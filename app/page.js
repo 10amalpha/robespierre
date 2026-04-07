@@ -547,7 +547,7 @@ export default function App() {
 
     {/* Tabs */}
     <div style={{ display: "flex", borderBottom: "1px solid #1e1e2e", padding: "0 20px", gap: 2, overflowX: "auto" }}>
-      {[["intel", "🧠 Intelligence"], ["insights", "💡 Insights"], ["robes", "⚔️ Robespierre"], ["members", "👥 Members"]].map(([key, lb]) => (
+      {[["intel", "🧠 Intelligence"], ["insights", "💡 Insights"], ["progress", "📈 Progress"], ["robes", "⚔️ Robespierre"], ["members", "👥 Members"]].map(([key, lb]) => (
         <button key={key} onClick={() => { setSec(key); if (key !== "members") { setSearch(""); setFilter("all"); } }} style={{ padding: "8px 14px", fontSize: 11, fontWeight: 600, cursor: "pointer", background: "transparent", border: "none", color: sec === key ? "#e5e7eb" : "#6b7280", borderBottom: sec === key ? "2px solid #10b981" : "2px solid transparent", whiteSpace: "nowrap" }}>{lb}</button>
       ))}
     </div>
@@ -693,6 +693,223 @@ export default function App() {
         </div>))}
       </div>
     </div>)}
+
+    {/* ── TAB: Progress ──────────────────────────────────────────── */}
+    {sec === "progress" && ((() => {
+      const snaps = META.snapshots;
+      const hasMultiple = snaps.length > 1;
+      const current = SNAP;
+
+      // Compute per-snapshot group stats if we have history
+      const getSnapStats = (snapId) => {
+        const members = D.filter(x => {
+          const h = x.history?.find(hh => hh.snapshot === snapId);
+          return h != null;
+        });
+        const pillarMembers = members.filter(x => {
+          const h = x.history?.find(hh => hh.snapshot === snapId);
+          return h && h.pillars;
+        });
+        const pn = pillarMembers.length || 1;
+        return {
+          avgNet: pillarMembers.reduce((a, x) => a + (x.history.find(h => h.snapshot === snapId)?.pillars?.network || 0), 0) / pn,
+          avgInt: pillarMembers.reduce((a, x) => a + (x.history.find(h => h.snapshot === snapId)?.pillars?.intelligence || 0), 0) / pn,
+          avgCap: pillarMembers.reduce((a, x) => a + (x.history.find(h => h.snapshot === snapId)?.pillars?.capital || 0), 0) / pn,
+          avgCo: pillarMembers.reduce((a, x) => a + (x.history.find(h => h.snapshot === snapId)?.composite || 0), 0) / pn,
+          tA: members.filter(x => x.history.find(h => h.snapshot === snapId)?.tier === "A").length,
+          tB: members.filter(x => x.history.find(h => h.snapshot === snapId)?.tier === "B").length,
+          tC: members.filter(x => x.history.find(h => h.snapshot === snapId)?.tier === "C").length,
+          tZ: members.filter(x => x.history.find(h => h.snapshot === snapId)?.tier === "Z").length,
+        };
+      };
+
+      // Tier movers between snapshots
+      const getMovers = () => {
+        if (!hasMultiple) return { up: [], down: [], newA: [] };
+        const prev = snaps[snaps.length - 2].id;
+        const curr = snaps[snaps.length - 1].id;
+        const up = [], down = [], newA = [];
+        D.forEach(m => {
+          const ph = m.history?.find(h => h.snapshot === prev);
+          const ch = m.history?.find(h => h.snapshot === curr);
+          if (!ph || !ch) return;
+          if (ch.tier === "A" && ph.tier !== "A") newA.push({ name: m.n, from: ph.tier, scoreDelta: (ch.composite || ch.score || 0) - (ph.composite || ph.score || 0) });
+          if ((ch.composite || 0) > (ph.composite || 0) + 5) up.push({ name: m.n, from: ph.composite || ph.score || 0, to: ch.composite || 0, delta: (ch.composite || 0) - (ph.composite || ph.score || 0) });
+          if ((ch.composite || 0) < (ph.composite || 0) - 5) down.push({ name: m.n, from: ph.composite || ph.score || 0, to: ch.composite || 0, delta: (ch.composite || 0) - (ph.composite || ph.score || 0) });
+        });
+        return { up: up.sort((a, b) => b.delta - a.delta).slice(0, 10), down: down.sort((a, b) => a.delta - b.delta).slice(0, 10), newA };
+      };
+
+      const DeltaChip = ({ val, suffix = "" }) => {
+        if (val == null || isNaN(val)) return null;
+        const r = Math.round(val);
+        const c = r > 0 ? "#10b981" : r < 0 ? "#ef4444" : "#6b7280";
+        return <span style={{ fontSize: 11, fontWeight: 700, color: c, fontFamily: "'JetBrains Mono',monospace" }}>{r > 0 ? "▲" : r < 0 ? "▼" : "="}{Math.abs(r)}{suffix}</span>;
+      };
+
+      return (<div style={{ padding: "14px 20px 80px" }}>
+        {/* Header */}
+        <div style={{ background: "#111118", borderRadius: 12, padding: "16px 14px", border: "1px solid #1e1e2e", marginBottom: 12 }}>
+          <div style={{ fontSize: 10, color: "#6b7280", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 8 }}>📈 Snapshot Timeline</div>
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+            {snaps.map((s, i) => (
+              <div key={s.id} style={{ flex: "1 1 120px", minWidth: 120, padding: "10px 12px", borderRadius: 8, background: s.id === current.id ? "#052e16" : "#0a0a0f", border: `1px solid ${s.id === current.id ? "#10b98130" : "#1e1e2e"}` }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 4, marginBottom: 4 }}>
+                  <span style={{ fontSize: 13, fontWeight: 700, color: s.id === current.id ? "#10b981" : "#6b7280", fontFamily: "'JetBrains Mono',monospace" }}>{s.id}</span>
+                  {s.id === current.id && <span style={{ fontSize: 8, padding: "1px 5px", borderRadius: 99, background: "#10b98120", color: "#10b981", fontWeight: 600 }}>CURRENT</span>}
+                </div>
+                <div style={{ fontSize: 10, color: "#9ca3af" }}>{s.from} → {s.to}</div>
+                <div style={{ fontSize: 10, color: "#6b7280", marginTop: 2 }}>{s.days}d · {s.totalMsgs?.toLocaleString() || "?"} msgs · {s.totalMembers || "?"} members</div>
+              </div>
+            ))}
+            {snaps.length === 1 && (
+              <div style={{ flex: "1 1 120px", minWidth: 120, padding: "10px 12px", borderRadius: 8, background: "#0a0a0f", border: "1px dashed #1e1e2e" }}>
+                <div style={{ fontSize: 13, fontWeight: 700, color: "#374151", fontFamily: "'JetBrains Mono',monospace" }}>s2</div>
+                <div style={{ fontSize: 10, color: "#374151" }}>Next audit</div>
+                <div style={{ fontSize: 10, color: "#374151", marginTop: 2 }}>Upload new chat export to generate</div>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {hasMultiple ? (() => {
+          const prev = getSnapStats(snaps[snaps.length - 2].id);
+          const curr = getSnapStats(snaps[snaps.length - 1].id);
+          const movers = getMovers();
+          return (<>
+            {/* Pillar Deltas */}
+            <div style={{ background: "#111118", borderRadius: 12, padding: "14px 12px", border: "1px solid #1e1e2e", marginBottom: 12 }}>
+              <div style={{ fontSize: 10, color: "#6b7280", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>⚡ Pillar Progress</div>
+              {[
+                { label: "🔗 Network Sharing", prev: prev.avgNet, curr: curr.avgNet, c: PCOL.network },
+                { label: "🧠 Collective Intelligence", prev: prev.avgInt, curr: curr.avgInt, c: PCOL.intelligence },
+                { label: "💰 Open Source Capital", prev: prev.avgCap, curr: curr.avgCap, c: PCOL.capital },
+                { label: "Composite", prev: prev.avgCo, curr: curr.avgCo, c: "#e5e7eb" },
+              ].map((p, i) => (
+                <div key={i} style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 0", borderBottom: i < 3 ? "1px solid #1e1e2e" : "none" }}>
+                  <span style={{ fontSize: 11, color: "#e5e7eb", flex: 1 }}>{p.label}</span>
+                  <span style={{ fontSize: 12, color: "#6b7280", fontFamily: "'JetBrains Mono',monospace" }}>{Math.round(p.prev)}</span>
+                  <span style={{ fontSize: 10, color: "#6b7280" }}>→</span>
+                  <span style={{ fontSize: 12, color: p.c, fontWeight: 700, fontFamily: "'JetBrains Mono',monospace" }}>{Math.round(p.curr)}</span>
+                  <DeltaChip val={p.curr - p.prev} />
+                </div>
+              ))}
+            </div>
+
+            {/* Tier Movements */}
+            <div style={{ background: "#111118", borderRadius: 12, padding: "14px 12px", border: "1px solid #1e1e2e", marginBottom: 12 }}>
+              <div style={{ fontSize: 10, color: "#6b7280", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>🔄 Tier Movements</div>
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 10 }}>
+                {[["A", prev.tA, curr.tA, "#10b981"], ["B", prev.tB, curr.tB, "#f59e0b"], ["C", prev.tC, curr.tC, "#ef4444"], ["Z", prev.tZ, curr.tZ, "#6b21a8"]].map(([t, p, c, col]) => (
+                  <div key={t} style={{ flex: "1 1 70px", padding: "8px 10px", borderRadius: 8, background: "#0a0a0f", border: `1px solid ${col}20` }}>
+                    <div style={{ fontSize: 9, color: col, fontWeight: 600 }}>Tier {t}</div>
+                    <div style={{ display: "flex", alignItems: "baseline", gap: 4 }}>
+                      <span style={{ fontSize: 16, fontWeight: 700, color: col, fontFamily: "'JetBrains Mono',monospace" }}>{c}</span>
+                      <DeltaChip val={c - p} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+              {movers.newA.length > 0 && (
+                <div style={{ marginBottom: 8 }}>
+                  <div style={{ fontSize: 10, color: "#10b981", fontWeight: 600, marginBottom: 4 }}>🎉 Promoted to Tier A:</div>
+                  {movers.newA.map(m => (
+                    <div key={m.name} onClick={() => goM(m.name)} style={{ fontSize: 11, color: "#e5e7eb", padding: "3px 0", cursor: "pointer" }}>
+                      {m.name} <span style={{ color: "#6b7280" }}>from {m.from}</span> <DeltaChip val={m.scoreDelta} />
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Biggest Movers */}
+            <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 12 }}>
+              <div style={{ flex: "1 1 200px", background: "#111118", borderRadius: 10, padding: "12px", border: "1px solid #10b98120" }}>
+                <div style={{ fontSize: 10, color: "#10b981", fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", marginBottom: 6 }}>🚀 Biggest Climbers</div>
+                {movers.up.length > 0 ? movers.up.map((m, i) => (
+                  <div key={m.name} onClick={() => goM(m.name)} style={{ display: "flex", justifyContent: "space-between", padding: "3px 0", cursor: "pointer", borderBottom: i < movers.up.length - 1 ? "1px solid #1a1a2e" : "none" }}>
+                    <span style={{ fontSize: 11, color: "#e5e7eb" }}>{m.name}</span>
+                    <span style={{ fontSize: 11, color: "#10b981", fontWeight: 700, fontFamily: "'JetBrains Mono',monospace" }}>+{m.delta}</span>
+                  </div>
+                )) : <div style={{ fontSize: 10, color: "#6b7280" }}>No significant climbers yet</div>}
+              </div>
+              <div style={{ flex: "1 1 200px", background: "#111118", borderRadius: 10, padding: "12px", border: "1px solid #ef444420" }}>
+                <div style={{ fontSize: 10, color: "#ef4444", fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", marginBottom: 6 }}>📉 Biggest Drops</div>
+                {movers.down.length > 0 ? movers.down.map((m, i) => (
+                  <div key={m.name} onClick={() => goM(m.name)} style={{ display: "flex", justifyContent: "space-between", padding: "3px 0", cursor: "pointer", borderBottom: i < movers.down.length - 1 ? "1px solid #1a1a2e" : "none" }}>
+                    <span style={{ fontSize: 11, color: "#e5e7eb" }}>{m.name}</span>
+                    <span style={{ fontSize: 11, color: "#ef4444", fontWeight: 700, fontFamily: "'JetBrains Mono',monospace" }}>{m.delta}</span>
+                  </div>
+                )) : <div style={{ fontSize: 10, color: "#6b7280" }}>No significant drops yet</div>}
+              </div>
+            </div>
+          </>);
+        })() : (
+          /* Single snapshot — show baseline state and what will be tracked */
+          <>
+            <div style={{ background: "#111118", borderRadius: 12, padding: "14px 12px", border: "1px solid #1e1e2e", marginBottom: 12 }}>
+              <div style={{ fontSize: 10, color: "#6b7280", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>📊 Baseline (s1) — What Gets Tracked</div>
+              <div style={{ fontSize: 11, color: "#9ca3af", lineHeight: 1.6, marginBottom: 12 }}>
+                This is the starting line. Every metric below becomes the comparison point for the next audit. Upload a new chat export to generate s2 and see the deltas.
+              </div>
+              {[
+                { label: "🔗 Network Sharing", val: k.avgNet, target: 50, c: PCOL.network },
+                { label: "🧠 Collective Intelligence", val: k.avgInt, target: 50, c: PCOL.intelligence },
+                { label: "💰 Open Source Capital", val: k.avgCap, target: 50, c: PCOL.capital },
+                { label: "Group Composite", val: k.avgCo, target: 60, c: "#e5e7eb" },
+                { label: "Founder Msg Share", val: k.fM * 100, target: 15, c: "#f59e0b", invert: true },
+                { label: "Founder Link Share", val: k.fL * 100, target: 20, c: "#ef4444", invert: true },
+              ].map((p, i) => (
+                <div key={i} style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 0", borderBottom: i < 5 ? "1px solid #1e1e2e" : "none" }}>
+                  <span style={{ fontSize: 11, color: "#e5e7eb", flex: 1 }}>{p.label}</span>
+                  <span style={{ fontSize: 14, fontWeight: 700, color: p.c, fontFamily: "'JetBrains Mono',monospace" }}>{Math.round(p.val)}{p.label.includes("Share") ? "%" : ""}</span>
+                  <span style={{ fontSize: 9, color: "#6b7280" }}>target: {p.invert ? "<" : ">"}{p.target}{p.label.includes("Share") ? "%" : ""}</span>
+                  <span style={{ fontSize: 10, color: p.invert ? (p.val > p.target ? "#ef4444" : "#10b981") : (p.val >= p.target ? "#10b981" : "#f59e0b") }}>
+                    {p.invert ? (p.val > p.target ? "✗" : "✓") : (p.val >= p.target ? "✓" : "✗")}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            {/* Tier Baseline */}
+            <div style={{ background: "#111118", borderRadius: 12, padding: "14px 12px", border: "1px solid #1e1e2e", marginBottom: 12 }}>
+              <div style={{ fontSize: 10, color: "#6b7280", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>🏛️ Tier Distribution (Baseline)</div>
+              <div style={{ display: "flex", gap: 4, marginBottom: 10 }}>
+                {[["A", k.tA, "#10b981"], ["B", k.tB, "#f59e0b"], ["C", k.tC, "#ef4444"], ["Z", k.tZ, "#6b21a8"]].map(([t, ct, c]) => {
+                  const pct = (ct / k.nn) * 100;
+                  return (<div key={t} style={{ width: `${pct}%`, minWidth: ct > 0 ? 30 : 0, height: 32, background: c + "40", borderRadius: 4, display: "flex", alignItems: "center", justifyContent: "center", border: `1px solid ${c}30` }}>
+                    <span style={{ fontSize: 10, fontWeight: 700, color: c, fontFamily: "'JetBrains Mono',monospace" }}>{t}:{ct}</span>
+                  </div>);
+                })}
+              </div>
+              <div style={{ fontSize: 10, color: "#6b7280", lineHeight: 1.5 }}>
+                Next audit will show: tier promotions/demotions, new Tier A members, who fell from grace, and zombie/deserter changes.
+              </div>
+            </div>
+
+            {/* What Changes Will Be Tracked */}
+            <div style={{ background: "#052e16", borderRadius: 12, padding: "14px 12px", border: "1px solid #10b98130" }}>
+              <div style={{ fontSize: 10, color: "#10b981", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 8 }}>🔮 What s2 Will Reveal</div>
+              {[
+                "Pillar averages: did 🔗 Network, 🧠 Intelligence, 💰 Capital improve?",
+                "Tier movements: who got promoted? who got demoted?",
+                "Biggest climbers: top 10 composite score increases",
+                "Biggest drops: who fell off and by how much?",
+                "Founder dependency: is Hernán's share decreasing?",
+                "Panican reform: did flagged panicans improve their Capital scores?",
+                "Persona evolution: did people's topics/expertise shift?",
+                "Dead weight delta: how many zombies were cut? did it improve signal?",
+              ].map((item, i) => (
+                <div key={i} style={{ display: "flex", gap: 8, marginBottom: 5, alignItems: "flex-start" }}>
+                  <span style={{ fontSize: 10, color: "#10b981", flexShrink: 0 }}>→</span>
+                  <span style={{ fontSize: 11, color: "#a0d4b8", lineHeight: 1.4 }}>{item}</span>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+      </div>);
+    })())}
 
     {/* ── TAB: Robespierre ───────────────────────────────────────── */}
     {sec === "robes" && (<div style={{ padding: "14px 20px 80px" }}>
