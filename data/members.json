@@ -1,0 +1,3404 @@
+{
+  "Andres Felipe Arias": {
+    "tier": "A",
+    "score": 87.9,
+    "msgs": 641,
+    "links": 85,
+    "avgWords": 11.5,
+    "activeDays": 41,
+    "activeWeeks": 9,
+    "lastActive": "2026-02-21",
+    "daysInactive": 0,
+    "components": {
+      "volume": 30,
+      "consistency": 12.9,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 87.9,
+        "tier": "A",
+        "msgs": 641,
+        "links": 85
+      }
+    ]
+  },
+  "Camilo Gomez": {
+    "tier": "A",
+    "score": 86.5,
+    "msgs": 153,
+    "links": 30,
+    "avgWords": 22.9,
+    "activeDays": 32,
+    "activeWeeks": 8,
+    "lastActive": "2026-02-18",
+    "daysInactive": 2,
+    "components": {
+      "volume": 30,
+      "consistency": 11.5,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 86.5,
+        "tier": "A",
+        "msgs": 153,
+        "links": 30
+      }
+    ]
+  },
+  "Fede Suarez": {
+    "tier": "A",
+    "score": 86.5,
+    "msgs": 185,
+    "links": 17,
+    "avgWords": 32,
+    "activeDays": 32,
+    "activeWeeks": 8,
+    "lastActive": "2026-02-21",
+    "daysInactive": 0,
+    "components": {
+      "volume": 30,
+      "consistency": 11.5,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 86.5,
+        "tier": "A",
+        "msgs": 185,
+        "links": 17
+      }
+    ]
+  },
+  "Lucas Jaramillo": {
+    "tier": "A",
+    "score": 86.5,
+    "msgs": 205,
+    "links": 33,
+    "avgWords": 16.5,
+    "activeDays": 38,
+    "activeWeeks": 8,
+    "lastActive": "2026-02-21",
+    "daysInactive": 0,
+    "components": {
+      "volume": 30,
+      "consistency": 11.5,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 86.5,
+        "tier": "A",
+        "msgs": 205,
+        "links": 33
+      }
+    ]
+  },
+  "Nico Fernandez": {
+    "tier": "A",
+    "score": 86.5,
+    "msgs": 160,
+    "links": 25,
+    "avgWords": 21.2,
+    "activeDays": 36,
+    "activeWeeks": 8,
+    "lastActive": "2026-02-20",
+    "daysInactive": 1,
+    "components": {
+      "volume": 30,
+      "consistency": 11.5,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 86.5,
+        "tier": "A",
+        "msgs": 160,
+        "links": 25
+      }
+    ]
+  },
+  "Gabriel Bedoya": {
+    "tier": "A",
+    "score": 86.5,
+    "msgs": 133,
+    "links": 8,
+    "avgWords": 23.4,
+    "activeDays": 33,
+    "activeWeeks": 8,
+    "lastActive": "2026-02-21",
+    "daysInactive": 0,
+    "components": {
+      "volume": 30,
+      "consistency": 11.5,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 86.5,
+        "tier": "A",
+        "msgs": 133,
+        "links": 8
+      }
+    ]
+  },
+  "Camilo Botero": {
+    "tier": "A",
+    "score": 86.5,
+    "msgs": 130,
+    "links": 11,
+    "avgWords": 18.3,
+    "activeDays": 33,
+    "activeWeeks": 8,
+    "lastActive": "2026-02-21",
+    "daysInactive": 0,
+    "components": {
+      "volume": 30,
+      "consistency": 11.5,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 86.5,
+        "tier": "A",
+        "msgs": 130,
+        "links": 11
+      }
+    ]
+  },
+  "Hernán Jaramillo": {
+    "tier": "A",
+    "score": 86.5,
+    "msgs": 1476,
+    "links": 510,
+    "avgWords": 18.8,
+    "activeDays": 40,
+    "activeWeeks": 8,
+    "lastActive": "2026-02-21",
+    "daysInactive": 0,
+    "components": {
+      "volume": 30,
+      "consistency": 11.5,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": true,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 86.5,
+        "tier": "A",
+        "msgs": 1476,
+        "links": 510
+      }
+    ]
+  },
+  "Dario Palacio": {
+    "tier": "A",
+    "score": 85,
+    "msgs": 213,
+    "links": 59,
+    "avgWords": 7.5,
+    "activeDays": 38,
+    "activeWeeks": 7,
+    "lastActive": "2026-02-21",
+    "daysInactive": 0,
+    "components": {
+      "volume": 30,
+      "consistency": 10,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 85,
+        "tier": "A",
+        "msgs": 213,
+        "links": 59
+      }
+    ]
+  },
+  "Nathanel Serebrenik": {
+    "tier": "A",
+    "score": 85,
+    "msgs": 157,
+    "links": 38,
+    "avgWords": 11.5,
+    "activeDays": 32,
+    "activeWeeks": 7,
+    "lastActive": "2026-02-21",
+    "daysInactive": 0,
+    "components": {
+      "volume": 30,
+      "consistency": 10,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 85,
+        "tier": "A",
+        "msgs": 157,
+        "links": 38
+      }
+    ]
+  },
+  "gordo Barato": {
+    "tier": "A",
+    "score": 85,
+    "msgs": 318,
+    "links": 135,
+    "avgWords": 8.4,
+    "activeDays": 35,
+    "activeWeeks": 7,
+    "lastActive": "2026-02-21",
+    "daysInactive": 0,
+    "components": {
+      "volume": 30,
+      "consistency": 10,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 85,
+        "tier": "A",
+        "msgs": 318,
+        "links": 135
+      }
+    ]
+  },
+  "Guillermo Valencia": {
+    "tier": "A",
+    "score": 84.6,
+    "msgs": 98,
+    "links": 11,
+    "avgWords": 18.8,
+    "activeDays": 28,
+    "activeWeeks": 8,
+    "lastActive": "2026-02-19",
+    "daysInactive": 1,
+    "components": {
+      "volume": 28.1,
+      "consistency": 11.5,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 84.6,
+        "tier": "A",
+        "msgs": 98,
+        "links": 11
+      }
+    ]
+  },
+  "antonio jaller": {
+    "tier": "A",
+    "score": 77.1,
+    "msgs": 77,
+    "links": 9,
+    "avgWords": 11.3,
+    "activeDays": 28,
+    "activeWeeks": 7,
+    "lastActive": "2026-02-20",
+    "daysInactive": 1,
+    "components": {
+      "volume": 22.1,
+      "consistency": 10,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 77.1,
+        "tier": "A",
+        "msgs": 77,
+        "links": 9
+      }
+    ]
+  },
+  "Juan Diego Pipo": {
+    "tier": "A",
+    "score": 77.1,
+    "msgs": 77,
+    "links": 13,
+    "avgWords": 10.9,
+    "activeDays": 27,
+    "activeWeeks": 7,
+    "lastActive": "2026-02-21",
+    "daysInactive": 0,
+    "components": {
+      "volume": 22.1,
+      "consistency": 10,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 77.1,
+        "tier": "A",
+        "msgs": 77,
+        "links": 13
+      }
+    ]
+  },
+  "Daniel Bermúdez": {
+    "tier": "A",
+    "score": 73.7,
+    "msgs": 65,
+    "links": 13,
+    "avgWords": 77.5,
+    "activeDays": 21,
+    "activeWeeks": 7,
+    "lastActive": "2026-02-18",
+    "daysInactive": 2,
+    "components": {
+      "volume": 18.6,
+      "consistency": 10,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 73.7,
+        "tier": "A",
+        "msgs": 65,
+        "links": 13
+      }
+    ]
+  },
+  "Juan Esteban Sanin": {
+    "tier": "A",
+    "score": 71.7,
+    "msgs": 73,
+    "links": 7,
+    "avgWords": 21.4,
+    "activeDays": 17,
+    "activeWeeks": 4,
+    "lastActive": "2026-02-20",
+    "daysInactive": 1,
+    "components": {
+      "volume": 20.9,
+      "consistency": 5.7,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 71.7,
+        "tier": "A",
+        "msgs": 73,
+        "links": 7
+      }
+    ]
+  },
+  "Misas": {
+    "tier": "A",
+    "score": 68.2,
+    "msgs": 51,
+    "links": 24,
+    "avgWords": 12.8,
+    "activeDays": 23,
+    "activeWeeks": 6,
+    "lastActive": "2026-02-19",
+    "daysInactive": 1,
+    "components": {
+      "volume": 14.6,
+      "consistency": 8.6,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 68.2,
+        "tier": "A",
+        "msgs": 51,
+        "links": 24
+      }
+    ]
+  },
+  "Enrique Uribe": {
+    "tier": "A",
+    "score": 68,
+    "msgs": 45,
+    "links": 11,
+    "avgWords": 17.7,
+    "activeDays": 23,
+    "activeWeeks": 7,
+    "lastActive": "2026-02-19",
+    "daysInactive": 1,
+    "components": {
+      "volume": 12.9,
+      "consistency": 10,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 68,
+        "tier": "A",
+        "msgs": 45,
+        "links": 11
+      }
+    ]
+  },
+  "Pablo Velez Mejia": {
+    "tier": "A",
+    "score": 67.7,
+    "msgs": 39,
+    "links": 3,
+    "avgWords": 17.6,
+    "activeDays": 21,
+    "activeWeeks": 8,
+    "lastActive": "2026-02-20",
+    "daysInactive": 1,
+    "components": {
+      "volume": 11.2,
+      "consistency": 11.5,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 67.7,
+        "tier": "A",
+        "msgs": 39,
+        "links": 3
+      }
+    ]
+  },
+  "Andred Angel": {
+    "tier": "A",
+    "score": 67.7,
+    "msgs": 49,
+    "links": 3,
+    "avgWords": 27.9,
+    "activeDays": 19,
+    "activeWeeks": 6,
+    "lastActive": "2026-02-20",
+    "daysInactive": 1,
+    "components": {
+      "volume": 14.1,
+      "consistency": 8.6,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 67.7,
+        "tier": "A",
+        "msgs": 49,
+        "links": 3
+      }
+    ]
+  },
+  "Jon Oleaga": {
+    "tier": "A",
+    "score": 67.4,
+    "msgs": 48,
+    "links": 1,
+    "avgWords": 27.6,
+    "activeDays": 14,
+    "activeWeeks": 6,
+    "lastActive": "2026-02-18",
+    "daysInactive": 2,
+    "components": {
+      "volume": 13.8,
+      "consistency": 8.6,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 67.4,
+        "tier": "A",
+        "msgs": 48,
+        "links": 1
+      }
+    ]
+  },
+  "Hector Casado": {
+    "tier": "A",
+    "score": 66.2,
+    "msgs": 44,
+    "links": 10,
+    "avgWords": 11.2,
+    "activeDays": 18,
+    "activeWeeks": 6,
+    "lastActive": "2026-02-17",
+    "daysInactive": 3,
+    "components": {
+      "volume": 12.6,
+      "consistency": 8.6,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 66.2,
+        "tier": "A",
+        "msgs": 44,
+        "links": 10
+      }
+    ]
+  },
+  "Camilo Ospina Lumm": {
+    "tier": "A",
+    "score": 65.7,
+    "msgs": 47,
+    "links": 5,
+    "avgWords": 17.7,
+    "activeDays": 15,
+    "activeWeeks": 5,
+    "lastActive": "2026-02-20",
+    "daysInactive": 1,
+    "components": {
+      "volume": 13.5,
+      "consistency": 7.2,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 65.7,
+        "tier": "A",
+        "msgs": 47,
+        "links": 5
+      }
+    ]
+  },
+  "paul gomez": {
+    "tier": "A",
+    "score": 61.6,
+    "msgs": 33,
+    "links": 6,
+    "avgWords": 33.7,
+    "activeDays": 7,
+    "activeWeeks": 5,
+    "lastActive": "2026-02-18",
+    "daysInactive": 2,
+    "components": {
+      "volume": 9.5,
+      "consistency": 7.2,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 61.6,
+        "tier": "A",
+        "msgs": 33,
+        "links": 6
+      }
+    ]
+  },
+  "Juan Castilla": {
+    "tier": "A",
+    "score": 59.9,
+    "msgs": 22,
+    "links": 3,
+    "avgWords": 18,
+    "activeDays": 9,
+    "activeWeeks": 6,
+    "lastActive": "2026-02-20",
+    "daysInactive": 1,
+    "components": {
+      "volume": 6.3,
+      "consistency": 8.6,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 59.9,
+        "tier": "A",
+        "msgs": 22,
+        "links": 3
+      }
+    ]
+  },
+  "Simón Restrepo": {
+    "tier": "A",
+    "score": 59.6,
+    "msgs": 21,
+    "links": 4,
+    "avgWords": 60.6,
+    "activeDays": 10,
+    "activeWeeks": 6,
+    "lastActive": "2026-02-13",
+    "daysInactive": 7,
+    "components": {
+      "volume": 6,
+      "consistency": 8.6,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 59.6,
+        "tier": "A",
+        "msgs": 21,
+        "links": 4
+      }
+    ]
+  },
+  "Sebastian Piedrahita": {
+    "tier": "A",
+    "score": 59.3,
+    "msgs": 20,
+    "links": 5,
+    "avgWords": 10.6,
+    "activeDays": 13,
+    "activeWeeks": 6,
+    "lastActive": "2026-02-20",
+    "daysInactive": 1,
+    "components": {
+      "volume": 5.7,
+      "consistency": 8.6,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 59.3,
+        "tier": "A",
+        "msgs": 20,
+        "links": 5
+      }
+    ]
+  },
+  "Juan Pablo González S.": {
+    "tier": "A",
+    "score": 57.9,
+    "msgs": 15,
+    "links": 7,
+    "avgWords": 10.6,
+    "activeDays": 11,
+    "activeWeeks": 6,
+    "lastActive": "2026-02-17",
+    "daysInactive": 3,
+    "components": {
+      "volume": 4.3,
+      "consistency": 8.6,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 57.9,
+        "tier": "A",
+        "msgs": 15,
+        "links": 7
+      }
+    ]
+  },
+  "Paula Jaramillo": {
+    "tier": "A",
+    "score": 57.9,
+    "msgs": 20,
+    "links": 2,
+    "avgWords": 17.1,
+    "activeDays": 8,
+    "activeWeeks": 5,
+    "lastActive": "2026-02-17",
+    "daysInactive": 3,
+    "components": {
+      "volume": 5.7,
+      "consistency": 7.2,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 57.9,
+        "tier": "A",
+        "msgs": 20,
+        "links": 2
+      }
+    ]
+  },
+  "Diego Sanchez": {
+    "tier": "A",
+    "score": 57.6,
+    "msgs": 14,
+    "links": 4,
+    "avgWords": 23.6,
+    "activeDays": 7,
+    "activeWeeks": 6,
+    "lastActive": "2026-02-20",
+    "daysInactive": 1,
+    "components": {
+      "volume": 4,
+      "consistency": 8.6,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 57.6,
+        "tier": "A",
+        "msgs": 14,
+        "links": 4
+      }
+    ]
+  },
+  "Simon Jaramillo Alpha": {
+    "tier": "A",
+    "score": 57.6,
+    "msgs": 14,
+    "links": 0,
+    "avgWords": 20.4,
+    "activeDays": 9,
+    "activeWeeks": 6,
+    "lastActive": "2026-02-20",
+    "daysInactive": 1,
+    "components": {
+      "volume": 4,
+      "consistency": 8.6,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 57.6,
+        "tier": "A",
+        "msgs": 14,
+        "links": 0
+      }
+    ]
+  },
+  "Valentina Ramírez": {
+    "tier": "A",
+    "score": 57.6,
+    "msgs": 29,
+    "links": 3,
+    "avgWords": 16.6,
+    "activeDays": 10,
+    "activeWeeks": 3,
+    "lastActive": "2026-02-20",
+    "daysInactive": 1,
+    "components": {
+      "volume": 8.3,
+      "consistency": 4.3,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 57.6,
+        "tier": "A",
+        "msgs": 29,
+        "links": 3
+      }
+    ]
+  },
+  "Peter Alexander": {
+    "tier": "A",
+    "score": 56.8,
+    "msgs": 16,
+    "links": 5,
+    "avgWords": 39.5,
+    "activeDays": 8,
+    "activeWeeks": 5,
+    "lastActive": "2026-02-19",
+    "daysInactive": 1,
+    "components": {
+      "volume": 4.6,
+      "consistency": 7.2,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 56.8,
+        "tier": "A",
+        "msgs": 16,
+        "links": 5
+      }
+    ]
+  },
+  "Felipe Medina": {
+    "tier": "A",
+    "score": 55.8,
+    "msgs": 16,
+    "links": 3,
+    "avgWords": 10.2,
+    "activeDays": 12,
+    "activeWeeks": 7,
+    "lastActive": "2026-02-18",
+    "daysInactive": 2,
+    "components": {
+      "volume": 4.6,
+      "consistency": 10,
+      "substance": 16.2,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 55.8,
+        "tier": "A",
+        "msgs": 16,
+        "links": 3
+      }
+    ]
+  },
+  "Rodrigo Londoño": {
+    "tier": "A",
+    "score": 55.6,
+    "msgs": 17,
+    "links": 4,
+    "avgWords": 15.8,
+    "activeDays": 8,
+    "activeWeeks": 4,
+    "lastActive": "2026-02-20",
+    "daysInactive": 1,
+    "components": {
+      "volume": 4.9,
+      "consistency": 5.7,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 55.6,
+        "tier": "A",
+        "msgs": 17,
+        "links": 4
+      }
+    ]
+  },
+  "Juancho Palacio": {
+    "tier": "A",
+    "score": 55,
+    "msgs": 7,
+    "links": 2,
+    "avgWords": 15.4,
+    "activeDays": 6,
+    "activeWeeks": 6,
+    "lastActive": "2026-02-13",
+    "daysInactive": 7,
+    "components": {
+      "volume": 2,
+      "consistency": 8.6,
+      "substance": 19.4,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 55,
+        "tier": "A",
+        "msgs": 7,
+        "links": 2
+      }
+    ]
+  },
+  "Daniel Mesa": {
+    "tier": "A",
+    "score": 55,
+    "msgs": 20,
+    "links": 6,
+    "avgWords": 23.1,
+    "activeDays": 5,
+    "activeWeeks": 3,
+    "lastActive": "2026-02-18",
+    "daysInactive": 2,
+    "components": {
+      "volume": 5.7,
+      "consistency": 4.3,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 55,
+        "tier": "A",
+        "msgs": 20,
+        "links": 6
+      }
+    ]
+  },
+  "Carlos Tobon": {
+    "tier": "A",
+    "score": 54.2,
+    "msgs": 12,
+    "links": 4,
+    "avgWords": 13.6,
+    "activeDays": 9,
+    "activeWeeks": 4,
+    "lastActive": "2026-02-15",
+    "daysInactive": 5,
+    "components": {
+      "volume": 3.4,
+      "consistency": 5.7,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 54.2,
+        "tier": "A",
+        "msgs": 12,
+        "links": 4
+      }
+    ]
+  },
+  "Felipe Valencia": {
+    "tier": "A",
+    "score": 53.9,
+    "msgs": 11,
+    "links": 3,
+    "avgWords": 16.8,
+    "activeDays": 6,
+    "activeWeeks": 4,
+    "lastActive": "2026-02-20",
+    "daysInactive": 1,
+    "components": {
+      "volume": 3.2,
+      "consistency": 5.7,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 53.9,
+        "tier": "A",
+        "msgs": 11,
+        "links": 3
+      }
+    ]
+  },
+  "Andres Palacio": {
+    "tier": "A",
+    "score": 53.2,
+    "msgs": 21,
+    "links": 6,
+    "avgWords": 8.5,
+    "activeDays": 10,
+    "activeWeeks": 5,
+    "lastActive": "2026-02-10",
+    "daysInactive": 10,
+    "components": {
+      "volume": 6,
+      "consistency": 7.2,
+      "substance": 20,
+      "recency": 20
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 53.2,
+        "tier": "A",
+        "msgs": 21,
+        "links": 6
+      }
+    ]
+  },
+  "Lucas Echavarria": {
+    "tier": "A",
+    "score": 52.2,
+    "msgs": 12,
+    "links": 2,
+    "avgWords": 15.4,
+    "activeDays": 5,
+    "activeWeeks": 3,
+    "lastActive": "2026-02-21",
+    "daysInactive": 0,
+    "components": {
+      "volume": 3.4,
+      "consistency": 4.3,
+      "substance": 19.4,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 52.2,
+        "tier": "A",
+        "msgs": 12,
+        "links": 2
+      }
+    ]
+  },
+  "Ricky Uribe": {
+    "tier": "A",
+    "score": 51.8,
+    "msgs": 27,
+    "links": 4,
+    "avgWords": 8.9,
+    "activeDays": 10,
+    "activeWeeks": 5,
+    "lastActive": "2026-02-11",
+    "daysInactive": 9,
+    "components": {
+      "volume": 7.7,
+      "consistency": 7.2,
+      "substance": 16.9,
+      "recency": 20
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 51.8,
+        "tier": "A",
+        "msgs": 27,
+        "links": 4
+      }
+    ]
+  },
+  "Eulalia Sanín": {
+    "tier": "A",
+    "score": 51.6,
+    "msgs": 23,
+    "links": 0,
+    "avgWords": 11.4,
+    "activeDays": 10,
+    "activeWeeks": 6,
+    "lastActive": "2026-02-16",
+    "daysInactive": 4,
+    "components": {
+      "volume": 6.6,
+      "consistency": 8.6,
+      "substance": 11.4,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 51.6,
+        "tier": "A",
+        "msgs": 23,
+        "links": 0
+      }
+    ]
+  },
+  "Nicolas Pelaez": {
+    "tier": "A",
+    "score": 51.1,
+    "msgs": 36,
+    "links": 0,
+    "avgWords": 7.1,
+    "activeDays": 17,
+    "activeWeeks": 6,
+    "lastActive": "2026-02-19",
+    "daysInactive": 1,
+    "components": {
+      "volume": 10.3,
+      "consistency": 8.6,
+      "substance": 7.1,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 51.1,
+        "tier": "A",
+        "msgs": 36,
+        "links": 0
+      }
+    ]
+  },
+  "Rafael Troconis": {
+    "tier": "A",
+    "score": 51,
+    "msgs": 11,
+    "links": 0,
+    "avgWords": 49.2,
+    "activeDays": 5,
+    "activeWeeks": 2,
+    "lastActive": "2026-02-18",
+    "daysInactive": 2,
+    "components": {
+      "volume": 3.2,
+      "consistency": 2.9,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 51,
+        "tier": "A",
+        "msgs": 11,
+        "links": 0
+      }
+    ]
+  },
+  "Luis Espinoza": {
+    "tier": "A",
+    "score": 50.8,
+    "msgs": 5,
+    "links": 3,
+    "avgWords": 12.6,
+    "activeDays": 5,
+    "activeWeeks": 4,
+    "lastActive": "2026-02-15",
+    "daysInactive": 5,
+    "components": {
+      "volume": 1.4,
+      "consistency": 5.7,
+      "substance": 18.6,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 50.8,
+        "tier": "A",
+        "msgs": 5,
+        "links": 3
+      }
+    ]
+  },
+  "Carlos Henao": {
+    "tier": "A",
+    "score": 50.2,
+    "msgs": 3,
+    "links": 0,
+    "avgWords": 24.7,
+    "activeDays": 3,
+    "activeWeeks": 3,
+    "lastActive": "2026-02-18",
+    "daysInactive": 2,
+    "components": {
+      "volume": 0.9,
+      "consistency": 4.3,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 50.2,
+        "tier": "A",
+        "msgs": 3,
+        "links": 0
+      }
+    ]
+  },
+  "German Corredor": {
+    "tier": "A",
+    "score": 49.8,
+    "msgs": 7,
+    "links": 0,
+    "avgWords": 15.6,
+    "activeDays": 7,
+    "activeWeeks": 5,
+    "lastActive": "2026-02-18",
+    "daysInactive": 2,
+    "components": {
+      "volume": 2,
+      "consistency": 7.2,
+      "substance": 15.6,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 49.8,
+        "tier": "A",
+        "msgs": 7,
+        "links": 0
+      }
+    ]
+  },
+  "Nico Zapata (Taurus)": {
+    "tier": "A",
+    "score": 49,
+    "msgs": 4,
+    "links": 1,
+    "avgWords": 32.2,
+    "activeDays": 3,
+    "activeWeeks": 2,
+    "lastActive": "2026-02-20",
+    "daysInactive": 1,
+    "components": {
+      "volume": 1.1,
+      "consistency": 2.9,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 49,
+        "tier": "A",
+        "msgs": 4,
+        "links": 1
+      }
+    ]
+  },
+  "Romano Arango": {
+    "tier": "A",
+    "score": 48.8,
+    "msgs": 21,
+    "links": 3,
+    "avgWords": 4.6,
+    "activeDays": 13,
+    "activeWeeks": 5,
+    "lastActive": "2026-02-18",
+    "daysInactive": 2,
+    "components": {
+      "volume": 6,
+      "consistency": 7.2,
+      "substance": 10.6,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 48.8,
+        "tier": "A",
+        "msgs": 21,
+        "links": 3
+      }
+    ]
+  },
+  "Andrea Arango": {
+    "tier": "A",
+    "score": 48.7,
+    "msgs": 12,
+    "links": 0,
+    "avgWords": 14.5,
+    "activeDays": 6,
+    "activeWeeks": 4,
+    "lastActive": "2026-02-18",
+    "daysInactive": 2,
+    "components": {
+      "volume": 3.4,
+      "consistency": 5.7,
+      "substance": 14.5,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 48.7,
+        "tier": "A",
+        "msgs": 12,
+        "links": 0
+      }
+    ]
+  },
+  "Mauricio Uribe": {
+    "tier": "A",
+    "score": 48.2,
+    "msgs": 6,
+    "links": 0,
+    "avgWords": 29.2,
+    "activeDays": 1,
+    "activeWeeks": 1,
+    "lastActive": "2026-02-20",
+    "daysInactive": 1,
+    "components": {
+      "volume": 1.7,
+      "consistency": 1.4,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 48.2,
+        "tier": "A",
+        "msgs": 6,
+        "links": 0
+      }
+    ]
+  },
+  "Molo Villa": {
+    "tier": "A",
+    "score": 47.6,
+    "msgs": 4,
+    "links": 0,
+    "avgWords": 39.5,
+    "activeDays": 1,
+    "activeWeeks": 1,
+    "lastActive": "2026-02-18",
+    "daysInactive": 2,
+    "components": {
+      "volume": 1.1,
+      "consistency": 1.4,
+      "substance": 20,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 47.6,
+        "tier": "A",
+        "msgs": 4,
+        "links": 0
+      }
+    ]
+  },
+  "Monica Arango": {
+    "tier": "A",
+    "score": 46.3,
+    "msgs": 12,
+    "links": 0,
+    "avgWords": 10.7,
+    "activeDays": 9,
+    "activeWeeks": 5,
+    "lastActive": "2026-02-20",
+    "daysInactive": 1,
+    "components": {
+      "volume": 3.4,
+      "consistency": 7.2,
+      "substance": 10.7,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 46.3,
+        "tier": "A",
+        "msgs": 12,
+        "links": 0
+      }
+    ]
+  },
+  "Antonio Linares": {
+    "tier": "A",
+    "score": 45.8,
+    "msgs": 10,
+    "links": 0,
+    "avgWords": 9.3,
+    "activeDays": 8,
+    "activeWeeks": 6,
+    "lastActive": "2026-02-19",
+    "daysInactive": 1,
+    "components": {
+      "volume": 2.9,
+      "consistency": 8.6,
+      "substance": 9.3,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 45.8,
+        "tier": "A",
+        "msgs": 10,
+        "links": 0
+      }
+    ]
+  },
+  "Maria Rios": {
+    "tier": "A",
+    "score": 44.9,
+    "msgs": 15,
+    "links": 0,
+    "avgWords": 8.5,
+    "activeDays": 9,
+    "activeWeeks": 5,
+    "lastActive": "2026-02-20",
+    "daysInactive": 1,
+    "components": {
+      "volume": 4.3,
+      "consistency": 7.2,
+      "substance": 8.5,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 44.9,
+        "tier": "A",
+        "msgs": 15,
+        "links": 0
+      }
+    ]
+  },
+  "Sergio Gonzalez": {
+    "tier": "A",
+    "score": 44.7,
+    "msgs": 3,
+    "links": 2,
+    "avgWords": 12,
+    "activeDays": 2,
+    "activeWeeks": 2,
+    "lastActive": "2026-02-16",
+    "daysInactive": 4,
+    "components": {
+      "volume": 0.9,
+      "consistency": 2.9,
+      "substance": 16,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 44.7,
+        "tier": "A",
+        "msgs": 3,
+        "links": 2
+      }
+    ]
+  },
+  "Gustavo Villa": {
+    "tier": "A",
+    "score": 44.6,
+    "msgs": 11,
+    "links": 0,
+    "avgWords": 12.2,
+    "activeDays": 4,
+    "activeWeeks": 3,
+    "lastActive": "2026-02-20",
+    "daysInactive": 1,
+    "components": {
+      "volume": 3.2,
+      "consistency": 4.3,
+      "substance": 12.2,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 44.6,
+        "tier": "A",
+        "msgs": 11,
+        "links": 0
+      }
+    ]
+  },
+  "Gabby Grinberg": {
+    "tier": "A",
+    "score": 44.4,
+    "msgs": 2,
+    "links": 0,
+    "avgWords": 16,
+    "activeDays": 2,
+    "activeWeeks": 2,
+    "lastActive": "2026-02-16",
+    "daysInactive": 4,
+    "components": {
+      "volume": 0.6,
+      "consistency": 2.9,
+      "substance": 16,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 44.4,
+        "tier": "A",
+        "msgs": 2,
+        "links": 0
+      }
+    ]
+  },
+  "Ricardo Sierra": {
+    "tier": "A",
+    "score": 43.7,
+    "msgs": 1,
+    "links": 0,
+    "avgWords": 17,
+    "activeDays": 1,
+    "activeWeeks": 1,
+    "lastActive": "2026-02-19",
+    "daysInactive": 1,
+    "components": {
+      "volume": 0.3,
+      "consistency": 1.4,
+      "substance": 17,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 43.7,
+        "tier": "A",
+        "msgs": 1,
+        "links": 0
+      }
+    ]
+  },
+  "Checho Barth": {
+    "tier": "A",
+    "score": 43.6,
+    "msgs": 16,
+    "links": 0,
+    "avgWords": 6.8,
+    "activeDays": 10,
+    "activeWeeks": 5,
+    "lastActive": "2026-02-19",
+    "daysInactive": 1,
+    "components": {
+      "volume": 4.6,
+      "consistency": 7.2,
+      "substance": 6.8,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 43.6,
+        "tier": "A",
+        "msgs": 16,
+        "links": 0
+      }
+    ]
+  },
+  "Maria Isabel Arango": {
+    "tier": "A",
+    "score": 43.4,
+    "msgs": 14,
+    "links": 0,
+    "avgWords": 7.2,
+    "activeDays": 8,
+    "activeWeeks": 5,
+    "lastActive": "2026-02-19",
+    "daysInactive": 1,
+    "components": {
+      "volume": 4,
+      "consistency": 7.2,
+      "substance": 7.2,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 43.4,
+        "tier": "A",
+        "msgs": 14,
+        "links": 0
+      }
+    ]
+  },
+  "Ricardo Jaramillo": {
+    "tier": "A",
+    "score": 42.8,
+    "msgs": 4,
+    "links": 0,
+    "avgWords": 15.2,
+    "activeDays": 2,
+    "activeWeeks": 1,
+    "lastActive": "2026-02-15",
+    "daysInactive": 5,
+    "components": {
+      "volume": 1.1,
+      "consistency": 1.4,
+      "substance": 15.2,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 42.8,
+        "tier": "A",
+        "msgs": 4,
+        "links": 0
+      }
+    ]
+  },
+  "Barry": {
+    "tier": "A",
+    "score": 42.3,
+    "msgs": 7,
+    "links": 1,
+    "avgWords": 7.6,
+    "activeDays": 6,
+    "activeWeeks": 4,
+    "lastActive": "2026-02-20",
+    "daysInactive": 1,
+    "components": {
+      "volume": 2,
+      "consistency": 5.7,
+      "substance": 9.6,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 42.3,
+        "tier": "A",
+        "msgs": 7,
+        "links": 1
+      }
+    ]
+  },
+  "Antonioooo": {
+    "tier": "A",
+    "score": 41.9,
+    "msgs": 15,
+    "links": 0,
+    "avgWords": 11.9,
+    "activeDays": 10,
+    "activeWeeks": 4,
+    "lastActive": "2026-02-11",
+    "daysInactive": 9,
+    "components": {
+      "volume": 4.3,
+      "consistency": 5.7,
+      "substance": 11.9,
+      "recency": 20
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 41.9,
+        "tier": "A",
+        "msgs": 15,
+        "links": 0
+      }
+    ]
+  },
+  "Juan Saldarriaga": {
+    "tier": "A",
+    "score": 41.7,
+    "msgs": 1,
+    "links": 1,
+    "avgWords": 13,
+    "activeDays": 1,
+    "activeWeeks": 1,
+    "lastActive": "2026-02-18",
+    "daysInactive": 2,
+    "components": {
+      "volume": 0.3,
+      "consistency": 1.4,
+      "substance": 15,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 41.7,
+        "tier": "A",
+        "msgs": 1,
+        "links": 1
+      }
+    ]
+  },
+  "Martin Pelaez": {
+    "tier": "B",
+    "score": 39.8,
+    "msgs": 4,
+    "links": 2,
+    "avgWords": 6.8,
+    "activeDays": 2,
+    "activeWeeks": 2,
+    "lastActive": "2026-02-18",
+    "daysInactive": 2,
+    "components": {
+      "volume": 1.1,
+      "consistency": 2.9,
+      "substance": 10.8,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 39.8,
+        "tier": "B",
+        "msgs": 4,
+        "links": 2
+      }
+    ]
+  },
+  "Alejandro Pérez": {
+    "tier": "B",
+    "score": 39.5,
+    "msgs": 6,
+    "links": 3,
+    "avgWords": 2.5,
+    "activeDays": 5,
+    "activeWeeks": 3,
+    "lastActive": "2026-02-19",
+    "daysInactive": 1,
+    "components": {
+      "volume": 1.7,
+      "consistency": 4.3,
+      "substance": 8.5,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 39.5,
+        "tier": "B",
+        "msgs": 6,
+        "links": 3
+      }
+    ]
+  },
+  "Luis Alberto Botero": {
+    "tier": "B",
+    "score": 38.2,
+    "msgs": 4,
+    "links": 1,
+    "avgWords": 5.8,
+    "activeDays": 3,
+    "activeWeeks": 3,
+    "lastActive": "2026-02-19",
+    "daysInactive": 1,
+    "components": {
+      "volume": 1.1,
+      "consistency": 4.3,
+      "substance": 7.8,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 38.2,
+        "tier": "B",
+        "msgs": 4,
+        "links": 1
+      }
+    ]
+  },
+  "Ricardo Espinal": {
+    "tier": "B",
+    "score": 38.2,
+    "msgs": 6,
+    "links": 0,
+    "avgWords": 7.2,
+    "activeDays": 3,
+    "activeWeeks": 3,
+    "lastActive": "2026-02-19",
+    "daysInactive": 1,
+    "components": {
+      "volume": 1.7,
+      "consistency": 4.3,
+      "substance": 7.2,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 38.2,
+        "tier": "B",
+        "msgs": 6,
+        "links": 0
+      }
+    ]
+  },
+  "Wilder Zapata": {
+    "tier": "B",
+    "score": 36.8,
+    "msgs": 3,
+    "links": 2,
+    "avgWords": 2.7,
+    "activeDays": 3,
+    "activeWeeks": 3,
+    "lastActive": "2026-02-16",
+    "daysInactive": 4,
+    "components": {
+      "volume": 0.9,
+      "consistency": 4.3,
+      "substance": 6.7,
+      "recency": 25
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 36.8,
+        "tier": "B",
+        "msgs": 3,
+        "links": 2
+      }
+    ]
+  },
+  "Jorge Campuzano": {
+    "tier": "B",
+    "score": 34.8,
+    "msgs": 8,
+    "links": 1,
+    "avgWords": 6.2,
+    "activeDays": 5,
+    "activeWeeks": 3,
+    "lastActive": "2026-02-08",
+    "daysInactive": 12,
+    "components": {
+      "volume": 2.3,
+      "consistency": 4.3,
+      "substance": 8.2,
+      "recency": 20
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 34.8,
+        "tier": "B",
+        "msgs": 8,
+        "links": 1
+      }
+    ]
+  },
+  "Agustin Argentino": {
+    "tier": "B",
+    "score": 24.3,
+    "msgs": 14,
+    "links": 2,
+    "avgWords": 10.6,
+    "activeDays": 7,
+    "activeWeeks": 4,
+    "lastActive": "2025-12-15",
+    "daysInactive": 67,
+    "components": {
+      "volume": 4,
+      "consistency": 5.7,
+      "substance": 14.6,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 24.3,
+        "tier": "B",
+        "msgs": 14,
+        "links": 2
+      }
+    ]
+  },
+  "Carolina Rojas Gómez": {
+    "tier": "B",
+    "score": 24,
+    "msgs": 4,
+    "links": 1,
+    "avgWords": 130.5,
+    "activeDays": 2,
+    "activeWeeks": 2,
+    "lastActive": "2025-12-07",
+    "daysInactive": 75,
+    "components": {
+      "volume": 1.1,
+      "consistency": 2.9,
+      "substance": 20,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 24,
+        "tier": "B",
+        "msgs": 4,
+        "links": 1
+      }
+    ]
+  },
+  "Eduardo Sagues": {
+    "tier": "B",
+    "score": 22.7,
+    "msgs": 1,
+    "links": 0,
+    "avgWords": 1,
+    "activeDays": 1,
+    "activeWeeks": 1,
+    "lastActive": "2026-02-09",
+    "daysInactive": 11,
+    "components": {
+      "volume": 0.3,
+      "consistency": 1.4,
+      "substance": 1,
+      "recency": 20
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 22.7,
+        "tier": "B",
+        "msgs": 1,
+        "links": 0
+      }
+    ]
+  },
+  "Andres Bilbao": {
+    "tier": "B",
+    "score": 22.3,
+    "msgs": 3,
+    "links": 1,
+    "avgWords": 28,
+    "activeDays": 1,
+    "activeWeeks": 1,
+    "lastActive": "2025-11-30",
+    "daysInactive": 82,
+    "components": {
+      "volume": 0.9,
+      "consistency": 1.4,
+      "substance": 20,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 22.3,
+        "tier": "B",
+        "msgs": 3,
+        "links": 1
+      }
+    ]
+  },
+  "Rafael Troconis Llave": {
+    "tier": "B",
+    "score": 22.3,
+    "msgs": 3,
+    "links": 1,
+    "avgWords": 98.7,
+    "activeDays": 1,
+    "activeWeeks": 1,
+    "lastActive": "2025-12-05",
+    "daysInactive": 77,
+    "components": {
+      "volume": 0.9,
+      "consistency": 1.4,
+      "substance": 20,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 22.3,
+        "tier": "B",
+        "msgs": 3,
+        "links": 1
+      }
+    ]
+  },
+  "Roberto Cuartas": {
+    "tier": "B",
+    "score": 21.7,
+    "msgs": 1,
+    "links": 0,
+    "avgWords": 42,
+    "activeDays": 1,
+    "activeWeeks": 1,
+    "lastActive": "2025-11-25",
+    "daysInactive": 87,
+    "components": {
+      "volume": 0.3,
+      "consistency": 1.4,
+      "substance": 20,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 21.7,
+        "tier": "B",
+        "msgs": 1,
+        "links": 0
+      }
+    ]
+  },
+  "Mauricio Ortega": {
+    "tier": "C",
+    "score": 14.7,
+    "msgs": 1,
+    "links": 0,
+    "avgWords": 13,
+    "activeDays": 1,
+    "activeWeeks": 1,
+    "lastActive": "2025-12-01",
+    "daysInactive": 81,
+    "components": {
+      "volume": 0.3,
+      "consistency": 1.4,
+      "substance": 13,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 14.7,
+        "tier": "C",
+        "msgs": 1,
+        "links": 0
+      }
+    ]
+  },
+  "Jorge Saldarriaga": {
+    "tier": "C",
+    "score": 14.7,
+    "msgs": 1,
+    "links": 0,
+    "avgWords": 13,
+    "activeDays": 1,
+    "activeWeeks": 1,
+    "lastActive": "2025-12-13",
+    "daysInactive": 69,
+    "components": {
+      "volume": 0.3,
+      "consistency": 1.4,
+      "substance": 13,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 14.7,
+        "tier": "C",
+        "msgs": 1,
+        "links": 0
+      }
+    ]
+  },
+  "Eduardo Llopis": {
+    "tier": "C",
+    "score": 13.3,
+    "msgs": 7,
+    "links": 1,
+    "avgWords": 6.4,
+    "activeDays": 3,
+    "activeWeeks": 2,
+    "lastActive": "2025-12-11",
+    "daysInactive": 71,
+    "components": {
+      "volume": 2,
+      "consistency": 2.9,
+      "substance": 8.4,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 13.3,
+        "tier": "C",
+        "msgs": 7,
+        "links": 1
+      }
+    ]
+  },
+  "Mama": {
+    "tier": "C",
+    "score": 12.7,
+    "msgs": 1,
+    "links": 0,
+    "avgWords": 11,
+    "activeDays": 1,
+    "activeWeeks": 1,
+    "lastActive": "2025-12-17",
+    "daysInactive": 65,
+    "components": {
+      "volume": 0.3,
+      "consistency": 1.4,
+      "substance": 11,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 12.7,
+        "tier": "C",
+        "msgs": 1,
+        "links": 0
+      }
+    ]
+  },
+  "Felo": {
+    "tier": "C",
+    "score": 10.7,
+    "msgs": 3,
+    "links": 0,
+    "avgWords": 7,
+    "activeDays": 3,
+    "activeWeeks": 2,
+    "lastActive": "2025-12-17",
+    "daysInactive": 65,
+    "components": {
+      "volume": 0.9,
+      "consistency": 2.9,
+      "substance": 7,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 10.7,
+        "tier": "C",
+        "msgs": 3,
+        "links": 0
+      }
+    ]
+  },
+  "Squiz Medina": {
+    "tier": "C",
+    "score": 6.7,
+    "msgs": 1,
+    "links": 0,
+    "avgWords": 5,
+    "activeDays": 1,
+    "activeWeeks": 1,
+    "lastActive": "2025-12-17",
+    "daysInactive": 65,
+    "components": {
+      "volume": 0.3,
+      "consistency": 1.4,
+      "substance": 5,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 6.7,
+        "tier": "C",
+        "msgs": 1,
+        "links": 0
+      }
+    ]
+  },
+  "Juancho Tirado": {
+    "tier": "C",
+    "score": 5.4,
+    "msgs": 2,
+    "links": 0,
+    "avgWords": 2,
+    "activeDays": 2,
+    "activeWeeks": 2,
+    "lastActive": "2025-12-11",
+    "daysInactive": 71,
+    "components": {
+      "volume": 0.6,
+      "consistency": 2.9,
+      "substance": 2,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 5.4,
+        "tier": "C",
+        "msgs": 2,
+        "links": 0
+      }
+    ]
+  },
+  "Musimbi": {
+    "tier": "C",
+    "score": 4.7,
+    "msgs": 1,
+    "links": 1,
+    "avgWords": 1,
+    "activeDays": 1,
+    "activeWeeks": 1,
+    "lastActive": "2025-11-25",
+    "daysInactive": 87,
+    "components": {
+      "volume": 0.3,
+      "consistency": 1.4,
+      "substance": 3,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 4.7,
+        "tier": "C",
+        "msgs": 1,
+        "links": 1
+      }
+    ]
+  },
+  "David Muñoz": {
+    "tier": "C",
+    "score": 2.7,
+    "msgs": 1,
+    "links": 0,
+    "avgWords": 1,
+    "activeDays": 1,
+    "activeWeeks": 1,
+    "lastActive": "2025-11-29",
+    "daysInactive": 83,
+    "components": {
+      "volume": 0.3,
+      "consistency": 1.4,
+      "substance": 1,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 2.7,
+        "tier": "C",
+        "msgs": 1,
+        "links": 0
+      }
+    ]
+  },
+  "Alejandra Zapata Coninsa": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Alejo Molina": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Amalia AAA Londoño": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Amalia Uribe Gustavo Villa Gumroad": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Ana Arango": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "André Joffry": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Blanket": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Carlos Mazo": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "catalina botero": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Checho Aguirre": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Claudia restrepo Rectora": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Damian Llave De lucas jaramillo": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Daniel Arango": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Daniel Martinez": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Diego Kuri": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Diego Mazo": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Douglas Rueda Buche": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Federico Molina": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Germancito Primo Ricky Uribe": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Gonzalo teso": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Jackie Yanovich": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Juliana M Novia Santi": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Luisk": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Manu Cuñada beto": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Mariana Botero": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Melissa P": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Miguel Botero": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Mimi": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Pablo Arboleda": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Pablo Botero Londoño": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Paola Betancur Vargas": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Paola Macia Fernandez": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Pedro Faria": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Ricardo Kuri": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Rigo Uran": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "SA Santiago Arango": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "santiago lopez": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Sergio Jaramillo": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  },
+  "Tomas Restrepo Amigo Mazo F2 Y F3": {
+    "tier": "Z",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "never",
+    "daysInactive": 96,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0
+      }
+    ]
+  }
+}

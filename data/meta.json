@@ -1,0 +1,45 @@
+{
+  "group": "10AMPRO",
+  "groupDisplayName": "10AMPRO — Collective Intelligence",
+  "currentSnapshot": "s1",
+  "snapshots": [
+    {
+      "id": "s1",
+      "from": "2025-11-16",
+      "to": "2026-02-21",
+      "days": 96,
+      "totalMsgs": 5149,
+      "totalLinks": 1161,
+      "totalMembers": 126,
+      "processedAt": "2026-02-21"
+    }
+  ],
+  "scoring": {
+    "volume": { "max": 30, "desc": "msgs/week × 5, capped" },
+    "consistency": { "max": 25, "desc": "active weeks / total weeks × 25" },
+    "substance": { "max": 20, "desc": "(avg words/10) × 10 + (links × 2), capped" },
+    "recency": { "max": 25, "desc": "25 if <7d, 20 if <14d, 12 if <30d, 5 if <60d, 0 if 60d+" }
+  },
+  "tierThresholds": {
+    "A": 40,
+    "B": 15,
+    "C": 1,
+    "Z": 0
+  },
+  "rules": {
+    "junkSources": ["instagram.com", "tiktok.com"],
+    "goodSources": ["x.com", "twitter.com", "youtube.com", "substack.com", "bloomberg.com", "reuters.com", "ft.com", "arxiv.org"],
+    "zombieDays": 90,
+    "guillotineRule": "Old/repetido = Guillotina (since Jan 21, 2026)"
+  },
+  "sourceStats": {
+    "s1": [
+      { "source": "X/Twitter", "count": 754, "verdict": "Primary alpha channel" },
+      { "source": "YouTube", "count": 151, "verdict": "Deep content" },
+      { "source": "Substack", "count": 71, "verdict": "Analysis layer" },
+      { "source": "Instagram", "count": 16, "verdict": "Junk food" },
+      { "source": "TikTok", "count": 14, "verdict": "Junk food" },
+      { "source": "Bloomberg/Reuters/FT", "count": 4, "verdict": "Premium signal" }
+    ]
+  }
+}

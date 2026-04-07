@@ -9,14 +9,29 @@ WhatsApp group engagement analytics for 10AMPRO community. Measures collective i
 - **Vercel Project**: `prj_h7LiqacKcqwQcae368ZXoMyQ7aeL`
 - **Team**: `team_nPG5TrnRZyVuclmm6dZL1AcX`
 
-## Architecture
+## Architecture (V5 — Metrics Ledger)
 - Next.js 14 App Router
 - Single page: `app/page.js` ('use client' component)
-- All member data embedded in component as `D` array
+- **Data layer separated from UI:**
+  - `data/members.json` — metrics ledger (126 members, ~62KB)
+  - `data/meta.json` — group config, snapshot history, scoring rules, source stats
+- UI reads from JSON imports — no hardcoded data in component
+- Each member has a `history[]` array tracking score/tier across snapshots
 - No backend/API — static data from WhatsApp export analysis
 - Fonts: JetBrains Mono (metrics), Inter (text)
 - Dark theme (#0a0a0f background)
 - No external UI libs — pure inline styles
+
+### Update Workflow
+1. Upload new WhatsApp chat export
+2. Parse → compute metrics for new period
+3. Merge into `data/members.json` (update totals, add history entry, recalculate tiers)
+4. Add new snapshot to `data/meta.json`
+5. Push → Vercel auto-deploys (UI untouched)
+
+### What Gets Kept vs Thrown Away
+- **Kept**: scores, tiers, msg counts, link counts, avg words, active days/weeks, last active, score components, trajectory history
+- **Thrown away**: raw chat text, individual messages, timestamps, message content
 
 ## Data Period
 - **Range**: Nov 16, 2025 → Feb 21, 2026 (96 days)
