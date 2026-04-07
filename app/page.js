@@ -189,17 +189,18 @@ const Card = ({ m, rank, exp, tog }) => {
           const urgent = d <= 3;
           const c = urgent ? "#ef4444" : "#f97316";
           return (
-            <div style={{ display: "flex", alignItems: "center", gap: 4, flexShrink: 0 }}>
-              <span style={{ fontSize: 11 }}>⏰</span>
-              <span style={{ fontSize: 16, fontWeight: 800, color: c, fontFamily: "'JetBrains Mono',monospace" }}>{d}</span>
-              <span style={{ fontSize: 8, color: "#6b7280" }}>d</span>
-              <span style={{ fontSize: 14, fontWeight: 700, color: c, fontFamily: "'JetBrains Mono',monospace" }}>{h}</span>
-              <span style={{ fontSize: 8, color: "#6b7280" }}>hrs</span>
-              <span style={{ fontSize: 14, fontWeight: 700, color: c, fontFamily: "'JetBrains Mono',monospace" }}>{mn}</span>
-              <span style={{ fontSize: 8, color: "#6b7280" }}>min</span>
-              <div onClick={e => { e.stopPropagation(); window.open(`https://solscan.io/token/${TOKEN.mint}`, '_blank'); }} style={{ display: "flex", alignItems: "center", gap: 4, padding: "5px 12px", background: "linear-gradient(135deg, #f59e0b, #f97316)", borderRadius: 8, cursor: "pointer", boxShadow: "0 2px 8px #f59e0b40", marginLeft: 6 }}>
-                <img src="/logo.jpg" alt="" style={{ width: 14, height: 14, borderRadius: 3 }} />
-                <span style={{ fontSize: 11, fontWeight: 800, color: "#0a0a0f" }}>Pay 10,000</span>
+            <div style={{ display: "flex", alignItems: "center", gap: 6, flexShrink: 0 }}>
+              <span style={{ fontSize: 10, color: "#6b7280", whiteSpace: "nowrap" }}>Stop the timer:</span>
+              <span style={{ fontSize: 14 }}>⏰</span>
+              <span style={{ fontSize: 22, fontWeight: 800, color: c, fontFamily: "'JetBrains Mono',monospace" }}>{d}</span>
+              <span style={{ fontSize: 10, color: "#6b7280" }}>d</span>
+              <span style={{ fontSize: 18, fontWeight: 700, color: c, fontFamily: "'JetBrains Mono',monospace" }}>{h}</span>
+              <span style={{ fontSize: 10, color: "#6b7280" }}>hrs</span>
+              <span style={{ fontSize: 18, fontWeight: 700, color: c, fontFamily: "'JetBrains Mono',monospace" }}>{mn}</span>
+              <span style={{ fontSize: 10, color: "#6b7280" }}>min</span>
+              <div onClick={e => { e.stopPropagation(); window.open(`https://solscan.io/token/${TOKEN.mint}`, '_blank'); }} style={{ display: "flex", alignItems: "center", gap: 6, padding: "8px 18px", background: "linear-gradient(135deg, #f59e0b, #f97316)", borderRadius: 10, cursor: "pointer", boxShadow: "0 2px 12px #f59e0b50", marginLeft: 4 }}>
+                <img src="/logo.jpg" alt="" style={{ width: 18, height: 18, borderRadius: 5 }} />
+                <span style={{ fontSize: 14, fontWeight: 800, color: "#0a0a0f" }}>Pay 10,000</span>
               </div>
             </div>
           );
