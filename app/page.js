@@ -244,7 +244,6 @@ const Card = ({ m, rank, exp, tog }) => {
           </div>
         );
       })()}
-      </div>
       {exp && (<div style={{ marginTop: 11, paddingTop: 9, borderTop: `1px solid ${tc.color}20` }}>
         <div style={{ display: "flex", gap: 12, alignItems: "flex-start", flexWrap: "wrap", justifyContent: "center" }}>
           <Radar net={m.p.network} int={m.p.intelligence} cap={m.p.capital} size={90} />
