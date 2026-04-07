@@ -22,9 +22,38 @@
         "score": 87.9,
         "tier": "A",
         "msgs": 641,
-        "links": 85
+        "links": 85,
+        "pillars": {
+          "network": 74,
+          "intelligence": 70,
+          "capital": 55
+        },
+        "composite": 66
       }
-    ]
+    ],
+    "pillars": {
+      "network": 74,
+      "intelligence": 70,
+      "capital": 55
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 30,
+        "intros": 25,
+        "reach": 19
+      },
+      "intelligence": {
+        "infoQuality": 35,
+        "depth": 5,
+        "discussion": 30
+      },
+      "capital": {
+        "positions": 18,
+        "thesis": 12,
+        "transparency": 25
+      }
+    },
+    "composite": 66
   },
   "Camilo Gomez": {
     "tier": "A",
@@ -49,9 +78,38 @@
         "score": 86.5,
         "tier": "A",
         "msgs": 153,
-        "links": 30
+        "links": 30,
+        "pillars": {
+          "network": 72,
+          "intelligence": 69,
+          "capital": 67
+        },
+        "composite": 69
       }
-    ]
+    ],
+    "pillars": {
+      "network": 72,
+      "intelligence": 69,
+      "capital": 67
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 30,
+        "intros": 25,
+        "reach": 17
+      },
+      "intelligence": {
+        "infoQuality": 35,
+        "depth": 10,
+        "discussion": 24
+      },
+      "capital": {
+        "positions": 25,
+        "thesis": 17,
+        "transparency": 25
+      }
+    },
+    "composite": 69
   },
   "Fede Suarez": {
     "tier": "A",
@@ -76,9 +134,38 @@
         "score": 86.5,
         "tier": "A",
         "msgs": 185,
-        "links": 17
+        "links": 17,
+        "pillars": {
+          "network": 72,
+          "intelligence": 77,
+          "capital": 70
+        },
+        "composite": 73
       }
-    ]
+    ],
+    "pillars": {
+      "network": 72,
+      "intelligence": 77,
+      "capital": 70
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 30,
+        "intros": 25,
+        "reach": 17
+      },
+      "intelligence": {
+        "infoQuality": 34,
+        "depth": 14,
+        "discussion": 29
+      },
+      "capital": {
+        "positions": 25,
+        "thesis": 20,
+        "transparency": 25
+      }
+    },
+    "composite": 73
   },
   "Lucas Jaramillo": {
     "tier": "A",
@@ -103,9 +190,38 @@
         "score": 86.5,
         "tier": "A",
         "msgs": 205,
-        "links": 33
+        "links": 33,
+        "pillars": {
+          "network": 72,
+          "intelligence": 69,
+          "capital": 62
+        },
+        "composite": 67
       }
-    ]
+    ],
+    "pillars": {
+      "network": 72,
+      "intelligence": 69,
+      "capital": 62
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 30,
+        "intros": 25,
+        "reach": 17
+      },
+      "intelligence": {
+        "infoQuality": 35,
+        "depth": 7,
+        "discussion": 27
+      },
+      "capital": {
+        "positions": 25,
+        "thesis": 12,
+        "transparency": 25
+      }
+    },
+    "composite": 67
   },
   "Nico Fernandez": {
     "tier": "A",
@@ -130,9 +246,38 @@
         "score": 86.5,
         "tier": "A",
         "msgs": 160,
-        "links": 25
+        "links": 25,
+        "pillars": {
+          "network": 72,
+          "intelligence": 66,
+          "capital": 66
+        },
+        "composite": 68
       }
-    ]
+    ],
+    "pillars": {
+      "network": 72,
+      "intelligence": 66,
+      "capital": 66
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 30,
+        "intros": 25,
+        "reach": 17
+      },
+      "intelligence": {
+        "infoQuality": 35,
+        "depth": 9,
+        "discussion": 22
+      },
+      "capital": {
+        "positions": 25,
+        "thesis": 16,
+        "transparency": 25
+      }
+    },
+    "composite": 68
   },
   "Gabriel Bedoya": {
     "tier": "A",
@@ -157,9 +302,38 @@
         "score": 86.5,
         "tier": "A",
         "msgs": 133,
-        "links": 8
+        "links": 8,
+        "pillars": {
+          "network": 67,
+          "intelligence": 46,
+          "capital": 67
+        },
+        "composite": 59
       }
-    ]
+    ],
+    "pillars": {
+      "network": 67,
+      "intelligence": 46,
+      "capital": 67
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 30,
+        "intros": 20,
+        "reach": 17
+      },
+      "intelligence": {
+        "infoQuality": 16,
+        "depth": 10,
+        "discussion": 20
+      },
+      "capital": {
+        "positions": 25,
+        "thesis": 17,
+        "transparency": 25
+      }
+    },
+    "composite": 59
   },
   "Camilo Botero": {
     "tier": "A",
@@ -184,9 +358,38 @@
         "score": 86.5,
         "tier": "A",
         "msgs": 130,
-        "links": 11
+        "links": 11,
+        "pillars": {
+          "network": 72,
+          "intelligence": 50,
+          "capital": 63
+        },
+        "composite": 60
       }
-    ]
+    ],
+    "pillars": {
+      "network": 72,
+      "intelligence": 50,
+      "capital": 63
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 30,
+        "intros": 25,
+        "reach": 17
+      },
+      "intelligence": {
+        "infoQuality": 22,
+        "depth": 8,
+        "discussion": 20
+      },
+      "capital": {
+        "positions": 25,
+        "thesis": 13,
+        "transparency": 25
+      }
+    },
+    "composite": 60
   },
   "Hernán Jaramillo": {
     "tier": "A",
@@ -211,9 +414,38 @@
         "score": 86.5,
         "tier": "A",
         "msgs": 1476,
-        "links": 510
+        "links": 510,
+        "pillars": {
+          "network": 72,
+          "intelligence": 73,
+          "capital": 63
+        },
+        "composite": 69
       }
-    ]
+    ],
+    "pillars": {
+      "network": 72,
+      "intelligence": 73,
+      "capital": 63
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 30,
+        "intros": 25,
+        "reach": 17
+      },
+      "intelligence": {
+        "infoQuality": 35,
+        "depth": 8,
+        "discussion": 30
+      },
+      "capital": {
+        "positions": 25,
+        "thesis": 13,
+        "transparency": 25
+      }
+    },
+    "composite": 69
   },
   "Dario Palacio": {
     "tier": "A",
@@ -238,9 +470,38 @@
         "score": 85,
         "tier": "A",
         "msgs": 213,
-        "links": 59
+        "links": 59,
+        "pillars": {
+          "network": 70,
+          "intelligence": 66,
+          "capital": 49
+        },
+        "composite": 61
       }
-    ]
+    ],
+    "pillars": {
+      "network": 70,
+      "intelligence": 66,
+      "capital": 49
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 30,
+        "intros": 25,
+        "reach": 15
+      },
+      "intelligence": {
+        "infoQuality": 35,
+        "depth": 3,
+        "discussion": 28
+      },
+      "capital": {
+        "positions": 13,
+        "thesis": 11,
+        "transparency": 25
+      }
+    },
+    "composite": 61
   },
   "Nathanel Serebrenik": {
     "tier": "A",
@@ -265,9 +526,38 @@
         "score": 85,
         "tier": "A",
         "msgs": 157,
-        "links": 38
+        "links": 38,
+        "pillars": {
+          "network": 70,
+          "intelligence": 65,
+          "capital": 55
+        },
+        "composite": 63
       }
-    ]
+    ],
+    "pillars": {
+      "network": 70,
+      "intelligence": 65,
+      "capital": 55
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 30,
+        "intros": 25,
+        "reach": 15
+      },
+      "intelligence": {
+        "infoQuality": 35,
+        "depth": 5,
+        "discussion": 25
+      },
+      "capital": {
+        "positions": 18,
+        "thesis": 12,
+        "transparency": 25
+      }
+    },
+    "composite": 63
   },
   "gordo Barato": {
     "tier": "A",
@@ -292,9 +582,38 @@
         "score": 85,
         "tier": "A",
         "msgs": 318,
-        "links": 135
+        "links": 135,
+        "pillars": {
+          "network": 70,
+          "intelligence": 69,
+          "capital": 49
+        },
+        "composite": 62
       }
-    ]
+    ],
+    "pillars": {
+      "network": 70,
+      "intelligence": 69,
+      "capital": 49
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 30,
+        "intros": 25,
+        "reach": 15
+      },
+      "intelligence": {
+        "infoQuality": 35,
+        "depth": 4,
+        "discussion": 30
+      },
+      "capital": {
+        "positions": 13,
+        "thesis": 11,
+        "transparency": 25
+      }
+    },
+    "composite": 62
   },
   "Guillermo Valencia": {
     "tier": "A",
@@ -319,9 +638,38 @@
         "score": 84.6,
         "tier": "A",
         "msgs": 98,
-        "links": 11
+        "links": 11,
+        "pillars": {
+          "network": 72,
+          "intelligence": 48,
+          "capital": 63
+        },
+        "composite": 59
       }
-    ]
+    ],
+    "pillars": {
+      "network": 72,
+      "intelligence": 48,
+      "capital": 63
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 30,
+        "intros": 25,
+        "reach": 17
+      },
+      "intelligence": {
+        "infoQuality": 22,
+        "depth": 8,
+        "discussion": 18
+      },
+      "capital": {
+        "positions": 25,
+        "thesis": 13,
+        "transparency": 25
+      }
+    },
+    "composite": 59
   },
   "antonio jaller": {
     "tier": "A",
@@ -346,9 +694,38 @@
         "score": 77.1,
         "tier": "A",
         "msgs": 77,
-        "links": 9
+        "links": 9,
+        "pillars": {
+          "network": 65,
+          "intelligence": 37,
+          "capital": 55
+        },
+        "composite": 50
       }
-    ]
+    ],
+    "pillars": {
+      "network": 65,
+      "intelligence": 37,
+      "capital": 55
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 30,
+        "intros": 20,
+        "reach": 15
+      },
+      "intelligence": {
+        "infoQuality": 18,
+        "depth": 5,
+        "discussion": 14
+      },
+      "capital": {
+        "positions": 18,
+        "thesis": 12,
+        "transparency": 25
+      }
+    },
+    "composite": 50
   },
   "Juan Diego Pipo": {
     "tier": "A",
@@ -373,9 +750,38 @@
         "score": 77.1,
         "tier": "A",
         "msgs": 77,
-        "links": 13
+        "links": 13,
+        "pillars": {
+          "network": 70,
+          "intelligence": 45,
+          "capital": 55
+        },
+        "composite": 55
       }
-    ]
+    ],
+    "pillars": {
+      "network": 70,
+      "intelligence": 45,
+      "capital": 55
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 30,
+        "intros": 25,
+        "reach": 15
+      },
+      "intelligence": {
+        "infoQuality": 26,
+        "depth": 5,
+        "discussion": 14
+      },
+      "capital": {
+        "positions": 18,
+        "thesis": 12,
+        "transparency": 25
+      }
+    },
+    "composite": 55
   },
   "Daniel Bermúdez": {
     "tier": "A",
@@ -400,9 +806,38 @@
         "score": 73.7,
         "tier": "A",
         "msgs": 65,
-        "links": 13
+        "links": 13,
+        "pillars": {
+          "network": 70,
+          "intelligence": 75,
+          "capital": 83
+        },
+        "composite": 77
       }
-    ]
+    ],
+    "pillars": {
+      "network": 70,
+      "intelligence": 75,
+      "capital": 83
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 30,
+        "intros": 25,
+        "reach": 15
+      },
+      "intelligence": {
+        "infoQuality": 26,
+        "depth": 34,
+        "discussion": 15
+      },
+      "capital": {
+        "positions": 25,
+        "thesis": 33,
+        "transparency": 25
+      }
+    },
+    "composite": 77
   },
   "Juan Esteban Sanin": {
     "tier": "A",
@@ -427,9 +862,38 @@
         "score": 71.7,
         "tier": "A",
         "msgs": 73,
-        "links": 7
+        "links": 7,
+        "pillars": {
+          "network": 52,
+          "intelligence": 45,
+          "capital": 61
+        },
+        "composite": 52
       }
-    ]
+    ],
+    "pillars": {
+      "network": 52,
+      "intelligence": 45,
+      "capital": 61
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 30,
+        "intros": 13,
+        "reach": 9
+      },
+      "intelligence": {
+        "infoQuality": 14,
+        "depth": 9,
+        "discussion": 21
+      },
+      "capital": {
+        "positions": 25,
+        "thesis": 16,
+        "transparency": 20
+      }
+    },
+    "composite": 52
   },
   "Misas": {
     "tier": "A",
@@ -454,9 +918,38 @@
         "score": 68.2,
         "tier": "A",
         "msgs": 51,
-        "links": 24
+        "links": 24,
+        "pillars": {
+          "network": 68,
+          "intelligence": 52,
+          "capital": 50
+        },
+        "composite": 55
       }
-    ]
+    ],
+    "pillars": {
+      "network": 68,
+      "intelligence": 52,
+      "capital": 50
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 30,
+        "intros": 25,
+        "reach": 13
+      },
+      "intelligence": {
+        "infoQuality": 35,
+        "depth": 6,
+        "discussion": 11
+      },
+      "capital": {
+        "positions": 18,
+        "thesis": 12,
+        "transparency": 20
+      }
+    },
+    "composite": 55
   },
   "Enrique Uribe": {
     "tier": "A",
@@ -481,9 +974,38 @@
         "score": 68,
         "tier": "A",
         "msgs": 45,
-        "links": 11
+        "links": 11,
+        "pillars": {
+          "network": 70,
+          "intelligence": 40,
+          "capital": 63
+        },
+        "composite": 56
       }
-    ]
+    ],
+    "pillars": {
+      "network": 70,
+      "intelligence": 40,
+      "capital": 63
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 30,
+        "intros": 25,
+        "reach": 15
+      },
+      "intelligence": {
+        "infoQuality": 22,
+        "depth": 8,
+        "discussion": 10
+      },
+      "capital": {
+        "positions": 25,
+        "thesis": 13,
+        "transparency": 25
+      }
+    },
+    "composite": 56
   },
   "Pablo Velez Mejia": {
     "tier": "A",
@@ -508,9 +1030,38 @@
         "score": 67.7,
         "tier": "A",
         "msgs": 39,
-        "links": 3
+        "links": 3,
+        "pillars": {
+          "network": 62,
+          "intelligence": 23,
+          "capital": 53
+        },
+        "composite": 43
       }
-    ]
+    ],
+    "pillars": {
+      "network": 62,
+      "intelligence": 23,
+      "capital": 53
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 30,
+        "intros": 15,
+        "reach": 17
+      },
+      "intelligence": {
+        "infoQuality": 6,
+        "depth": 8,
+        "discussion": 9
+      },
+      "capital": {
+        "positions": 25,
+        "thesis": 3,
+        "transparency": 25
+      }
+    },
+    "composite": 43
   },
   "Andred Angel": {
     "tier": "A",
@@ -535,9 +1086,38 @@
         "score": 67.7,
         "tier": "A",
         "msgs": 49,
-        "links": 3
+        "links": 3,
+        "pillars": {
+          "network": 51,
+          "intelligence": 31,
+          "capital": 53
+        },
+        "composite": 44
       }
-    ]
+    ],
+    "pillars": {
+      "network": 51,
+      "intelligence": 31,
+      "capital": 53
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 30,
+        "intros": 8,
+        "reach": 13
+      },
+      "intelligence": {
+        "infoQuality": 6,
+        "depth": 12,
+        "discussion": 13
+      },
+      "capital": {
+        "positions": 25,
+        "thesis": 8,
+        "transparency": 20
+      }
+    },
+    "composite": 44
   },
   "Jon Oleaga": {
     "tier": "A",
@@ -562,9 +1142,38 @@
         "score": 67.4,
         "tier": "A",
         "msgs": 48,
-        "links": 1
+        "links": 1,
+        "pillars": {
+          "network": 50,
+          "intelligence": 31,
+          "capital": 48
+        },
+        "composite": 42
       }
-    ]
+    ],
+    "pillars": {
+      "network": 50,
+      "intelligence": 31,
+      "capital": 48
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 29,
+        "intros": 8,
+        "reach": 13
+      },
+      "intelligence": {
+        "infoQuality": 2,
+        "depth": 12,
+        "discussion": 17
+      },
+      "capital": {
+        "positions": 25,
+        "thesis": 8,
+        "transparency": 15
+      }
+    },
+    "composite": 42
   },
   "Hector Casado": {
     "tier": "A",
@@ -589,9 +1198,38 @@
         "score": 66.2,
         "tier": "A",
         "msgs": 44,
-        "links": 10
+        "links": 10,
+        "pillars": {
+          "network": 56,
+          "intelligence": 37,
+          "capital": 50
+        },
+        "composite": 46
       }
-    ]
+    ],
+    "pillars": {
+      "network": 56,
+      "intelligence": 37,
+      "capital": 50
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 30,
+        "intros": 13,
+        "reach": 13
+      },
+      "intelligence": {
+        "infoQuality": 20,
+        "depth": 5,
+        "discussion": 12
+      },
+      "capital": {
+        "positions": 18,
+        "thesis": 12,
+        "transparency": 20
+      }
+    },
+    "composite": 46
   },
   "Camilo Ospina Lumm": {
     "tier": "A",
@@ -616,9 +1254,38 @@
         "score": 65.7,
         "tier": "A",
         "msgs": 47,
-        "links": 5
+        "links": 5,
+        "pillars": {
+          "network": 53,
+          "intelligence": 33,
+          "capital": 43
+        },
+        "composite": 42
       }
-    ]
+    ],
+    "pillars": {
+      "network": 53,
+      "intelligence": 33,
+      "capital": 43
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 29,
+        "intros": 13,
+        "reach": 11
+      },
+      "intelligence": {
+        "infoQuality": 10,
+        "depth": 8,
+        "discussion": 16
+      },
+      "capital": {
+        "positions": 25,
+        "thesis": 3,
+        "transparency": 15
+      }
+    },
+    "composite": 42
   },
   "paul gomez": {
     "tier": "A",
@@ -643,9 +1310,38 @@
         "score": 61.6,
         "tier": "A",
         "msgs": 33,
-        "links": 6
+        "links": 6,
+        "pillars": {
+          "network": 44,
+          "intelligence": 50,
+          "capital": 60
+        },
+        "composite": 52
       }
-    ]
+    ],
+    "pillars": {
+      "network": 44,
+      "intelligence": 50,
+      "capital": 60
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 24,
+        "intros": 9,
+        "reach": 11
+      },
+      "intelligence": {
+        "infoQuality": 12,
+        "depth": 15,
+        "discussion": 24
+      },
+      "capital": {
+        "positions": 25,
+        "thesis": 20,
+        "transparency": 15
+      }
+    },
+    "composite": 52
   },
   "Juan Castilla": {
     "tier": "A",
@@ -670,9 +1366,38 @@
         "score": 59.9,
         "tier": "A",
         "msgs": 22,
-        "links": 3
+        "links": 3,
+        "pillars": {
+          "network": 42,
+          "intelligence": 26,
+          "capital": 38
+        },
+        "composite": 34
       }
-    ]
+    ],
+    "pillars": {
+      "network": 42,
+      "intelligence": 26,
+      "capital": 38
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 26,
+        "intros": 4,
+        "reach": 13
+      },
+      "intelligence": {
+        "infoQuality": 6,
+        "depth": 8,
+        "discussion": 12
+      },
+      "capital": {
+        "positions": 20,
+        "thesis": 3,
+        "transparency": 15
+      }
+    },
+    "composite": 34
   },
   "Simón Restrepo": {
     "tier": "A",
@@ -697,9 +1422,38 @@
         "score": 59.6,
         "tier": "A",
         "msgs": 21,
-        "links": 4
+        "links": 4,
+        "pillars": {
+          "network": 48,
+          "intelligence": 45,
+          "capital": 53
+        },
+        "composite": 49
       }
-    ]
+    ],
+    "pillars": {
+      "network": 48,
+      "intelligence": 45,
+      "capital": 53
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 26,
+        "intros": 9,
+        "reach": 13
+      },
+      "intelligence": {
+        "infoQuality": 8,
+        "depth": 27,
+        "discussion": 11
+      },
+      "capital": {
+        "positions": 20,
+        "thesis": 18,
+        "transparency": 15
+      }
+    },
+    "composite": 49
   },
   "Sebastian Piedrahita": {
     "tier": "A",
@@ -724,9 +1478,38 @@
         "score": 59.3,
         "tier": "A",
         "msgs": 20,
-        "links": 5
+        "links": 5,
+        "pillars": {
+          "network": 34,
+          "intelligence": 22,
+          "capital": 30
+        },
+        "composite": 28
       }
-    ]
+    ],
+    "pillars": {
+      "network": 34,
+      "intelligence": 22,
+      "capital": 30
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 8,
+        "intros": 13,
+        "reach": 13
+      },
+      "intelligence": {
+        "infoQuality": 10,
+        "depth": 5,
+        "discussion": 8
+      },
+      "capital": {
+        "positions": 13,
+        "thesis": 2,
+        "transparency": 15
+      }
+    },
+    "composite": 28
   },
   "Juan Pablo González S.": {
     "tier": "A",
@@ -751,9 +1534,38 @@
         "score": 57.9,
         "tier": "A",
         "msgs": 15,
-        "links": 7
+        "links": 7,
+        "pillars": {
+          "network": 33,
+          "intelligence": 25,
+          "capital": 40
+        },
+        "composite": 32
       }
-    ]
+    ],
+    "pillars": {
+      "network": 33,
+      "intelligence": 25,
+      "capital": 40
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 7,
+        "intros": 13,
+        "reach": 13
+      },
+      "intelligence": {
+        "infoQuality": 14,
+        "depth": 5,
+        "discussion": 7
+      },
+      "capital": {
+        "positions": 13,
+        "thesis": 12,
+        "transparency": 15
+      }
+    },
+    "composite": 32
   },
   "Paula Jaramillo": {
     "tier": "A",
@@ -778,9 +1590,38 @@
         "score": 57.9,
         "tier": "A",
         "msgs": 20,
-        "links": 2
+        "links": 2,
+        "pillars": {
+          "network": 20,
+          "intelligence": 24,
+          "capital": 38
+        },
+        "composite": 28
       }
-    ]
+    ],
+    "pillars": {
+      "network": 20,
+      "intelligence": 24,
+      "capital": 38
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 5,
+        "intros": 4,
+        "reach": 11
+      },
+      "intelligence": {
+        "infoQuality": 4,
+        "depth": 7,
+        "discussion": 13
+      },
+      "capital": {
+        "positions": 20,
+        "thesis": 3,
+        "transparency": 15
+      }
+    },
+    "composite": 28
   },
   "Diego Sanchez": {
     "tier": "A",
@@ -805,9 +1646,38 @@
         "score": 57.6,
         "tier": "A",
         "msgs": 14,
-        "links": 4
+        "links": 4,
+        "pillars": {
+          "network": 26,
+          "intelligence": 28,
+          "capital": 42
+        },
+        "composite": 32
       }
-    ]
+    ],
+    "pillars": {
+      "network": 26,
+      "intelligence": 28,
+      "capital": 42
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 4,
+        "intros": 9,
+        "reach": 13
+      },
+      "intelligence": {
+        "infoQuality": 8,
+        "depth": 10,
+        "discussion": 10
+      },
+      "capital": {
+        "positions": 20,
+        "thesis": 7,
+        "transparency": 15
+      }
+    },
+    "composite": 32
   },
   "Simon Jaramillo Alpha": {
     "tier": "A",
@@ -832,9 +1702,38 @@
         "score": 57.6,
         "tier": "A",
         "msgs": 14,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 22,
+          "intelligence": 17,
+          "capital": 41
+        },
+        "composite": 27
       }
-    ]
+    ],
+    "pillars": {
+      "network": 22,
+      "intelligence": 17,
+      "capital": 41
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 6,
+        "intros": 4,
+        "reach": 13
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 9,
+        "discussion": 8
+      },
+      "capital": {
+        "positions": 20,
+        "thesis": 6,
+        "transparency": 15
+      }
+    },
+    "composite": 27
   },
   "Valentina Ramírez": {
     "tier": "A",
@@ -859,9 +1758,38 @@
         "score": 57.6,
         "tier": "A",
         "msgs": 29,
-        "links": 3
+        "links": 3,
+        "pillars": {
+          "network": 37,
+          "intelligence": 28,
+          "capital": 32
+        },
+        "composite": 32
       }
-    ]
+    ],
+    "pillars": {
+      "network": 37,
+      "intelligence": 28,
+      "capital": 32
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 26,
+        "intros": 4,
+        "reach": 6
+      },
+      "intelligence": {
+        "infoQuality": 6,
+        "depth": 7,
+        "discussion": 15
+      },
+      "capital": {
+        "positions": 20,
+        "thesis": 2,
+        "transparency": 10
+      }
+    },
+    "composite": 32
   },
   "Peter Alexander": {
     "tier": "A",
@@ -886,9 +1814,38 @@
         "score": 56.8,
         "tier": "A",
         "msgs": 16,
-        "links": 5
+        "links": 5,
+        "pillars": {
+          "network": 25,
+          "intelligence": 37,
+          "capital": 47
+        },
+        "composite": 38
       }
-    ]
+    ],
+    "pillars": {
+      "network": 25,
+      "intelligence": 37,
+      "capital": 47
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 5,
+        "intros": 9,
+        "reach": 11
+      },
+      "intelligence": {
+        "infoQuality": 10,
+        "depth": 17,
+        "discussion": 10
+      },
+      "capital": {
+        "positions": 20,
+        "thesis": 12,
+        "transparency": 15
+      }
+    },
+    "composite": 38
   },
   "Felipe Medina": {
     "tier": "A",
@@ -913,9 +1870,38 @@
         "score": 55.8,
         "tier": "A",
         "msgs": 16,
-        "links": 3
+        "links": 3,
+        "pillars": {
+          "network": 31,
+          "intelligence": 17,
+          "capital": 35
+        },
+        "composite": 27
       }
-    ]
+    ],
+    "pillars": {
+      "network": 31,
+      "intelligence": 17,
+      "capital": 35
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 8,
+        "intros": 8,
+        "reach": 15
+      },
+      "intelligence": {
+        "infoQuality": 6,
+        "depth": 4,
+        "discussion": 7
+      },
+      "capital": {
+        "positions": 13,
+        "thesis": 2,
+        "transparency": 20
+      }
+    },
+    "composite": 27
   },
   "Rodrigo Londoño": {
     "tier": "A",
@@ -940,9 +1926,38 @@
         "score": 55.6,
         "tier": "A",
         "msgs": 17,
-        "links": 4
+        "links": 4,
+        "pillars": {
+          "network": 23,
+          "intelligence": 26,
+          "capital": 37
+        },
+        "composite": 29
       }
-    ]
+    ],
+    "pillars": {
+      "network": 23,
+      "intelligence": 26,
+      "capital": 37
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 5,
+        "intros": 9,
+        "reach": 9
+      },
+      "intelligence": {
+        "infoQuality": 8,
+        "depth": 7,
+        "discussion": 11
+      },
+      "capital": {
+        "positions": 20,
+        "thesis": 2,
+        "transparency": 15
+      }
+    },
+    "composite": 29
   },
   "Juancho Palacio": {
     "tier": "A",
@@ -967,9 +1982,38 @@
         "score": 55,
         "tier": "A",
         "msgs": 7,
-        "links": 2
+        "links": 2,
+        "pillars": {
+          "network": 21,
+          "intelligence": 17,
+          "capital": 32
+        },
+        "composite": 23
       }
-    ]
+    ],
+    "pillars": {
+      "network": 21,
+      "intelligence": 17,
+      "capital": 32
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 4,
+        "intros": 4,
+        "reach": 13
+      },
+      "intelligence": {
+        "infoQuality": 4,
+        "depth": 7,
+        "discussion": 6
+      },
+      "capital": {
+        "positions": 15,
+        "thesis": 2,
+        "transparency": 15
+      }
+    },
+    "composite": 23
   },
   "Daniel Mesa": {
     "tier": "A",
@@ -994,9 +2038,38 @@
         "score": 55,
         "tier": "A",
         "msgs": 20,
-        "links": 6
+        "links": 6,
+        "pillars": {
+          "network": 15,
+          "intelligence": 42,
+          "capital": 42
+        },
+        "composite": 35
       }
-    ]
+    ],
+    "pillars": {
+      "network": 15,
+      "intelligence": 42,
+      "capital": 42
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 3,
+        "intros": 5,
+        "reach": 6
+      },
+      "intelligence": {
+        "infoQuality": 12,
+        "depth": 10,
+        "discussion": 20
+      },
+      "capital": {
+        "positions": 20,
+        "thesis": 17,
+        "transparency": 5
+      }
+    },
+    "composite": 35
   },
   "Carlos Tobon": {
     "tier": "A",
@@ -1021,9 +2094,38 @@
         "score": 54.2,
         "tier": "A",
         "msgs": 12,
-        "links": 4
+        "links": 4,
+        "pillars": {
+          "network": 23,
+          "intelligence": 21,
+          "capital": 30
+        },
+        "composite": 25
       }
-    ]
+    ],
+    "pillars": {
+      "network": 23,
+      "intelligence": 21,
+      "capital": 30
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 6,
+        "intros": 9,
+        "reach": 9
+      },
+      "intelligence": {
+        "infoQuality": 8,
+        "depth": 6,
+        "discussion": 7
+      },
+      "capital": {
+        "positions": 13,
+        "thesis": 2,
+        "transparency": 15
+      }
+    },
+    "composite": 25
   },
   "Felipe Valencia": {
     "tier": "A",
@@ -1048,9 +2150,38 @@
         "score": 53.9,
         "tier": "A",
         "msgs": 11,
-        "links": 3
+        "links": 3,
+        "pillars": {
+          "network": 16,
+          "intelligence": 23,
+          "capital": 38
+        },
+        "composite": 27
       }
-    ]
+    ],
+    "pillars": {
+      "network": 16,
+      "intelligence": 23,
+      "capital": 38
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 4,
+        "intros": 4,
+        "reach": 9
+      },
+      "intelligence": {
+        "infoQuality": 6,
+        "depth": 7,
+        "discussion": 9
+      },
+      "capital": {
+        "positions": 20,
+        "thesis": 3,
+        "transparency": 15
+      }
+    },
+    "composite": 27
   },
   "Andres Palacio": {
     "tier": "A",
@@ -1075,9 +2206,38 @@
         "score": 53.2,
         "tier": "A",
         "msgs": 21,
-        "links": 6
+        "links": 6,
+        "pillars": {
+          "network": 46,
+          "intelligence": 26,
+          "capital": 34
+        },
+        "composite": 34
       }
-    ]
+    ],
+    "pillars": {
+      "network": 46,
+      "intelligence": 26,
+      "capital": 34
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 26,
+        "intros": 9,
+        "reach": 11
+      },
+      "intelligence": {
+        "infoQuality": 12,
+        "depth": 4,
+        "discussion": 11
+      },
+      "capital": {
+        "positions": 8,
+        "thesis": 11,
+        "transparency": 15
+      }
+    },
+    "composite": 34
   },
   "Lucas Echavarria": {
     "tier": "A",
@@ -1102,9 +2262,38 @@
         "score": 52.2,
         "tier": "A",
         "msgs": 12,
-        "links": 2
+        "links": 2,
+        "pillars": {
+          "network": 10,
+          "intelligence": 23,
+          "capital": 27
+        },
+        "composite": 21
       }
-    ]
+    ],
+    "pillars": {
+      "network": 10,
+      "intelligence": 23,
+      "capital": 27
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 3,
+        "intros": 0,
+        "reach": 6
+      },
+      "intelligence": {
+        "infoQuality": 4,
+        "depth": 7,
+        "discussion": 12
+      },
+      "capital": {
+        "positions": 20,
+        "thesis": 2,
+        "transparency": 5
+      }
+    },
+    "composite": 21
   },
   "Ricky Uribe": {
     "tier": "A",
@@ -1129,9 +2318,38 @@
         "score": 51.8,
         "tier": "A",
         "msgs": 27,
-        "links": 4
+        "links": 4,
+        "pillars": {
+          "network": 46,
+          "intelligence": 25,
+          "capital": 24
+        },
+        "composite": 30
       }
-    ]
+    ],
+    "pillars": {
+      "network": 46,
+      "intelligence": 25,
+      "capital": 24
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 26,
+        "intros": 9,
+        "reach": 11
+      },
+      "intelligence": {
+        "infoQuality": 8,
+        "depth": 4,
+        "discussion": 14
+      },
+      "capital": {
+        "positions": 8,
+        "thesis": 1,
+        "transparency": 15
+      }
+    },
+    "composite": 30
   },
   "Eulalia Sanín": {
     "tier": "A",
@@ -1156,9 +2374,38 @@
         "score": 51.6,
         "tier": "A",
         "msgs": 23,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 43,
+          "intelligence": 16,
+          "capital": 30
+        },
+        "composite": 28
       }
-    ]
+    ],
+    "pillars": {
+      "network": 43,
+      "intelligence": 16,
+      "capital": 30
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 26,
+        "intros": 4,
+        "reach": 13
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 5,
+        "discussion": 12
+      },
+      "capital": {
+        "positions": 13,
+        "thesis": 2,
+        "transparency": 15
+      }
+    },
+    "composite": 28
   },
   "Nicolas Pelaez": {
     "tier": "A",
@@ -1183,9 +2430,38 @@
         "score": 51.1,
         "tier": "A",
         "msgs": 36,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 51,
+          "intelligence": 14,
+          "capital": 34
+        },
+        "composite": 30
       }
-    ]
+    ],
+    "pillars": {
+      "network": 51,
+      "intelligence": 14,
+      "capital": 34
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 30,
+        "intros": 8,
+        "reach": 13
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 3,
+        "discussion": 11
+      },
+      "capital": {
+        "positions": 13,
+        "thesis": 1,
+        "transparency": 20
+      }
+    },
+    "composite": 30
   },
   "Rafael Troconis": {
     "tier": "A",
@@ -1210,9 +2486,38 @@
         "score": 51,
         "tier": "A",
         "msgs": 11,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 7,
+          "intelligence": 33,
+          "capital": 40
+        },
+        "composite": 29
       }
-    ]
+    ],
+    "pillars": {
+      "network": 7,
+      "intelligence": 33,
+      "capital": 40
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 3,
+        "intros": 0,
+        "reach": 4
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 22,
+        "discussion": 11
+      },
+      "capital": {
+        "positions": 20,
+        "thesis": 15,
+        "transparency": 5
+      }
+    },
+    "composite": 29
   },
   "Luis Espinoza": {
     "tier": "A",
@@ -1237,9 +2542,38 @@
         "score": 50.8,
         "tier": "A",
         "msgs": 5,
-        "links": 3
+        "links": 3,
+        "pillars": {
+          "network": 12,
+          "intelligence": 17,
+          "capital": 20
+        },
+        "composite": 17
       }
-    ]
+    ],
+    "pillars": {
+      "network": 12,
+      "intelligence": 17,
+      "capital": 20
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 3,
+        "intros": 0,
+        "reach": 9
+      },
+      "intelligence": {
+        "infoQuality": 6,
+        "depth": 6,
+        "discussion": 5
+      },
+      "capital": {
+        "positions": 8,
+        "thesis": 2,
+        "transparency": 10
+      }
+    },
+    "composite": 17
   },
   "Carlos Henao": {
     "tier": "A",
@@ -1264,9 +2598,38 @@
         "score": 50.2,
         "tier": "A",
         "msgs": 3,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 8,
+          "intelligence": 16,
+          "capital": 27
+        },
+        "composite": 18
       }
-    ]
+    ],
+    "pillars": {
+      "network": 8,
+      "intelligence": 16,
+      "capital": 27
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 2,
+        "intros": 0,
+        "reach": 6
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 11,
+        "discussion": 5
+      },
+      "capital": {
+        "positions": 15,
+        "thesis": 7,
+        "transparency": 5
+      }
+    },
+    "composite": 18
   },
   "German Corredor": {
     "tier": "A",
@@ -1291,9 +2654,38 @@
         "score": 49.8,
         "tier": "A",
         "msgs": 7,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 19,
+          "intelligence": 12,
+          "capital": 32
+        },
+        "composite": 21
       }
-    ]
+    ],
+    "pillars": {
+      "network": 19,
+      "intelligence": 12,
+      "capital": 32
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 4,
+        "intros": 4,
+        "reach": 11
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 7,
+        "discussion": 5
+      },
+      "capital": {
+        "positions": 15,
+        "thesis": 2,
+        "transparency": 15
+      }
+    },
+    "composite": 21
   },
   "Nico Zapata (Taurus)": {
     "tier": "A",
@@ -1318,9 +2710,38 @@
         "score": 49,
         "tier": "A",
         "msgs": 4,
-        "links": 1
+        "links": 1,
+        "pillars": {
+          "network": 6,
+          "intelligence": 23,
+          "capital": 30
+        },
+        "composite": 21
       }
-    ]
+    ],
+    "pillars": {
+      "network": 6,
+      "intelligence": 23,
+      "capital": 30
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 2,
+        "intros": 0,
+        "reach": 4
+      },
+      "intelligence": {
+        "infoQuality": 2,
+        "depth": 14,
+        "discussion": 7
+      },
+      "capital": {
+        "positions": 15,
+        "thesis": 10,
+        "transparency": 5
+      }
+    },
+    "composite": 21
   },
   "Romano Arango": {
     "tier": "A",
@@ -1345,9 +2766,38 @@
         "score": 48.8,
         "tier": "A",
         "msgs": 21,
-        "links": 3
+        "links": 3,
+        "pillars": {
+          "network": 47,
+          "intelligence": 16,
+          "capital": 24
+        },
+        "composite": 27
       }
-    ]
+    ],
+    "pillars": {
+      "network": 47,
+      "intelligence": 16,
+      "capital": 24
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 28,
+        "intros": 8,
+        "reach": 11
+      },
+      "intelligence": {
+        "infoQuality": 6,
+        "depth": 2,
+        "discussion": 8
+      },
+      "capital": {
+        "positions": 8,
+        "thesis": 1,
+        "transparency": 15
+      }
+    },
+    "composite": 27
   },
   "Andrea Arango": {
     "tier": "A",
@@ -1372,9 +2822,38 @@
         "score": 48.7,
         "tier": "A",
         "msgs": 12,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 16,
+          "intelligence": 16,
+          "capital": 30
+        },
+        "composite": 21
       }
-    ]
+    ],
+    "pillars": {
+      "network": 16,
+      "intelligence": 16,
+      "capital": 30
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 4,
+        "intros": 4,
+        "reach": 9
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 6,
+        "discussion": 10
+      },
+      "capital": {
+        "positions": 13,
+        "thesis": 2,
+        "transparency": 15
+      }
+    },
+    "composite": 21
   },
   "Mauricio Uribe": {
     "tier": "A",
@@ -1399,9 +2878,38 @@
         "score": 48.2,
         "tier": "A",
         "msgs": 6,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 3,
+          "intelligence": 43,
+          "capital": 24
+        },
+        "composite": 26
       }
-    ]
+    ],
+    "pillars": {
+      "network": 3,
+      "intelligence": 43,
+      "capital": 24
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 1,
+        "intros": 0,
+        "reach": 2
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 13,
+        "discussion": 30
+      },
+      "capital": {
+        "positions": 15,
+        "thesis": 9,
+        "transparency": 0
+      }
+    },
+    "composite": 26
   },
   "Molo Villa": {
     "tier": "A",
@@ -1426,9 +2934,38 @@
         "score": 47.6,
         "tier": "A",
         "msgs": 4,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 3,
+          "intelligence": 37,
+          "capital": 27
+        },
+        "composite": 25
       }
-    ]
+    ],
+    "pillars": {
+      "network": 3,
+      "intelligence": 37,
+      "capital": 27
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 1,
+        "intros": 0,
+        "reach": 2
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 17,
+        "discussion": 20
+      },
+      "capital": {
+        "positions": 15,
+        "thesis": 12,
+        "transparency": 0
+      }
+    },
+    "composite": 25
   },
   "Monica Arango": {
     "tier": "A",
@@ -1453,9 +2990,38 @@
         "score": 46.3,
         "tier": "A",
         "msgs": 12,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 20,
+          "intelligence": 11,
+          "capital": 30
+        },
+        "composite": 20
       }
-    ]
+    ],
+    "pillars": {
+      "network": 20,
+      "intelligence": 11,
+      "capital": 30
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 6,
+        "intros": 4,
+        "reach": 11
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 5,
+        "discussion": 7
+      },
+      "capital": {
+        "positions": 13,
+        "thesis": 2,
+        "transparency": 15
+      }
+    },
+    "composite": 20
   },
   "Antonio Linares": {
     "tier": "A",
@@ -1480,9 +3046,38 @@
         "score": 45.8,
         "tier": "A",
         "msgs": 10,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 22,
+          "intelligence": 10,
+          "capital": 19
+        },
+        "composite": 16
       }
-    ]
+    ],
+    "pillars": {
+      "network": 22,
+      "intelligence": 10,
+      "capital": 19
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 5,
+        "intros": 4,
+        "reach": 13
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 4,
+        "discussion": 6
+      },
+      "capital": {
+        "positions": 3,
+        "thesis": 1,
+        "transparency": 15
+      }
+    },
+    "composite": 16
   },
   "Maria Rios": {
     "tier": "A",
@@ -1507,9 +3102,38 @@
         "score": 44.9,
         "tier": "A",
         "msgs": 15,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 20,
+          "intelligence": 12,
+          "capital": 24
+        },
+        "composite": 18
       }
-    ]
+    ],
+    "pillars": {
+      "network": 20,
+      "intelligence": 12,
+      "capital": 24
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 6,
+        "intros": 4,
+        "reach": 11
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 4,
+        "discussion": 8
+      },
+      "capital": {
+        "positions": 8,
+        "thesis": 1,
+        "transparency": 15
+      }
+    },
+    "composite": 18
   },
   "Sergio Gonzalez": {
     "tier": "A",
@@ -1534,9 +3158,38 @@
         "score": 44.7,
         "tier": "A",
         "msgs": 3,
-        "links": 2
+        "links": 2,
+        "pillars": {
+          "network": 6,
+          "intelligence": 17,
+          "capital": 15
+        },
+        "composite": 14
       }
-    ]
+    ],
+    "pillars": {
+      "network": 6,
+      "intelligence": 17,
+      "capital": 15
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 1,
+        "intros": 0,
+        "reach": 4
+      },
+      "intelligence": {
+        "infoQuality": 4,
+        "depth": 5,
+        "discussion": 8
+      },
+      "capital": {
+        "positions": 8,
+        "thesis": 2,
+        "transparency": 5
+      }
+    },
+    "composite": 14
   },
   "Gustavo Villa": {
     "tier": "A",
@@ -1561,9 +3214,38 @@
         "score": 44.6,
         "tier": "A",
         "msgs": 11,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 9,
+          "intelligence": 19,
+          "capital": 20
+        },
+        "composite": 17
       }
-    ]
+    ],
+    "pillars": {
+      "network": 9,
+      "intelligence": 19,
+      "capital": 20
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 3,
+        "intros": 0,
+        "reach": 6
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 5,
+        "discussion": 14
+      },
+      "capital": {
+        "positions": 13,
+        "thesis": 2,
+        "transparency": 5
+      }
+    },
+    "composite": 17
   },
   "Gabby Grinberg": {
     "tier": "A",
@@ -1588,9 +3270,38 @@
         "score": 44.4,
         "tier": "A",
         "msgs": 2,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 6,
+          "intelligence": 12,
+          "capital": 22
+        },
+        "composite": 14
       }
-    ]
+    ],
+    "pillars": {
+      "network": 6,
+      "intelligence": 12,
+      "capital": 22
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 1,
+        "intros": 0,
+        "reach": 4
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 7,
+        "discussion": 5
+      },
+      "capital": {
+        "positions": 15,
+        "thesis": 2,
+        "transparency": 5
+      }
+    },
+    "composite": 14
   },
   "Ricardo Sierra": {
     "tier": "A",
@@ -1615,9 +3326,38 @@
         "score": 43.7,
         "tier": "A",
         "msgs": 1,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 3,
+          "intelligence": 12,
+          "capital": 18
+        },
+        "composite": 12
       }
-    ]
+    ],
+    "pillars": {
+      "network": 3,
+      "intelligence": 12,
+      "capital": 18
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 1,
+        "intros": 0,
+        "reach": 2
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 7,
+        "discussion": 5
+      },
+      "capital": {
+        "positions": 15,
+        "thesis": 3,
+        "transparency": 0
+      }
+    },
+    "composite": 12
   },
   "Checho Barth": {
     "tier": "A",
@@ -1642,9 +3382,38 @@
         "score": 43.6,
         "tier": "A",
         "msgs": 16,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 21,
+          "intelligence": 11,
+          "capital": 24
+        },
+        "composite": 18
       }
-    ]
+    ],
+    "pillars": {
+      "network": 21,
+      "intelligence": 11,
+      "capital": 24
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 6,
+        "intros": 4,
+        "reach": 11
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 3,
+        "discussion": 8
+      },
+      "capital": {
+        "positions": 8,
+        "thesis": 1,
+        "transparency": 15
+      }
+    },
+    "composite": 18
   },
   "Maria Isabel Arango": {
     "tier": "A",
@@ -1669,9 +3438,38 @@
         "score": 43.4,
         "tier": "A",
         "msgs": 14,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 20,
+          "intelligence": 12,
+          "capital": 24
+        },
+        "composite": 18
       }
-    ]
+    ],
+    "pillars": {
+      "network": 20,
+      "intelligence": 12,
+      "capital": 24
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 5,
+        "intros": 4,
+        "reach": 11
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 3,
+        "discussion": 9
+      },
+      "capital": {
+        "positions": 8,
+        "thesis": 1,
+        "transparency": 15
+      }
+    },
+    "composite": 18
   },
   "Ricardo Jaramillo": {
     "tier": "A",
@@ -1696,9 +3494,38 @@
         "score": 42.8,
         "tier": "A",
         "msgs": 4,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 3,
+          "intelligence": 17,
+          "capital": 17
+        },
+        "composite": 14
       }
-    ]
+    ],
+    "pillars": {
+      "network": 3,
+      "intelligence": 17,
+      "capital": 17
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 1,
+        "intros": 0,
+        "reach": 2
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 7,
+        "discussion": 10
+      },
+      "capital": {
+        "positions": 15,
+        "thesis": 2,
+        "transparency": 0
+      }
+    },
+    "composite": 14
   },
   "Barry": {
     "tier": "A",
@@ -1723,9 +3550,38 @@
         "score": 42.3,
         "tier": "A",
         "msgs": 7,
-        "links": 1
+        "links": 1,
+        "pillars": {
+          "network": 16,
+          "intelligence": 11,
+          "capital": 19
+        },
+        "composite": 15
       }
-    ]
+    ],
+    "pillars": {
+      "network": 16,
+      "intelligence": 11,
+      "capital": 19
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 4,
+        "intros": 4,
+        "reach": 9
+      },
+      "intelligence": {
+        "infoQuality": 2,
+        "depth": 3,
+        "discussion": 6
+      },
+      "capital": {
+        "positions": 3,
+        "thesis": 1,
+        "transparency": 15
+      }
+    },
+    "composite": 15
   },
   "Antonioooo": {
     "tier": "A",
@@ -1750,9 +3606,38 @@
         "score": 41.9,
         "tier": "A",
         "msgs": 15,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 19,
+          "intelligence": 13,
+          "capital": 30
+        },
+        "composite": 20
       }
-    ]
+    ],
+    "pillars": {
+      "network": 19,
+      "intelligence": 13,
+      "capital": 30
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 6,
+        "intros": 4,
+        "reach": 9
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 5,
+        "discussion": 8
+      },
+      "capital": {
+        "positions": 13,
+        "thesis": 2,
+        "transparency": 15
+      }
+    },
+    "composite": 20
   },
   "Juan Saldarriaga": {
     "tier": "A",
@@ -1777,9 +3662,38 @@
         "score": 41.7,
         "tier": "A",
         "msgs": 1,
-        "links": 1
+        "links": 1,
+        "pillars": {
+          "network": 3,
+          "intelligence": 13,
+          "capital": 10
+        },
+        "composite": 9
       }
-    ]
+    ],
+    "pillars": {
+      "network": 3,
+      "intelligence": 13,
+      "capital": 10
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 1,
+        "intros": 0,
+        "reach": 2
+      },
+      "intelligence": {
+        "infoQuality": 2,
+        "depth": 6,
+        "discussion": 5
+      },
+      "capital": {
+        "positions": 8,
+        "thesis": 2,
+        "transparency": 0
+      }
+    },
+    "composite": 9
   },
   "Martin Pelaez": {
     "tier": "B",
@@ -1804,9 +3718,38 @@
         "score": 39.8,
         "tier": "B",
         "msgs": 4,
-        "links": 2
+        "links": 2,
+        "pillars": {
+          "network": 6,
+          "intelligence": 17,
+          "capital": 9
+        },
+        "composite": 11
       }
-    ]
+    ],
+    "pillars": {
+      "network": 6,
+      "intelligence": 17,
+      "capital": 9
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 1,
+        "intros": 0,
+        "reach": 4
+      },
+      "intelligence": {
+        "infoQuality": 4,
+        "depth": 3,
+        "discussion": 10
+      },
+      "capital": {
+        "positions": 3,
+        "thesis": 1,
+        "transparency": 5
+      }
+    },
+    "composite": 11
   },
   "Alejandro Pérez": {
     "tier": "B",
@@ -1831,9 +3774,38 @@
         "score": 39.5,
         "tier": "B",
         "msgs": 6,
-        "links": 3
+        "links": 3,
+        "pillars": {
+          "network": 10,
+          "intelligence": 13,
+          "capital": 8
+        },
+        "composite": 11
       }
-    ]
+    ],
+    "pillars": {
+      "network": 10,
+      "intelligence": 13,
+      "capital": 8
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 3,
+        "intros": 0,
+        "reach": 6
+      },
+      "intelligence": {
+        "infoQuality": 6,
+        "depth": 1,
+        "discussion": 6
+      },
+      "capital": {
+        "positions": 3,
+        "thesis": 0,
+        "transparency": 5
+      }
+    },
+    "composite": 11
   },
   "Luis Alberto Botero": {
     "tier": "B",
@@ -1858,9 +3830,38 @@
         "score": 38.2,
         "tier": "B",
         "msgs": 4,
-        "links": 1
+        "links": 1,
+        "pillars": {
+          "network": 8,
+          "intelligence": 11,
+          "capital": 9
+        },
+        "composite": 10
       }
-    ]
+    ],
+    "pillars": {
+      "network": 8,
+      "intelligence": 11,
+      "capital": 9
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 2,
+        "intros": 0,
+        "reach": 6
+      },
+      "intelligence": {
+        "infoQuality": 2,
+        "depth": 3,
+        "discussion": 7
+      },
+      "capital": {
+        "positions": 3,
+        "thesis": 1,
+        "transparency": 5
+      }
+    },
+    "composite": 10
   },
   "Ricardo Espinal": {
     "tier": "B",
@@ -1885,9 +3886,38 @@
         "score": 38.2,
         "tier": "B",
         "msgs": 6,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 8,
+          "intelligence": 13,
+          "capital": 9
+        },
+        "composite": 10
       }
-    ]
+    ],
+    "pillars": {
+      "network": 8,
+      "intelligence": 13,
+      "capital": 9
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 2,
+        "intros": 0,
+        "reach": 6
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 3,
+        "discussion": 10
+      },
+      "capital": {
+        "positions": 3,
+        "thesis": 1,
+        "transparency": 5
+      }
+    },
+    "composite": 10
   },
   "Wilder Zapata": {
     "tier": "B",
@@ -1912,9 +3942,38 @@
         "score": 36.8,
         "tier": "B",
         "msgs": 3,
-        "links": 2
+        "links": 2,
+        "pillars": {
+          "network": 8,
+          "intelligence": 10,
+          "capital": 8
+        },
+        "composite": 9
       }
-    ]
+    ],
+    "pillars": {
+      "network": 8,
+      "intelligence": 10,
+      "capital": 8
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 2,
+        "intros": 0,
+        "reach": 6
+      },
+      "intelligence": {
+        "infoQuality": 4,
+        "depth": 1,
+        "discussion": 5
+      },
+      "capital": {
+        "positions": 3,
+        "thesis": 0,
+        "transparency": 5
+      }
+    },
+    "composite": 9
   },
   "Jorge Campuzano": {
     "tier": "B",
@@ -1939,9 +3998,38 @@
         "score": 34.8,
         "tier": "B",
         "msgs": 8,
-        "links": 1
+        "links": 1,
+        "pillars": {
+          "network": 10,
+          "intelligence": 13,
+          "capital": 9
+        },
+        "composite": 11
       }
-    ]
+    ],
+    "pillars": {
+      "network": 10,
+      "intelligence": 13,
+      "capital": 9
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 3,
+        "intros": 0,
+        "reach": 6
+      },
+      "intelligence": {
+        "infoQuality": 2,
+        "depth": 3,
+        "discussion": 8
+      },
+      "capital": {
+        "positions": 3,
+        "thesis": 1,
+        "transparency": 5
+      }
+    },
+    "composite": 11
   },
   "Agustin Argentino": {
     "tier": "B",
@@ -1966,9 +4054,38 @@
         "score": 24.3,
         "tier": "B",
         "msgs": 14,
-        "links": 2
+        "links": 2,
+        "pillars": {
+          "network": 17,
+          "intelligence": 19,
+          "capital": 30
+        },
+        "composite": 22
       }
-    ]
+    ],
+    "pillars": {
+      "network": 17,
+      "intelligence": 19,
+      "capital": 30
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 4,
+        "intros": 4,
+        "reach": 9
+      },
+      "intelligence": {
+        "infoQuality": 4,
+        "depth": 5,
+        "discussion": 10
+      },
+      "capital": {
+        "positions": 13,
+        "thesis": 2,
+        "transparency": 15
+      }
+    },
+    "composite": 22
   },
   "Carolina Rojas Gómez": {
     "tier": "B",
@@ -1993,9 +4110,38 @@
         "score": 24,
         "tier": "B",
         "msgs": 4,
-        "links": 1
+        "links": 1,
+        "pillars": {
+          "network": 6,
+          "intelligence": 47,
+          "capital": 55
+        },
+        "composite": 40
       }
-    ]
+    ],
+    "pillars": {
+      "network": 6,
+      "intelligence": 47,
+      "capital": 55
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 1,
+        "intros": 0,
+        "reach": 4
+      },
+      "intelligence": {
+        "infoQuality": 2,
+        "depth": 35,
+        "discussion": 10
+      },
+      "capital": {
+        "positions": 15,
+        "thesis": 35,
+        "transparency": 5
+      }
+    },
+    "composite": 40
   },
   "Eduardo Sagues": {
     "tier": "B",
@@ -2020,9 +4166,38 @@
         "score": 22.7,
         "tier": "B",
         "msgs": 1,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 3,
+          "intelligence": 5,
+          "capital": 3
+        },
+        "composite": 4
       }
-    ]
+    ],
+    "pillars": {
+      "network": 3,
+      "intelligence": 5,
+      "capital": 3
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 1,
+        "intros": 0,
+        "reach": 2
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 5
+      },
+      "capital": {
+        "positions": 3,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 4
   },
   "Andres Bilbao": {
     "tier": "B",
@@ -2047,9 +4222,38 @@
         "score": 22.3,
         "tier": "B",
         "msgs": 3,
-        "links": 1
+        "links": 1,
+        "pillars": {
+          "network": 3,
+          "intelligence": 29,
+          "capital": 23
+        },
+        "composite": 20
       }
-    ]
+    ],
+    "pillars": {
+      "network": 3,
+      "intelligence": 29,
+      "capital": 23
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 1,
+        "intros": 0,
+        "reach": 2
+      },
+      "intelligence": {
+        "infoQuality": 2,
+        "depth": 12,
+        "discussion": 15
+      },
+      "capital": {
+        "positions": 15,
+        "thesis": 8,
+        "transparency": 0
+      }
+    },
+    "composite": 20
   },
   "Rafael Troconis Llave": {
     "tier": "B",
@@ -2074,9 +4278,38 @@
         "score": 22.3,
         "tier": "B",
         "msgs": 3,
-        "links": 1
+        "links": 1,
+        "pillars": {
+          "network": 3,
+          "intelligence": 52,
+          "capital": 45
+        },
+        "composite": 37
       }
-    ]
+    ],
+    "pillars": {
+      "network": 3,
+      "intelligence": 52,
+      "capital": 45
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 1,
+        "intros": 0,
+        "reach": 2
+      },
+      "intelligence": {
+        "infoQuality": 2,
+        "depth": 35,
+        "discussion": 15
+      },
+      "capital": {
+        "positions": 15,
+        "thesis": 30,
+        "transparency": 0
+      }
+    },
+    "composite": 37
   },
   "Roberto Cuartas": {
     "tier": "B",
@@ -2101,9 +4334,38 @@
         "score": 21.7,
         "tier": "B",
         "msgs": 1,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 3,
+          "intelligence": 23,
+          "capital": 28
+        },
+        "composite": 20
       }
-    ]
+    ],
+    "pillars": {
+      "network": 3,
+      "intelligence": 23,
+      "capital": 28
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 1,
+        "intros": 0,
+        "reach": 2
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 18,
+        "discussion": 5
+      },
+      "capital": {
+        "positions": 15,
+        "thesis": 13,
+        "transparency": 0
+      }
+    },
+    "composite": 20
   },
   "Mauricio Ortega": {
     "tier": "C",
@@ -2128,9 +4390,38 @@
         "score": 14.7,
         "tier": "C",
         "msgs": 1,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 3,
+          "intelligence": 11,
+          "capital": 10
+        },
+        "composite": 9
       }
-    ]
+    ],
+    "pillars": {
+      "network": 3,
+      "intelligence": 11,
+      "capital": 10
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 1,
+        "intros": 0,
+        "reach": 2
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 6,
+        "discussion": 5
+      },
+      "capital": {
+        "positions": 8,
+        "thesis": 2,
+        "transparency": 0
+      }
+    },
+    "composite": 9
   },
   "Jorge Saldarriaga": {
     "tier": "C",
@@ -2155,9 +4446,38 @@
         "score": 14.7,
         "tier": "C",
         "msgs": 1,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 3,
+          "intelligence": 11,
+          "capital": 10
+        },
+        "composite": 9
       }
-    ]
+    ],
+    "pillars": {
+      "network": 3,
+      "intelligence": 11,
+      "capital": 10
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 1,
+        "intros": 0,
+        "reach": 2
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 6,
+        "discussion": 5
+      },
+      "capital": {
+        "positions": 8,
+        "thesis": 2,
+        "transparency": 0
+      }
+    },
+    "composite": 9
   },
   "Eduardo Llopis": {
     "tier": "C",
@@ -2182,9 +4502,38 @@
         "score": 13.3,
         "tier": "C",
         "msgs": 7,
-        "links": 1
+        "links": 1,
+        "pillars": {
+          "network": 6,
+          "intelligence": 16,
+          "capital": 9
+        },
+        "composite": 11
       }
-    ]
+    ],
+    "pillars": {
+      "network": 6,
+      "intelligence": 16,
+      "capital": 9
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 2,
+        "intros": 0,
+        "reach": 4
+      },
+      "intelligence": {
+        "infoQuality": 2,
+        "depth": 3,
+        "discussion": 12
+      },
+      "capital": {
+        "positions": 3,
+        "thesis": 1,
+        "transparency": 5
+      }
+    },
+    "composite": 11
   },
   "Mama": {
     "tier": "C",
@@ -2209,9 +4558,38 @@
         "score": 12.7,
         "tier": "C",
         "msgs": 1,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 3,
+          "intelligence": 10,
+          "capital": 10
+        },
+        "composite": 8
       }
-    ]
+    ],
+    "pillars": {
+      "network": 3,
+      "intelligence": 10,
+      "capital": 10
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 1,
+        "intros": 0,
+        "reach": 2
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 5,
+        "discussion": 5
+      },
+      "capital": {
+        "positions": 8,
+        "thesis": 2,
+        "transparency": 0
+      }
+    },
+    "composite": 8
   },
   "Felo": {
     "tier": "C",
@@ -2236,9 +4614,38 @@
         "score": 10.7,
         "tier": "C",
         "msgs": 3,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 6,
+          "intelligence": 8,
+          "capital": 9
+        },
+        "composite": 8
       }
-    ]
+    ],
+    "pillars": {
+      "network": 6,
+      "intelligence": 8,
+      "capital": 9
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 2,
+        "intros": 0,
+        "reach": 4
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 3,
+        "discussion": 5
+      },
+      "capital": {
+        "positions": 3,
+        "thesis": 1,
+        "transparency": 5
+      }
+    },
+    "composite": 8
   },
   "Squiz Medina": {
     "tier": "C",
@@ -2263,9 +4670,38 @@
         "score": 6.7,
         "tier": "C",
         "msgs": 1,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 3,
+          "intelligence": 7,
+          "capital": 4
+        },
+        "composite": 5
       }
-    ]
+    ],
+    "pillars": {
+      "network": 3,
+      "intelligence": 7,
+      "capital": 4
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 1,
+        "intros": 0,
+        "reach": 2
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 2,
+        "discussion": 5
+      },
+      "capital": {
+        "positions": 3,
+        "thesis": 1,
+        "transparency": 0
+      }
+    },
+    "composite": 5
   },
   "Juancho Tirado": {
     "tier": "C",
@@ -2290,9 +4726,38 @@
         "score": 5.4,
         "tier": "C",
         "msgs": 2,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 6,
+          "intelligence": 6,
+          "capital": 8
+        },
+        "composite": 7
       }
-    ]
+    ],
+    "pillars": {
+      "network": 6,
+      "intelligence": 6,
+      "capital": 8
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 1,
+        "intros": 0,
+        "reach": 4
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 1,
+        "discussion": 5
+      },
+      "capital": {
+        "positions": 3,
+        "thesis": 0,
+        "transparency": 5
+      }
+    },
+    "composite": 7
   },
   "Musimbi": {
     "tier": "C",
@@ -2317,9 +4782,38 @@
         "score": 4.7,
         "tier": "C",
         "msgs": 1,
-        "links": 1
+        "links": 1,
+        "pillars": {
+          "network": 3,
+          "intelligence": 7,
+          "capital": 3
+        },
+        "composite": 5
       }
-    ]
+    ],
+    "pillars": {
+      "network": 3,
+      "intelligence": 7,
+      "capital": 3
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 1,
+        "intros": 0,
+        "reach": 2
+      },
+      "intelligence": {
+        "infoQuality": 2,
+        "depth": 0,
+        "discussion": 5
+      },
+      "capital": {
+        "positions": 3,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 5
   },
   "David Muñoz": {
     "tier": "C",
@@ -2344,9 +4838,38 @@
         "score": 2.7,
         "tier": "C",
         "msgs": 1,
-        "links": 0
+        "links": 0,
+        "pillars": {
+          "network": 3,
+          "intelligence": 5,
+          "capital": 3
+        },
+        "composite": 4
       }
-    ]
+    ],
+    "pillars": {
+      "network": 3,
+      "intelligence": 5,
+      "capital": 3
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 1,
+        "intros": 0,
+        "reach": 2
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 5
+      },
+      "capital": {
+        "positions": 3,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 4
   },
   "Alejandra Zapata Coninsa": {
     "tier": "Z",
@@ -2373,7 +4896,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Alejo Molina": {
     "tier": "Z",
@@ -2400,7 +4946,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Amalia AAA Londoño": {
     "tier": "Z",
@@ -2427,7 +4996,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Amalia Uribe Gustavo Villa Gumroad": {
     "tier": "Z",
@@ -2454,7 +5046,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Ana Arango": {
     "tier": "Z",
@@ -2481,7 +5096,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "André Joffry": {
     "tier": "Z",
@@ -2508,7 +5146,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Blanket": {
     "tier": "Z",
@@ -2535,7 +5196,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Carlos Mazo": {
     "tier": "Z",
@@ -2562,7 +5246,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "catalina botero": {
     "tier": "Z",
@@ -2589,7 +5296,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Checho Aguirre": {
     "tier": "Z",
@@ -2616,7 +5346,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Claudia restrepo Rectora": {
     "tier": "Z",
@@ -2643,7 +5396,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Damian Llave De lucas jaramillo": {
     "tier": "Z",
@@ -2670,7 +5446,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Daniel Arango": {
     "tier": "Z",
@@ -2697,7 +5496,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Daniel Martinez": {
     "tier": "Z",
@@ -2724,7 +5546,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Diego Kuri": {
     "tier": "Z",
@@ -2751,7 +5596,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Diego Mazo": {
     "tier": "Z",
@@ -2778,7 +5646,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Douglas Rueda Buche": {
     "tier": "Z",
@@ -2805,7 +5696,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Federico Molina": {
     "tier": "Z",
@@ -2832,7 +5746,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Germancito Primo Ricky Uribe": {
     "tier": "Z",
@@ -2859,7 +5796,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Gonzalo teso": {
     "tier": "Z",
@@ -2886,7 +5846,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Jackie Yanovich": {
     "tier": "Z",
@@ -2913,7 +5896,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Juliana M Novia Santi": {
     "tier": "Z",
@@ -2940,7 +5946,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Luisk": {
     "tier": "Z",
@@ -2967,7 +5996,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Manu Cuñada beto": {
     "tier": "Z",
@@ -2994,7 +6046,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Mariana Botero": {
     "tier": "Z",
@@ -3021,7 +6096,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Melissa P": {
     "tier": "Z",
@@ -3048,7 +6146,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Miguel Botero": {
     "tier": "Z",
@@ -3075,7 +6196,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Mimi": {
     "tier": "Z",
@@ -3102,7 +6246,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Pablo Arboleda": {
     "tier": "Z",
@@ -3129,7 +6296,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Pablo Botero Londoño": {
     "tier": "Z",
@@ -3156,7 +6346,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Paola Betancur Vargas": {
     "tier": "Z",
@@ -3183,7 +6396,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Paola Macia Fernandez": {
     "tier": "Z",
@@ -3210,7 +6446,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Pedro Faria": {
     "tier": "Z",
@@ -3237,7 +6496,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Ricardo Kuri": {
     "tier": "Z",
@@ -3264,7 +6546,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Rigo Uran": {
     "tier": "Z",
@@ -3291,7 +6596,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "SA Santiago Arango": {
     "tier": "Z",
@@ -3318,7 +6646,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "santiago lopez": {
     "tier": "Z",
@@ -3345,7 +6696,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Sergio Jaramillo": {
     "tier": "Z",
@@ -3372,7 +6746,30 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   },
   "Tomas Restrepo Amigo Mazo F2 Y F3": {
     "tier": "Z",
@@ -3399,6 +6796,29 @@
         "msgs": 0,
         "links": 0
       }
-    ]
+    ],
+    "pillars": {
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
+    },
+    "pillarComponents": {
+      "network": {
+        "mentions": 0,
+        "intros": 0,
+        "reach": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depth": 0,
+        "discussion": 0
+      },
+      "capital": {
+        "positions": 0,
+        "thesis": 0,
+        "transparency": 0
+      }
+    },
+    "composite": 0
   }
 }

@@ -11,11 +11,16 @@ const D = Object.entries(membersRaw).map(([name, d]) => ({
   vs: d.components.volume, cs: d.components.consistency,
   ss: d.components.substance, rs: d.components.recency,
   u: d.isFounder, history: d.history,
+  p: d.pillars || { network: 0, intelligence: 0, capital: 0 },
+  pc: d.pillarComponents || {},
+  co: d.composite || 0,
 }));
 
 const META = metaRaw;
 const SNAP = META.snapshots.find(s => s.id === META.currentSnapshot) || META.snapshots[0];
 const SRC = (META.sourceStats && META.sourceStats[META.currentSnapshot]) || [];
+const PIL = META.pillars || {};
+const PW = META.pillarWeights || { network: 0.25, intelligence: 0.40, capital: 0.35 };
 
 /* ── Tier Config ────────────────────────────────────────────────── */
 const TC = {
@@ -24,6 +29,8 @@ const TC = {
   C: { label: "Remove", color: "#ef4444", bg: "#450a0a", bgL: "#7f1d1d", icon: "🪓" },
   Z: { label: "Zombie", color: "#6b21a8", bg: "#2e1065", bgL: "#4c1d95", icon: "🧟" },
 };
+
+const PCOL = { network: "#3b82f6", intelligence: "#8b5cf6", capital: "#10b981" };
 
 /* ── KPI Engine ─────────────────────────────────────────────────── */
 function kpis(d) {
@@ -41,6 +48,13 @@ function kpis(d) {
   const lurk = d.filter(x => x.m < 3).length;
   const avgW = d.reduce((a, x) => a + x.aw, 0) / nn;
   const days = SNAP.days;
+  // Pillar averages (non-zombie only)
+  const active = d.filter(x => x.t !== "Z");
+  const an = active.length || 1;
+  const avgNet = active.reduce((a, x) => a + x.p.network, 0) / an;
+  const avgInt = active.reduce((a, x) => a + x.p.intelligence, 0) / an;
+  const avgCap = active.reduce((a, x) => a + x.p.capital, 0) / an;
+  const avgCo = active.reduce((a, x) => a + x.co, 0) / an;
   return {
     nn, tot, lnk, yM, yL, c5, a7, deep, lk, days,
     kd: ent / Math.log2(nn), sn: subM / tot, nd: lk / nn,
@@ -49,6 +63,7 @@ function kpis(d) {
     dw: d.filter(x => x.t === "C").length + d.filter(x => x.t === "B" && x.di > 60).length + d.filter(x => x.t === "Z").length,
     tA: d.filter(x => x.t === "A").length, tB: d.filter(x => x.t === "B").length,
     tC: d.filter(x => x.t === "C").length, tZ: d.filter(x => x.t === "Z").length,
+    avgNet, avgInt, avgCap, avgCo,
   };
 }
 
@@ -68,10 +83,7 @@ const G = ({ v, mx = 1, lb, sub, c, sz = 76 }) => {
 
 const KPI = ({ icon, title, value, sub, color, alert }) => (
   <div style={{ background: "#111118", borderRadius: 10, padding: "11px 13px", border: `1px solid ${alert ? color + "40" : "#1e1e2e"}`, flex: "1 1 140px", minWidth: 140 }}>
-    <div style={{ display: "flex", alignItems: "center", gap: 5, marginBottom: 5 }}>
-      <span style={{ fontSize: 12 }}>{icon}</span>
-      <span style={{ fontSize: 9, color: "#6b7280", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase" }}>{title}</span>
-    </div>
+    <div style={{ display: "flex", alignItems: "center", gap: 5, marginBottom: 5 }}><span style={{ fontSize: 12 }}>{icon}</span><span style={{ fontSize: 9, color: "#6b7280", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase" }}>{title}</span></div>
     <div style={{ fontSize: 21, fontWeight: 700, color, fontFamily: "'JetBrains Mono',monospace" }}>{value}</div>
     <div style={{ fontSize: 10, color: "#6b7280", marginTop: 2, lineHeight: 1.4 }}>{sub}</div>
   </div>
@@ -81,8 +93,8 @@ const Br = ({ v, mx = 100, c }) => (<div style={{ width: "100%", height: 5, back
 
 const Mn = ({ lb, v, mx = 30, c }) => (<div style={{ flex: 1, minWidth: 68 }}>
   <div style={{ fontSize: 9, color: "#6b7280", marginBottom: 2, letterSpacing: "0.05em" }}>{lb}</div>
-  <div style={{ fontSize: 12, fontWeight: 600, color: c, fontFamily: "'JetBrains Mono',monospace" }}>{v.toFixed(1)}</div>
-  <div style={{ width: "100%", height: 3, background: "#1a1a2e", borderRadius: 2, marginTop: 2 }}><div style={{ width: `${(v / mx) * 100}%`, height: "100%", background: c, borderRadius: 2 }} /></div>
+  <div style={{ fontSize: 12, fontWeight: 600, color: c, fontFamily: "'JetBrains Mono',monospace" }}>{typeof v === "number" ? v.toFixed(1) : v}</div>
+  <div style={{ width: "100%", height: 3, background: "#1a1a2e", borderRadius: 2, marginTop: 2 }}><div style={{ width: `${(typeof v === "number" ? v : 0) / mx * 100}%`, height: "100%", background: c, borderRadius: 2 }} /></div>
 </div>);
 
 const Ins = ({ icon, title, body, color }) => (
@@ -93,12 +105,51 @@ const Ins = ({ icon, title, body, color }) => (
   </div>
 );
 
+/* ── Radar Chart (Triangle) ─────────────────────────────────────── */
+const Radar = ({ net, int, cap, size = 90 }) => {
+  const cx = size / 2, cy = size / 2, r = size * 0.38;
+  const angles = [-Math.PI / 2, -Math.PI / 2 + (2 * Math.PI / 3), -Math.PI / 2 + (4 * Math.PI / 3)];
+  const pts = (vals) => vals.map((v, i) => {
+    const a = angles[i], d = (v / 100) * r;
+    return [cx + d * Math.cos(a), cy + d * Math.sin(a)];
+  });
+  const grid = pts([100, 100, 100]);
+  const grid50 = pts([50, 50, 50]);
+  const data = pts([net, int, cap]);
+  const poly = (p) => p.map(([x, y]) => `${x},${y}`).join(" ");
+  return (
+    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
+      <polygon points={poly(grid)} fill="none" stroke="#1e1e2e" strokeWidth="1" />
+      <polygon points={poly(grid50)} fill="none" stroke="#1e1e2e" strokeWidth="0.5" strokeDasharray="2,2" />
+      {grid.map((p, i) => <line key={i} x1={cx} y1={cy} x2={p[0]} y2={p[1]} stroke="#1e1e2e" strokeWidth="0.5" />)}
+      <polygon points={poly(data)} fill="#10b98115" stroke="#10b981" strokeWidth="1.5" />
+      {data.map((p, i) => <circle key={i} cx={p[0]} cy={p[1]} r="3" fill={[PCOL.network, PCOL.intelligence, PCOL.capital][i]} />)}
+      <text x={cx} y={8} textAnchor="middle" fill={PCOL.network} fontSize="7" fontWeight="600">🔗{net}</text>
+      <text x={size - 4} y={size - 6} textAnchor="end" fill={PCOL.intelligence} fontSize="7" fontWeight="600">🧠{int}</text>
+      <text x={4} y={size - 6} textAnchor="start" fill={PCOL.capital} fontSize="7" fontWeight="600">💰{cap}</text>
+    </svg>
+  );
+};
+
+/* ── Pillar Bar (horizontal) ────────────────────────────────────── */
+const PillarBar = ({ label, icon, value, color, max = 100 }) => (
+  <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
+    <span style={{ fontSize: 11, width: 16 }}>{icon}</span>
+    <div style={{ flex: 1 }}>
+      <div style={{ width: "100%", height: 6, background: "#1a1a2e", borderRadius: 3, overflow: "hidden" }}>
+        <div style={{ width: `${(value / max) * 100}%`, height: "100%", background: color, borderRadius: 3, transition: "width 0.6s" }} />
+      </div>
+    </div>
+    <span style={{ fontSize: 11, fontWeight: 700, color, fontFamily: "'JetBrains Mono',monospace", width: 28, textAlign: "right" }}>{value}</span>
+  </div>
+);
+
 /* ── Member Card ────────────────────────────────────────────────── */
 const Card = ({ m, rank, exp, tog }) => {
   const tc = TC[m.t];
   const hasHistory = m.history && m.history.length > 1;
   const prev = hasHistory ? m.history[m.history.length - 2] : null;
-  const delta = prev ? m.s - prev.score : null;
+  const delta = prev && prev.composite != null ? m.co - prev.composite : null;
   return (
     <div onClick={tog} style={{ background: exp ? tc.bgL : "#111118", border: `1px solid ${exp ? tc.color + "40" : "#1e1e2e"}`, borderRadius: 10, padding: "10px 13px", cursor: "pointer", transition: "all 0.2s", marginBottom: 5 }}>
       <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
@@ -107,28 +158,39 @@ const Card = ({ m, rank, exp, tog }) => {
           <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
             <span style={{ fontWeight: 600, color: "#e5e7eb", fontSize: 13 }}>{m.n}{m.u ? " 👑" : ""}</span>
             <span style={{ fontSize: 9, padding: "2px 7px", borderRadius: 99, fontWeight: 600, background: tc.bg, color: tc.color, border: `1px solid ${tc.color}30` }}>{tc.icon} {tc.label}</span>
-            {delta !== null && <span style={{ fontSize: 9, fontWeight: 700, color: delta > 0 ? "#10b981" : delta < 0 ? "#ef4444" : "#6b7280", fontFamily: "'JetBrains Mono',monospace" }}>{delta > 0 ? "▲" : delta < 0 ? "▼" : "="}{Math.abs(delta).toFixed(1)}</span>}
+            {delta !== null && <span style={{ fontSize: 9, fontWeight: 700, color: delta > 0 ? "#10b981" : delta < 0 ? "#ef4444" : "#6b7280", fontFamily: "'JetBrains Mono',monospace" }}>{delta > 0 ? "▲" : delta < 0 ? "▼" : "="}{Math.abs(delta).toFixed(0)}</span>}
           </div>
-          <div style={{ display: "flex", gap: 10, marginTop: 3 }}>
-            <span style={{ fontSize: 10, color: "#9ca3af" }}>{m.m} msgs</span>
-            <span style={{ fontSize: 10, color: "#9ca3af" }}>{m.l} links</span>
-            <span style={{ fontSize: 10, color: m.di > 30 ? "#ef4444" : m.di > 14 ? "#f59e0b" : "#6b7280" }}>{m.di === 0 ? "today" : `${m.di}d ago`}</span>
+          <div style={{ display: "flex", gap: 8, marginTop: 4 }}>
+            <span style={{ fontSize: 9, color: PCOL.network, fontWeight: 600, fontFamily: "'JetBrains Mono',monospace" }}>🔗{m.p.network}</span>
+            <span style={{ fontSize: 9, color: PCOL.intelligence, fontWeight: 600, fontFamily: "'JetBrains Mono',monospace" }}>🧠{m.p.intelligence}</span>
+            <span style={{ fontSize: 9, color: PCOL.capital, fontWeight: 600, fontFamily: "'JetBrains Mono',monospace" }}>💰{m.p.capital}</span>
+            <span style={{ fontSize: 9, color: "#6b7280" }}>·</span>
+            <span style={{ fontSize: 9, color: m.di > 30 ? "#ef4444" : m.di > 14 ? "#f59e0b" : "#6b7280" }}>{m.di === 0 ? "today" : `${m.di}d ago`}</span>
           </div>
         </div>
         <div style={{ textAlign: "right", flexShrink: 0 }}>
-          <div style={{ fontSize: 17, fontWeight: 700, color: tc.color, fontFamily: "'JetBrains Mono',monospace" }}>{m.s.toFixed(0)}</div>
-          <div style={{ width: 52 }}><Br v={m.s} c={tc.color} /></div>
+          <div style={{ fontSize: 17, fontWeight: 700, color: tc.color, fontFamily: "'JetBrains Mono',monospace" }}>{m.co}</div>
+          <div style={{ width: 52 }}><Br v={m.co} c={tc.color} /></div>
         </div>
       </div>
       {exp && (<div style={{ marginTop: 11, paddingTop: 9, borderTop: `1px solid ${tc.color}20` }}>
-        <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-          <Mn lb="VOLUME" v={m.vs} mx={30} c="#3b82f6" />
-          <Mn lb="CONSISTENCY" v={m.cs} mx={25} c="#8b5cf6" />
-          <Mn lb="SUBSTANCE" v={m.ss} mx={20} c="#ec4899" />
-          <Mn lb="RECENCY" v={m.rs} mx={25} c="#10b981" />
+        <div style={{ display: "flex", gap: 12, alignItems: "flex-start", flexWrap: "wrap" }}>
+          <Radar net={m.p.network} int={m.p.intelligence} cap={m.p.capital} size={100} />
+          <div style={{ flex: 1, minWidth: 150 }}>
+            <PillarBar label="Network" icon="🔗" value={m.p.network} color={PCOL.network} />
+            <PillarBar label="Intelligence" icon="🧠" value={m.p.intelligence} color={PCOL.intelligence} />
+            <PillarBar label="Capital" icon="💰" value={m.p.capital} color={PCOL.capital} />
+            <div style={{ borderTop: "1px solid #1e1e2e", marginTop: 6, paddingTop: 6 }}>
+              <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+                <Mn lb="VOLUME" v={m.vs} mx={30} c="#6b7280" />
+                <Mn lb="CONSISTENCY" v={m.cs} mx={25} c="#6b7280" />
+                <Mn lb="RECENCY" v={m.rs} mx={25} c="#6b7280" />
+              </div>
+            </div>
+          </div>
         </div>
         <div style={{ display: "flex", gap: 13, marginTop: 7, flexWrap: "wrap" }}>
-          {[["Avg words", m.w], ["Active days", `${m.ad}/${SNAP.days}`], ["Weeks", `${m.aw}/14`], ["Last", m.la]].map(([a, b]) => (
+          {[["Msgs", m.m], ["Links", m.l], ["Avg words", m.w], ["Active days", `${m.ad}/${SNAP.days}`], ["Last", m.la]].map(([a, b]) => (
             <div key={a} style={{ fontSize: 10, color: "#9ca3af" }}><span style={{ color: "#6b7280" }}>{a}:</span> {b}</div>
           ))}
         </div>
@@ -137,7 +199,7 @@ const Card = ({ m, rank, exp, tog }) => {
           <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
             {m.history.map((h, i) => (
               <div key={h.snapshot} style={{ fontSize: 10, padding: "3px 8px", borderRadius: 6, background: i === m.history.length - 1 ? tc.bg : "#0a0a0f", border: `1px solid ${i === m.history.length - 1 ? tc.color + "30" : "#1e1e2e"}`, color: i === m.history.length - 1 ? tc.color : "#6b7280", fontFamily: "'JetBrains Mono',monospace" }}>
-                {h.snapshot}: {h.score.toFixed(0)} ({h.tier})
+                {h.snapshot}: {(h.composite != null ? h.composite : h.score || 0).toFixed ? (h.composite ?? h.score ?? 0) : 0} ({h.tier})
               </div>
             ))}
           </div>
@@ -156,20 +218,29 @@ export default function App() {
   const [filter, setFilter] = useState("all");
   const [search, setSearch] = useState("");
   const [exp, setExp] = useState(null);
-  const [sort, setSort] = useState("score");
+  const [sort, setSort] = useState("composite");
   const [sec, setSec] = useState("intel");
   const k = useMemo(() => kpis(D), []);
   const filt = useMemo(() => {
     let r = [...D];
     if (filter !== "all") r = r.filter(x => x.t === filter);
     if (search) r = r.filter(x => x.n.toLowerCase().includes(search.toLowerCase()));
-    if (sort === "score") r.sort((a, b) => b.s - a.s);
+    if (sort === "composite") r.sort((a, b) => b.co - a.co);
+    else if (sort === "network") r.sort((a, b) => b.p.network - a.p.network);
+    else if (sort === "intelligence") r.sort((a, b) => b.p.intelligence - a.p.intelligence);
+    else if (sort === "capital") r.sort((a, b) => b.p.capital - a.p.capital);
     else if (sort === "msgs") r.sort((a, b) => b.m - a.m);
     else if (sort === "inactive") r.sort((a, b) => b.di - a.di);
     else if (sort === "links") r.sort((a, b) => b.l - a.l);
     return r;
   }, [filter, search, sort]);
   const goM = (name) => { setSec("members"); setFilter("all"); setSearch(name); setExp(name); };
+
+  // Top per pillar (non-founder, non-zombie)
+  const active = D.filter(x => !x.u && x.t !== "Z");
+  const topNet = [...active].sort((a, b) => b.p.network - a.p.network).slice(0, 5);
+  const topInt = [...active].sort((a, b) => b.p.intelligence - a.p.intelligence).slice(0, 5);
+  const topCap = [...active].sort((a, b) => b.p.capital - a.p.capital).slice(0, 5);
 
   return (<div style={{ minHeight: "100vh", background: "#0a0a0f", color: "#e5e7eb", fontFamily: "'Inter',-apple-system,sans-serif" }}>
 
@@ -186,16 +257,72 @@ export default function App() {
     </div>
 
     {/* Tabs */}
-    <div style={{ display: "flex", borderBottom: "1px solid #1e1e2e", padding: "0 20px", gap: 2 }}>
+    <div style={{ display: "flex", borderBottom: "1px solid #1e1e2e", padding: "0 20px", gap: 2, overflowX: "auto" }}>
       {[["intel", "🧠 Intelligence"], ["insights", "💡 Insights"], ["robes", "⚔️ Robespierre"], ["members", "👥 Members"]].map(([key, lb]) => (
-        <button key={key} onClick={() => { setSec(key); if (key !== "members") { setSearch(""); setFilter("all"); } }} style={{ padding: "8px 14px", fontSize: 11, fontWeight: 600, cursor: "pointer", background: "transparent", border: "none", color: sec === key ? "#e5e7eb" : "#6b7280", borderBottom: sec === key ? "2px solid #10b981" : "2px solid transparent" }}>{lb}</button>
+        <button key={key} onClick={() => { setSec(key); if (key !== "members") { setSearch(""); setFilter("all"); } }} style={{ padding: "8px 14px", fontSize: 11, fontWeight: 600, cursor: "pointer", background: "transparent", border: "none", color: sec === key ? "#e5e7eb" : "#6b7280", borderBottom: sec === key ? "2px solid #10b981" : "2px solid transparent", whiteSpace: "nowrap" }}>{lb}</button>
       ))}
     </div>
 
     {/* ── TAB: Intelligence ──────────────────────────────────────── */}
     {sec === "intel" && (<div style={{ padding: "14px 20px 80px" }}>
+
+      {/* Three Pillars Overview */}
+      <div style={{ background: "#111118", borderRadius: 12, padding: "16px 14px", border: "1px solid #1e1e2e", marginBottom: 12 }}>
+        <div style={{ fontSize: 10, color: "#6b7280", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 12 }}>⚡ Three Pillars of 10AMPRO</div>
+        <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+          {[
+            { key: "network", icon: "🔗", label: "Network Sharing", desc: "Connecting people", avg: k.avgNet, c: PCOL.network, w: PW.network },
+            { key: "intelligence", icon: "🧠", label: "Collective Intelligence", desc: "Making us smarter", avg: k.avgInt, c: PCOL.intelligence, w: PW.intelligence },
+            { key: "capital", icon: "💰", label: "Open Source Capital", desc: "Showing your hand", avg: k.avgCap, c: PCOL.capital, w: PW.capital },
+          ].map(p => (
+            <div key={p.key} style={{ flex: "1 1 140px", minWidth: 140, background: "#0a0a0f", borderRadius: 10, padding: "14px 12px", border: `1px solid ${p.c}20` }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 8 }}>
+                <span style={{ fontSize: 16 }}>{p.icon}</span>
+                <div>
+                  <div style={{ fontSize: 11, fontWeight: 600, color: "#e5e7eb" }}>{p.label}</div>
+                  <div style={{ fontSize: 9, color: "#6b7280" }}>{p.desc}</div>
+                </div>
+              </div>
+              <div style={{ display: "flex", alignItems: "baseline", gap: 6, marginBottom: 4 }}>
+                <span style={{ fontSize: 24, fontWeight: 700, color: p.c, fontFamily: "'JetBrains Mono',monospace" }}>{Math.round(p.avg)}</span>
+                <span style={{ fontSize: 10, color: "#6b7280" }}>/ 100 avg</span>
+              </div>
+              <Br v={p.avg} c={p.c} />
+              <div style={{ fontSize: 9, color: "#6b7280", marginTop: 4 }}>Weight: {(p.w * 100).toFixed(0)}%</div>
+            </div>
+          ))}
+        </div>
+        <div style={{ display: "flex", alignItems: "baseline", gap: 6, marginTop: 12, padding: "8px 10px", background: "#0a0a0f", borderRadius: 8, border: "1px solid #1e1e2e" }}>
+          <span style={{ fontSize: 10, color: "#6b7280" }}>Group Composite:</span>
+          <span style={{ fontSize: 20, fontWeight: 700, color: "#e5e7eb", fontFamily: "'JetBrains Mono',monospace" }}>{Math.round(k.avgCo)}</span>
+          <span style={{ fontSize: 10, color: "#6b7280" }}>/ 100</span>
+          <div style={{ flex: 1, marginLeft: 8 }}><Br v={k.avgCo} c="#10b981" /></div>
+        </div>
+      </div>
+
+      {/* Top per pillar */}
+      <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 12 }}>
+        {[
+          { label: "Top Networkers", icon: "🔗", data: topNet, key: "network", c: PCOL.network },
+          { label: "Top Intelligence", icon: "🧠", data: topInt, key: "intelligence", c: PCOL.intelligence },
+          { label: "Top Capital", icon: "💰", data: topCap, key: "capital", c: PCOL.capital },
+        ].map(col => (
+          <div key={col.key} style={{ flex: "1 1 180px", minWidth: 180, background: "#111118", borderRadius: 10, padding: "12px", border: `1px solid ${col.c}20` }}>
+            <div style={{ fontSize: 10, color: col.c, fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", marginBottom: 8 }}>{col.icon} {col.label}</div>
+            {col.data.map((m, i) => (
+              <div key={m.n} onClick={() => goM(m.n)} style={{ display: "flex", alignItems: "center", gap: 6, padding: "4px 0", cursor: "pointer", borderBottom: i < 4 ? "1px solid #1a1a2e" : "none" }}>
+                <span style={{ fontSize: 10, fontWeight: 700, color: i < 3 ? col.c : "#6b7280", fontFamily: "'JetBrains Mono',monospace", width: 16 }}>{i + 1}</span>
+                <span style={{ fontSize: 11, color: "#e5e7eb", flex: 1 }}>{m.n}</span>
+                <span style={{ fontSize: 11, fontWeight: 700, color: col.c, fontFamily: "'JetBrains Mono',monospace" }}>{m.p[col.key]}</span>
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+
+      {/* System Health Gauges */}
       <div style={{ background: "#111118", borderRadius: 12, padding: "14px 10px", border: "1px solid #1e1e2e", marginBottom: 12 }}>
-        <div style={{ fontSize: 10, color: "#6b7280", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 12 }}>🧬 System Learning Health</div>
+        <div style={{ fontSize: 10, color: "#6b7280", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 12 }}>🧬 System Health</div>
         <div style={{ display: "flex", justifyContent: "space-around", flexWrap: "wrap", gap: 8 }}>
           <G v={k.kd * 100} mx={100} lb="Knowledge Distribution" sub="%" c="#8b5cf6" />
           <G v={k.sn * 100} mx={100} lb="Signal-to-Noise" sub="%" c="#10b981" />
@@ -203,6 +330,8 @@ export default function App() {
           <G v={(1 - k.fM) * 100} mx={100} lb="Decentralization" sub="%" c="#f59e0b" />
         </div>
       </div>
+
+      {/* KPI Grid */}
       <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 12 }}>
         <KPI icon="🧠" title="Active Brains" value={k.c5} sub={`${((k.c5 / k.nn) * 100).toFixed(0)}% contribute 5+ msgs`} color="#10b981" />
         <KPI icon="🔗" title="Knowledge Inputs" value={k.lnk} sub={`${k.lk} members share sources`} color="#3b82f6" />
@@ -211,72 +340,61 @@ export default function App() {
         <KPI icon="🔥" title="7d Pulse" value={k.a7} sub={`${((k.a7 / k.nn) * 100).toFixed(0)}% active this week`} color="#10b981" />
         <KPI icon="🪓" title="Dead Weight" value={k.dw} sub="to cut for signal" color="#ef4444" alert />
       </div>
-      <div style={{ background: "#111118", borderRadius: 12, padding: "14px 12px", border: "1px solid #1e1e2e", marginBottom: 12 }}>
-        <div style={{ fontSize: 10, color: "#6b7280", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>📊 Learning Flywheel</div>
-        {[
-          { lb: "Knowledge Input", d: "External links", v: k.lnk, tg: "1,500+", p: Math.min(k.lnk / 1500, 1), c: "#3b82f6", dt: `${k.lk} of ${k.nn} share links (${((k.lk / k.nn) * 100).toFixed(0)}%)` },
-          { lb: "Processing", d: "Substantive msgs (10+ words)", v: `${(k.sn * 100).toFixed(0)}%`, tg: "80%+", p: k.sn / 0.8, c: "#10b981", dt: `${k.deep} members write deep analytical messages` },
-          { lb: "Distribution", d: "Brains processing signal", v: k.c5, tg: "50+", p: Math.min(k.c5 / 50, 1), c: "#8b5cf6", dt: `Spread: ${(k.kd * 100).toFixed(0)}% of max entropy` },
-          { lb: "Retention", d: "Active within 7 days", v: `${((k.a7 / k.nn) * 100).toFixed(0)}%`, tg: "85%+", p: (k.a7 / k.nn) / 0.85, c: "#f59e0b", dt: `${k.a7} of ${k.nn} engaged this week` },
-        ].map((x, i) => (<div key={i} style={{ marginBottom: 13 }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 3 }}>
-            <div><span style={{ fontSize: 12, fontWeight: 600, color: "#e5e7eb" }}>{x.lb}</span><span style={{ fontSize: 10, color: "#6b7280", marginLeft: 6 }}>{x.d}</span></div>
-            <div style={{ display: "flex", gap: 6, alignItems: "baseline" }}><span style={{ fontSize: 15, fontWeight: 700, color: x.c, fontFamily: "'JetBrains Mono',monospace" }}>{x.v}</span><span style={{ fontSize: 9, color: "#6b7280" }}>/ {x.tg}</span></div>
-          </div>
-          <div style={{ width: "100%", height: 5, background: "#1a1a2e", borderRadius: 3, overflow: "hidden", marginBottom: 3 }}><div style={{ width: `${Math.min(x.p * 100, 100)}%`, height: "100%", background: x.p >= 1 ? x.c : `${x.c}99`, borderRadius: 3 }} /></div>
-          <div style={{ fontSize: 10, color: "#6b7280" }}>{x.dt}</div>
-        </div>))}
-      </div>
-      <div style={{ background: "#111118", borderRadius: 12, padding: "14px 12px", border: "1px solid #1e1e2e" }}>
-        <div style={{ fontSize: 10, color: "#6b7280", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>🏆 Top Knowledge Nodes (ex-founder)</div>
-        {D.filter(x => !x.u).sort((a, b) => { const sa = a.l * 3 + a.w * 0.5 + a.aw * 2 + a.m * 0.1; const sb = b.l * 3 + b.w * 0.5 + b.aw * 2 + b.m * 0.1; return sb - sa; }).slice(0, 10).map((x, i) => {
-          const ks = (x.l * 3 + x.w * 0.5 + x.aw * 2 + x.m * 0.1).toFixed(0);
-          return (<div key={x.n} onClick={() => goM(x.n)} style={{ display: "flex", alignItems: "center", gap: 10, padding: "7px 4px", borderBottom: i < 9 ? "1px solid #1a1a2e" : "none", cursor: "pointer", borderRadius: 6 }} onMouseEnter={e => e.currentTarget.style.background = "#1a1a2e"} onMouseLeave={e => e.currentTarget.style.background = "transparent"}>
-            <div style={{ width: 22, height: 22, borderRadius: "50%", background: i < 3 ? "#052e16" : "#1a1a2e", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 10, fontWeight: 700, color: i < 3 ? "#10b981" : "#6b7280", fontFamily: "'JetBrains Mono',monospace", flexShrink: 0 }}>{i + 1}</div>
-            <div style={{ flex: 1 }}><span style={{ fontSize: 12, fontWeight: 500, color: "#e5e7eb" }}>{x.n}</span></div>
-            <div style={{ display: "flex", gap: 12, alignItems: "center", fontSize: 10, color: "#9ca3af" }}><span>🔗{x.l}</span><span>💬{x.m}</span><span>{x.w.toFixed(0)}w</span><span style={{ color: "#10b981", fontWeight: 700, fontFamily: "'JetBrains Mono',monospace", fontSize: 12 }}>{ks}</span></div>
-          </div>);
-        })}
-      </div>
     </div>)}
 
     {/* ── TAB: Insights ──────────────────────────────────────────── */}
     {sec === "insights" && (<div style={{ padding: "14px 20px 80px" }}>
+
+      {/* Pillar Health Insights */}
+      <div style={{ background: "#111118", borderRadius: 12, padding: "14px 12px", border: "1px solid #1e1e2e", marginBottom: 14 }}>
+        <div style={{ fontSize: 10, color: "#e5e7eb", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>📊 Pillar Diagnosis</div>
+        {[
+          { icon: "🔗", label: "Network Sharing", avg: k.avgNet, c: PCOL.network, strong: active.filter(x => x.p.network >= 60).length, weak: active.filter(x => x.p.network < 20 && x.p.network > 0).length, insight: "Most members consume but don't connect others. Intros and @mentions are the currency of network value." },
+          { icon: "🧠", label: "Collective Intelligence", avg: k.avgInt, c: PCOL.intelligence, strong: active.filter(x => x.p.intelligence >= 60).length, weak: active.filter(x => x.p.intelligence < 20 && x.p.intelligence > 0).length, insight: "The group's strongest pillar — driven by a few prolific link-sharers and analysts. Need to distribute this more." },
+          { icon: "💰", label: "Open Source Capital", avg: k.avgCap, c: PCOL.capital, strong: active.filter(x => x.p.capital >= 60).length, weak: active.filter(x => x.p.capital < 20 && x.p.capital > 0).length, insight: "The hardest pillar — requires vulnerability. 'I bought X, here's my thesis.' Most groups avoid this. 10AMPRO should own it." },
+        ].map((p, i) => (
+          <div key={i} style={{ padding: "10px 0", borderBottom: i < 2 ? "1px solid #1e1e2e" : "none" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
+              <span style={{ fontSize: 14 }}>{p.icon}</span>
+              <span style={{ fontSize: 12, fontWeight: 600, color: "#e5e7eb" }}>{p.label}</span>
+              <span style={{ fontSize: 16, fontWeight: 700, color: p.c, fontFamily: "'JetBrains Mono',monospace", marginLeft: "auto" }}>{Math.round(p.avg)}</span>
+              <span style={{ fontSize: 9, color: "#6b7280" }}>avg</span>
+            </div>
+            <div style={{ display: "flex", gap: 12, marginBottom: 4 }}>
+              <span style={{ fontSize: 10, color: "#10b981" }}>✓ {p.strong} strong (60+)</span>
+              <span style={{ fontSize: 10, color: "#ef4444" }}>✗ {p.weak} weak (&lt;20)</span>
+            </div>
+            <div style={{ fontSize: 11, color: "#9ca3af", lineHeight: 1.5 }}>{p.insight}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Founder Dependency */}
       <div style={{ background: "#111118", borderRadius: 12, padding: "14px 12px", border: "1px solid #f59e0b25", marginBottom: 14 }}>
-        <div style={{ fontSize: 10, color: "#f59e0b", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>⚠️ Founder Dependency Analysis</div>
+        <div style={{ fontSize: 10, color: "#f59e0b", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>⚠️ Founder Dependency</div>
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 12 }}>
-          {[{ lb: "Message Share", v: `${(k.fM * 100).toFixed(0)}%`, tg: "<15%", bad: k.fM > 0.15, c: "#f59e0b" }, { lb: "Link Share", v: `${(k.fL * 100).toFixed(0)}%`, tg: "<20%", bad: k.fL > 0.2, c: "#ef4444" }, { lb: "Your Msgs", v: k.yM.toLocaleString(), tg: null, bad: false, c: "#8b5cf6" }, { lb: "Your Links", v: k.yL, tg: null, bad: false, c: "#3b82f6" }].map(x => (
-            <div key={x.lb} style={{ flex: "1 1 80px", minWidth: 80, background: x.bad ? "#422006" : "#0a0a0f", borderRadius: 8, padding: "9px 11px", border: `1px solid ${x.bad ? x.c + "30" : "#1e1e2e"}` }}>
-              <div style={{ fontSize: 9, color: "#6b7280", fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase" }}>{x.lb}</div>
-              <div style={{ fontSize: 19, fontWeight: 700, color: x.c, fontFamily: "'JetBrains Mono',monospace", marginTop: 2 }}>{x.v}</div>
+          {[{ lb: "Msg Share", v: `${(k.fM * 100).toFixed(0)}%`, tg: "<15%", bad: k.fM > 0.15, c: "#f59e0b" }, { lb: "Link Share", v: `${(k.fL * 100).toFixed(0)}%`, tg: "<20%", bad: k.fL > 0.2, c: "#ef4444" }, { lb: "Msgs", v: k.yM.toLocaleString(), c: "#8b5cf6" }, { lb: "Links", v: k.yL, c: "#3b82f6" }].map(x => (
+            <div key={x.lb} style={{ flex: "1 1 70px", minWidth: 70, background: x.bad ? "#422006" : "#0a0a0f", borderRadius: 8, padding: "9px 11px", border: `1px solid ${x.bad ? x.c + "30" : "#1e1e2e"}` }}>
+              <div style={{ fontSize: 9, color: "#6b7280", fontWeight: 600, textTransform: "uppercase" }}>{x.lb}</div>
+              <div style={{ fontSize: 17, fontWeight: 700, color: x.c, fontFamily: "'JetBrains Mono',monospace", marginTop: 2 }}>{x.v}</div>
               {x.tg && <div style={{ fontSize: 9, color: x.bad ? "#ef4444" : "#10b981", marginTop: 2 }}>target: {x.tg}</div>}
             </div>
           ))}
         </div>
-        <div style={{ fontSize: 11, color: "#d4a574", lineHeight: 1.6, padding: "10px 12px", background: "#422006", borderRadius: 8, border: "1px solid #f59e0b20" }}>
-          <strong style={{ color: "#f59e0b" }}>What this means:</strong> You are the brain, curator, and energy source. If you stop posting for a week, knowledge input drops by more than half.<br /><br />
-          <strong style={{ color: "#f59e0b" }}>How to fix:</strong> Assign weekly curator roles to top 5. Challenge{" "}
-          <span onClick={() => goM("Andres Felipe Arias")} style={{ textDecoration: "underline", cursor: "pointer" }}>Andres Felipe</span>,{" "}
-          <span onClick={() => goM("gordo Barato")} style={{ textDecoration: "underline", cursor: "pointer" }}>gordo Barato</span>,{" "}
-          <span onClick={() => goM("Lucas Jaramillo")} style={{ textDecoration: "underline", cursor: "pointer" }}>Lucas</span>,{" "}
-          <span onClick={() => goM("Fede Suarez")} style={{ textDecoration: "underline", cursor: "pointer" }}>Fede</span>, and{" "}
-          <span onClick={() => goM("Dario Palacio")} style={{ textDecoration: "underline", cursor: "pointer" }}>Dario</span> to match your link output.
-        </div>
       </div>
-      <Ins icon="📊" title={`Top 5 Concentration: ${(k.t5p * 100).toFixed(0)}% of non-founder msgs`} color="#8b5cf6" body={`${k.t5.map(x => x.n).join(", ")} generate ${k.t5m.toLocaleString()} of ${(k.tot - k.yM).toLocaleString()} non-founder messages. The remaining ${k.tA - 6} Tier A members average only ${((k.tot - k.yM - k.t5m) / (k.tA - 6)).toFixed(0)} msgs each.`} />
+
       <Ins icon="👻" title={`Lurker Ratio: ${(k.lurkP * 100).toFixed(0)}% have <3 messages`} color="#ef4444" body={`${k.lurk} of ${k.nn} members posted fewer than 3 messages in ${SNAP.days} days.`} />
-      <Ins icon="📐" title={`Signal Quality: ${k.deep} deep writers (${((k.deep / k.nn) * 100).toFixed(0)}%)`} color="#ec4899" body="Members averaging 15+ words/msg are your analytical engines. Challenge them to post original theses, not just reactions." />
-      <Ins icon="🔗" title={`Knowledge Input Diversity: ${k.lk} of ${k.nn} share links`} color="#3b82f6" body={`Only ${((k.lk / k.nn) * 100).toFixed(0)}% bring in external knowledge. The group's information diet depends on ~${k.lk} curators feeding ${k.nn} consumers.`} />
-      <Ins icon="📅" title={`Consistency: avg ${k.avgW.toFixed(1)} of 14 weeks active`} color="#f59e0b" body={`${D.filter(x => x.aw <= 2).length} members were active only 1-2 weeks total. Consistency matters more than volume.`} />
-      <Ins icon="🚌" title="Bus Factor: 1" color="#ef4444" body={`If Hernán stops posting, the group loses ${(k.fM * 100).toFixed(0)}% of messages and ${(k.fL * 100).toFixed(0)}% of links overnight. Goal: raise bus factor to 5.`} />
+      <Ins icon="🚌" title="Bus Factor: 1" color="#ef4444" body={`If Hernán stops, the group loses ${(k.fM * 100).toFixed(0)}% of messages and ${(k.fL * 100).toFixed(0)}% of links. Goal: raise to 5.`} />
+
+      {/* Actionable Plays */}
       <div style={{ background: "#052e16", borderRadius: 12, padding: "14px 12px", border: "1px solid #10b98130", marginTop: 4 }}>
-        <div style={{ fontSize: 10, color: "#10b981", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 8 }}>🎯 Actionable Plays</div>
+        <div style={{ fontSize: 10, color: "#10b981", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 8 }}>🎯 Pillar-Based Actions</div>
         {[
-          { n: "1", t: "Cut dead weight NOW", d: `Remove ${k.tZ} zombies + ${k.tC} Tier C + ${D.filter(x => x.t === "B" && x.di > 60).length} dormant = ${k.dw} total cuts.` },
-          { n: "2", t: "Weekly Curator Rotation", d: "Top 5 non-founder each curate 3 links/week on rotating topics." },
-          { n: "3", t: "Activate the Long Tail", d: `${D.filter(x => x.t === "A" && x.m < 20 && x.m >= 5).length} Tier A members have 5-20 msgs. Tag them directly.` },
-          { n: "4", t: "Thursday Thesis Drop", d: "Weekly ritual: 3 members post a 1-paragraph investment thesis." },
-          { n: "5", t: "Quarterly Audit", d: "Re-run this analysis every 90 days. Track founder dependency ↓, contributors ↑." },
+          { n: "1", t: "🔗 Network Challenge", d: "Each Tier A member introduces 1 person from their network to the group per month. Track intro count." },
+          { n: "2", t: "🧠 Weekly Curator Rotation", d: "Top 5 each curate 3 quality links/week. Rotating topics: macro, crypto, AI, latam, wild card." },
+          { n: "3", t: "💰 Friday Position Thread", d: "Weekly ritual: 'What did you buy/sell this week and why?' Even 2 sentences counts. Make transparency the norm." },
+          { n: "4", t: "🪓 Cut dead weight", d: `Remove ${k.dw} members scoring 0 across all pillars. They add noise, not signal.` },
+          { n: "5", t: "📊 Quarterly Pillar Audit", d: "Re-run every 90 days. Track each pillar's group average over time. The goal: all three above 50." },
         ].map(x => (<div key={x.n} style={{ display: "flex", gap: 10, marginBottom: 9, alignItems: "flex-start" }}>
           <div style={{ width: 20, height: 20, borderRadius: "50%", background: "#10b98120", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 10, fontWeight: 700, color: "#10b981", fontFamily: "'JetBrains Mono',monospace", flexShrink: 0 }}>{x.n}</div>
           <div><div style={{ fontSize: 11, fontWeight: 600, color: "#e5e7eb" }}>{x.t}</div><div style={{ fontSize: 10, color: "#9ca3af", lineHeight: 1.5, marginTop: 1 }}>{x.d}</div></div>
@@ -288,7 +406,7 @@ export default function App() {
     {sec === "robes" && (<div style={{ padding: "14px 20px 80px" }}>
       <div style={{ background: "linear-gradient(135deg,#1a0a0a,#2e1065)", borderRadius: 12, padding: "20px 16px", border: "1px solid #6b21a830", marginBottom: 14 }}>
         <div style={{ fontSize: 18, fontWeight: 700, color: "#dc2626", marginBottom: 6 }}>⚔️ La Guillotina</div>
-        <div style={{ fontSize: 12, color: "#e5a0a0", lineHeight: 1.6 }}>The revolution demands participation. Members below contributed zero signal to collective intelligence.</div>
+        <div style={{ fontSize: 12, color: "#e5a0a0", lineHeight: 1.6 }}>Zero across all 3 pillars = instant execution. Strong on 1 but zero on 2 = watch list with specific challenge.</div>
       </div>
       <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 14 }}>
         {[["Zombies", k.tZ, "#ef4444", "#450a0a", "Never typed once"], ["Tier C", k.tC, "#f97316", "#450a0a", "Posted then vanished"], ["Dormant B", D.filter(x => x.t === "B" && x.di > 60).length, "#f59e0b", "#422006", "60+ days silent"], ["Total Cut", k.dw, "#dc2626", "#1a0a2e", `${(k.dw / k.nn * 100).toFixed(0)}% of group`]].map(([lb, ct, c, bg, sub]) => (
@@ -301,7 +419,7 @@ export default function App() {
       </div>
       <div style={{ background: "#111118", borderRadius: 12, padding: "16px 14px", border: "1px solid #1e1e2e", marginBottom: 14 }}>
         <div style={{ fontSize: 10, color: "#dc2626", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>📜 Crimes Against Collective Intelligence</div>
-        {[{ crime: "Zero Participation", icon: "🧟", desc: `Never posted a single message in ${SNAP.days} days.`, count: k.tZ }, { crime: "Abandonment", icon: "💀", desc: "Posted 1-7 messages then went silent 65+ days.", count: k.tC }, { crime: "Dormancy", icon: "😴", desc: "Had some activity but 60+ days inactive.", count: D.filter(x => x.t === "B" && x.di > 60).length }].map((c, i) => (
+        {[{ crime: "Zero on All Pillars", icon: "🧟", desc: "No networking, no intelligence, no capital sharing. Pure parasite.", count: k.tZ }, { crime: "Abandonment", icon: "💀", desc: "Posted a few times then went silent 65+ days.", count: k.tC }, { crime: "Dormancy", icon: "😴", desc: "Had activity but 60+ days inactive now.", count: D.filter(x => x.t === "B" && x.di > 60).length }].map((c, i) => (
           <div key={i} style={{ display: "flex", gap: 12, padding: "10px 0", borderBottom: i < 2 ? "1px solid #1e1e2e" : "none", alignItems: "flex-start" }}>
             <span style={{ fontSize: 24, flexShrink: 0 }}>{c.icon}</span>
             <div style={{ flex: 1 }}><div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}><span style={{ fontSize: 13, fontWeight: 600, color: "#e5e7eb" }}>{c.crime}</span><span style={{ fontSize: 16, fontWeight: 700, color: "#ef4444", fontFamily: "'JetBrains Mono',monospace" }}>{c.count}</span></div><div style={{ fontSize: 11, color: "#9ca3af", marginTop: 2, lineHeight: 1.5 }}>{c.desc}</div></div>
@@ -319,30 +437,24 @@ export default function App() {
           </div>); })}
       </div>}
       <div style={{ background: "#111118", borderRadius: 12, padding: "16px 14px", border: "1px solid #6b21a825", marginBottom: 14 }}>
-        <div style={{ fontSize: 10, color: "#6b21a8", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>🧟 The Executed — Zero Post Zombies ({k.tZ})</div>
+        <div style={{ fontSize: 10, color: "#6b21a8", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>🧟 Zombies ({k.tZ})</div>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
           {D.filter(x => x.t === "Z").sort((a, b) => a.n.localeCompare(b.n)).map(z => (<div key={z.n} style={{ fontSize: 11, padding: "4px 10px", borderRadius: 6, background: "#2e1065", color: "#a78bfa", border: "1px solid #6b21a830" }}>{z.n}</div>))}
         </div>
       </div>
       <div style={{ background: "#111118", borderRadius: 12, padding: "16px 14px", border: "1px solid #ef444425", marginBottom: 14 }}>
-        <div style={{ fontSize: 10, color: "#ef4444", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>💀 The Deserters — Tier C ({k.tC})</div>
+        <div style={{ fontSize: 10, color: "#ef4444", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>💀 Deserters — Tier C ({k.tC})</div>
         {D.filter(x => x.t === "C").sort((a, b) => b.di - a.di).map(m => (<div key={m.n} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "6px 0", borderBottom: "1px solid #1a1a2e" }}><span style={{ fontSize: 12, color: "#e5e7eb" }}>{m.n}</span><div style={{ display: "flex", gap: 12, fontSize: 10, color: "#9ca3af" }}><span>{m.m} msgs</span><span style={{ color: "#ef4444" }}>{m.di}d silent</span></div></div>))}
-      </div>
-      <div style={{ background: "#111118", borderRadius: 12, padding: "16px 14px", border: "1px solid #f59e0b25", marginBottom: 14 }}>
-        <div style={{ fontSize: 10, color: "#f59e0b", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>😴 Death Row — Dormant Tier B ({D.filter(x => x.t === "B" && x.di > 60).length})</div>
-        {D.filter(x => x.t === "B" && x.di > 60).sort((a, b) => b.di - a.di).map(m => (<div key={m.n} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "6px 0", borderBottom: "1px solid #1a1a2e" }}><span style={{ fontSize: 12, color: "#e5e7eb" }}>{m.n}</span><div style={{ display: "flex", gap: 12, fontSize: 10, color: "#9ca3af" }}><span>{m.m} msgs</span><span>{m.s.toFixed(0)} score</span><span style={{ color: "#f59e0b" }}>{m.di}d silent</span></div></div>))}
       </div>
       <div style={{ background: "#052e16", borderRadius: 12, padding: "16px 14px", border: "1px solid #10b98130" }}>
         <div style={{ fontSize: 10, color: "#10b981", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>🔄 Path to Redemption</div>
-        <div style={{ fontSize: 11, color: "#a0d4b8", lineHeight: 1.6 }}>The revolution is firm but fair. Executed members may petition for re-entry:</div>
-        <div style={{ marginTop: 10 }}>
-          {["DM the founder with a 1-paragraph thesis on any current investment topic", "Commit to sharing minimum 2 quality links per week (no IG/TikTok)", "Engage in at least 3 discussions per week for the first month", "Accept that a second execution is permanent — no appeals"].map((r, i) => (
-            <div key={i} style={{ display: "flex", gap: 8, marginBottom: 6, alignItems: "flex-start" }}>
-              <span style={{ fontSize: 11, color: "#10b981", fontWeight: 700, fontFamily: "'JetBrains Mono',monospace", flexShrink: 0 }}>{i + 1}.</span>
-              <span style={{ fontSize: 11, color: "#a0d4b8" }}>{r}</span>
-            </div>
-          ))}
-        </div>
+        <div style={{ fontSize: 11, color: "#a0d4b8", lineHeight: 1.6, marginBottom: 8 }}>Pick your pillar. Prove your value in at least ONE:</div>
+        {["🔗 Introduce 2 valuable contacts to the group", "🧠 Share 3 quality links/week for a month + engage in discussions", "💰 Post 4 investment theses with specific tickers and reasoning", "Accept that a second execution is permanent"].map((r, i) => (
+          <div key={i} style={{ display: "flex", gap: 8, marginBottom: 6, alignItems: "flex-start" }}>
+            <span style={{ fontSize: 11, color: "#10b981", fontWeight: 700, fontFamily: "'JetBrains Mono',monospace", flexShrink: 0 }}>{i + 1}.</span>
+            <span style={{ fontSize: 11, color: "#a0d4b8" }}>{r}</span>
+          </div>
+        ))}
       </div>
     </div>)}
 
@@ -364,7 +476,13 @@ export default function App() {
           ))}
           <div style={{ flex: 1 }} />
           <select value={sort} onChange={e => setSort(e.target.value)} style={{ padding: "5px 8px", borderRadius: 6, fontSize: 11, background: "#111118", border: "1px solid #1e1e2e", color: "#9ca3af", cursor: "pointer" }}>
-            <option value="score">Sort: Score</option><option value="msgs">Sort: Messages</option><option value="links">Sort: Links</option><option value="inactive">Sort: Most Inactive</option>
+            <option value="composite">Sort: Composite</option>
+            <option value="network">Sort: 🔗 Network</option>
+            <option value="intelligence">Sort: 🧠 Intelligence</option>
+            <option value="capital">Sort: 💰 Capital</option>
+            <option value="msgs">Sort: Messages</option>
+            <option value="links">Sort: Links</option>
+            <option value="inactive">Sort: Most Inactive</option>
           </select>
         </div>
       </div>

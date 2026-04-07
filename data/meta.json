@@ -14,11 +14,62 @@
       "processedAt": "2026-02-21"
     }
   ],
-  "scoring": {
-    "volume": { "max": 30, "desc": "msgs/week × 5, capped" },
-    "consistency": { "max": 25, "desc": "active weeks / total weeks × 25" },
-    "substance": { "max": 20, "desc": "(avg words/10) × 10 + (links × 2), capped" },
-    "recency": { "max": 25, "desc": "25 if <7d, 20 if <14d, 12 if <30d, 5 if <60d, 0 if 60d+" }
+  "pillars": {
+    "network": {
+      "label": "Network Sharing",
+      "icon": "🔗",
+      "emoji": "🔗",
+      "color": "#3b82f6",
+      "weight": 0.25,
+      "description": "Connecting people — intros, deal flow, client/investor bridges, expanding the group's collective reach",
+      "signals": ["@mentions of other members", "intro language (te presento, meet X)", "deal flow sharing", "connecting dots between members"],
+      "components": {
+        "mentions": { "max": 30, "desc": "Tagging/referencing other members" },
+        "intros": { "max": 40, "desc": "Explicit introductions and connections made" },
+        "reach": { "max": 30, "desc": "Diversity of members engaged with" }
+      }
+    },
+    "intelligence": {
+      "label": "Collective Intelligence",
+      "icon": "🧠",
+      "emoji": "🧠",
+      "color": "#8b5cf6",
+      "weight": 0.40,
+      "description": "Making the group smarter — quality info diet, sharing concepts, arguing positions, cementing ideas through discussion",
+      "signals": ["quality links (not junk food)", "substantive messages (high word count)", "discussion engagement (back-and-forth)", "original analysis"],
+      "components": {
+        "infoQuality": { "max": 35, "desc": "Quality and diversity of shared links/sources" },
+        "depth": { "max": 35, "desc": "Average message substance (words, analysis)" },
+        "discussion": { "max": 30, "desc": "Engaging in back-and-forth, building on others' ideas" }
+      }
+    },
+    "capital": {
+      "label": "Open Source Capital",
+      "icon": "💰",
+      "emoji": "💰",
+      "color": "#10b981",
+      "weight": 0.35,
+      "description": "Showing your hand — sharing positions, theses, what you bought/sold and why. Radical transparency on investment decisions",
+      "signals": ["ticker mentions ($TSLA, $BTC)", "buy/sell language (compré, vendí, entré)", "thesis posts (here's why)", "price targets", "portfolio mentions"],
+      "components": {
+        "positions": { "max": 40, "desc": "Sharing what you bought/sold with tickers" },
+        "thesis": { "max": 35, "desc": "Explaining the why — investment reasoning" },
+        "transparency": { "max": 25, "desc": "Frequency and openness of sharing decisions" }
+      }
+    }
+  },
+  "pillarWeights": {
+    "network": 0.25,
+    "intelligence": 0.40,
+    "capital": 0.35
+  },
+  "engagement": {
+    "description": "Base activity metrics — consistency, volume, recency. Not a pillar, but a multiplier.",
+    "components": {
+      "volume": { "max": 30, "desc": "msgs/week × 5, capped" },
+      "consistency": { "max": 25, "desc": "active weeks / total weeks × 25" },
+      "recency": { "max": 25, "desc": "25 if <7d, 20 if <14d, 12 if <30d, 5 if <60d, 0 if 60d+" }
+    }
   },
   "tierThresholds": {
     "A": 40,
