@@ -384,5 +384,13 @@
         "member": "Hernán Jaramillo"
       }
     ]
+  },
+  "token": {
+    "name": "10AMPRO",
+    "mint": "6P5McDuhznaedKjnCvfe9iEjtCfVLyZhSqe93TZtawky",
+    "burnAddress": "EGEYg4GYbfdUpEeL6RByTSTiuZYckNJ1EwUGACY6UezG",
+    "costToStay": 10000,
+    "timerDays": 10,
+    "chain": "solana"
   }
 }

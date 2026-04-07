@@ -17,6 +17,9 @@ const D = Object.entries(membersRaw).map(([name, d]) => ({
   panic: d.panicScore,
   panicFlags: d.panicFlags || [],
   persona: d.persona || {},
+  highlights: d.highlights || [],
+  savedBy: d.savedBy || null,
+  savedUntil: d.savedUntil || null,
 }));
 
 const META = metaRaw;
@@ -171,6 +174,22 @@ const Card = ({ m, rank, exp, tog }) => {
             <span style={{ fontSize: 8, color: "#6b7280" }}>·</span>
             <span style={{ fontSize: 8, color: m.di > 30 ? "#ef4444" : m.di > 14 ? "#f59e0b" : "#6b7280" }}>{m.di === 0 ? "today" : `${m.di}d ago`}</span>
           </div>
+          {/* Compact timer for Z/C */}
+          {(m.t === "Z" || m.t === "C") && !m.savedBy && (
+            <div style={{ display: "flex", alignItems: "center", gap: 4, marginTop: 3 }}>
+              <span style={{ fontSize: 7, color: "#ef4444" }}>⏰</span>
+              <div style={{ flex: 1, height: 2, background: "#1a1a2e", borderRadius: 1, maxWidth: 80 }}>
+                <div style={{ width: "100%", height: "100%", background: "linear-gradient(90deg, #ef4444, #f97316)", borderRadius: 1 }} />
+              </div>
+              <span style={{ fontSize: 7, color: "#ef4444", fontFamily: "'JetBrains Mono',monospace" }}>10d</span>
+            </div>
+          )}
+          {(m.t === "Z" || m.t === "C") && m.savedBy && (
+            <div style={{ display: "flex", alignItems: "center", gap: 3, marginTop: 3 }}>
+              <span style={{ fontSize: 7, color: "#10b981" }}>🛡️ saved</span>
+            </div>
+          )}
+          </div>
         </div>
         <div style={{ textAlign: "right", flexShrink: 0 }}>
           <div style={{ fontSize: 17, fontWeight: 700, color: tc.color, fontFamily: "'JetBrains Mono',monospace" }}>{m.co}</div>
@@ -267,6 +286,71 @@ const Card = ({ m, rank, exp, tog }) => {
             ))}
           </div>
         </div>)}
+        {/* ⏰ Guillotine Timer — Z and C tier only */}
+        {(m.t === "Z" || m.t === "C") && (() => {
+          const TOKEN = META.token || {};
+          const saved = m.savedBy || null; // wallet address that paid
+          const savedUntil = m.savedUntil || null; // ISO date
+          const now = new Date();
+          const deadline = savedUntil ? new Date(savedUntil) : new Date(now.getTime() + (TOKEN.timerDays || 10) * 24 * 60 * 60 * 1000);
+          const daysLeft = Math.max(0, Math.ceil((deadline - now) / (1000 * 60 * 60 * 24)));
+          const pct = savedUntil ? Math.min(100, (daysLeft / (TOKEN.timerDays || 10)) * 100) : 0;
+          const isExpired = daysLeft === 0 && !saved;
+          const solscanUrl = saved ? `https://solscan.io/account/${saved}` : null;
+
+          return (
+            <div style={{ marginTop: 8, paddingTop: 8, borderTop: "1px solid #ef444420" }}>
+              <div style={{ background: "linear-gradient(135deg,#1a0505,#0a0a0f)", borderRadius: 8, padding: "10px 12px", border: "1px solid #ef444425" }}>
+                {/* Timer Header */}
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+                    <span style={{ fontSize: 12 }}>⏰</span>
+                    <span style={{ fontSize: 9, color: "#ef4444", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" }}>Guillotine Timer</span>
+                  </div>
+                  {saved ? (
+                    <span style={{ fontSize: 8, padding: "2px 6px", borderRadius: 99, background: "#052e16", color: "#10b981", fontWeight: 600, border: "1px solid #10b98130" }}>🛡️ SAVED</span>
+                  ) : (
+                    <span style={{ fontSize: 8, padding: "2px 6px", borderRadius: 99, background: "#450a0a", color: "#ef4444", fontWeight: 600, border: "1px solid #ef444430" }}>{daysLeft}d left</span>
+                  )}
+                </div>
+
+                {/* Timer Bar */}
+                <div style={{ width: "100%", height: 6, background: "#1a1a2e", borderRadius: 3, overflow: "hidden", marginBottom: 6 }}>
+                  <div style={{ width: saved ? `${pct}%` : "100%", height: "100%", background: saved ? "#10b981" : `linear-gradient(90deg, #ef4444, #f97316 ${100-((daysLeft/(TOKEN.timerDays||10))*100)}%, #1a1a2e)`, borderRadius: 3, transition: "width 1s ease",
+                    animation: !saved ? "pulse 2s ease-in-out infinite" : "none" }} />
+                </div>
+
+                {saved ? (
+                  /* Saved state — show who saved them */
+                  <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                    <span style={{ fontSize: 10, color: "#10b981" }}>🛡️ Protected until {deadline.toLocaleDateString()}</span>
+                    <a href={solscanUrl} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} style={{ fontSize: 8, color: "#3b82f6", textDecoration: "none", padding: "1px 6px", background: "#0a0a1f", borderRadius: 4, border: "1px solid #3b82f620", fontFamily: "'JetBrains Mono',monospace" }}>
+                      {saved.slice(0,4)}...{saved.slice(-4)} ↗
+                    </a>
+                  </div>
+                ) : (
+                  /* Unsaved — show pay to stay */
+                  <div>
+                    <div style={{ fontSize: 10, color: "#9ca3af", lineHeight: 1.5, marginBottom: 6 }}>
+                      Contribute to earn your seat — or pay <span style={{ color: "#f59e0b", fontWeight: 700 }}>{(TOKEN.costToStay || 10000).toLocaleString()} $10AMPRO</span> to reset the timer. Someone else can pay on your behalf.
+                    </div>
+                    <div style={{ display: "flex", gap: 6, alignItems: "center", flexWrap: "wrap" }}>
+                      <a href={`https://solscan.io/token/${TOKEN.mint}`} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} style={{ fontSize: 9, padding: "4px 10px", borderRadius: 6, background: "#1e1e2e", color: "#f59e0b", border: "1px solid #f59e0b30", textDecoration: "none", fontWeight: 600, display: "flex", alignItems: "center", gap: 4 }}>
+                        🪙 $10AMPRO Token
+                      </a>
+                      <a href={`https://solscan.io/account/${TOKEN.burnAddress}`} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} style={{ fontSize: 9, padding: "4px 10px", borderRadius: 6, background: "#450a0a", color: "#ef4444", border: "1px solid #ef444430", textDecoration: "none", fontWeight: 600, display: "flex", alignItems: "center", gap: 4 }}>
+                        🔥 Burn Address
+                      </a>
+                    </div>
+                    <div style={{ fontSize: 8, color: "#4b5563", marginTop: 4, fontFamily: "'JetBrains Mono',monospace", wordBreak: "break-all" }}>
+                      Send to: {TOKEN.burnAddress}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          );
+        })()}
       </div>)}
     </div>
   );
