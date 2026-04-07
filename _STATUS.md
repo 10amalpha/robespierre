@@ -7,7 +7,7 @@
 - **URL**: https://club.10am.pro
 - **Fallback**: https://robespierre.vercel.app
 - **Repo**: github.com/10amalpha/robespierre
-- **Version**: V7.3 (Opus Deep-Graded, Guillotine Timer, Pay to Stay, Header Tally)
+- **Version**: V8.0 (On-Chain Pay to Stay — Wallet Connect + SPL Transfer + Verification API)
 - **Last Deploy**: April 7, 2026
 - **Vercel**: `prj_h7LiqacKcqwQcae368ZXoMyQ7aeL` / `team_nPG5TrnRZyVuclmm6dZL1AcX`
 
@@ -16,12 +16,15 @@
 robespierre/
   data/
     members.json    ← 129 members, Opus-graded + savedBy/savedUntil fields
-    meta.json       ← snapshots, pillars, sources, highlights, token config
+    meta.json       ← snapshots, pillars, sources, highlights, token config (w/ decimals)
   app/
-    page.js         ← 5-tab UI, mobile-responsive, guillotine timers
+    page.js         ← 5-tab UI, wallet connect, on-chain pay, guillotine timers
     layout.js       ← viewport, PWA, favicon, manifest
+    api/
+      verify-saves/
+        route.js    ← Solana RPC verification — scans burn address for SPL transfers + memos
   public/
-    logo.jpg, icons, manifest.json (from mercados.10am.pro)
+    logo.jpg, icons, manifest.json
 ```
 
 ## Data
@@ -81,6 +84,16 @@ robespierre/
 - **Anyone can pay on behalf of another member** (sponsorship)
 - Paid members **disappear** from Remove/Zombie lists until next audit
 
+### On-Chain Architecture (V8.0)
+- **No database needed** — the blockchain IS the database
+- **Client-side wallet**: Direct `window.solana` detection (Phantom/Backpack), no heavy adapter libraries
+- **Transaction flow**: User clicks Pay → wallet connect → build SPL transfer + memo → sign → send → confirm
+- **Memo format**: `SAVE:MemberName` — identifies which member the payment covers
+- **Verification API** (`/api/verify-saves`): Scans burn address token account for incoming transfers, reads memos, returns list of saved members with wallet + tx signature
+- **Merge strategy**: On-chain saves override static `members.json` data at render time via `mergedD`
+- **Caching**: API caches results for 60s to avoid RPC rate limits
+- **Optimistic UI**: After successful payment, local state updates immediately before API refetch
+
 ### Token Config (meta.json)
 ```json
 {
@@ -88,6 +101,7 @@ robespierre/
   "mint": "6P5McDuhznaedKjnCvfe9iEjtCfVLyZhSqe93TZtawky",
   "burnAddress": "EGEYg4GYbfdUpEeL6RByTSTiuZYckNJ1EwUGACY6UezG",
   "costToStay": 10000,
+  "decimals": 6,
   "timerDays": 10,
   "chain": "solana"
 }
@@ -126,14 +140,21 @@ robespierre/
 | V6.3+ | Apr 7 | Rebrand → 10AM CLUB, club.10am.pro live |
 | V7.0 | Apr 7 | Guillotine Timer + Pay to Stay (10,000 $10AMPRO) |
 | V7.3 | Apr 7 | **Inline timer + header tally** — 🪓46 pending | ⏰9d 8h | 🛡️ saved |
+| V8.0 | Apr 7 | **On-Chain Pay to Stay** — Phantom/Backpack wallet, SPL transfer, memo tagging, verification API |
 
 ## TODO — Part 2: On-Chain
-- [ ] **Phantom/Backpack wallet connect** on Pay button
-- [ ] **SPL token transfer** transaction builder (10K $10AMPRO → burn address)
-- [ ] **On-chain verification** API route (Solana RPC → check transfers → auto-update savedBy)
-- [ ] **Memo/reference** system to match payments to specific members
-- [ ] Auto-update members.json when payment confirmed
-- [ ] Real-time timer that stops on-chain confirmation
+- [x] **Phantom/Backpack wallet connect** on Pay button (window.solana detection)
+- [x] **SPL token transfer** transaction builder (10K $10AMPRO → burn address)
+- [x] **On-chain verification** API route (`/api/verify-saves` — Solana RPC → scan burn address → match memos)
+- [x] **Memo/reference** system to match payments to specific members (`SAVE:MemberName`)
+- [x] Auto-merge on-chain saves with static data at render time
+- [x] Saved members show 🛡️ shield + wallet address + tx link
+- [x] Pay button shows ⏳ Signing... state during transaction
+- [x] Wallet connect bar in header with address display
+- [x] Error/success banners for transaction status
+- [ ] **Token decimals verification** — confirm 6 decimals on mainnet (currently assumed)
+- [ ] Real-time timer that ticks every second (currently ticks on re-render)
+- [ ] Batch verification — handle 100+ saves efficiently
 
 ## TODO — Other
 - [ ] Quarterly Opus re-run (~July 2026)

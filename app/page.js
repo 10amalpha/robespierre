@@ -151,7 +151,7 @@ const PillarBar = ({ label, icon, value, color, max = 100 }) => (
 );
 
 /* ── Member Card ────────────────────────────────────────────────── */
-const Card = ({ m, rank, exp, tog }) => {
+const Card = ({ m, rank, exp, tog, onPay, payingFor }) => {
   const tc = TC[m.t];
   const hasHistory = m.history && m.history.length > 1;
   const prev = hasHistory ? m.history[m.history.length - 2] : null;
@@ -198,13 +198,29 @@ const Card = ({ m, rank, exp, tog }) => {
               <span style={{ fontSize: 10, color: "#6b7280" }}>hrs</span>
               <span style={{ fontSize: 18, fontWeight: 700, color: c, fontFamily: "'JetBrains Mono',monospace" }}>{mn}</span>
               <span style={{ fontSize: 10, color: "#6b7280" }}>min</span>
-              <div onClick={e => { e.stopPropagation(); window.open(`https://solscan.io/token/${TOKEN.mint}`, '_blank'); }} style={{ display: "flex", alignItems: "center", gap: 6, padding: "8px 18px", background: "linear-gradient(135deg, #f59e0b, #f97316)", borderRadius: 10, cursor: "pointer", boxShadow: "0 2px 12px #f59e0b50", marginLeft: 4 }}>
-                <img src="/logo.jpg" alt="" style={{ width: 18, height: 18, borderRadius: 5 }} />
-                <span style={{ fontSize: 14, fontWeight: 800, color: "#0a0a0f" }}>Pay 10,000</span>
+              <div onClick={e => { e.stopPropagation(); if (onPay) onPay(m.n); }} style={{ display: "flex", alignItems: "center", gap: 6, padding: "8px 18px", background: payingFor === m.n ? "linear-gradient(135deg, #6b7280, #4b5563)" : "linear-gradient(135deg, #f59e0b, #f97316)", borderRadius: 10, cursor: payingFor === m.n ? "wait" : "pointer", boxShadow: "0 2px 12px #f59e0b50", marginLeft: 4, opacity: payingFor && payingFor !== m.n ? 0.4 : 1 }}>
+                {payingFor === m.n ? (
+                  <span style={{ fontSize: 12, fontWeight: 800, color: "#0a0a0f" }}>⏳ Signing...</span>
+                ) : (<>
+                  <img src="/logo.jpg" alt="" style={{ width: 18, height: 18, borderRadius: 5 }} />
+                  <span style={{ fontSize: 14, fontWeight: 800, color: "#0a0a0f" }}>Pay 10,000</span>
+                </>)}
               </div>
             </div>
           );
-        })() : !(m.t === "Z" || m.t === "C") ? (
+        })() : (m.t === "Z" || m.t === "C") && m.savedBy ? (
+          /* Saved on-chain — show green shield */
+          <div style={{ display: "flex", alignItems: "center", gap: 6, flexShrink: 0 }}>
+            <div style={{ padding: "6px 14px", background: "#052e16", borderRadius: 10, border: "1px solid #10b98140", display: "flex", alignItems: "center", gap: 6 }}>
+              <span style={{ fontSize: 16 }}>🛡️</span>
+              <div>
+                <div style={{ fontSize: 11, fontWeight: 700, color: "#10b981" }}>Saved</div>
+                <div style={{ fontSize: 8, color: "#6b728080", fontFamily: "'JetBrains Mono',monospace" }}>{m.savedBy.slice(0, 4)}...{m.savedBy.slice(-4)}</div>
+              </div>
+            </div>
+            {m.txSig && <a href={`https://solscan.io/tx/${m.txSig}`} target="_blank" rel="noopener" onClick={e => e.stopPropagation()} style={{ fontSize: 8, color: "#6b7280", textDecoration: "underline" }}>tx</a>}
+          </div>
+        ) : !(m.t === "Z" || m.t === "C") ? (
           <div style={{ textAlign: "right", flexShrink: 0 }}>
             <div style={{ fontSize: 17, fontWeight: 700, color: tc.color, fontFamily: "'JetBrains Mono',monospace" }}>{m.co}</div>
             <div style={{ width: 52 }}><Br v={m.co} c={tc.color} /></div>
@@ -559,6 +575,95 @@ const NodeMap = ({ data, goM }) => {
   );
 };
 
+/* ── Solana Pay to Stay ─────────────────────────────────────────── */
+const TOKEN = META.token || {};
+const SOL_CONFIG = {
+  mint: TOKEN.mint || "6P5McDuhznaedKjnCvfe9iEjtCfVLyZhSqe93TZtawky",
+  burn: TOKEN.burnAddress || "EGEYg4GYbfdUpEeL6RByTSTiuZYckNJ1EwUGACY6UezG",
+  cost: TOKEN.costToStay || 10000,
+  decimals: TOKEN.decimals || 6,
+  timerDays: TOKEN.timerDays || 10,
+  rpc: "https://api.mainnet-beta.solana.com",
+  memoProgram: "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr",
+};
+
+async function connectWallet() {
+  const provider = window?.solana || window?.phantom?.solana || window?.backpack?.solana;
+  if (!provider) {
+    window.open("https://phantom.app/", "_blank");
+    return null;
+  }
+  try {
+    const resp = await provider.connect();
+    return { publicKey: resp.publicKey.toString(), provider };
+  } catch (e) {
+    console.error("Wallet connect failed:", e);
+    return null;
+  }
+}
+
+async function buildPayTransaction(walletPubkey, memberName, provider) {
+  // Dynamically import solana web3 — only loaded when user clicks Pay
+  const { Connection, PublicKey, Transaction, TransactionInstruction } = await import("@solana/web3.js");
+  const { getAssociatedTokenAddress, createTransferInstruction, getAccount, createAssociatedTokenAccountInstruction } = await import("@solana/spl-token");
+
+  const conn = new Connection(SOL_CONFIG.rpc, "confirmed");
+  const senderPk = new PublicKey(walletPubkey);
+  const mintPk = new PublicKey(SOL_CONFIG.mint);
+  const burnPk = new PublicKey(SOL_CONFIG.burn);
+
+  // Get sender's associated token account
+  const senderATA = await getAssociatedTokenAddress(mintPk, senderPk);
+
+  // Check sender has enough tokens
+  try {
+    const acct = await getAccount(conn, senderATA);
+    const balance = Number(acct.amount) / Math.pow(10, SOL_CONFIG.decimals);
+    if (balance < SOL_CONFIG.cost) {
+      throw new Error(`Insufficient balance: ${balance.toLocaleString()} $10AMPRO (need ${SOL_CONFIG.cost.toLocaleString()})`);
+    }
+  } catch (e) {
+    if (e.message.includes("Insufficient")) throw e;
+    throw new Error("No $10AMPRO tokens found in this wallet");
+  }
+
+  // Get or create burn address ATA
+  const burnATA = await getAssociatedTokenAddress(mintPk, burnPk);
+  const tx = new Transaction();
+
+  // Check if burn ATA exists, create if not
+  try {
+    await getAccount(conn, burnATA);
+  } catch {
+    tx.add(createAssociatedTokenAccountInstruction(senderPk, burnATA, burnPk, mintPk));
+  }
+
+  // SPL transfer: cost * 10^decimals
+  const rawAmount = BigInt(SOL_CONFIG.cost) * BigInt(Math.pow(10, SOL_CONFIG.decimals));
+  tx.add(createTransferInstruction(senderATA, burnATA, senderPk, rawAmount));
+
+  // Add memo: "SAVE:MemberName"
+  const memoIx = new TransactionInstruction({
+    keys: [],
+    programId: new PublicKey(SOL_CONFIG.memoProgram),
+    data: Buffer.from(`SAVE:${memberName}`),
+  });
+  tx.add(memoIx);
+
+  // Set recent blockhash and fee payer
+  const { blockhash, lastValidBlockHeight } = await conn.getLatestBlockhash();
+  tx.recentBlockhash = blockhash;
+  tx.lastValidBlockHeight = lastValidBlockHeight;
+  tx.feePayer = senderPk;
+
+  // Sign and send via wallet
+  const signed = await provider.signTransaction(tx);
+  const sig = await conn.sendRawTransaction(signed.serialize());
+  await conn.confirmTransaction({ signature: sig, blockhash, lastValidBlockHeight }, "confirmed");
+
+  return sig;
+}
+
 /* ── Main App ───────────────────────────────────────────────────── */
 export default function App() {
   const [filter, setFilter] = useState("all");
@@ -566,9 +671,76 @@ export default function App() {
   const [exp, setExp] = useState(null);
   const [sort, setSort] = useState("composite");
   const [sec, setSec] = useState("intel");
-  const k = useMemo(() => kpis(D), []);
+
+  // Wallet state
+  const [wallet, setWallet] = useState(null); // { publicKey, provider }
+  const [onChainSaves, setOnChainSaves] = useState({}); // { memberName: { savedBy, signature, ... } }
+  const [payingFor, setPayingFor] = useState(null); // member name currently being paid for
+  const [payError, setPayError] = useState(null);
+  const [paySuccess, setPaySuccess] = useState(null);
+
+  // Fetch on-chain saves on mount
+  useEffect(() => {
+    fetch("/api/verify-saves")
+      .then(r => r.json())
+      .then(data => {
+        if (data.saves) {
+          const map = {};
+          data.saves.forEach(s => { map[s.member] = s; });
+          setOnChainSaves(map);
+        }
+      })
+      .catch(() => {}); // silent fail — falls back to static data
+  }, [paySuccess]); // refetch after successful payment
+
+  // Merge on-chain saves with static data — on-chain overrides static
+  const mergedD = useMemo(() => D.map(m => {
+    const onchain = onChainSaves[m.n];
+    if (onchain) return { ...m, savedBy: onchain.savedBy, savedUntil: onchain.savedUntil, txSig: onchain.signature };
+    return m;
+  }), [onChainSaves]);
+
+  // Handle wallet connect
+  const handleConnect = useCallback(async () => {
+    if (wallet) { wallet.provider?.disconnect?.(); setWallet(null); return; }
+    const w = await connectWallet();
+    if (w) setWallet(w);
+  }, [wallet]);
+
+  // Handle pay
+  const handlePay = useCallback(async (memberName) => {
+    let w = wallet;
+    if (!w) {
+      w = await connectWallet();
+      if (!w) return;
+      setWallet(w);
+    }
+    setPayingFor(memberName);
+    setPayError(null);
+    setPaySuccess(null);
+    try {
+      const sig = await buildPayTransaction(w.publicKey, memberName, w.provider);
+      setPaySuccess({ member: memberName, sig });
+      setPayingFor(null);
+      // Optimistically update local state
+      setOnChainSaves(prev => ({
+        ...prev,
+        [memberName]: {
+          member: memberName,
+          savedBy: w.publicKey,
+          signature: sig,
+          savedUntil: new Date(new Date("2026-04-07").getTime() + SOL_CONFIG.timerDays * 86400000).toISOString(),
+        },
+      }));
+    } catch (e) {
+      setPayError(e.message || "Transaction failed");
+      setPayingFor(null);
+    }
+  }, [wallet]);
+
+  const k = useMemo(() => kpis(mergedD.length ? mergedD : D), [mergedD]);
   const filt = useMemo(() => {
-    let r = [...D];
+    let r = [...mergedD];
     if (filter !== "all") r = r.filter(x => x.t === filter && !x.savedBy);
     if (search) r = r.filter(x => x.n.toLowerCase().includes(search.toLowerCase()));
     if (sort === "composite") r.sort((a, b) => b.co - a.co);
@@ -579,11 +751,11 @@ export default function App() {
     else if (sort === "inactive") r.sort((a, b) => b.di - a.di);
     else if (sort === "links") r.sort((a, b) => b.l - a.l);
     return r;
-  }, [filter, search, sort]);
+  }, [filter, search, sort, mergedD]);
   const goM = (name) => { setSec("members"); setFilter("all"); setSearch(name); setExp(name); };
 
   // Top per pillar (INCLUDING founder, non-zombie)
-  const active = D.filter(x => x.t !== "Z");
+  const active = mergedD.filter(x => x.t !== "Z");
   const topComposite = [...active].sort((a, b) => b.co - a.co).slice(0, 10);
   const topNet = [...active].sort((a, b) => b.p.network - a.p.network).slice(0, 10);
   const topInt = [...active].sort((a, b) => b.p.intelligence - a.p.intelligence).slice(0, 10);
@@ -606,8 +778,8 @@ export default function App() {
         </div>
         {/* Guillotine Tally — BIG and prominent */}
         {(() => {
-          const axed = D.filter(x => (x.t === "Z" || x.t === "C") && !x.savedBy).length;
-          const saved = D.filter(x => (x.t === "Z" || x.t === "C") && x.savedBy).length;
+          const axed = mergedD.filter(x => (x.t === "Z" || x.t === "C") && !x.savedBy).length;
+          const saved = mergedD.filter(x => (x.t === "Z" || x.t === "C") && x.savedBy).length;
           const TOKEN = META.token || {};
           const timerDays = TOKEN.timerDays || 10;
           const auditDate = new Date('2026-04-07T00:00:00');
@@ -649,6 +821,30 @@ export default function App() {
       <div style={{ fontSize: 10, color: "#4b5563", marginTop: 6, paddingLeft: 40 }}>
         {META.snapshots[0].from.slice(5).replace("-", "/")} → {SNAP.to.slice(5).replace("-", "/")} · {k.nn} members · {k.tot.toLocaleString()} msgs · Powered by Cerebro
       </div>
+      {/* Wallet Connect Bar */}
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: 8, padding: "6px 8px", background: "#111118", borderRadius: 8, border: "1px solid #1e1e2e" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+          <span style={{ fontSize: 10, color: "#6b7280" }}>💳 Solana</span>
+          {wallet && <span style={{ fontSize: 9, color: "#10b981", fontFamily: "'JetBrains Mono',monospace" }}>{wallet.publicKey.slice(0, 4)}...{wallet.publicKey.slice(-4)}</span>}
+        </div>
+        <button onClick={handleConnect} style={{ padding: "4px 12px", fontSize: 10, fontWeight: 700, background: wallet ? "#1e1e2e" : "linear-gradient(135deg, #ab9ff2, #7c3aed)", color: wallet ? "#9ca3af" : "#fff", border: "none", borderRadius: 6, cursor: "pointer" }}>
+          {wallet ? "Disconnect" : "Connect Wallet"}
+        </button>
+      </div>
+      {/* Pay status messages */}
+      {payError && (
+        <div style={{ marginTop: 6, padding: "8px 12px", background: "#450a0a", borderRadius: 8, border: "1px solid #ef444440", display: "flex", alignItems: "center", gap: 8 }}>
+          <span style={{ fontSize: 11, color: "#ef4444" }}>❌ {payError}</span>
+          <button onClick={() => setPayError(null)} style={{ marginLeft: "auto", fontSize: 10, color: "#6b7280", background: "none", border: "none", cursor: "pointer" }}>✕</button>
+        </div>
+      )}
+      {paySuccess && (
+        <div style={{ marginTop: 6, padding: "8px 12px", background: "#052e16", borderRadius: 8, border: "1px solid #10b98140", display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+          <span style={{ fontSize: 11, color: "#10b981" }}>🛡️ {paySuccess.member} saved on-chain!</span>
+          <a href={`https://solscan.io/tx/${paySuccess.sig}`} target="_blank" rel="noopener" style={{ fontSize: 9, color: "#6b7280", fontFamily: "'JetBrains Mono',monospace" }}>{paySuccess.sig.slice(0, 12)}...</a>
+          <button onClick={() => setPaySuccess(null)} style={{ marginLeft: "auto", fontSize: 10, color: "#6b7280", background: "none", border: "none", cursor: "pointer" }}>✕</button>
+        </div>
+      )}
     </div>
 
     {/* Tabs */}
@@ -723,7 +919,7 @@ export default function App() {
         const HT = META.highlightTypes || {};
         const groupHL = (META.groupHighlights && META.groupHighlights[META.currentSnapshot]) || [];
         // Also collect top individual highlights
-        const allHL = D.flatMap(m => (m.highlights || []).map(h => ({ ...h, member: m.n }))).sort((a, b) => (b.quality || 0) - (a.quality || 0));
+        const allHL = mergedD.flatMap(m => (m.highlights || []).map(h => ({ ...h, member: m.n }))).sort((a, b) => (b.quality || 0) - (a.quality || 0));
         const combined = groupHL.length > 0 ? groupHL : allHL.slice(0, 12);
         const pending = combined.length === 0;
         return (
@@ -859,7 +1055,7 @@ export default function App() {
 
       // Compute per-snapshot group stats if we have history
       const getSnapStats = (snapId) => {
-        const members = D.filter(x => {
+        const members = mergedD.filter(x => {
           const h = x.history?.find(hh => hh.snapshot === snapId);
           return h != null;
         });
@@ -886,7 +1082,7 @@ export default function App() {
         const prev = snaps[snaps.length - 2].id;
         const curr = snaps[snaps.length - 1].id;
         const up = [], down = [], newA = [];
-        D.forEach(m => {
+        mergedD.forEach(m => {
           const ph = m.history?.find(h => h.snapshot === prev);
           const ch = m.history?.find(h => h.snapshot === curr);
           if (!ph || !ch) return;
@@ -1078,7 +1274,7 @@ export default function App() {
         <div style={{ fontSize: 12, color: "#9ca3af", lineHeight: 1.6 }}>Three pillars define membership: <span style={{ color: PCOL.network }}>🔗 Network</span>, <span style={{ color: PCOL.intelligence }}>🧠 Intelligence</span>, <span style={{ color: PCOL.capital }}>💰 Capital</span>. Score zero across all three and you&apos;re out. The club demands contribution — not consumption.</div>
       </div>
       <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 14 }}>
-        {[["Zombies", k.tZ, "#ef4444", "#450a0a", "Never typed once"], ["Tier C", k.tC, "#f97316", "#450a0a", "Posted then vanished"], ["Dormant B", D.filter(x => x.t === "B" && x.di > 60).length, "#f59e0b", "#422006", "60+ days silent"], ["Total Cut", k.dw, "#dc2626", "#1a0a2e", `${(k.dw / k.nn * 100).toFixed(0)}% of group`]].map(([lb, ct, c, bg, sub]) => (
+        {[["Zombies", k.tZ, "#ef4444", "#450a0a", "Never typed once"], ["Tier C", k.tC, "#f97316", "#450a0a", "Posted then vanished"], ["Dormant B", mergedD.filter(x => x.t === "B" && x.di > 60).length, "#f59e0b", "#422006", "60+ days silent"], ["Total Cut", k.dw, "#dc2626", "#1a0a2e", `${(k.dw / k.nn * 100).toFixed(0)}% of group`]].map(([lb, ct, c, bg, sub]) => (
           <div key={lb} style={{ flex: "1 1 100px", background: bg, borderRadius: 10, padding: "12px 14px", border: `1px solid ${c}30` }}>
             <div style={{ fontSize: 9, color: c, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase" }}>{lb}</div>
             <div style={{ fontSize: 28, fontWeight: 700, color: c, fontFamily: "'JetBrains Mono',monospace" }}>{ct}</div>
@@ -1088,7 +1284,7 @@ export default function App() {
       </div>
       <div style={{ background: "#111118", borderRadius: 12, padding: "16px 14px", border: "1px solid #1e1e2e", marginBottom: 14 }}>
         <div style={{ fontSize: 10, color: "#dc2626", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>📜 Membership Violations</div>
-        {[{ crime: "Zero Contribution", icon: "🧟", desc: `Joined but never posted a single message. ${SNAP.days}+ days of silence. Pure consumer.`, count: k.tZ }, { crime: "Abandoned", icon: "💀", desc: "Posted a few times then vanished. Showed up, saw the alpha, left without contributing.", count: k.tC }, { crime: "Gone Dark", icon: "😴", desc: "Had activity but 60+ days inactive. One check-in away from removal.", count: D.filter(x => x.t === "B" && x.di > 60).length }].map((c, i) => (
+        {[{ crime: "Zero Contribution", icon: "🧟", desc: `Joined but never posted a single message. ${SNAP.days}+ days of silence. Pure consumer.`, count: k.tZ }, { crime: "Abandoned", icon: "💀", desc: "Posted a few times then vanished. Showed up, saw the alpha, left without contributing.", count: k.tC }, { crime: "Gone Dark", icon: "😴", desc: "Had activity but 60+ days inactive. One check-in away from removal.", count: mergedD.filter(x => x.t === "B" && x.di > 60).length }].map((c, i) => (
           <div key={i} style={{ display: "flex", gap: 12, padding: "10px 0", borderBottom: i < 2 ? "1px solid #1e1e2e" : "none", alignItems: "flex-start" }}>
             <span style={{ fontSize: 24, flexShrink: 0 }}>{c.icon}</span>
             <div style={{ flex: 1 }}><div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}><span style={{ fontSize: 13, fontWeight: 600, color: "#e5e7eb" }}>{c.crime}</span><span style={{ fontSize: 16, fontWeight: 700, color: "#ef4444", fontFamily: "'JetBrains Mono',monospace" }}>{c.count}</span></div><div style={{ fontSize: 11, color: "#9ca3af", marginTop: 2, lineHeight: 1.5 }}>{c.desc}</div></div>
@@ -1098,7 +1294,7 @@ export default function App() {
 
       {/* Panicans — Opus AI Analysis */}
       {(() => {
-        const panicans = D.filter(x => x.panic !== null && x.panic >= 30).sort((a, b) => b.panic - a.panic);
+        const panicans = mergedD.filter(x => x.panic !== null && x.panic >= 30).sort((a, b) => b.panic - a.panic);
         return (
           <div style={{ background: "#111118", borderRadius: 12, padding: "16px 14px", border: "1px solid #f9731625", marginBottom: 14 }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
@@ -1202,12 +1398,12 @@ export default function App() {
       <div style={{ background: "#111118", borderRadius: 12, padding: "16px 14px", border: "1px solid #6b21a825", marginBottom: 14 }}>
         <div style={{ fontSize: 10, color: "#6b21a8", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>🧟 Zombies ({k.tZ})</div>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
-          {D.filter(x => x.t === "Z").sort((a, b) => a.n.localeCompare(b.n)).map(z => (<div key={z.n} style={{ fontSize: 11, padding: "4px 10px", borderRadius: 6, background: "#2e1065", color: "#a78bfa", border: "1px solid #6b21a830" }}>{z.n}</div>))}
+          {mergedD.filter(x => x.t === "Z").sort((a, b) => a.n.localeCompare(b.n)).map(z => (<div key={z.n} style={{ fontSize: 11, padding: "4px 10px", borderRadius: 6, background: "#2e1065", color: "#a78bfa", border: "1px solid #6b21a830" }}>{z.n}</div>))}
         </div>
       </div>
       <div style={{ background: "#111118", borderRadius: 12, padding: "16px 14px", border: "1px solid #ef444425", marginBottom: 14 }}>
         <div style={{ fontSize: 10, color: "#ef4444", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>💀 Deserters — Tier C ({k.tC})</div>
-        {D.filter(x => x.t === "C").sort((a, b) => b.di - a.di).map(m => (<div key={m.n} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "6px 0", borderBottom: "1px solid #1a1a2e" }}><span style={{ fontSize: 12, color: "#e5e7eb" }}>{m.n}</span><div style={{ display: "flex", gap: 12, fontSize: 10, color: "#9ca3af" }}><span>{m.m} msgs</span><span style={{ color: "#ef4444" }}>{m.di}d silent</span></div></div>))}
+        {mergedD.filter(x => x.t === "C").sort((a, b) => b.di - a.di).map(m => (<div key={m.n} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "6px 0", borderBottom: "1px solid #1a1a2e" }}><span style={{ fontSize: 12, color: "#e5e7eb" }}>{m.n}</span><div style={{ display: "flex", gap: 12, fontSize: 10, color: "#9ca3af" }}><span>{m.m} msgs</span><span style={{ color: "#ef4444" }}>{m.di}d silent</span></div></div>))}
       </div>
       <div style={{ background: "#052e16", borderRadius: 12, padding: "16px 14px", border: "1px solid #10b98130" }}>
         <div style={{ fontSize: 10, color: "#10b981", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>🔄 Path to Re-Entry</div>
@@ -1251,7 +1447,7 @@ export default function App() {
       </div>
       <div style={{ padding: "0 14px 80px" }}>
         <div style={{ fontSize: 10, color: "#6b7280", marginBottom: 6, fontWeight: 500 }}>{filt.length} member{filt.length !== 1 ? "s" : ""}</div>
-        {filt.map((m, i) => (<Card key={m.n} m={m} rank={i + 1} exp={exp === m.n} tog={() => setExp(exp === m.n ? null : m.n)} />))}
+        {filt.map((m, i) => (<Card key={m.n} m={m} rank={i + 1} exp={exp === m.n} tog={() => setExp(exp === m.n ? null : m.n)} onPay={handlePay} payingFor={payingFor} />))}
       </div>
     </>)}
   </div>);

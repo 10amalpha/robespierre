@@ -1,6 +1,6 @@
 {
   "group": "10AMPRO",
-  "groupDisplayName": "10AMPRO — Collective Intelligence",
+  "groupDisplayName": "10AMPRO \u2014 Collective Intelligence",
   "currentSnapshot": "s2",
   "snapshots": [
     {
@@ -28,11 +28,11 @@
   "pillars": {
     "network": {
       "label": "Network Sharing",
-      "icon": "🔗",
-      "emoji": "🔗",
+      "icon": "\ud83d\udd17",
+      "emoji": "\ud83d\udd17",
       "color": "#3b82f6",
       "weight": 0.25,
-      "description": "Connecting people — intros, deal flow, client/investor bridges, expanding the group's collective reach",
+      "description": "Connecting people \u2014 intros, deal flow, client/investor bridges, expanding the group's collective reach",
       "signals": [
         "@mentions of other members",
         "intro language (te presento, meet X)",
@@ -56,11 +56,11 @@
     },
     "intelligence": {
       "label": "Collective Intelligence",
-      "icon": "🧠",
-      "emoji": "🧠",
+      "icon": "\ud83e\udde0",
+      "emoji": "\ud83e\udde0",
       "color": "#8b5cf6",
       "weight": 0.4,
-      "description": "Making the group smarter — quality info diet, sharing concepts, arguing positions, cementing ideas through discussion",
+      "description": "Making the group smarter \u2014 quality info diet, sharing concepts, arguing positions, cementing ideas through discussion",
       "signals": [
         "quality links (not junk food)",
         "substantive messages (high word count)",
@@ -84,14 +84,14 @@
     },
     "capital": {
       "label": "Open Source Capital",
-      "icon": "💰",
-      "emoji": "💰",
+      "icon": "\ud83d\udcb0",
+      "emoji": "\ud83d\udcb0",
       "color": "#10b981",
       "weight": 0.35,
-      "description": "Showing your hand — sharing positions, theses, what you bought/sold and why. Radical transparency on investment decisions",
+      "description": "Showing your hand \u2014 sharing positions, theses, what you bought/sold and why. Radical transparency on investment decisions",
       "signals": [
         "ticker mentions ($TSLA, $BTC)",
-        "buy/sell language (compré, vendí, entré)",
+        "buy/sell language (compr\u00e9, vend\u00ed, entr\u00e9)",
         "thesis posts (here's why)",
         "price targets",
         "portfolio mentions"
@@ -103,7 +103,7 @@
         },
         "thesis": {
           "max": 35,
-          "desc": "Explaining the why — investment reasoning"
+          "desc": "Explaining the why \u2014 investment reasoning"
         },
         "transparency": {
           "max": 25,
@@ -118,15 +118,15 @@
     "capital": 0.35
   },
   "engagement": {
-    "description": "Base activity metrics — consistency, volume, recency. Not a pillar, but a multiplier.",
+    "description": "Base activity metrics \u2014 consistency, volume, recency. Not a pillar, but a multiplier.",
     "components": {
       "volume": {
         "max": 30,
-        "desc": "msgs/week × 5, capped"
+        "desc": "msgs/week \u00d7 5, capped"
       },
       "consistency": {
         "max": 25,
-        "desc": "active weeks / total weeks × 25"
+        "desc": "active weeks / total weeks \u00d7 25"
       },
       "recency": {
         "max": 25,
@@ -142,16 +142,16 @@
   },
   "panicans": {
     "label": "Panicans",
-    "icon": "🚨",
+    "icon": "\ud83d\udea8",
     "color": "#f97316",
     "description": "Members who flood the chat with fear, panic, and reactive noise. They have no thesis, no conviction, and amplify volatility instead of signal. The anti-thesis of Open Source Capital.",
     "signals": [
       "Fear language without thesis (nos vamos a la mierda, esto se cae, RIP)",
-      "Reactive to red candles — only posts when price drops",
-      "Zero conviction — never shares what they actually hold",
-      "Question-bombing without research (qué está pasando?? por qué cayó??)",
-      "Emotional contagion — spreads FUD that triggers others to panic",
-      "No follow-up — panics, disappears, never acknowledges when wrong"
+      "Reactive to red candles \u2014 only posts when price drops",
+      "Zero conviction \u2014 never shares what they actually hold",
+      "Question-bombing without research (qu\u00e9 est\u00e1 pasando?? por qu\u00e9 cay\u00f3??)",
+      "Emotional contagion \u2014 spreads FUD that triggers others to panic",
+      "No follow-up \u2014 panics, disappears, never acknowledges when wrong"
     ],
     "scoring": {
       "panicScore": "0-100 assigned by Opus analysis. Higher = more panican behavior.",
@@ -249,43 +249,43 @@
   "highlightTypes": {
     "thesis": {
       "label": "Investment Thesis",
-      "icon": "💰",
+      "icon": "\ud83d\udcb0",
       "color": "#10b981",
       "pillar": "capital"
     },
     "analysis": {
       "label": "Deep Analysis",
-      "icon": "🧠",
+      "icon": "\ud83e\udde0",
       "color": "#8b5cf6",
       "pillar": "intelligence"
     },
     "link": {
       "label": "Alpha Link",
-      "icon": "🔗",
+      "icon": "\ud83d\udd17",
       "color": "#3b82f6",
       "pillar": "intelligence"
     },
     "intro": {
       "label": "Network Intro",
-      "icon": "🤝",
+      "icon": "\ud83e\udd1d",
       "color": "#ec4899",
       "pillar": "network"
     },
     "call": {
       "label": "Market Call",
-      "icon": "📣",
+      "icon": "\ud83d\udce3",
       "color": "#f59e0b",
       "pillar": "capital"
     },
     "insight": {
       "label": "Original Insight",
-      "icon": "💡",
+      "icon": "\ud83d\udca1",
       "color": "#06b6d4",
       "pillar": "intelligence"
     },
     "tool": {
       "label": "Tool/Resource",
-      "icon": "🛠️",
+      "icon": "\ud83d\udee0\ufe0f",
       "color": "#6366f1",
       "pillar": "network"
     }
@@ -309,19 +309,19 @@
         "type": "thesis",
         "summary": "Si yo fuera un agente portfolio - comprehensive analysis of how AI agents will reshape the economy and what assets they'd choose",
         "quality": 10,
-        "member": "Hernán Jaramillo"
+        "member": "Hern\u00e1n Jaramillo"
       },
       {
         "type": "analysis",
         "summary": "Connected Iran targeting, oil flows, China chokepoints to Treasury bills and BRICS destruction thesis",
         "quality": 10,
-        "member": "Hernán Jaramillo"
+        "member": "Hern\u00e1n Jaramillo"
       },
       {
         "type": "link",
         "summary": "Shared over 200 high-quality sources, tools, and analysis threads connecting macro to specific positions",
         "quality": 10,
-        "member": "Hernán Jaramillo"
+        "member": "Hern\u00e1n Jaramillo"
       },
       {
         "type": "thesis",
@@ -333,7 +333,7 @@
         "type": "analysis",
         "summary": "Comprehensive HIMS institutional ownership analysis tracking 748 holders at 94.68% float with detailed fund movements",
         "quality": 10,
-        "member": "Simón Restrepo"
+        "member": "Sim\u00f3n Restrepo"
       },
       {
         "type": "thesis",
@@ -381,7 +381,7 @@
         "type": "tool",
         "summary": "Built hedonicum.pro - AI-powered wine/restaurant recommendation engine using personal taste data",
         "quality": 9,
-        "member": "Hernán Jaramillo"
+        "member": "Hern\u00e1n Jaramillo"
       }
     ]
   },
@@ -391,6 +391,7 @@
     "burnAddress": "EGEYg4GYbfdUpEeL6RByTSTiuZYckNJ1EwUGACY6UezG",
     "costToStay": 10000,
     "timerDays": 10,
-    "chain": "solana"
+    "chain": "solana",
+    "decimals": 6
   }
 }
