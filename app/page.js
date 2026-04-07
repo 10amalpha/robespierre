@@ -848,9 +848,15 @@ export default function App() {
           <span style={{ fontSize: 10, color: "#6b7280" }}>💳 Solana</span>
           {wallet && <span style={{ fontSize: 9, color: "#10b981", fontFamily: "'JetBrains Mono',monospace" }}>{wallet.publicKey.slice(0, 4)}...{wallet.publicKey.slice(-4)}</span>}
         </div>
-        <button onClick={handleConnect} style={{ padding: "4px 12px", fontSize: 10, fontWeight: 700, background: wallet ? "#1e1e2e" : "linear-gradient(135deg, #ab9ff2, #7c3aed)", color: wallet ? "#9ca3af" : "#fff", border: "none", borderRadius: 6, cursor: "pointer" }}>
-          {wallet ? "Disconnect" : "Connect Wallet"}
-        </button>
+        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <a href="https://jup.ag/tokens/6P5McDuhznaedKjnCvfe9iEjtCfVLyZhSqe93TZtawky" target="_blank" rel="noopener" style={{ padding: "4px 12px", fontSize: 10, fontWeight: 700, background: "linear-gradient(135deg, #f59e0b, #f97316)", color: "#0a0a0f", border: "none", borderRadius: 6, cursor: "pointer", textDecoration: "none", display: "flex", alignItems: "center", gap: 4 }}>
+            <img src="/logo.jpg" alt="" style={{ width: 14, height: 14, borderRadius: 4 }} />
+            Buy $10AMPRO
+          </a>
+          <button onClick={handleConnect} style={{ padding: "4px 12px", fontSize: 10, fontWeight: 700, background: wallet ? "#1e1e2e" : "linear-gradient(135deg, #ab9ff2, #7c3aed)", color: wallet ? "#9ca3af" : "#fff", border: "none", borderRadius: 6, cursor: "pointer" }}>
+            {wallet ? "Disconnect" : "Connect Wallet"}
+          </button>
+        </div>
       </div>
       {/* Pay status messages */}
       {payError && (
