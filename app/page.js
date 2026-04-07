@@ -589,7 +589,7 @@ const SOL_CONFIG = {
   cost: TOKEN.costToStay || 10000,
   decimals: TOKEN.decimals || 6,
   timerDays: TOKEN.timerDays || 10,
-  rpc: "https://api.mainnet-beta.solana.com",
+  rpc: "https://mainnet.helius-rpc.com/?api-key=d4d1c413-f308-4627-acf4-be837d854089",
   memoProgram: "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr",
 };
 

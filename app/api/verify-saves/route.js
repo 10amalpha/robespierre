@@ -1,6 +1,6 @@
 import { Connection, PublicKey } from "@solana/web3.js";
 
-const RPC = "https://api.mainnet-beta.solana.com";
+const RPC = "https://mainnet.helius-rpc.com/?api-key=d4d1c413-f308-4627-acf4-be837d854089";
 const BURN = "EGEYg4GYbfdUpEeL6RByTSTiuZYckNJ1EwUGACY6UezG";
 const MINT = "6P5McDuhznaedKjnCvfe9iEjtCfVLyZhSqe93TZtawky";
 const COST = 10000;
