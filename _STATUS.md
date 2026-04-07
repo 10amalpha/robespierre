@@ -7,7 +7,7 @@
 - **URL**: https://club.10am.pro
 - **Fallback**: https://robespierre.vercel.app
 - **Repo**: github.com/10amalpha/robespierre
-- **Version**: V8.0 (On-Chain Pay to Stay — Wallet Connect + SPL Transfer + Verification API)
+- **Version**: V8.1 (On-Chain Pay to Stay + Saved Visibility)
 - **Last Deploy**: April 7, 2026
 - **Vercel**: `prj_h7LiqacKcqwQcae368ZXoMyQ7aeL` / `team_nPG5TrnRZyVuclmm6dZL1AcX`
 
@@ -94,6 +94,14 @@ robespierre/
 - **Caching**: API caches results for 60s to avoid RPC rate limits
 - **Optimistic UI**: After successful payment, local state updates immediately before API refetch
 
+### Saved Member Visibility (V8.1)
+- **Members tab**: 🛡️ Saved filter button shows only saved Z/C members
+- **Members tab**: Green "Saved" counter card appears when saves exist
+- **Members tab**: Saved Z/C members visible in ALL tier filters (not hidden)
+- **Standards tab**: Zombie list shows saved members in green with 🛡️ prefix
+- **Standards tab**: Deserter list shows "Saved" label for saved members
+- **Member card**: Saved Z/C → 🛡️ shield + truncated wallet + Solscan tx link
+
 ### Token Config (meta.json)
 ```json
 {
@@ -141,6 +149,7 @@ robespierre/
 | V7.0 | Apr 7 | Guillotine Timer + Pay to Stay (10,000 $10AMPRO) |
 | V7.3 | Apr 7 | **Inline timer + header tally** — 🪓46 pending | ⏰9d 8h | 🛡️ saved |
 | V8.0 | Apr 7 | **On-Chain Pay to Stay** — Phantom/Backpack wallet, SPL transfer, memo tagging, verification API |
+| V8.1 | Apr 7 | **Saved Visibility** — 🛡️ Saved filter, badges in zombie/remove lists, saved counter card |
 
 ## TODO — Part 2: On-Chain
 - [x] **Phantom/Backpack wallet connect** on Pay button (window.solana detection)
