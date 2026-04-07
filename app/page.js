@@ -1,5 +1,5 @@
 "use client";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useRef, useCallback } from "react";
 import membersRaw from "../data/members.json";
 import metaRaw from "../data/meta.json";
 
@@ -226,6 +226,255 @@ const Card = ({ m, rank, exp, tog }) => {
 const srcColors = { "X/Twitter": "#3b82f6", "YouTube": "#8b5cf6", "Substack": "#10b981", "Instagram": "#ef4444", "TikTok": "#ef4444", "Bloomberg/Reuters/FT": "#f59e0b" };
 const srcVerdicts = { "Primary alpha channel": "✓", "Deep content": "✓", "Analysis layer": "✓", "Junk food": "✗ (-2)", "Premium signal": "✓ (need more)" };
 
+/* ── Network Node Map ───────────────────────────────────────────── */
+const NodeMap = ({ data, goM }) => {
+  const canvasRef = useRef(null);
+  const [hovered, setHovered] = useState(null);
+  const [dims, setDims] = useState({ w: 360, h: 340 });
+  const nodesRef = useRef(null);
+  const animRef = useRef(null);
+
+  // Build nodes and edges from member data
+  const { nodes, edges } = useMemo(() => {
+    // Only include non-zombie members with some activity
+    const active = data.filter(x => x.t !== "Z" && x.m > 0);
+    const nodes = active.map((m, i) => ({
+      id: i, name: m.n, tier: m.t, co: m.co, msgs: m.m,
+      network: m.p.network, intelligence: m.p.intelligence, capital: m.p.capital,
+      isFounder: m.u,
+      // Size based on composite (min 4, max 18)
+      r: Math.max(4, Math.min(18, 4 + (m.co / 100) * 14)),
+      // Start position: random within bounds
+      x: 0, y: 0, vx: 0, vy: 0,
+    }));
+
+    // Generate edges: connect members who overlap in activity patterns
+    // Higher overlap = stronger connection. Use active weeks + active days as proxy
+    const edges = [];
+    for (let i = 0; i < nodes.length; i++) {
+      const a = active[i];
+      for (let j = i + 1; j < nodes.length; j++) {
+        const b = active[j];
+        // Connection strength: both active in same time window
+        // Proxy: min(weeks_a, weeks_b) / max(weeks_a, weeks_b) * activity overlap
+        const weekOverlap = Math.min(a.aw, b.aw) / Math.max(a.aw, b.aw, 1);
+        const dayOverlap = Math.min(a.ad, b.ad) / Math.max(a.ad, b.ad, 1);
+        const strength = (weekOverlap * 0.6 + dayOverlap * 0.4);
+        // Only connect if reasonable overlap and both somewhat active
+        if (strength > 0.4 && a.aw >= 3 && b.aw >= 3) {
+          edges.push({ source: i, target: j, strength });
+        } else if (strength > 0.6 && (a.aw >= 2 || b.aw >= 2)) {
+          edges.push({ source: i, target: j, strength: strength * 0.5 });
+        }
+      }
+    }
+    return { nodes, edges };
+  }, [data]);
+
+  // Simple force simulation
+  useEffect(() => {
+    if (!canvasRef.current || nodes.length === 0) return;
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
+    const W = canvas.width, H = canvas.height;
+    const cx = W / 2, cy = H / 2;
+
+    // Initialize positions in a circle
+    nodes.forEach((n, i) => {
+      const angle = (i / nodes.length) * Math.PI * 2;
+      const dist = 60 + Math.random() * 80;
+      n.x = cx + Math.cos(angle) * dist;
+      n.y = cy + Math.sin(angle) * dist;
+      n.vx = 0; n.vy = 0;
+    });
+    nodesRef.current = nodes;
+
+    let frame = 0;
+    const maxFrames = 200;
+
+    const tick = () => {
+      frame++;
+      const alpha = Math.max(0.001, 1 - frame / maxFrames);
+
+      // Forces
+      nodes.forEach(n => { n.vx *= 0.85; n.vy *= 0.85; });
+
+      // Repulsion between all nodes
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const dx = nodes[j].x - nodes[i].x;
+          const dy = nodes[j].y - nodes[i].y;
+          const d = Math.sqrt(dx * dx + dy * dy) || 1;
+          const force = -800 * alpha / (d * d);
+          const fx = (dx / d) * force, fy = (dy / d) * force;
+          nodes[i].vx -= fx; nodes[i].vy -= fy;
+          nodes[j].vx += fx; nodes[j].vy += fy;
+        }
+      }
+
+      // Attraction along edges
+      edges.forEach(e => {
+        const a = nodes[e.source], b = nodes[e.target];
+        const dx = b.x - a.x, dy = b.y - a.y;
+        const d = Math.sqrt(dx * dx + dy * dy) || 1;
+        const force = (d - 50) * 0.02 * e.strength * alpha;
+        const fx = (dx / d) * force, fy = (dy / d) * force;
+        a.vx += fx; a.vy += fy;
+        b.vx -= fx; b.vy -= fy;
+      });
+
+      // Center gravity
+      nodes.forEach(n => {
+        n.vx += (cx - n.x) * 0.008 * alpha;
+        n.vy += (cy - n.y) * 0.008 * alpha;
+      });
+
+      // Apply velocities and bounds
+      nodes.forEach(n => {
+        n.x += n.vx;
+        n.y += n.vy;
+        n.x = Math.max(n.r + 4, Math.min(W - n.r - 4, n.x));
+        n.y = Math.max(n.r + 4, Math.min(H - n.r - 4, n.y));
+      });
+
+      // Draw
+      ctx.clearRect(0, 0, W, H);
+
+      // Edges
+      edges.forEach(e => {
+        const a = nodes[e.source], b = nodes[e.target];
+        ctx.beginPath();
+        ctx.moveTo(a.x, a.y);
+        ctx.lineTo(b.x, b.y);
+        ctx.strokeStyle = `rgba(255,255,255,${0.03 + e.strength * 0.06})`;
+        ctx.lineWidth = 0.5 + e.strength;
+        ctx.stroke();
+      });
+
+      // Nodes
+      const hov = nodesRef.current?.find(n => n.name === (typeof window !== "undefined" ? window.__robHover : null));
+      nodes.forEach(n => {
+        const isHov = hov && n.name === hov.name;
+        const tierColor = TC[n.tier]?.color || "#6b7280";
+
+        // Glow for hovered
+        if (isHov) {
+          ctx.beginPath();
+          ctx.arc(n.x, n.y, n.r + 6, 0, Math.PI * 2);
+          ctx.fillStyle = tierColor + "30";
+          ctx.fill();
+        }
+
+        // Node circle
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+        ctx.fillStyle = isHov ? tierColor : tierColor + "90";
+        ctx.fill();
+        ctx.strokeStyle = isHov ? "#fff" : tierColor;
+        ctx.lineWidth = isHov ? 2 : 1;
+        ctx.stroke();
+
+        // Founder crown
+        if (n.isFounder) {
+          ctx.font = `${Math.max(8, n.r * 0.8)}px sans-serif`;
+          ctx.textAlign = "center";
+          ctx.fillText("👑", n.x, n.y - n.r - 3);
+        }
+
+        // Name label for large or hovered nodes
+        if (n.r >= 10 || isHov) {
+          ctx.font = `${isHov ? "bold " : ""}${isHov ? 10 : 8}px 'Inter',sans-serif`;
+          ctx.textAlign = "center";
+          ctx.fillStyle = isHov ? "#fff" : "#9ca3af";
+          const label = n.name.split(" ")[0];
+          ctx.fillText(label, n.x, n.y + n.r + 11);
+        }
+
+        // Composite score inside node if big enough
+        if (n.r >= 8) {
+          ctx.font = `bold ${Math.max(7, n.r * 0.65)}px 'JetBrains Mono',monospace`;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillStyle = "#fff";
+          ctx.fillText(n.co, n.x, n.y);
+          ctx.textBaseline = "alphabetic";
+        }
+      });
+
+      if (frame < maxFrames) {
+        animRef.current = requestAnimationFrame(tick);
+      }
+    };
+
+    animRef.current = requestAnimationFrame(tick);
+    return () => { if (animRef.current) cancelAnimationFrame(animRef.current); };
+  }, [nodes, edges]);
+
+  // Mouse interaction
+  const handleMouse = useCallback((e) => {
+    if (!canvasRef.current || !nodesRef.current) return;
+    const rect = canvasRef.current.getBoundingClientRect();
+    const scaleX = canvasRef.current.width / rect.width;
+    const scaleY = canvasRef.current.height / rect.height;
+    const mx = (e.clientX - rect.left) * scaleX;
+    const my = (e.clientY - rect.top) * scaleY;
+    let found = null;
+    for (const n of nodesRef.current) {
+      const dx = mx - n.x, dy = my - n.y;
+      if (dx * dx + dy * dy < (n.r + 4) * (n.r + 4)) { found = n; break; }
+    }
+    if (typeof window !== "undefined") window.__robHover = found?.name || null;
+    setHovered(found);
+    canvasRef.current.style.cursor = found ? "pointer" : "default";
+  }, []);
+
+  const handleClick = useCallback(() => { if (hovered) goM(hovered.name); }, [hovered, goM]);
+
+  return (
+    <div style={{ background: "#111118", borderRadius: 12, padding: "14px 12px", border: "1px solid #1e1e2e", marginBottom: 12 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
+        <div style={{ fontSize: 10, color: "#6b7280", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase" }}>🌐 Network Node Map</div>
+        <div style={{ fontSize: 9, color: "#6b7280" }}>Node size = composite · Color = tier · Click to view member</div>
+      </div>
+      <div style={{ position: "relative", borderRadius: 8, overflow: "hidden", background: "#0a0a0f", border: "1px solid #1e1e2e" }}>
+        <canvas
+          ref={canvasRef}
+          width={720}
+          height={500}
+          style={{ width: "100%", height: "auto", display: "block" }}
+          onMouseMove={handleMouse}
+          onMouseLeave={() => { if (typeof window !== "undefined") window.__robHover = null; setHovered(null); }}
+          onClick={handleClick}
+        />
+        {hovered && (
+          <div style={{ position: "absolute", top: 8, right: 8, background: "#111118ee", borderRadius: 8, padding: "8px 12px", border: `1px solid ${TC[hovered.tier]?.color || "#6b7280"}30`, backdropFilter: "blur(4px)" }}>
+            <div style={{ fontSize: 12, fontWeight: 700, color: "#e5e7eb" }}>{hovered.name}{hovered.isFounder ? " 👑" : ""}</div>
+            <div style={{ display: "flex", gap: 8, marginTop: 3, fontSize: 10 }}>
+              <span style={{ color: PCOL.network, fontWeight: 600 }}>🔗{hovered.network}</span>
+              <span style={{ color: PCOL.intelligence, fontWeight: 600 }}>🧠{hovered.intelligence}</span>
+              <span style={{ color: PCOL.capital, fontWeight: 600 }}>💰{hovered.capital}</span>
+            </div>
+            <div style={{ fontSize: 10, color: TC[hovered.tier]?.color, fontWeight: 600, marginTop: 2 }}>Composite: {hovered.co} · {hovered.msgs} msgs</div>
+          </div>
+        )}
+      </div>
+      {/* Legend */}
+      <div style={{ display: "flex", gap: 12, marginTop: 8, flexWrap: "wrap" }}>
+        {[["A", "Active"], ["B", "Watch"], ["C", "Remove"]].map(([t, lb]) => (
+          <div key={t} style={{ display: "flex", alignItems: "center", gap: 4 }}>
+            <div style={{ width: 8, height: 8, borderRadius: "50%", background: TC[t].color }} />
+            <span style={{ fontSize: 9, color: "#6b7280" }}>{lb}</span>
+          </div>
+        ))}
+        <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+          <div style={{ width: 14, height: 2, background: "#ffffff20", borderRadius: 1 }} />
+          <span style={{ fontSize: 9, color: "#6b7280" }}>Activity overlap</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 /* ── Main App ───────────────────────────────────────────────────── */
 export default function App() {
   const [filter, setFilter] = useState("all");
@@ -332,6 +581,9 @@ export default function App() {
           </div>
         ))}
       </div>
+
+      {/* Network Node Map */}
+      <NodeMap data={D} goM={goM} />
 
       {/* System Health Gauges */}
       <div style={{ background: "#111118", borderRadius: 12, padding: "14px 10px", border: "1px solid #1e1e2e", marginBottom: 12 }}>
