@@ -595,7 +595,7 @@ export default function App() {
     <div style={{ padding: "16px 14px 10px" }}>
       <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
         <img src="/logo.jpg" alt="10AMPRO" style={{ width: 32, height: 32, borderRadius: 8 }} />
-        <div>
+        <div style={{ flex: 1 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
             <span style={{ fontSize: 17, fontWeight: 700, letterSpacing: "-0.02em" }}>10AM</span>
             <span style={{ fontSize: 17, fontWeight: 700, letterSpacing: "-0.02em", color: "#10b981" }}>CLUB</span>
@@ -604,6 +604,41 @@ export default function App() {
             💰 Open Source Capital · 🧠 Collective Intelligence · 🔗 Network Sharing
           </div>
         </div>
+        {/* Guillotine Tally */}
+        {(() => {
+          const axed = D.filter(x => (x.t === "Z" || x.t === "C") && !x.savedBy).length;
+          const saved = D.filter(x => (x.t === "Z" || x.t === "C") && x.savedBy).length;
+          const TOKEN = META.token || {};
+          const timerDays = TOKEN.timerDays || 10;
+          const auditDate = new Date('2026-04-07T00:00:00');
+          const deadline = new Date(auditDate.getTime() + timerDays * 24 * 3600 * 1000);
+          const now = new Date();
+          const remaining = Math.max(0, Math.floor((deadline - now) / 1000));
+          const dd = Math.floor(remaining / 86400);
+          const hh = Math.floor((remaining % 86400) / 3600);
+          return (
+            <div style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0 }}>
+              <div style={{ textAlign: "center" }}>
+                <div style={{ fontSize: 22, fontWeight: 800, color: "#ef4444", fontFamily: "'JetBrains Mono',monospace", lineHeight: 1 }}>{axed}</div>
+                <div style={{ fontSize: 8, color: "#ef4444", fontWeight: 600, letterSpacing: "0.05em" }}>🪓 AXED</div>
+              </div>
+              {saved > 0 && <div style={{ textAlign: "center" }}>
+                <div style={{ fontSize: 22, fontWeight: 800, color: "#10b981", fontFamily: "'JetBrains Mono',monospace", lineHeight: 1 }}>{saved}</div>
+                <div style={{ fontSize: 8, color: "#10b981", fontWeight: 600, letterSpacing: "0.05em" }}>🛡️ SAVED</div>
+              </div>}
+              <div style={{ height: 28, width: 1, background: "#1e1e2e" }} />
+              <div style={{ textAlign: "center" }}>
+                <div style={{ display: "flex", alignItems: "baseline", gap: 2 }}>
+                  <span style={{ fontSize: 18, fontWeight: 800, color: "#f97316", fontFamily: "'JetBrains Mono',monospace" }}>{dd}</span>
+                  <span style={{ fontSize: 8, color: "#6b7280" }}>d</span>
+                  <span style={{ fontSize: 14, fontWeight: 700, color: "#f97316", fontFamily: "'JetBrains Mono',monospace" }}>{hh}</span>
+                  <span style={{ fontSize: 8, color: "#6b7280" }}>h</span>
+                </div>
+                <div style={{ fontSize: 7, color: "#6b7280", letterSpacing: "0.05em" }}>⏰ UNTIL CUT</div>
+              </div>
+            </div>
+          );
+        })()}
       </div>
       <div style={{ fontSize: 10, color: "#4b5563", marginTop: 6, paddingLeft: 40 }}>
         {META.snapshots[0].from.slice(5).replace("-", "/")} → {SNAP.to.slice(5).replace("-", "/")} · {k.nn} members · {k.tot.toLocaleString()} msgs · Powered by Cerebro
