@@ -741,7 +741,8 @@ export default function App() {
   const k = useMemo(() => kpis(mergedD.length ? mergedD : D), [mergedD]);
   const filt = useMemo(() => {
     let r = [...mergedD];
-    if (filter !== "all") r = r.filter(x => x.t === filter && !x.savedBy);
+    if (filter === "saved") r = r.filter(x => (x.t === "Z" || x.t === "C") && x.savedBy);
+    else if (filter !== "all") r = r.filter(x => x.t === filter);
     if (search) r = r.filter(x => x.n.toLowerCase().includes(search.toLowerCase()));
     if (sort === "composite") r.sort((a, b) => b.co - a.co);
     else if (sort === "network") r.sort((a, b) => b.p.network - a.p.network);
@@ -1398,12 +1399,12 @@ export default function App() {
       <div style={{ background: "#111118", borderRadius: 12, padding: "16px 14px", border: "1px solid #6b21a825", marginBottom: 14 }}>
         <div style={{ fontSize: 10, color: "#6b21a8", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>🧟 Zombies ({k.tZ})</div>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
-          {mergedD.filter(x => x.t === "Z").sort((a, b) => a.n.localeCompare(b.n)).map(z => (<div key={z.n} style={{ fontSize: 11, padding: "4px 10px", borderRadius: 6, background: "#2e1065", color: "#a78bfa", border: "1px solid #6b21a830" }}>{z.n}</div>))}
+          {mergedD.filter(x => x.t === "Z").sort((a, b) => a.n.localeCompare(b.n)).map(z => (<div key={z.n} style={{ fontSize: 11, padding: "4px 10px", borderRadius: 6, background: z.savedBy ? "#052e16" : "#2e1065", color: z.savedBy ? "#10b981" : "#a78bfa", border: `1px solid ${z.savedBy ? "#10b98130" : "#6b21a830"}` }}>{z.savedBy ? "🛡️ " : ""}{z.n}</div>))}
         </div>
       </div>
       <div style={{ background: "#111118", borderRadius: 12, padding: "16px 14px", border: "1px solid #ef444425", marginBottom: 14 }}>
         <div style={{ fontSize: 10, color: "#ef4444", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>💀 Deserters — Tier C ({k.tC})</div>
-        {mergedD.filter(x => x.t === "C").sort((a, b) => b.di - a.di).map(m => (<div key={m.n} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "6px 0", borderBottom: "1px solid #1a1a2e" }}><span style={{ fontSize: 12, color: "#e5e7eb" }}>{m.n}</span><div style={{ display: "flex", gap: 12, fontSize: 10, color: "#9ca3af" }}><span>{m.m} msgs</span><span style={{ color: "#ef4444" }}>{m.di}d silent</span></div></div>))}
+        {mergedD.filter(x => x.t === "C").sort((a, b) => b.di - a.di).map(m => (<div key={m.n} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "6px 0", borderBottom: "1px solid #1a1a2e" }}><span style={{ fontSize: 12, color: m.savedBy ? "#10b981" : "#e5e7eb" }}>{m.savedBy ? "🛡️ " : ""}{m.n}</span><div style={{ display: "flex", gap: 12, fontSize: 10, color: "#9ca3af" }}>{m.savedBy ? <span style={{ color: "#10b981", fontWeight: 600 }}>Saved</span> : <><span>{m.m} msgs</span><span style={{ color: "#ef4444" }}>{m.di}d silent</span></>}</div></div>))}
       </div>
       <div style={{ background: "#052e16", borderRadius: 12, padding: "16px 14px", border: "1px solid #10b98130" }}>
         <div style={{ fontSize: 10, color: "#10b981", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>🔄 Path to Re-Entry</div>
@@ -1426,12 +1427,18 @@ export default function App() {
             <div style={{ fontSize: 10, color: c, opacity: 0.7, fontWeight: 500 }}>{lb}</div>
           </div>
         ))}
+        {(() => { const sc = mergedD.filter(x => (x.t === "Z" || x.t === "C") && x.savedBy).length; return sc > 0 ? (
+          <div onClick={() => setFilter("saved")} style={{ flex: 1, minWidth: 70, padding: "9px 12px", borderRadius: 8, background: "#052e16", border: "1px solid #10b98140", cursor: "pointer" }}>
+            <div style={{ fontSize: 20, fontWeight: 700, color: "#10b981", fontFamily: "'JetBrains Mono',monospace" }}>{sc}</div>
+            <div style={{ fontSize: 10, color: "#10b981", opacity: 0.7, fontWeight: 500 }}>🛡️ Saved</div>
+          </div>
+        ) : null; })()}
       </div>
       <div style={{ padding: "10px 14px", display: "flex", flexDirection: "column", gap: 8 }}>
         <input type="text" placeholder="Search members..." value={search} onChange={e => setSearch(e.target.value)} style={{ width: "100%", padding: "9px 12px", borderRadius: 8, background: "#111118", border: "1px solid #1e1e2e", color: "#e5e7eb", fontSize: 12, outline: "none", boxSizing: "border-box" }} />
         <div style={{ display: "flex", gap: 5, flexWrap: "wrap" }}>
-          {[["all", "All"], ["A", "⚡ Active"], ["B", "👁 Watch"], ["C", "🪓 Remove"], ["Z", "🧟 Zombie"]].map(([key, lb]) => (
-            <button key={key} onClick={() => setFilter(key)} style={{ padding: "5px 12px", borderRadius: 6, fontSize: 11, fontWeight: 600, border: "1px solid", cursor: "pointer", background: filter === key ? (key === "all" ? "#1e1e2e" : TC[key]?.bg || "#1e1e2e") : "transparent", color: filter === key ? (key === "all" ? "#e5e7eb" : TC[key]?.color || "#e5e7eb") : "#6b7280", borderColor: filter === key ? (key === "all" ? "#374151" : (TC[key]?.color || "") + "40") : "#1e1e2e" }}>{lb}</button>
+          {[["all", "All"], ["A", "⚡ Active"], ["B", "👁 Watch"], ["C", "🪓 Remove"], ["Z", "🧟 Zombie"], ["saved", "🛡️ Saved"]].map(([key, lb]) => (
+            <button key={key} onClick={() => setFilter(key)} style={{ padding: "5px 12px", borderRadius: 6, fontSize: 11, fontWeight: 600, border: "1px solid", cursor: "pointer", background: filter === key ? (key === "all" ? "#1e1e2e" : key === "saved" ? "#052e16" : TC[key]?.bg || "#1e1e2e") : "transparent", color: filter === key ? (key === "all" ? "#e5e7eb" : key === "saved" ? "#10b981" : TC[key]?.color || "#e5e7eb") : "#6b7280", borderColor: filter === key ? (key === "all" ? "#374151" : key === "saved" ? "#10b98140" : (TC[key]?.color || "") + "40") : "#1e1e2e" }}>{lb}</button>
           ))}
           <div style={{ flex: 1 }} />
           <select value={sort} onChange={e => setSort(e.target.value)} style={{ padding: "5px 8px", borderRadius: 6, fontSize: 11, background: "#111118", border: "1px solid #1e1e2e", color: "#9ca3af", cursor: "pointer" }}>
