@@ -175,46 +175,41 @@ const Card = ({ m, rank, exp, tog }) => {
             <span style={{ fontSize: 8, color: m.di > 30 ? "#ef4444" : m.di > 14 ? "#f59e0b" : "#6b7280" }}>{m.di === 0 ? "today" : `${m.di}d ago`}</span>
           </div>
         </div>
-        {/* Right side: Score (only for non-Z/C) */}
-        {!(m.t === "Z" || m.t === "C") && (
+        {/* Right side: Score OR Timer+Button (all in one row) */}
+        {(m.t === "Z" || m.t === "C") && !m.savedBy ? (() => {
+          const TOKEN = META.token || {};
+          const timerDays = TOKEN.timerDays || 10;
+          const auditDate = new Date('2026-04-07T00:00:00');
+          const deadline = new Date(auditDate.getTime() + timerDays * 24 * 3600 * 1000);
+          const now = new Date();
+          const remaining = Math.max(0, Math.floor((deadline - now) / 1000));
+          const d = Math.floor(remaining / 86400);
+          const h = Math.floor((remaining % 86400) / 3600);
+          const mn = Math.floor((remaining % 3600) / 60);
+          const urgent = d <= 3;
+          const c = urgent ? "#ef4444" : "#f97316";
+          return (
+            <div style={{ display: "flex", alignItems: "center", gap: 4, flexShrink: 0 }}>
+              <span style={{ fontSize: 11 }}>⏰</span>
+              <span style={{ fontSize: 16, fontWeight: 800, color: c, fontFamily: "'JetBrains Mono',monospace" }}>{d}</span>
+              <span style={{ fontSize: 8, color: "#6b7280" }}>d</span>
+              <span style={{ fontSize: 14, fontWeight: 700, color: c, fontFamily: "'JetBrains Mono',monospace" }}>{h}</span>
+              <span style={{ fontSize: 8, color: "#6b7280" }}>hrs</span>
+              <span style={{ fontSize: 14, fontWeight: 700, color: c, fontFamily: "'JetBrains Mono',monospace" }}>{mn}</span>
+              <span style={{ fontSize: 8, color: "#6b7280" }}>min</span>
+              <div onClick={e => { e.stopPropagation(); window.open(`https://solscan.io/token/${TOKEN.mint}`, '_blank'); }} style={{ display: "flex", alignItems: "center", gap: 4, padding: "5px 12px", background: "linear-gradient(135deg, #f59e0b, #f97316)", borderRadius: 8, cursor: "pointer", boxShadow: "0 2px 8px #f59e0b40", marginLeft: 6 }}>
+                <img src="/logo.jpg" alt="" style={{ width: 14, height: 14, borderRadius: 3 }} />
+                <span style={{ fontSize: 11, fontWeight: 800, color: "#0a0a0f" }}>Pay 10,000</span>
+              </div>
+            </div>
+          );
+        })() : !(m.t === "Z" || m.t === "C") ? (
           <div style={{ textAlign: "right", flexShrink: 0 }}>
             <div style={{ fontSize: 17, fontWeight: 700, color: tc.color, fontFamily: "'JetBrains Mono',monospace" }}>{m.co}</div>
             <div style={{ width: 52 }}><Br v={m.co} c={tc.color} /></div>
           </div>
-        )}
+        ) : null}
       </div>
-
-      {/* ⏰ COUNTDOWN — Z and C tier only, hidden if saved */}
-      {(m.t === "Z" || m.t === "C") && !m.savedBy && (() => {
-        const TOKEN = META.token || {};
-        const timerDays = TOKEN.timerDays || 10;
-        const auditDate = new Date('2026-04-07T00:00:00');
-        const deadline = new Date(auditDate.getTime() + timerDays * 24 * 3600 * 1000);
-        const now = new Date();
-        const remaining = Math.max(0, Math.floor((deadline - now) / 1000));
-        const d = Math.floor(remaining / 86400);
-        const h = Math.floor((remaining % 86400) / 3600);
-        const mn = Math.floor((remaining % 3600) / 60);
-        const urgent = d <= 3;
-
-        return (
-          <div style={{ marginTop: 6, display: "flex", alignItems: "center", gap: 8 }}>
-            <span style={{ fontSize: 10, color: "#6b7280", whiteSpace: "nowrap", flexShrink: 0 }}>Stop the timer:</span>
-            <span style={{ fontSize: 12 }}>⏰</span>
-            <span style={{ fontSize: 20, fontWeight: 800, color: urgent ? "#ef4444" : "#f97316", fontFamily: "'JetBrains Mono',monospace" }}>{d}</span>
-            <span style={{ fontSize: 9, color: "#6b7280" }}>d</span>
-            <span style={{ fontSize: 16, fontWeight: 700, color: urgent ? "#ef4444" : "#f97316", fontFamily: "'JetBrains Mono',monospace" }}>{h}</span>
-            <span style={{ fontSize: 9, color: "#6b7280" }}>hrs</span>
-            <span style={{ fontSize: 16, fontWeight: 700, color: urgent ? "#ef4444" : "#f97316", fontFamily: "'JetBrains Mono',monospace" }}>{mn}</span>
-            <span style={{ fontSize: 9, color: "#6b7280" }}>min</span>
-            <div style={{ flex: 1 }} />
-            <div onClick={e => { e.stopPropagation(); window.open(`https://solscan.io/token/${TOKEN.mint}`, '_blank'); }} style={{ display: "flex", alignItems: "center", gap: 5, padding: "6px 14px", background: "linear-gradient(135deg, #f59e0b, #f97316)", borderRadius: 8, cursor: "pointer", boxShadow: "0 2px 10px #f59e0b40", flexShrink: 0 }} onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"} onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}>
-              <img src="/logo.jpg" alt="" style={{ width: 16, height: 16, borderRadius: 4 }} />
-              <span style={{ fontSize: 12, fontWeight: 800, color: "#0a0a0f" }}>Pay 10,000</span>
-            </div>
-          </div>
-        );
-      })()}
       {exp && (<div style={{ marginTop: 11, paddingTop: 9, borderTop: `1px solid ${tc.color}20` }}>
         <div style={{ display: "flex", gap: 12, alignItems: "flex-start", flexWrap: "wrap", justifyContent: "center" }}>
           <Radar net={m.p.network} int={m.p.intelligence} cap={m.p.capital} size={90} />
