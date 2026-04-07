@@ -613,20 +613,20 @@ export default function App() {
         </div>
       </div>
 
-      {/* Top per pillar */}
-      <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 12 }}>
+      {/* Top per pillar — 3 columns */}
+      <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
         {[
           { label: "Top Networkers", icon: "🔗", data: topNet, key: "network", c: PCOL.network },
           { label: "Top Intelligence", icon: "🧠", data: topInt, key: "intelligence", c: PCOL.intelligence },
           { label: "Top Capital", icon: "💰", data: topCap, key: "capital", c: PCOL.capital },
         ].map(col => (
-          <div key={col.key} style={{ flex: "1 1 100%", minWidth: 140, background: "#111118", borderRadius: 10, padding: "12px", border: `1px solid ${col.c}20` }}>
-            <div style={{ fontSize: 10, color: col.c, fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", marginBottom: 8 }}>{col.icon} {col.label}</div>
+          <div key={col.key} style={{ flex: 1, minWidth: 0, background: "#111118", borderRadius: 10, padding: "10px", border: `1px solid ${col.c}20`, overflow: "hidden" }}>
+            <div style={{ fontSize: 9, color: col.c, fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", marginBottom: 6 }}>{col.icon} {col.label}</div>
             {col.data.map((m, i) => (
-              <div key={m.n} onClick={() => goM(m.n)} style={{ display: "flex", alignItems: "center", gap: 6, padding: "4px 0", cursor: "pointer", borderBottom: i < 9 ? "1px solid #1a1a2e" : "none" }}>
-                <span style={{ fontSize: 10, fontWeight: 700, color: i < 3 ? col.c : "#6b7280", fontFamily: "'JetBrains Mono',monospace", width: 16 }}>{i + 1}</span>
-                <span style={{ fontSize: 11, color: "#e5e7eb", flex: 1 }}>{m.n}</span>
-                <span style={{ fontSize: 11, fontWeight: 700, color: col.c, fontFamily: "'JetBrains Mono',monospace" }}>{m.p[col.key]}</span>
+              <div key={m.n} onClick={() => goM(m.n)} style={{ display: "flex", alignItems: "center", gap: 4, padding: "3px 0", cursor: "pointer", borderBottom: i < 9 ? "1px solid #1a1a2e" : "none" }}>
+                <span style={{ fontSize: 9, fontWeight: 700, color: i < 3 ? col.c : "#6b7280", fontFamily: "'JetBrains Mono',monospace", width: 14, flexShrink: 0 }}>{i + 1}</span>
+                <span style={{ fontSize: 10, color: "#e5e7eb", flex: 1, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{m.n.split(' ').slice(0, 2).join(' ')}</span>
+                <span style={{ fontSize: 10, fontWeight: 700, color: col.c, fontFamily: "'JetBrains Mono',monospace", flexShrink: 0 }}>{m.p[col.key]}</span>
               </div>
             ))}
           </div>
