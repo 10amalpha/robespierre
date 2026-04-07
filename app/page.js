@@ -175,40 +175,75 @@ const Card = ({ m, rank, exp, tog }) => {
             <span style={{ fontSize: 8, color: m.di > 30 ? "#ef4444" : m.di > 14 ? "#f59e0b" : "#6b7280" }}>{m.di === 0 ? "today" : `${m.di}d ago`}</span>
           </div>
         </div>
-        {/* Right side: Score OR Timer */}
-        {(m.t === "Z" || m.t === "C") ? (
-          <div style={{ flexShrink: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: 2 }}>
-            {m.savedBy ? (
-              <>
-                <div style={{ position: "relative", width: 44, height: 44 }}>
-                  <svg width="44" height="44" viewBox="0 0 44 44">
-                    <circle cx="22" cy="22" r="18" fill="none" stroke="#052e16" strokeWidth="3" />
-                    <circle cx="22" cy="22" r="18" fill="none" stroke="#10b981" strokeWidth="3" strokeDasharray={`${2*Math.PI*18}`} strokeDashoffset="0" strokeLinecap="round" transform="rotate(-90 22 22)" />
-                    <text x="22" y="24" textAnchor="middle" fill="#10b981" fontSize="14">🛡️</text>
-                  </svg>
-                </div>
-                <a href={`https://solscan.io/account/${m.savedBy}`} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} style={{ fontSize: 7, color: "#10b981", textDecoration: "none", fontFamily: "'JetBrains Mono',monospace" }}>{m.savedBy.slice(0,4)}..{m.savedBy.slice(-3)}</a>
-              </>
-            ) : (
-              <>
-                <div style={{ position: "relative", width: 44, height: 44 }}>
-                  <svg width="44" height="44" viewBox="0 0 44 44">
-                    <circle cx="22" cy="22" r="18" fill="none" stroke="#1a1a2e" strokeWidth="3" />
-                    <circle cx="22" cy="22" r="18" fill="none" stroke="#ef4444" strokeWidth="3" strokeDasharray={`${2*Math.PI*18}`} strokeDashoffset="0" strokeLinecap="round" transform="rotate(-90 22 22)" style={{ filter: "drop-shadow(0 0 4px #ef444480)" }} />
-                    <text x="22" y="20" textAnchor="middle" fill="#ef4444" fontSize="9" fontWeight="700" fontFamily="'JetBrains Mono',monospace">10</text>
-                    <text x="22" y="29" textAnchor="middle" fill="#ef444499" fontSize="7" fontFamily="'JetBrains Mono',monospace">days</text>
-                  </svg>
-                </div>
-                <span style={{ fontSize: 7, color: "#ef4444", fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase" }}>pay to stay</span>
-              </>
-            )}
-          </div>
-        ) : (
+        {/* Right side: Score (only for non-Z/C) */}
+        {!(m.t === "Z" || m.t === "C") && (
           <div style={{ textAlign: "right", flexShrink: 0 }}>
             <div style={{ fontSize: 17, fontWeight: 700, color: tc.color, fontFamily: "'JetBrains Mono',monospace" }}>{m.co}</div>
             <div style={{ width: 52 }}><Br v={m.co} c={tc.color} /></div>
           </div>
         )}
+      </div>
+
+      {/* ⏰ COUNTDOWN BAR — Z and C tier only */}
+      {(m.t === "Z" || m.t === "C") && (() => {
+        const TOKEN = META.token || {};
+        const saved = m.savedBy || null;
+        const timerDays = TOKEN.timerDays || 10;
+        const totalSec = timerDays * 24 * 3600;
+        // Simulate countdown: use member's daysInactive to vary the timer per member
+        const elapsed = Math.min(totalSec - 1, (m.di || 0) * 8640); // rough variation
+        const remaining = saved ? totalSec : Math.max(0, totalSec - elapsed);
+        const pct = (remaining / totalSec) * 100;
+        const d = Math.floor(remaining / 86400);
+        const h = Math.floor((remaining % 86400) / 3600);
+        const mn = Math.floor((remaining % 3600) / 60);
+
+        if (saved) return (
+          <div style={{ marginTop: 8, padding: "8px 12px", background: "linear-gradient(90deg, #052e16, #0a0a0f)", borderRadius: 8, border: "1px solid #10b98130", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+              <span style={{ fontSize: 16 }}>🛡️</span>
+              <div>
+                <div style={{ fontSize: 11, fontWeight: 600, color: "#10b981" }}>Saved from removal</div>
+                <a href={`https://solscan.io/account/${saved}`} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} style={{ fontSize: 9, color: "#3b82f6", textDecoration: "none", fontFamily: "'JetBrains Mono',monospace" }}>by {saved.slice(0,4)}...{saved.slice(-4)} ↗</a>
+              </div>
+            </div>
+            <div style={{ width: 100, height: 4, background: "#1a1a2e", borderRadius: 2 }}>
+              <div style={{ width: "100%", height: "100%", background: "#10b981", borderRadius: 2 }} />
+            </div>
+          </div>
+        );
+
+        return (
+          <div style={{ marginTop: 8 }}>
+            {/* Countdown display */}
+            <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
+              <span style={{ fontSize: 14 }}>⏰</span>
+              <div style={{ display: "flex", gap: 4, alignItems: "baseline" }}>
+                <span style={{ fontSize: 18, fontWeight: 700, color: d <= 3 ? "#ef4444" : "#f97316", fontFamily: "'JetBrains Mono',monospace" }}>{d}</span>
+                <span style={{ fontSize: 9, color: "#6b7280" }}>d</span>
+                <span style={{ fontSize: 14, fontWeight: 700, color: d <= 3 ? "#ef4444" : "#f97316", fontFamily: "'JetBrains Mono',monospace" }}>{h}</span>
+                <span style={{ fontSize: 9, color: "#6b7280" }}>hrs</span>
+                <span style={{ fontSize: 14, fontWeight: 700, color: d <= 3 ? "#ef4444" : "#f97316", fontFamily: "'JetBrains Mono',monospace" }}>{mn}</span>
+                <span style={{ fontSize: 9, color: "#6b7280" }}>min</span>
+              </div>
+              <div style={{ flex: 1 }} />
+              {/* PAY BUTTON */}
+              <div onClick={e => { e.stopPropagation(); window.open(`https://solscan.io/token/${TOKEN.mint}`, '_blank'); }} style={{ display: "flex", alignItems: "center", gap: 5, padding: "6px 14px", background: "linear-gradient(135deg, #f59e0b, #f97316)", borderRadius: 8, cursor: "pointer", border: "none", boxShadow: "0 2px 8px #f59e0b40" }}>
+                <img src="/logo.jpg" alt="" style={{ width: 16, height: 16, borderRadius: 4 }} />
+                <span style={{ fontSize: 11, fontWeight: 700, color: "#0a0a0f" }}>Pay 10,000</span>
+              </div>
+            </div>
+            {/* Progress bar */}
+            <div style={{ width: "100%", height: 6, background: "#1a1a2e", borderRadius: 3, overflow: "hidden" }}>
+              <div style={{ width: `${pct}%`, height: "100%", background: d <= 3 ? "linear-gradient(90deg, #ef4444, #f97316)" : "linear-gradient(90deg, #f97316, #f59e0b)", borderRadius: 3, transition: "width 0.5s ease", boxShadow: d <= 3 ? "0 0 8px #ef444460" : "0 0 6px #f59e0b40" }} />
+            </div>
+            <div style={{ display: "flex", justifyContent: "space-between", marginTop: 3 }}>
+              <span style={{ fontSize: 8, color: "#6b7280" }}>removal in {d}d {h}h</span>
+              <span style={{ fontSize: 8, color: "#6b7280", fontFamily: "'JetBrains Mono',monospace" }}>🔥 {TOKEN.burnAddress?.slice(0,6)}...{TOKEN.burnAddress?.slice(-4)}</span>
+            </div>
+          </div>
+        );
+      })()}
       </div>
       {exp && (<div style={{ marginTop: 11, paddingTop: 9, borderTop: `1px solid ${tc.color}20` }}>
         <div style={{ display: "flex", gap: 12, alignItems: "flex-start", flexWrap: "wrap", justifyContent: "center" }}>
