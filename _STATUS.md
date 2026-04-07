@@ -1,15 +1,14 @@
 # Robespierre — 10AMPRO Collective Intelligence Dashboard
 
 ## Quick Context
-WhatsApp group engagement analytics for 10AMPRO community. AI-graded scoring across three pillars (Network, Intelligence, Capital) with panican detection, personas, highlights, and network visualization. Built with Sonnet 4 analysis of actual message content — not proxy math.
+WhatsApp group engagement analytics for 10AMPRO community. Opus AI-graded scoring across three pillars (Network, Intelligence, Capital) with panican detection, personas, highlights, and network visualization. Named after the group's enforcement culture ("guillotina"). Cerebro is the AI brain.
 
 ## Live
 - **URL**: https://robespierre.vercel.app
 - **Repo**: github.com/10amalpha/robespierre
-- **Version**: V6.0 (Opus AI-Graded, Mobile Responsive)
+- **Version**: V6.3 (Opus Deep-Graded, Zero Pending)
 - **Last Deploy**: April 7, 2026
-- **Vercel Project**: `prj_h7LiqacKcqwQcae368ZXoMyQ7aeL`
-- **Team**: `team_nPG5TrnRZyVuclmm6dZL1AcX`
+- **Members**: 129 (34 zombies, 87 Opus-graded)
 
 ## Current Data
 | | s1 | s2 (CURRENT) |
@@ -18,162 +17,156 @@ WhatsApp group engagement analytics for 10AMPRO community. AI-graded scoring acr
 | **Days** | 96 | 44 |
 | **Messages** | 1,989 | 8,082 |
 | **Links** | 452 | 1,828 |
-| **Members** | 126 | 131 |
-| **Grading** | Sonnet 4 AI | Sonnet 4 AI |
+| **Grading** | Opus AI (full messages) | Opus AI (full messages) |
 
-Group activity **4x'd** from s1 to s2. 35 members added, 19 removed, 9 left. Detected automatically from chat system messages (no screenshots needed).
+Group activity **4x'd** from s1 to s2.
 
 ## Architecture
 ```
 robespierre/
   data/
-    members.json    ← 131 members, AI-graded pillars + personas + highlights + panic
-    meta.json       ← 2 snapshots, pillar defs, source stats, highlight types, rules
+    members.json    ← 129 members, Opus-graded pillars + personas + highlights + panic
+    meta.json       ← 2 snapshots, pillar defs, source stats, 15 group highlights
   app/
-    page.js         ← 5-tab UI (~1150 lines), mobile-responsive
-    layout.js       ← viewport meta, theme-color, PWA-capable
+    page.js         ← 5-tab UI, mobile-responsive
+    layout.js       ← viewport, theme-color, PWA
 ```
 
-### Three Pillars (AI-Graded by Sonnet 4)
-| Pillar | Weight | Measures |
-|--------|--------|----------|
-| 🔗 Network | 25% | Connecting people, intros, deal flow, @mentions |
-| 🧠 Intelligence | 40% | Info diet quality, analysis depth, discussion engagement |
-| 💰 Capital | 35% | Positions, theses, "I bought X because Y" |
+## Opus AI Pipeline
+- **Model**: Claude Opus 4 (full messages, not sampled)
+- **Rubric**: Ecosystem-aware — understands podcast, Substacks, what "alpha" means in 10AMPRO
+- **Scoring**: HARSH and DIFFERENTIATED (only 2 members above 90)
+- **Cost**: ~$8.40 per full run (10 batches, 87 members, 10K+ messages)
+- **Output per member**: 3 pillar scores, panic score + evidence quotes, bio, tags, role, best contribution
+- **Zero manual overrides** — all scores are 100% Opus judgment
 
-### Scoring
-- **Pillar scores** (0-100): AI-graded from actual message content by Sonnet 4
-- **Composite**: Weighted pillar blend × engagement multiplier
-- **Engagement multiplier**: Scales 0.5→1.0 based on msg count (prevents 15-msg members outranking 1000-msg contributors)
-- **Panic Score** (0-100): Fear flooding without thesis. 40=flagged, 60=warning, 80=guillotine
-- **Tier**: A=composite 40+, B=15-39, C=1-14, Z=0
+## Three Pillars
+| Pillar | Weight | What Opus Evaluates |
+|--------|--------|---------------------|
+| 🔗 Network | 25% | Connects people? Intros? Bridges opportunities? @mentions meaningfully? |
+| 🧠 Intelligence | 40% | Original analysis? Quality sources? Frameworks? Changes how others think? |
+| 💰 Capital | 35% | Specific positions? Entry points? "I bought X because Y"? Conviction? |
 
-### Per-Member Data
-Each member stores: tier, composite, pillars {network, intelligence, capital}, panicScore, panicFlags[], persona {bio, tags, role, platforms}, highlights [{type, summary, quality}], history [{snapshot, composite, pillars, tier}], plus activity stats (msgs, links, avgWords, activeDays, activeWeeks, lastActive, daysInactive).
-
-## AI Pipeline
-- **API Key**: Stored in project memory (Claude API)
-- **Model**: Sonnet 4 (fast, accurate for classification)
-- **Process**: Extract msgs per member → batch to API (19 calls) → grade pillars + panic + persona + highlights
-- **Cost**: ~$7 per full run (131 members, 10K+ messages)
-- **What AI reads**: Actual Spanish/English message content. Understands context, detects theses vs noise, identifies panic patterns.
-- **What gets stored**: Only scores, summaries, flags. No raw messages in repo.
+**Composite** = weighted pillars × engagement multiplier (0.6–1.0 based on msg count)
 
 ## Key Results
 
-### Top 10 Composite
-| # | Member | C | 🔗 | 🧠 | 💰 | Msgs |
-|---|--------|---|-----|-----|-----|------|
-| 1 | Hernán 👑 | 91 | 95 | 92 | 88 | 4,766 |
-| 2 | Guillermo Valencia | 87 | 85 | 95 | 80 | 138 |
-| 3 | Simón Restrepo | 87 | 85 | 90 | 85 | 67 |
-| 4 | Enrique Uribe | 86 | 80 | 90 | 85 | 120 |
-| 5 | Fede Suarez | 85 | 85 | 90 | 80 | 340 |
-| 6 | Dario Palacio | 85 | 85 | 90 | 80 | 380 |
-| 7 | Eduardo Llopis | 85 | 85 | 90 | 80 | 53 |
-| 8 | Camilo Ospina Lumm | 84 | 85 | 90 | 75 | 72 |
-| 9 | Camilo Botero | 83 | 70 | 90 | 85 | 225 |
-| 10 | Andres Felipe Arias | 80 | 78 | 85 | 75 | 1,355 |
+### 🏆 Top 10 Composite
+| # | Member | C | 🔗 | 🧠 | 💰 | Role (Opus) |
+|---|--------|---|-----|-----|-----|-------------|
+| 1 | Hernán 👑 | 93 | 95 | 92 | 94 | visionary-founder |
+| 2 | Andres Arias | 91 | 95 | 92 | 88 | Alpha Generator & Platform Builder |
+| 3 | Camilo Gomez | 85 | 85 | 92 | 78 | AI Infrastructure Pioneer |
+| 4 | Guillermo Valencia | 84 | 88 | 92 | 71 | Macro Philosopher & Author |
+| 5 | Nico Fernandez | 75 | 75 | 82 | 68 | political-investment analyst |
+| 6 | Gabriel Bedoya | 73 | 45 | 85 | 78 | Cultural Futurist & Builder |
+| 7 | Camilo Botero | 73 | 68 | 76 | 72 | Tech Venture Analyst |
+| 8 | Jon Oleaga | 67 | 62 | 88 | 75 | AI-architect |
+| 9 | Fede Suarez | 65 | 75 | 68 | 55 | International Bridge Builder |
+| 10 | Agustin Argentino | 65 | 85 | 70 | 45 | tech infrastructure expert |
 
-### Panicans (10 Flagged)
-| Member | Score | Evidence |
-|--------|-------|----------|
-| Juan Esteban Sanin | 85 | Political paranoia, conspiracy theories |
-| Pablo Velez Mejia | 75 | Closes positions on fear, questions every spike |
-| German Corredor | 75 | AI anxiety, feels left behind |
-| Felo | 75 | Political anxiety |
-| Ricardo Espinal | 45 | Geopolitical anxiety |
-| Lucas Jaramillo | 40 | Reactive to drops |
-| Monica Arango | 40 | "Prefiero no mirar" |
-| + 3 more at 40 | | |
+### Score Distribution
+| Range | Count | Note |
+|-------|-------|------|
+| 90+ | 2 | Only Hernán + Arias |
+| 80-89 | 2 | Camilo Gomez + Guillermo |
+| 70-79 | 9 | |
+| 60-69 | 11 | |
+| 50-59 | 18 | |
+| 40-49 | 20 | |
+| 30-39 | 14 | |
+| <30 | 11 | |
+
+### 🚨 Panicans (Opus Evidence)
+| Member | P | Role | Key Evidence |
+|--------|---|------|-------------|
+| Pablo Velez Mejia | 78 | Emotional Retail Trader | "Hood 72! 😰 Hims 16.40!", "BTC y SOL cayendo feo!" |
+| Jorge Saldarriaga | 60 | panic-trader | "Iran has just hit a missile in to my account!!!" |
+| Lucas Jaramillo | 58 | Social Connector | "No entré a mi cuenta por 3 meses", "Claude me dice que salga de TESLA" |
+| Andred Angel | 45 | contrarian observer | "Bull trap. In my opinion", "Se los dije..." |
+| Ricardo Espinal | 45 | political-commentator | "Iran preparado para alargar la guerra" |
+| Felo | 40 | political-commentator | "Yo veo todas las posibilidades que gane Cepeda" |
+| + 9 more at 30-39 | | |
+
+### 💎 Best Of (Top 15 Contributions)
+| ★ | Type | Member | Contribution |
+|---|------|--------|-------------|
+| 10 | 🛠️ | Arias | Built homeland.net.co replacing analyst teams with Claude |
+| 10 | 💡 | Arias | "Con Claude ya no necesito equipo" — fired analysts for AI |
+| 10 | 💰 | Hernán | "Si yo fuera un agente portfolio" — AI agents reshaping economy |
+| 10 | 🧠 | Hernán | Iran → oil → China → Treasury bills → BRICS analysis |
+| 10 | 🔗 | Hernán | 200+ quality sources connecting macro to specific plays |
+| 10 | 💰 | Guillermo | Published "Epistemic Wealth" book |
+| 10 | 🧠 | Simón | HIMS institutional ownership: 748 holders, 94.68% float |
+| 9 | 💰 | Arias | HIMS vs Big Pharma: network effects + FCF/share |
+| 9 | 🧠 | Arias | MSTR debt/Bitcoin thesis with entry points + Sharpe ratio |
+| 9 | 🛠️ | Camilo G | Built MacroPulse market monitoring system |
+| 9 | 🧠 | Camilo G | Anthropic leaked code → agent orchestration analysis |
+| 9 | 🔗 | Fede | Connected LatAm fintechs with LSEG opportunities |
+| 9 | 🧠 | Nico | MSTR BTC Yield valuation framework |
+| 9 | 💡 | Gabriel | LLMs becoming the OS layer insight |
+| 9 | 🛠️ | Hernán | Built hedonicum.pro — AI wine recommendation engine |
 
 ### Source Stats (s2)
-| Source | s1 | s2 | Δ |
-|--------|-----|-----|---|
-| X/Twitter | 754 | 1,245 | +65% |
-| YouTube | 151 | 128 | -15% |
-| Substack | 71 | 132 | +86% |
-| Instagram | 16 | 26 | +63% |
-| TikTok | 14 | 40 | +186% ⚠️ |
-| Bloomberg/Reuters/FT | 4 | 7 | +75% |
+| Source | Count | Δ from s1 |
+|--------|-------|-----------|
+| X/Twitter | 1,245 | +65% |
+| Substack | 132 | +86% |
+| YouTube | 128 | -15% |
+| TikTok | 40 | +186% ⚠️ |
+| Instagram | 26 | +63% |
+| Bloomberg/Reuters/FT | 7 | +75% |
 
-## 5 Tabs
+## 5 Tabs — All Complete
 
 ### 🧠 Intel
-- Three Pillars overview (group avg per pillar + weights)
-- **Top 10 per pillar** leaderboards (Network, Intelligence, Capital)
-- 🌐 Network Node Map (force-directed canvas graph, hover/click)
-- 💎 Best Of highlights (pending group-level population)
-- System Health gauges (Knowledge Distribution, S/N, Density, Decentralization)
-- KPI grid (Active Brains, Links, Velocity, Depth, 7d Pulse, Dead Weight)
+- Three Pillars overview (group averages + weights)
+- **Top 10 per pillar** in 3 horizontal columns
+- 🌐 Network Node Map (force-directed, hover/click)
+- 💎 Best Of — 15 Opus-selected top contributions
+- System Health gauges + KPI grid
 
 ### 💡 Insights
-- Pillar Diagnosis (per-pillar strong/weak + actionable insight)
-- Founder Dependency (msg share 21%, link share 37%)
-- Lurker Ratio, Bus Factor
+- Pillar Diagnosis (per-pillar strong/weak + insight)
+- Founder Dependency
 - Pillar-Based Actions (5 plays)
 
 ### 📈 Progress
-- Snapshot timeline (s1, s2 with stats)
+- Snapshot timeline (s1 + s2)
 - Baseline metrics with targets + ✓/✗
-- Tier distribution bar chart
-- "What s2 Will Reveal" roadmap (8 dimensions)
-- When comparing: pillar deltas, tier movements, biggest climbers/drops
+- Tier distribution
+- What s2 reveals (8 tracked dimensions)
 
 ### ⚔️ Robes
-- Execution stats (Zombies, Tier C, Dormant B, Total Cut)
+- Execution stats (4 cards)
 - Crimes Against CI (3 types)
-- 🚨 Panicans (AI-detected, 10 flagged with evidence + Capital cross-ref)
+- **🚨 Cerebro Panican Analysis** — Opus-powered cards with severity badges, bios, evidence quotes from actual messages, verdicts
 - Source Quality bars
-- Zombie list, Deserters, Death Row
-- Pillar-based Redemption Path
+- Zombies, Deserters, Death Row
+- Pillar-based Redemption
 
 ### 👥 Members
-- Tier cards (A/B/C/Z counts)
-- Search + filter + **sort by: Composite, 🔗 Network, 🧠 Intelligence, 💰 Capital, Msgs, Links, Inactive**
-- Expandable cards: radar triangle, pillar bars, panic bar, engagement metrics, persona (bio + platforms + tags + role), highlights (top 3), trajectory
+- Sort by: Composite, 🔗, 🧠, 💰, Msgs, Links, Inactive
+- Cards: radar chart, pillar bars, panic bar, persona (bio + platforms + tags + role), highlights (top 3), trajectory
 
 ## Mobile Responsive
-- Viewport meta tag (width=device-width, no zoom)
-- Theme-color for mobile chrome (#0a0a0f)
-- Apple mobile web app capable
-- All padding mobile-optimized (14px sides)
-- Tab labels shortened, horizontally scrollable
-- Cards flex-wrap, radar stacks vertically
-- Canvas responsive (600×400, 100% width)
-- MinWidth values reduced throughout
+Viewport meta, theme-color, PWA-capable, 14px padding, scrollable tabs, flex-wrap everywhere, canvas responsive.
 
-## Data Integrity
-- 3 duplicate members merged (Hernán/Hernan, Antonio/antonio, Felipe Valencia/valencia)
-- Engagement multiplier prevents low-activity score inflation
-- Member additions/removals detected from chat system messages
-- No screenshots needed — chat export is single source of truth
+## Member Detection
+From chat system messages (no screenshots needed): 35 added, 19 removed, 9 left, 24 new active in s2, 6 went silent.
 
 ## Version History
-| Version | Date | Changes |
-|---------|------|---------|
-| V1-V3 | Feb 21 | Initial builds — monolithic JSX |
+| Version | Date | Key Change |
+|---------|------|------------|
 | V4 | Feb 21 | Production — 4 tabs, single score |
-| V5.0 | Apr 7 | Metrics ledger architecture — data/UI split |
-| V5.1 | Apr 7 | Three pillars (Network, Intelligence, Capital) |
-| V5.2 | Apr 7 | Rate-based scoring (quality > volume) |
-| V5.3 | Apr 7 | Panicans detection framework |
-| V5.4 | Apr 7 | Network Node Map (force graph) |
-| V5.5 | Apr 7 | Member Personas (identity layer) |
-| V5.6 | Apr 7 | Progress tab (differential tracking) |
-| V5.7 | Apr 7 | Best Of highlights framework |
-| V6.0 | Apr 7 | **Sonnet 4 AI grading** — 19 API calls, 74 members graded from actual messages |
-| V6.0+ | Apr 7 | Mobile responsive, Top 10 leaderboards, dedup, engagement multiplier |
+| V5.0 | Apr 7 | Metrics ledger — data/UI split |
+| V5.1-5.7 | Apr 7 | Three pillars, panicans, node map, personas, progress, highlights |
+| V6.0 | Apr 7 | First Opus run (Sonnet, sampled) |
+| V6.2 | Apr 7 | **Opus deep grading** — full messages, ecosystem rubric, harsh differentiation |
+| V6.3 | Apr 7 | Panican evidence cards, Best Of populated, 3-column leaderboards, zero pending |
 
 ## TODO
-- [ ] Group-level Best Of highlights (top 15 across all members)
+- [ ] Quarterly Opus re-run (~July 2026)
 - [ ] Real @mention edges for Node Map
-- [ ] Trend charts on Progress tab
-- [ ] Build Robespierre bot (Mac Mini + KIMI)
-- [ ] Quarterly Opus re-run (next: ~July 2026)
-- [ ] Consider Opus (instead of Sonnet) for deeper analysis next run
-
-## Related
-- Claude Project: `10ampro_robespierre_v4.jsx` + `_chat.txt`
-- Claude API key: stored in project memory
-- Chat export: `WhatsApp_Chat_-_10ampro_-_CLUB_2.zip` (16,184 lines, Oct 22 '25 → Apr 7 '26)
+- [ ] Trend charts on Progress tab (pillar averages over time)
+- [ ] Build Robespierre bot (KIMI on Mac Mini)
