@@ -8,8 +8,8 @@
       "from": "2025-11-16",
       "to": "2026-02-21",
       "days": 96,
-      "totalMsgs": 5149,
-      "totalLinks": 1161,
+      "totalMsgs": 1989,
+      "totalLinks": 452,
       "totalMembers": 126,
       "processedAt": "2026-02-21"
     },
@@ -19,8 +19,8 @@
       "to": "2026-04-07",
       "days": 44,
       "totalMsgs": 8082,
-      "totalLinks": null,
-      "totalMembers": 133,
+      "totalLinks": 1828,
+      "totalMembers": 134,
       "processedAt": "2026-04-07",
       "processedBy": "opus"
     }
@@ -210,6 +210,38 @@
       {
         "source": "Bloomberg/Reuters/FT",
         "count": 4,
+        "verdict": "Premium signal"
+      }
+    ],
+    "s2": [
+      {
+        "source": "X/Twitter",
+        "count": 1245,
+        "verdict": "Primary alpha channel"
+      },
+      {
+        "source": "YouTube",
+        "count": 128,
+        "verdict": "Deep content"
+      },
+      {
+        "source": "Substack",
+        "count": 132,
+        "verdict": "Analysis layer"
+      },
+      {
+        "source": "Instagram",
+        "count": 26,
+        "verdict": "Junk food"
+      },
+      {
+        "source": "TikTok",
+        "count": 40,
+        "verdict": "Junk food"
+      },
+      {
+        "source": "Bloomberg/Reuters/FT",
+        "count": 7,
         "verdict": "Premium signal"
       }
     ]
