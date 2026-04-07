@@ -174,26 +174,41 @@ const Card = ({ m, rank, exp, tog }) => {
             <span style={{ fontSize: 8, color: "#6b7280" }}>·</span>
             <span style={{ fontSize: 8, color: m.di > 30 ? "#ef4444" : m.di > 14 ? "#f59e0b" : "#6b7280" }}>{m.di === 0 ? "today" : `${m.di}d ago`}</span>
           </div>
-          {/* Compact timer for Z/C */}
-          {(m.t === "Z" || m.t === "C") && !m.savedBy && (
-            <div style={{ display: "flex", alignItems: "center", gap: 4, marginTop: 3 }}>
-              <span style={{ fontSize: 7, color: "#ef4444" }}>⏰</span>
-              <div style={{ flex: 1, height: 2, background: "#1a1a2e", borderRadius: 1, maxWidth: 80 }}>
-                <div style={{ width: "100%", height: "100%", background: "linear-gradient(90deg, #ef4444, #f97316)", borderRadius: 1 }} />
-              </div>
-              <span style={{ fontSize: 7, color: "#ef4444", fontFamily: "'JetBrains Mono',monospace" }}>10d</span>
-            </div>
-          )}
-          {(m.t === "Z" || m.t === "C") && m.savedBy && (
-            <div style={{ display: "flex", alignItems: "center", gap: 3, marginTop: 3 }}>
-              <span style={{ fontSize: 7, color: "#10b981" }}>🛡️ saved</span>
-            </div>
-          )}
         </div>
-        <div style={{ textAlign: "right", flexShrink: 0 }}>
-          <div style={{ fontSize: 17, fontWeight: 700, color: tc.color, fontFamily: "'JetBrains Mono',monospace" }}>{m.co}</div>
-          <div style={{ width: 52 }}><Br v={m.co} c={tc.color} /></div>
-        </div>
+        {/* Right side: Score OR Timer */}
+        {(m.t === "Z" || m.t === "C") ? (
+          <div style={{ flexShrink: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: 2 }}>
+            {m.savedBy ? (
+              <>
+                <div style={{ position: "relative", width: 44, height: 44 }}>
+                  <svg width="44" height="44" viewBox="0 0 44 44">
+                    <circle cx="22" cy="22" r="18" fill="none" stroke="#052e16" strokeWidth="3" />
+                    <circle cx="22" cy="22" r="18" fill="none" stroke="#10b981" strokeWidth="3" strokeDasharray={`${2*Math.PI*18}`} strokeDashoffset="0" strokeLinecap="round" transform="rotate(-90 22 22)" />
+                    <text x="22" y="24" textAnchor="middle" fill="#10b981" fontSize="14">🛡️</text>
+                  </svg>
+                </div>
+                <a href={`https://solscan.io/account/${m.savedBy}`} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} style={{ fontSize: 7, color: "#10b981", textDecoration: "none", fontFamily: "'JetBrains Mono',monospace" }}>{m.savedBy.slice(0,4)}..{m.savedBy.slice(-3)}</a>
+              </>
+            ) : (
+              <>
+                <div style={{ position: "relative", width: 44, height: 44 }}>
+                  <svg width="44" height="44" viewBox="0 0 44 44">
+                    <circle cx="22" cy="22" r="18" fill="none" stroke="#1a1a2e" strokeWidth="3" />
+                    <circle cx="22" cy="22" r="18" fill="none" stroke="#ef4444" strokeWidth="3" strokeDasharray={`${2*Math.PI*18}`} strokeDashoffset="0" strokeLinecap="round" transform="rotate(-90 22 22)" style={{ filter: "drop-shadow(0 0 4px #ef444480)" }} />
+                    <text x="22" y="20" textAnchor="middle" fill="#ef4444" fontSize="9" fontWeight="700" fontFamily="'JetBrains Mono',monospace">10</text>
+                    <text x="22" y="29" textAnchor="middle" fill="#ef444499" fontSize="7" fontFamily="'JetBrains Mono',monospace">days</text>
+                  </svg>
+                </div>
+                <span style={{ fontSize: 7, color: "#ef4444", fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase" }}>pay to stay</span>
+              </>
+            )}
+          </div>
+        ) : (
+          <div style={{ textAlign: "right", flexShrink: 0 }}>
+            <div style={{ fontSize: 17, fontWeight: 700, color: tc.color, fontFamily: "'JetBrains Mono',monospace" }}>{m.co}</div>
+            <div style={{ width: 52 }}><Br v={m.co} c={tc.color} /></div>
+          </div>
+        )}
       </div>
       {exp && (<div style={{ marginTop: 11, paddingTop: 9, borderTop: `1px solid ${tc.color}20` }}>
         <div style={{ display: "flex", gap: 12, alignItems: "flex-start", flexWrap: "wrap", justifyContent: "center" }}>
