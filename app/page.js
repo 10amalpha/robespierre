@@ -46,7 +46,7 @@ function kpis(d) {
   const subM = d.filter(x => x.w >= 10).reduce((a, x) => a + x.m, 0);
   const tw = d.reduce((a, x) => a + x.w * x.m, 0);
   const noY = d.filter(x => !x.u);
-  const t5 = [...noY].sort((a, b) => b.m - a.m).slice(0, 5);
+  const t5 = [...noY].sort((a, b) => b.m - a.m).slice(0, 10);
   const t5m = t5.reduce((a, x) => a + x.m, 0);
   const lurk = d.filter(x => x.m < 3).length;
   const avgW = d.reduce((a, x) => a + x.aw, 0) / nn;
@@ -550,9 +550,9 @@ export default function App() {
 
   // Top per pillar (non-founder, non-zombie)
   const active = D.filter(x => !x.u && x.t !== "Z");
-  const topNet = [...active].sort((a, b) => b.p.network - a.p.network).slice(0, 5);
-  const topInt = [...active].sort((a, b) => b.p.intelligence - a.p.intelligence).slice(0, 5);
-  const topCap = [...active].sort((a, b) => b.p.capital - a.p.capital).slice(0, 5);
+  const topNet = [...active].sort((a, b) => b.p.network - a.p.network).slice(0, 10);
+  const topInt = [...active].sort((a, b) => b.p.intelligence - a.p.intelligence).slice(0, 10);
+  const topCap = [...active].sort((a, b) => b.p.capital - a.p.capital).slice(0, 10);
 
   return (<div style={{ minHeight: "100vh", background: "#0a0a0f", color: "#e5e7eb", fontFamily: "'Inter',-apple-system,sans-serif", overflowX: "hidden" }}>
 
@@ -622,7 +622,7 @@ export default function App() {
           <div key={col.key} style={{ flex: "1 1 100%", minWidth: 140, background: "#111118", borderRadius: 10, padding: "12px", border: `1px solid ${col.c}20` }}>
             <div style={{ fontSize: 10, color: col.c, fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", marginBottom: 8 }}>{col.icon} {col.label}</div>
             {col.data.map((m, i) => (
-              <div key={m.n} onClick={() => goM(m.n)} style={{ display: "flex", alignItems: "center", gap: 6, padding: "4px 0", cursor: "pointer", borderBottom: i < 4 ? "1px solid #1a1a2e" : "none" }}>
+              <div key={m.n} onClick={() => goM(m.n)} style={{ display: "flex", alignItems: "center", gap: 6, padding: "4px 0", cursor: "pointer", borderBottom: i < 9 ? "1px solid #1a1a2e" : "none" }}>
                 <span style={{ fontSize: 10, fontWeight: 700, color: i < 3 ? col.c : "#6b7280", fontFamily: "'JetBrains Mono',monospace", width: 16 }}>{i + 1}</span>
                 <span style={{ fontSize: 11, color: "#e5e7eb", flex: 1 }}>{m.n}</span>
                 <span style={{ fontSize: 11, fontWeight: 700, color: col.c, fontFamily: "'JetBrains Mono',monospace" }}>{m.p[col.key]}</span>
