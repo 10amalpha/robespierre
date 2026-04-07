@@ -587,7 +587,7 @@ const SOL_CONFIG = {
   mint: TOKEN.mint || "6P5McDuhznaedKjnCvfe9iEjtCfVLyZhSqe93TZtawky",
   burn: TOKEN.burnAddress || "EGEYg4GYbfdUpEeL6RByTSTiuZYckNJ1EwUGACY6UezG",
   cost: TOKEN.costToStay || 10000,
-  decimals: TOKEN.decimals || 6,
+  decimals: TOKEN.decimals || 9,
   timerDays: TOKEN.timerDays || 10,
   rpc: "https://mainnet.helius-rpc.com/?api-key=d4d1c413-f308-4627-acf4-be837d854089",
   memoProgram: "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr",

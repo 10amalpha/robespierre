@@ -4,7 +4,7 @@ const RPC = "https://mainnet.helius-rpc.com/?api-key=d4d1c413-f308-4627-acf4-be8
 const BURN = "EGEYg4GYbfdUpEeL6RByTSTiuZYckNJ1EwUGACY6UezG";
 const MINT = "6P5McDuhznaedKjnCvfe9iEjtCfVLyZhSqe93TZtawky";
 const COST = 10000;
-const DECIMALS = 6; // SPL token decimals — adjust if different
+const DECIMALS = 9; // SPL token decimals
 const RAW_COST = COST * Math.pow(10, DECIMALS);
 const MEMO_PROGRAM = "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr";
 const AUDIT_DATE = new Date("2026-04-07T00:00:00Z");
