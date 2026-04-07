@@ -666,11 +666,9 @@ async function buildPayTransaction(walletPubkey, memberName, provider) {
 
     // Build transaction with blockhash
     const { blockhash, lastValidBlockHeight } = await conn.getLatestBlockhash("confirmed");
-    const transaction = new Transaction({
-      recentBlockhash: blockhash,
-      lastValidBlockHeight: lastValidBlockHeight,
-      feePayer: senderPk,
-    });
+    const transaction = new Transaction();
+    transaction.recentBlockhash = blockhash;
+    transaction.feePayer = senderPk;
     transaction.add(...instructions);
 
     // Phantom recommended: signAndSendTransaction
