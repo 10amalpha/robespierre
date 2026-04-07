@@ -1011,66 +1011,91 @@ export default function App() {
         ))}
       </div>
 
-      {/* Panicans */}
+      {/* Panicans — Opus AI Analysis */}
       {(() => {
-        const panicans = D.filter(x => x.panic !== null && x.panic !== 0 && x.panic >= 40).sort((a, b) => b.panic - a.panic);
-        const pending = D.filter(x => x.panic === null && x.t !== "Z").length;
+        const panicans = D.filter(x => x.panic !== null && x.panic >= 30).sort((a, b) => b.panic - a.panic);
         return (
           <div style={{ background: "#111118", borderRadius: 12, padding: "16px 14px", border: "1px solid #f9731625", marginBottom: 14 }}>
-            <div style={{ fontSize: 10, color: "#f97316", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 6 }}>🚨 The Panicans — Fear Merchants</div>
-            <div style={{ fontSize: 11, color: "#9ca3af", lineHeight: 1.6, marginBottom: 10 }}>
-              Members who flood the chat with fear instead of thesis. No conviction, no positions — just reactive noise that erodes collective confidence. The anti-thesis of Open Source Capital.
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
+              <div style={{ fontSize: 10, color: "#f97316", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase" }}>🚨 Cerebro Analysis: Panicans</div>
+              <div style={{ fontSize: 8, padding: "2px 6px", borderRadius: 99, background: "#1e1e2e", color: "#8b5cf6", fontWeight: 600 }}>Powered by Opus</div>
             </div>
-            <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 10 }}>
+            <div style={{ fontSize: 11, color: "#9ca3af", lineHeight: 1.6, marginBottom: 12 }}>
+              Members who erode collective alpha by flooding fear without thesis. Opus read every message and identified patterns of panic behavior — reactive selling, catastrophizing, emotional contagion. The antithesis of Open Source Capital.
+            </div>
+
+            {/* Severity Legend */}
+            <div style={{ display: "flex", gap: 8, marginBottom: 12, flexWrap: "wrap" }}>
               {[
-                { lb: "Fear without thesis", icon: "😱", desc: "Posts panic but never shares what they hold" },
-                { lb: "Red candle reactive", icon: "📉", desc: "Only shows up when price drops" },
-                { lb: "FUD spreader", icon: "🔥", desc: "Emotional contagion that triggers others" },
-                { lb: "No follow-up", icon: "🫥", desc: "Panics, disappears, never admits they were wrong" },
-              ].map((s, i) => (
-                <div key={i} style={{ flex: "1 1 120px", minWidth: 100, padding: "8px 10px", background: "#1a0a00", borderRadius: 8, border: "1px solid #f9731615" }}>
-                  <div style={{ fontSize: 14, marginBottom: 2 }}>{s.icon}</div>
-                  <div style={{ fontSize: 10, fontWeight: 600, color: "#f97316" }}>{s.lb}</div>
-                  <div style={{ fontSize: 9, color: "#9ca3af", marginTop: 2, lineHeight: 1.4 }}>{s.desc}</div>
+                { lb: "GUILLOTINE", range: "70+", c: "#ef4444", bg: "#450a0a", desc: "Chronic fear merchant. Erodes group conviction." },
+                { lb: "WARNING", range: "50-69", c: "#f97316", bg: "#422006", desc: "Notable panic. Needs to show conviction or go." },
+                { lb: "WATCH", range: "30-49", c: "#f59e0b", bg: "#1e1e2e", desc: "Some reactive behavior. Monitor next audit." },
+              ].map(s => (
+                <div key={s.lb} style={{ flex: "1 1 100px", minWidth: 90, padding: "6px 8px", background: s.bg, borderRadius: 6, border: `1px solid ${s.c}20` }}>
+                  <div style={{ fontSize: 9, fontWeight: 700, color: s.c }}>{s.lb} ({s.range})</div>
+                  <div style={{ fontSize: 8, color: "#9ca3af", marginTop: 2 }}>{s.desc}</div>
                 </div>
               ))}
             </div>
-            {panicans.length > 0 ? (
-              <div>
-                <div style={{ fontSize: 9, color: "#6b7280", marginBottom: 6 }}>Flagged by Opus analysis — panic score 40+</div>
-                {panicans.map(m => (
-                  <div key={m.n} onClick={() => goM(m.n)} style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 6px", borderBottom: "1px solid #1e1e2e", cursor: "pointer", borderRadius: 6 }} onMouseEnter={e => e.currentTarget.style.background = "#1a1a2e"} onMouseLeave={e => e.currentTarget.style.background = "transparent"}>
-                    <div style={{ width: 36, height: 36, borderRadius: "50%", background: m.panic >= 80 ? "#7f1d1d" : m.panic >= 60 ? "#78350f" : "#422006", border: `2px solid ${m.panic >= 80 ? "#ef4444" : m.panic >= 60 ? "#f97316" : "#f59e0b"}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 700, color: m.panic >= 80 ? "#ef4444" : m.panic >= 60 ? "#f97316" : "#f59e0b", fontFamily: "'JetBrains Mono',monospace" }}>{m.panic}</div>
-                    <div style={{ flex: 1 }}>
-                      <div style={{ fontSize: 12, fontWeight: 600, color: "#e5e7eb" }}>{m.n}</div>
-                      <div style={{ fontSize: 10, color: "#9ca3af" }}>{m.m} msgs · 💰 Capital: {m.p.capital}</div>
-                    </div>
-                    <div style={{ fontSize: 9, padding: "3px 8px", borderRadius: 6, background: m.panic >= 80 ? "#450a0a" : m.panic >= 60 ? "#422006" : "#1e1e2e", color: m.panic >= 80 ? "#ef4444" : m.panic >= 60 ? "#f97316" : "#f59e0b", fontWeight: 600 }}>
-                      {m.panic >= 80 ? "🚨 GUILLOTINE" : m.panic >= 60 ? "⚠️ WARNING" : "👁 FLAGGED"}
-                    </div>
-                  </div>
-                ))}
-                {panicans.filter(m => m.panicFlags.length > 0).length > 0 && (
-                  <div style={{ marginTop: 8, padding: "8px 10px", background: "#0a0a0f", borderRadius: 8, border: "1px solid #1e1e2e" }}>
-                    <div style={{ fontSize: 9, color: "#6b7280", fontWeight: 600, textTransform: "uppercase", marginBottom: 4 }}>Evidence from Opus</div>
-                    {panicans.filter(m => m.panicFlags.length > 0).slice(0, 3).map(m => (
-                      <div key={m.n} style={{ marginBottom: 6 }}>
-                        <div style={{ fontSize: 10, fontWeight: 600, color: "#f97316" }}>{m.n}:</div>
-                        {m.panicFlags.slice(0, 2).map((f, i) => (
-                          <div key={i} style={{ fontSize: 10, color: "#9ca3af", marginLeft: 8, lineHeight: 1.4 }}>• {f}</div>
-                        ))}
+
+            {/* Panican Cards */}
+            {panicans.map((m, idx) => {
+              const severity = m.panic >= 70 ? { label: "GUILLOTINE", c: "#ef4444", bg: "#450a0a", icon: "🚨" } :
+                               m.panic >= 50 ? { label: "WARNING", c: "#f97316", bg: "#422006", icon: "⚠️" } :
+                                               { label: "WATCH", c: "#f59e0b", bg: "#1e1e2e", icon: "👁" };
+              return (
+                <div key={m.n} style={{ background: severity.bg, borderRadius: 10, padding: "12px", border: `1px solid ${severity.c}20`, marginBottom: 8 }}>
+                  {/* Header */}
+                  <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
+                    <div style={{ width: 40, height: 40, borderRadius: "50%", background: "#0a0a0f", border: `2px solid ${severity.c}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16, fontWeight: 700, color: severity.c, fontFamily: "'JetBrains Mono',monospace", flexShrink: 0 }}>{m.panic}</div>
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
+                        <span onClick={() => goM(m.n)} style={{ fontSize: 13, fontWeight: 700, color: "#e5e7eb", cursor: "pointer", textDecoration: "underline", textDecorationColor: severity.c + "40" }}>{m.n}</span>
+                        <span style={{ fontSize: 8, padding: "2px 6px", borderRadius: 99, background: severity.c + "20", color: severity.c, fontWeight: 700 }}>{severity.icon} {severity.label}</span>
                       </div>
-                    ))}
+                      {m.persona?.role && <div style={{ fontSize: 10, color: severity.c, opacity: 0.8, marginTop: 1 }}>{m.persona.role}</div>}
+                    </div>
+                    <div style={{ display: "flex", gap: 4, flexShrink: 0 }}>
+                      <div style={{ textAlign: "center", padding: "2px 6px", background: "#0a0a0f", borderRadius: 4 }}>
+                        <div style={{ fontSize: 8, color: "#6b7280" }}>💰</div>
+                        <div style={{ fontSize: 11, fontWeight: 700, color: PCOL.capital, fontFamily: "'JetBrains Mono',monospace" }}>{m.p.capital}</div>
+                      </div>
+                      <div style={{ textAlign: "center", padding: "2px 6px", background: "#0a0a0f", borderRadius: 4 }}>
+                        <div style={{ fontSize: 8, color: "#6b7280" }}>msgs</div>
+                        <div style={{ fontSize: 11, fontWeight: 700, color: "#6b7280", fontFamily: "'JetBrains Mono',monospace" }}>{m.m}</div>
+                      </div>
+                    </div>
                   </div>
-                )}
-              </div>
-            ) : pending > 0 ? (
-              <div style={{ padding: "12px", background: "#0a0a0f", borderRadius: 8, border: "1px dashed #f9731630", textAlign: "center" }}>
-                <div style={{ fontSize: 12, color: "#f97316", fontWeight: 600, marginBottom: 4 }}>🔍 Pending Opus Analysis</div>
-                <div style={{ fontSize: 11, color: "#9ca3af" }}>{pending} members awaiting AI analysis to detect panic behavior patterns.</div>
-                <div style={{ fontSize: 10, color: "#6b7280", marginTop: 4 }}>Once processed, flagged panicans will appear here with evidence.</div>
-              </div>
-            ) : (
+
+                  {/* Bio from Opus */}
+                  {m.persona?.bio && <div style={{ fontSize: 10, color: "#9ca3af", lineHeight: 1.5, marginBottom: 8, padding: "6px 8px", background: "#0a0a0f", borderRadius: 6 }}>{m.persona.bio}</div>}
+
+                  {/* Evidence Quotes */}
+                  {m.panicFlags?.length > 0 && (
+                    <div>
+                      <div style={{ fontSize: 9, color: severity.c, fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", marginBottom: 4 }}>📜 Evidence (from their actual messages)</div>
+                      {m.panicFlags.slice(0, 4).map((flag, i) => (
+                        <div key={i} style={{ display: "flex", gap: 6, marginBottom: 3, alignItems: "flex-start" }}>
+                          <span style={{ fontSize: 10, color: severity.c, flexShrink: 0 }}>»</span>
+                          <span style={{ fontSize: 10, color: "#d4a574", lineHeight: 1.4, fontStyle: "italic" }}>&ldquo;{flag}&rdquo;</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Verdict */}
+                  <div style={{ marginTop: 8, padding: "6px 8px", background: severity.c + "10", borderRadius: 6, border: `1px solid ${severity.c}15` }}>
+                    <div style={{ fontSize: 10, color: severity.c, fontWeight: 600 }}>
+                      {m.panic >= 70 ? "💀 Verdict: Actively damages group conviction. Posts fear, closes positions publicly, triggers others to panic. Zero thesis behind the emotion." :
+                       m.panic >= 50 ? "⚠️ Verdict: Pattern of reactive behavior. Surfaces mostly when markets drop. Needs to demonstrate conviction with actual positions or risk guillotine." :
+                       "👁 Verdict: Some reactive tendencies detected. Not chronic but worth monitoring. Next audit will determine trajectory."}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+
+            {panicans.length === 0 && (
               <div style={{ padding: "10px", background: "#052e16", borderRadius: 8, border: "1px solid #10b98120", textAlign: "center" }}>
                 <div style={{ fontSize: 11, color: "#10b981" }}>✓ No panicans detected — the group maintains conviction.</div>
               </div>

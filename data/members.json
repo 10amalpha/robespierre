@@ -1726,7 +1726,7 @@
   "Pablo Velez Mejia": {
     "tier": "A",
     "score": 67.7,
-    "msgs": 39,
+    "msgs": 207,
     "links": 3,
     "avgWords": 17.6,
     "activeDays": 21,
@@ -1790,13 +1790,17 @@
     "composite": 41,
     "panicScore": 78,
     "panicFlags": [
-      "Closed positions during Iran tensions",
-      "Constantly worried about Trump's market impact",
-      "Questions every volatility spike",
-      "Prefers cash in uncertain times"
+      "Hood 72! 😰 Hims 16.40!",
+      "Tesla sub 400usd!",
+      "BTC y SOL cayendo feo hoy! El lunes va haber sangre! 😰",
+      "Lo malo es que parece que se nos viene otro lunes negro pal portafolio de acciones! 😅",
+      "Hoy cascaron todas las acciones de Colombia, de cuenta de la encuesta de Invamer! Si gana Cepeda, les falta otro 60% por caer rapido! Jaja",
+      "Trump es muy erratico, o por lo menos sus mensajes dicen eso, horrible!",
+      "Ya veremos el costo de Iran en las urnas para Trump!",
+      "Yo si cerre hoy unas posiciones, no me da pena decirlo… jaja"
     ],
     "persona": {
-      "bio": "Retail trader focused on momentum plays and geopolitical events. Heavy Trump/politics commentary with emotional market reactions.",
+      "bio": "Active trader prone to emotional reactions and frequent market commentary. Focuses heavily on Trump's social media impact on markets and tends toward panic selling during volatility.",
       "tags": [
         "retail_trader",
         "politics",
@@ -1816,13 +1820,13 @@
     "highlights": [
       {
         "type": "call",
-        "summary": "Consistent criticism of Trump's Iran negotiation tactics and market timing",
+        "summary": "Sold puts on HIMS strike 15, premium 1.01",
         "quality": 4
       },
       {
-        "type": "insight",
-        "summary": "Questions SpaceX IPO timing and Tesla integration mechanics",
-        "quality": 3
+        "type": "analysis",
+        "summary": "Connected Trump's erratic Iran messaging to market volatility patterns",
+        "quality": 5
       }
     ]
   },
@@ -10739,80 +10743,6 @@
       "role": "Zombie"
     },
     "highlights": []
-  },
-  "PVM Pablo velez": {
-    "tier": "A",
-    "score": 0,
-    "msgs": 168,
-    "links": 10,
-    "avgWords": 17.3,
-    "activeDays": 43,
-    "activeWeeks": 9,
-    "lastActive": "2026-04-07",
-    "daysInactive": 0,
-    "components": {
-      "volume": 0,
-      "consistency": 0,
-      "substance": 0,
-      "recency": 0
-    },
-    "isFounder": false,
-    "history": [
-      {
-        "snapshot": "s2",
-        "tier": "A",
-        "composite": 49,
-        "pillars": {
-          "network": 32,
-          "intelligence": 42,
-          "capital": 68
-        }
-      }
-    ],
-    "panicScore": 71,
-    "panicFlags": [
-      "Hood 72! 😰 Hims 16.40!",
-      "Tesla sub 400usd!",
-      "BTC y SOL cayendo feo hoy! El lunes va haber sangre! 😰",
-      "Lo malo es que parece que se nos viene otro lunes negro pal portafolio de acciones! 😅",
-      "Hoy cascaron todas las acciones de Colombia, de cuenta de la encuesta de Invamer! Si gana Cepeda, les falta otro 60% por caer rapido! Jaja",
-      "Trump es muy erratico, o por lo menos sus mensajes dicen eso, horrible!",
-      "Ya veremos el costo de Iran en las urnas para Trump!",
-      "Yo si cerre hoy unas posiciones, no me da pena decirlo… jaja"
-    ],
-    "persona": {
-      "bio": "Active trader prone to emotional reactions and frequent market commentary. Focuses heavily on Trump's social media impact on markets and tends toward panic selling during volatility.",
-      "tags": [
-        "Day Trading",
-        "Trump Tweets",
-        "Market Panic",
-        "HIMS Options",
-        "Colombia Politics",
-        "Tesla",
-        "Iran War"
-      ],
-      "role": "Emotional Retail Trader",
-      "platforms": []
-    },
-    "highlights": [
-      {
-        "type": "call",
-        "summary": "Sold puts on HIMS strike 15, premium 1.01",
-        "quality": 4
-      },
-      {
-        "type": "analysis",
-        "summary": "Connected Trump's erratic Iran messaging to market volatility patterns",
-        "quality": 5
-      }
-    ],
-    "pillars": {
-      "network": 32,
-      "intelligence": 42,
-      "capital": 68
-    },
-    "pillarComponents": {},
-    "composite": 49
   },
   "María Posada Martínez": {
     "tier": "B",
