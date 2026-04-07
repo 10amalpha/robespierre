@@ -33,18 +33,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 92,
+        "composite": 91,
         "pillars": {
-          "network": 88,
-          "intelligence": 95,
-          "capital": 90
+          "network": 95,
+          "intelligence": 92,
+          "capital": 88
         }
       }
     ],
     "pillars": {
-      "network": 88,
-      "intelligence": 95,
-      "capital": 90
+      "network": 95,
+      "intelligence": 92,
+      "capital": 88
     },
     "pillarComponents": {
       "network": {
@@ -63,24 +63,22 @@
         "specificity": 13
       }
     },
-    "composite": 92,
-    "panicScore": 25,
-    "panicFlags": [
-      "HIMS stress reactions",
-      "occasional emotional trading sentiment"
-    ],
+    "composite": 91,
+    "panicScore": 12,
+    "panicFlags": [],
     "persona": {
-      "bio": "PhD Economics. BTC fundamentalist. Runs Arias Financial Academy (3K+ subs). Homeland wealth management. Shares real positions, legal/AI analysis. Podcast regular.",
+      "bio": "Chief of Arias Financial Academy with 3K+ Substack subs, crypto/MSTR bull, and obsessive AI/Claude power user building monetizable platforms. Former government official turned alpha generator who cuts through BS with zero empathy.",
       "tags": [
-        "BTC",
-        "macro",
-        "economics",
-        "legal",
-        "AI",
-        "positions",
-        "academy"
+        "AI/Claude",
+        "Bitcoin/MSTR",
+        "Colombia politics",
+        "Substacks",
+        "Options/Trading",
+        "Platform building",
+        "Anti-woke",
+        "Financial analysis"
       ],
-      "role": "Alpha Contributor",
+      "role": "Alpha Generator & Platform Builder",
       "platforms": [
         {
           "type": "substack",
@@ -96,18 +94,28 @@
     },
     "highlights": [
       {
-        "type": "analysis",
-        "summary": "AI adoption insight: Working with 3 large groups to 'subir márgenes brutalmente (bajando headcount, disparando rev/empl)' - real AI implementation experience",
-        "quality": 8
+        "type": "tool",
+        "summary": "Built homeland.net.co platform using Claude that replaces UBS/JPM/Goldman analyst teams - monetizing financial analysis",
+        "quality": 10
       },
       {
         "type": "thesis",
-        "summary": "Historical context piece: 'Entender la economía también es entender la historia. Especialmente la del Imperio Romano' - connecting economic history to current markets",
-        "quality": 7
+        "summary": "HIMS vs Big Pharma analysis showing network effects and FCF/share fundamentals vs regulatory attacks",
+        "quality": 9
+      },
+      {
+        "type": "analysis",
+        "summary": "Detailed MSTR debt/Bitcoin thesis with specific entry points and Sharpe ratio adjustments for liquidity",
+        "quality": 9
       },
       {
         "type": "insight",
-        "summary": "AI disruption analogy: 'Esto es como cuando la imprenta le quitó el monopolio del saber al clero' - understanding paradigm shifts through historical lens",
+        "summary": "'Con Claude ya no necesito equipo' - fired all analysts after building AI platform that does their work better/faster",
+        "quality": 10
+      },
+      {
+        "type": "call",
+        "summary": "Multiple successful calls: Brent oil perp 10x, MU accumulation, SOL at 79, HIMS partnership resolution",
         "quality": 8
       }
     ]
@@ -146,18 +154,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 76,
+        "composite": 85,
         "pillars": {
-          "network": 62,
-          "intelligence": 88,
-          "capital": 72
+          "network": 85,
+          "intelligence": 92,
+          "capital": 78
         }
       }
     ],
     "pillars": {
-      "network": 62,
-      "intelligence": 88,
-      "capital": 72
+      "network": 85,
+      "intelligence": 92,
+      "capital": 78
     },
     "pillarComponents": {
       "network": {
@@ -176,18 +184,22 @@
         "specificity": 25
       }
     },
-    "composite": 76,
-    "panicScore": 15,
+    "composite": 85,
+    "panicScore": 12,
     "panicFlags": [],
     "persona": {
-      "bio": "Substack writer. Deep research (astrocytomas, market analysis). Intermittent but high quality when active. Analytical depth.",
+      "bio": "Technical architect and AI researcher focused on agent systems, memory architecture, and edge computing. Runs deep experiments with OpenClaw, autonomous agents, and local inference while publishing thought leadership on AI disruption and technological shifts.",
       "tags": [
-        "research",
-        "writing",
-        "health",
-        "deep analysis"
+        "AI-agents",
+        "OpenClaw",
+        "edge-computing",
+        "Anthropic",
+        "AI-memory",
+        "nuclear-energy",
+        "BTC-infrastructure",
+        "robotics"
       ],
-      "role": "Analyst",
+      "role": "AI Infrastructure Pioneer",
       "platforms": [
         {
           "type": "substack",
@@ -198,23 +210,18 @@
     },
     "highlights": [
       {
-        "type": "analysis",
-        "summary": "Detailed MSTR/STRC structure analysis explaining debt hierarchy and Bitcoin premium calculations",
-        "quality": 10
+        "type": "tool",
+        "summary": "Built and deployed MacroPulse market monitoring system",
+        "quality": 9
       },
       {
-        "type": "insight",
-        "summary": "Anthropic code leak impact assessment - how 512k lines of production code accelerates competitor timelines",
+        "type": "analysis",
+        "summary": "Detailed breakdown of Anthropic's leaked code implications for agent orchestration acceleration",
         "quality": 9
       },
       {
         "type": "thesis",
-        "summary": "Bitcoin quantum computing FUD debunking - if quantum breaks Bitcoin, traditional finance dies first",
-        "quality": 9
-      },
-      {
-        "type": "tool",
-        "summary": "Built macro-pulse dashboard and polytropic.co site using Claude for book launch",
+        "summary": "Edge AI and local inference as the future of compute with M5 chips analysis",
         "quality": 8
       }
     ]
@@ -253,18 +260,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 85,
+        "composite": 65,
         "pillars": {
-          "network": 85,
-          "intelligence": 88,
-          "capital": 82
+          "network": 75,
+          "intelligence": 68,
+          "capital": 55
         }
       }
     ],
     "pillars": {
-      "network": 85,
-      "intelligence": 88,
-      "capital": 82
+      "network": 75,
+      "intelligence": 68,
+      "capital": 55
     },
     "pillarComponents": {
       "network": {
@@ -283,39 +290,44 @@
         "specificity": 23
       }
     },
-    "composite": 85,
+    "composite": 65,
     "panicScore": 15,
-    "panicFlags": [
-      "Shows deep skepticism of real estate tokenization as 'fiasco'"
-    ],
+    "panicFlags": [],
     "persona": {
-      "bio": "Tokenization and fintech expert. London-based. Supports USTBL project. Deep on JPM/stablecoins/DeFi rails. Bridges tradfi and web3.",
+      "bio": "Active fintech professional based in London who bridges LSEG/traditional finance with crypto/Bitcoin capital markets. Posts technical market analysis, connects fintech opportunities, and shares international perspectives on Colombia.",
       "tags": [
-        "tokenization",
-        "stablecoins",
-        "JPM",
-        "DeFi",
+        "bitcoin",
+        "capital-markets",
         "fintech",
-        "London"
+        "london",
+        "tokenization",
+        "oil-markets",
+        "colombia-politics",
+        "market-technicals"
       ],
-      "role": "Alpha Contributor",
+      "role": "International Bridge Builder",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "thesis",
-        "summary": "Ecopetrol as brutal oil play considering Venezuela/Iran dynamics and shale assets comparable to Permian/Vaca Muerta",
+        "type": "link",
+        "summary": "Connected Latin American fintechs with LSEG growth opportunities - generated real business discussions",
         "quality": 9
       },
       {
-        "type": "insight",
-        "summary": "Real estate tokenization identified as developer exit scam in Dubai/Salvador markets",
+        "type": "thesis",
+        "summary": "Clear framework for Bitcoin capital markets requirements: access rights, liquidity, confidentiality, robust infrastructure",
         "quality": 8
       },
       {
         "type": "analysis",
-        "summary": "Trump vs Congress dynamics on big pharma - executive hatred vs legislative capture",
-        "quality": 8
+        "summary": "Detailed explanation of prime brokerage mechanics and how Wall St captures value through lending/internalization",
+        "quality": 7
+      },
+      {
+        "type": "insight",
+        "summary": "Identified China treasury selling as potential depeg risk for onchain markets",
+        "quality": 7
       }
     ]
   },
@@ -353,18 +365,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 81,
+        "composite": 56,
         "pillars": {
-          "network": 80,
-          "intelligence": 78,
-          "capital": 85
+          "network": 72,
+          "intelligence": 55,
+          "capital": 45
         }
       }
     ],
     "pillars": {
-      "network": 80,
-      "intelligence": 78,
-      "capital": 85
+      "network": 72,
+      "intelligence": 55,
+      "capital": 45
     },
     "pillarComponents": {
       "network": {
@@ -383,42 +395,44 @@
         "specificity": 22
       }
     },
-    "composite": 81,
-    "panicScore": 40,
+    "composite": 56,
+    "panicScore": 58,
     "panicFlags": [
-      "El mundo esta demasiado nervioso. El SELL button ha estado ahi varias veces",
-      "Habiendo borrado el 2025 ya",
-      "uno sufriendo por lo que se come los domingos",
-      "Vieron la noticia de hims ? 😩"
+      "Yo decidí no entrar a mi cuenta por 3 meses o más. Estoy que me autoguillotino del chat. Breathe 🧘 in.",
+      "Te vendo el mío. Necesito caja 🤣🤣🤣",
+      "Yo me he dedicado a eso en X. A los que me tiran esa retórica. Le explico lo más fácil posible. Pero HP tarea difícil!!",
+      "No se ni que pensar.",
+      "Y en mi analisis financiero de mi portafolio la gueva de CLAUDE me dice que salga de TESLA yaaaaaa! jajajaja. inteligencia artificial de que ome!"
     ],
     "persona": {
-      "bio": "Self-taught coder. Built Python options trading tools. TSLA/BTC high conviction. \"A footballer programming in Python.\" Action-oriented.",
+      "bio": "Member running real estate investment funds in Miami, actively embracing AI tools (Claude) for business transformation while juggling multiple tech positions. Heavy focus on lifestyle content and social commentary alongside investment discussions.",
       "tags": [
-        "TSLA",
-        "BTC",
-        "options",
-        "python",
-        "tools",
-        "trading"
+        "Real Estate Miami",
+        "AI/Claude",
+        "HIMS",
+        "Tesla",
+        "Social Commentary",
+        "Family Man",
+        "Tech Tools"
       ],
-      "role": "Alpha Contributor",
+      "role": "Social Connector with Tech Enthusiasm",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "thesis",
-        "summary": "Deep HIMS conviction with peptide delivery vision and GLP-1 as 'Netflix moment'",
-        "quality": 8
-      },
-      {
-        "type": "insight",
-        "summary": "Geopolitical analysis connecting Trump's approach to Middle East with investment implications",
+        "type": "tool",
+        "summary": "Built wife's website 100% with Claude in 2 days saving $4M pesos and 1 month wait time",
         "quality": 7
       },
       {
-        "type": "tool",
-        "summary": "Hands-on Claude AI development for wife's business website with detailed technical feedback",
-        "quality": 8
+        "type": "link",
+        "summary": "Shared HIMS GLP-1 news and CEO thread on platform launch",
+        "quality": 6
+      },
+      {
+        "type": "thesis",
+        "summary": "Real estate to commercial pivot thesis focused on warehouses with Triple Net leases",
+        "quality": 5
       }
     ]
   },
@@ -456,18 +470,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 82,
+        "composite": 75,
         "pillars": {
-          "network": 78,
-          "intelligence": 90,
-          "capital": 75
+          "network": 75,
+          "intelligence": 82,
+          "capital": 68
         }
       }
     ],
     "pillars": {
-      "network": 78,
-      "intelligence": 90,
-      "capital": 75
+      "network": 75,
+      "intelligence": 82,
+      "capital": 68
     },
     "pillarComponents": {
       "network": {
@@ -486,23 +500,22 @@
         "specificity": 25
       }
     },
-    "composite": 82,
-    "panicScore": 25,
-    "panicFlags": [
-      "Defensive about traditional investment banking",
-      "Shows political bias affecting investment judgment"
-    ],
+    "composite": 75,
+    "panicScore": 22,
+    "panicFlags": [],
     "persona": {
-      "bio": "Satirical political analyst. Substack writer. MSTR debt analysis. Connects political events to market implications. Insightful and original voice.",
+      "bio": "Political analyst focused on battle cultural, writes Substacks about Colombian politics and voting strategy. Active connector who bridges podcast, Substack writers, and political analysis with investment implications.",
       "tags": [
-        "politics",
-        "satire",
-        "MSTR",
-        "Colombia",
-        "culture",
-        "analysis"
+        "batalla-cultural",
+        "política-colombiana",
+        "substack",
+        "btc",
+        "battle-culture",
+        "voting-analysis",
+        "CD-partido",
+        "conservative-politics"
       ],
-      "role": "Analyst",
+      "role": "political-investment analyst",
       "platforms": [
         {
           "type": "substack",
@@ -514,17 +527,17 @@
     "highlights": [
       {
         "type": "analysis",
-        "summary": "Detailed MSTR valuation framework comparing BTC/Share ratios and BTC yield mechanics across monetary universes",
+        "summary": "Detailed explanation of MSTR valuation using BTC Yield concept, showing how shares/BTC ratio creates value beyond NAV",
         "quality": 9
       },
       {
         "type": "thesis",
-        "summary": "Colombian Global Market tax advantage thesis - no capital gains on foreign stocks for Colombian investors",
+        "summary": "Published multiple analytical Substacks on voting strategy, election mathematics, and political investment implications",
         "quality": 8
       },
       {
-        "type": "insight",
-        "summary": "AI disruption of legal profession through superior copy/paste capabilities",
+        "type": "tool",
+        "summary": "Created battle cultural app and nopidopermiso.com domain for content distribution",
         "quality": 7
       }
     ]
@@ -563,18 +576,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 74,
+        "composite": 73,
         "pillars": {
-          "network": 82,
-          "intelligence": 78,
-          "capital": 65
+          "network": 45,
+          "intelligence": 85,
+          "capital": 78
         }
       }
     ],
     "pillars": {
-      "network": 82,
-      "intelligence": 78,
-      "capital": 65
+      "network": 45,
+      "intelligence": 85,
+      "capital": 78
     },
     "pillarComponents": {
       "network": {
@@ -593,22 +606,22 @@
         "specificity": 12
       }
     },
-    "composite": 74,
-    "panicScore": 25,
-    "panicFlags": [
-      "Self-deprecating about knowledge gaps",
-      "Admits understanding only 10% of discussions"
-    ],
+    "composite": 73,
+    "panicScore": 15,
+    "panicFlags": [],
     "persona": {
-      "bio": "Tokenization distribution expert. Lived in Brazil 5 years. CASIO strategy analogy. Son has European manufacturing. FUTOPIX Substack.",
+      "bio": "Anthropologist turned tech entrepreneur who writes FUTOPIX substack on science/tech futures. Successfully replaced developers with Claude, built e-commerce sites generating $60k+/week. Combines deep cultural analysis with practical execution.",
       "tags": [
-        "tokenization",
-        "distribution",
-        "Brazil",
-        "business",
-        "startups"
+        "FUTOPIX",
+        "anthropology",
+        "Claude-development",
+        "e-commerce",
+        "robotics",
+        "culture-tech",
+        "BTC-mining",
+        "service-design"
       ],
-      "role": "Alpha Contributor",
+      "role": "Cultural Futurist & Builder",
       "platforms": [
         {
           "type": "substack",
@@ -619,19 +632,9 @@
     },
     "highlights": [
       {
-        "type": "thesis",
-        "summary": "Analysis on Colombian vs US entrepreneurship with data-driven approach for Substack",
-        "quality": 8
-      },
-      {
         "type": "insight",
-        "summary": "Distinction between incubators (idea to company) vs accelerators (company scaling) - criticizing government focus on 'mermelada' projects",
+        "summary": "LLMs are becoming the OS layer while tools like Claude Code and Perplexity Computer are just use cases - the real disruption will come in Layer 2 applications",
         "quality": 9
-      },
-      {
-        "type": "analysis",
-        "summary": "Friction reduction as key to ecosystem acceleration - context mapping and government's role in eliminating barriers",
-        "quality": 8
       }
     ]
   },
@@ -669,18 +672,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 86,
+        "composite": 73,
         "pillars": {
-          "network": 72,
-          "intelligence": 93,
-          "capital": 88
+          "network": 68,
+          "intelligence": 76,
+          "capital": 72
         }
       }
     ],
     "pillars": {
-      "network": 72,
-      "intelligence": 93,
-      "capital": 88
+      "network": 68,
+      "intelligence": 76,
+      "capital": 72
     },
     "pillarComponents": {
       "network": {
@@ -699,40 +702,38 @@
         "specificity": 13
       }
     },
-    "composite": 86,
+    "composite": 73,
     "panicScore": 15,
-    "panicFlags": [
-      "Occasional FOMO on missing positions",
-      "Slight anxiety about premium pricing"
-    ],
+    "panicFlags": [],
     "persona": {
-      "bio": "Deep technical researcher. Quantum computing bear case. Iran geopolitics. Shares specific portfolio positions. One of the most substantive writers.",
+      "bio": "Venture investor and tech enthusiast who bridges AI applications with investment opportunities. Active in fund management and startup ecosystem, frequently discussing emerging tech trends and market dynamics.",
       "tags": [
-        "quantum computing",
-        "geopolitics",
-        "Iran",
-        "portfolio",
-        "research",
-        "tech"
+        "venture-capital",
+        "AI-applications",
+        "HIMS",
+        "private-credit",
+        "edge-models",
+        "SpaceX-IPO",
+        "energy-models"
       ],
-      "role": "Thesis Writer",
+      "role": "Tech Venture Analyst",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "analysis",
-        "summary": "MSTR valuation framework as leveraged BTC onramp vs direct BTC exposure - market utility vs leverage risk analysis",
-        "quality": 9
-      },
-      {
-        "type": "insight",
-        "summary": "Anthropic vs OpenAI revenue trajectory analysis and relative valuation attractiveness",
+        "type": "thesis",
+        "summary": "Energy-based AI models as disruptor to compute-intensive paradigm",
         "quality": 8
       },
       {
         "type": "analysis",
-        "summary": "Iran negotiation strategy breakdown using historical context and game theory principles",
-        "quality": 8
+        "summary": "Private credit fund gating mechanics and portfolio quality assessment",
+        "quality": 7
+      },
+      {
+        "type": "call",
+        "summary": "HIMS position with conviction, sold other holdings to concentrate",
+        "quality": 7
       }
     ]
   },
@@ -770,18 +771,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 95,
+        "composite": 93,
         "pillars": {
-          "network": 98,
-          "intelligence": 95,
-          "capital": 92
+          "network": 95,
+          "intelligence": 92,
+          "capital": 94
         }
       }
     ],
     "pillars": {
-      "network": 98,
-      "intelligence": 95,
-      "capital": 92
+      "network": 95,
+      "intelligence": 92,
+      "capital": 94
     },
     "pillarComponents": {
       "network": {
@@ -800,24 +801,22 @@
         "specificity": 25
       }
     },
-    "composite": 95,
-    "panicScore": 15,
-    "panicFlags": [
-      "occasional market timing concerns"
-    ],
+    "composite": 93,
+    "panicScore": 0,
+    "panicFlags": [],
     "persona": {
-      "bio": "Founder of 10AMPRO. Podcast host. Macro + crypto strategist. BTC since 2013. Raised $101M for startups. The engine that connects everything.",
+      "bio": "10AMPRO founder who synthesizes complex geopolitical, technological and market trends into actionable investment theses. Deep thinker on AI impact, agent economics, and the transformation of traditional systems. Builds tools and experiments constantly.",
       "tags": [
-        "macro",
-        "BTC",
-        "SOL",
-        "MSTR",
-        "options",
-        "tokenization",
-        "AI",
-        "founder"
+        "AI-agents",
+        "PLTR-thesis",
+        "SOL-ecosystem",
+        "geopolitics",
+        "builder",
+        "HOOD-analysis",
+        "wine-tech",
+        "Claude-experiments"
       ],
-      "role": "Founder",
+      "role": "visionary-founder",
       "platforms": [
         {
           "type": "substack",
@@ -834,18 +833,28 @@
     "highlights": [
       {
         "type": "thesis",
-        "summary": "Reserve currency thesis: 'the reserve currency is going to be equities' - profound macro insight about dollar debasement and equity store of value",
+        "summary": "Si yo fuera un agente portfolio - comprehensive analysis of how AI agents will reshape the economy and what assets they'd choose",
+        "quality": 10
+      },
+      {
+        "type": "tool",
+        "summary": "Built hedonicum.pro - AI-powered wine/restaurant recommendation engine using personal taste data",
         "quality": 9
       },
       {
         "type": "analysis",
-        "summary": "MSTR analysis: 'es como el avg de todos los put/calls de BTC.. en un solo precio.. y el premium que la gente paga por esos put/calls es STRC' - brilliant options analogy",
+        "summary": "Connected Iran targeting, oil flows, China chokepoints to Treasury bills and BRICS destruction thesis",
         "quality": 10
       },
       {
         "type": "insight",
-        "summary": "Saylor's genius: 'la sincronizacion de time horizons' - understanding that Saylor arbitrages different time preferences for capital access",
+        "summary": "Goldfishmemory method for Claude state management - solving AI's context limitation problem",
         "quality": 9
+      },
+      {
+        "type": "link",
+        "summary": "Shared over 200 high-quality sources, tools, and analysis threads connecting macro to specific positions",
+        "quality": 10
       }
     ]
   },
@@ -883,18 +892,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 87,
+        "composite": 54,
         "pillars": {
-          "network": 92,
-          "intelligence": 92,
-          "capital": 78
+          "network": 72,
+          "intelligence": 68,
+          "capital": 25
         }
       }
     ],
     "pillars": {
-      "network": 92,
-      "intelligence": 92,
-      "capital": 78
+      "network": 72,
+      "intelligence": 68,
+      "capital": 25
     },
     "pillarComponents": {
       "network": {
@@ -913,22 +922,24 @@
         "specificity": 13
       }
     },
-    "composite": 87,
-    "panicScore": 15,
+    "composite": 54,
+    "panicScore": 35,
     "panicFlags": [
-      "Shows frustration with Colombian bureaucracy"
+      "COlombia es un pais de dibujos animados",
+      "que pasa entonces? nos bajan todo? jaja que verguero"
     ],
     "persona": {
-      "bio": "Political economy analyst. Podcast co-host. Writes weekly chat summaries that synthesize the group intelligence. Medellín energy valley thesis. Podcast coordinator.",
+      "bio": "Early adopter focused on AI tools implementation in business, deeply passionate about NotebookLM and Perplexity. Acts as the group's scout for new AI products and practical applications.",
       "tags": [
-        "politics",
-        "Colombia",
-        "energy",
-        "Medellín",
-        "podcasts",
-        "summaries"
+        "AI-tools",
+        "NotebookLM",
+        "Perplexity",
+        "tech-adoption",
+        "Spain",
+        "crypto",
+        "practical-AI"
       ],
-      "role": "Alpha Contributor",
+      "role": "AI Tools Evangelist",
       "platforms": [
         {
           "type": "substack",
@@ -940,17 +951,7 @@
     "highlights": [
       {
         "type": "thesis",
-        "summary": "Created comprehensive weekly market summary '10AMPRO — Semana 22-28 de febrero' covering BTC crash, AI developments, and Colombian tax implications",
-        "quality": 10
-      },
-      {
-        "type": "insight",
-        "summary": "Identified Claude's potential and organized exclusive Claude Cowork event through Anthropic ambassador",
-        "quality": 9
-      },
-      {
-        "type": "analysis",
-        "summary": "Analyzed European vs US energy strategies and their investment implications",
+        "summary": "NotebookLM is Google's Trojan horse for AI adoption - the most user-friendly product that will drive mainstream usage",
         "quality": 8
       }
     ]
@@ -989,18 +990,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 77,
+        "composite": 49,
         "pillars": {
-          "network": 75,
-          "intelligence": 85,
-          "capital": 70
+          "network": 38,
+          "intelligence": 78,
+          "capital": 24
         }
       }
     ],
     "pillars": {
-      "network": 75,
-      "intelligence": 85,
-      "capital": 70
+      "network": 38,
+      "intelligence": 78,
+      "capital": 24
     },
     "pillarComponents": {
       "network": {
@@ -1019,19 +1020,22 @@
         "specificity": 19
       }
     },
-    "composite": 77,
+    "composite": 49,
     "panicScore": 15,
     "panicFlags": [],
     "persona": {
-      "bio": "YouTube creator. Political analysis + labor economics (robot vs. security guard math). Consistent link curation. Practical investment thinking.",
+      "bio": "Sophisticated geopolitical analyst with deep understanding of oil markets, Middle East dynamics, and global security issues. Combines technical market knowledge with strategic political insights.",
       "tags": [
-        "politics",
-        "labor",
-        "robotics",
-        "YouTube",
-        "curation"
+        "Geopolitics",
+        "Oil Markets",
+        "Iran/Israel",
+        "SOUTHCOM",
+        "Industrial Stocks",
+        "Polymarket",
+        "Strategic Analysis",
+        "Hedgeye"
       ],
-      "role": "Contributor",
+      "role": "Geopolitical Intelligence Analyst",
       "platforms": [
         {
           "type": "youtube",
@@ -1043,18 +1047,18 @@
     "highlights": [
       {
         "type": "analysis",
-        "summary": "Comprehensive Middle East conflict analysis linking Iran operations to energy market impacts",
-        "quality": 9
-      },
-      {
-        "type": "link",
-        "summary": "Curated high-quality geopolitical and energy research from premium sources like Gavekal",
+        "summary": "Detailed Iran water crisis analysis connecting geopolitics to market impact with ethnic division insights",
         "quality": 9
       },
       {
         "type": "insight",
-        "summary": "Colombian political analysis connecting Petro's rise to traditional power structures",
+        "summary": "Connected Unitree robots at $13.5k vs security guard at $37k/year economic disruption thesis",
         "quality": 8
+      },
+      {
+        "type": "link",
+        "summary": "Shared Tim Ferriss self-help trap article and gold price hegemony analysis",
+        "quality": 7
       }
     ]
   },
@@ -1092,18 +1096,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 77,
+        "composite": 46,
         "pillars": {
-          "network": 85,
-          "intelligence": 82,
-          "capital": 65
+          "network": 45,
+          "intelligence": 55,
+          "capital": 35
         }
       }
     ],
     "pillars": {
-      "network": 85,
-      "intelligence": 82,
-      "capital": 65
+      "network": 45,
+      "intelligence": 55,
+      "capital": 35
     },
     "pillarComponents": {
       "network": {
@@ -1122,22 +1126,21 @@
         "specificity": 14
       }
     },
-    "composite": 77,
-    "panicScore": 25,
-    "panicFlags": [
-      "Shares emotional content (crying videos)",
-      "Makes impulsive travel decisions based on market moves"
-    ],
+    "composite": 46,
+    "panicScore": 15,
+    "panicFlags": [],
     "persona": {
-      "bio": "#1 link curator in the group (646 msgs). 10AMPRO content creator. Podcast regular. The group's information nervous system.",
+      "bio": "Group entertainer who shares TikToks, memes and market commentary. Focuses on AI impact, Solana ecosystem, and international market movements with humor-based approach.",
       "tags": [
-        "curation",
-        "links",
-        "content creation",
-        "politics",
-        "broad market"
+        "tiktok-curator",
+        "memes",
+        "solana",
+        "AI-impact",
+        "market-humor",
+        "oil-prices",
+        "tech-news"
       ],
-      "role": "Curator",
+      "role": "content curator & comic relief",
       "platforms": [
         {
           "type": "twitter",
@@ -1148,19 +1151,14 @@
     },
     "highlights": [
       {
-        "type": "insight",
-        "summary": "Shared AI impact on portfolio crisis analysis via TikTok",
-        "quality": 7
-      },
-      {
         "type": "link",
-        "summary": "Consistently curates relevant financial and geopolitical content from X/Twitter",
-        "quality": 8
+        "summary": "Curates relevant TikToks on AI impact, Solana developments, and market trends for group discussion",
+        "quality": 6
       },
       {
-        "type": "call",
-        "summary": "Coordinated Tesla manager meeting with group members",
-        "quality": 6
+        "type": "insight",
+        "summary": "DoubleZero Solana fast lane explanations and energy valley concepts",
+        "quality": 5
       }
     ]
   },
@@ -1198,18 +1196,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 91,
+        "composite": 84,
         "pillars": {
-          "network": 82,
-          "intelligence": 98,
-          "capital": 88
+          "network": 88,
+          "intelligence": 92,
+          "capital": 71
         }
       }
     ],
     "pillars": {
-      "network": 82,
-      "intelligence": 98,
-      "capital": 88
+      "network": 88,
+      "intelligence": 92,
+      "capital": 71
     },
     "pillarComponents": {
       "network": {
@@ -1228,22 +1226,22 @@
         "specificity": 18
       }
     },
-    "composite": 91,
-    "panicScore": 15,
-    "panicFlags": [
-      "None - demonstrates strong conviction"
-    ],
+    "composite": 84,
+    "panicScore": 8,
+    "panicFlags": [],
     "persona": {
-      "bio": "Macro/central banking analyst. Macrowise Substack. Oil-to-30 thesis. Fed/Treasury dynamics. Geopolitical depth on Iran/Middle East. Podcast regular.",
+      "bio": "Sophisticated macro analyst and author publishing deep research on AI, geopolitics, and market structure. Writes the Macrowise Substack and recently published 'Epistemic Wealth' book exploring wealth in the AI era.",
       "tags": [
-        "macro",
-        "Fed",
-        "Treasury",
-        "oil",
-        "geopolitics",
-        "central banking"
+        "Macrowise",
+        "Epistemic Wealth",
+        "Gamma Squeeze",
+        "Iran Analysis",
+        "AI Philosophy",
+        "Fractal Intelligence",
+        "Oil Markets",
+        "Nation-State Evolution"
       ],
-      "role": "Alpha Contributor",
+      "role": "Macro Philosopher & Author",
       "platforms": [
         {
           "type": "substack",
@@ -1255,18 +1253,18 @@
     "highlights": [
       {
         "type": "thesis",
-        "summary": "Comprehensive Iran geopolitical analysis connecting Trump strategy, Azerbaijan pivot, and China containment through 'anaconda strategy'",
-        "quality": 9
+        "summary": "Published book 'Epistemic Wealth' arguing true wealth in AI era is learning capacity, not assets",
+        "quality": 10
       },
       {
         "type": "analysis",
-        "summary": "AI paradigm shift thesis: 'Not about replacing work, but embracing bigger challenges and using AI to go further' - compares to agricultural revolution",
-        "quality": 8
+        "summary": "Deep Iran water crisis and ethnic division analysis predicting Azerbaijan separation scenario",
+        "quality": 9
       },
       {
         "type": "insight",
-        "summary": "Identifies Avenir Group (Li Lin's family office) as source of crypto volatility with $1.18B IBIT position causing momentum trader liquidations",
-        "quality": 8
+        "summary": "Framework that brain operates at 20W using fractal geometry vs NVIDIA chips at 10,000x power",
+        "quality": 9
       }
     ]
   },
@@ -1304,18 +1302,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 77,
+        "composite": 58,
         "pillars": {
-          "network": 70,
-          "intelligence": 75,
-          "capital": 85
+          "network": 75,
+          "intelligence": 45,
+          "capital": 60
         }
       }
     ],
     "pillars": {
-      "network": 70,
-      "intelligence": 75,
-      "capital": 85
+      "network": 75,
+      "intelligence": 45,
+      "capital": 60
     },
     "pillarComponents": {
       "network": {
@@ -1334,41 +1332,33 @@
         "specificity": 15
       }
     },
-    "composite": 77,
-    "panicScore": 25,
+    "composite": 58,
+    "panicScore": 35,
     "panicFlags": [
-      "Margin considerations on borrowed money",
-      "FOMO expressions"
+      "No te vistas que no vas",
+      "Con una hora se desocupa",
+      "¿nos vamos a perder el rally?"
     ],
     "persona": {
-      "bio": "Active trader focused on AI stocks and practical investment execution. Provides real-time market observations and explores AI tools for productivity.",
+      "bio": "Trump/Musk evangelist with strong political opinions. Active social commentator who shares Tesla/FSD enthusiasm, family anecdotes, and cultural war takes. Based in Miami/Medellín area.",
       "tags": [
-        "trading",
-        "AI-tools",
-        "Tesla",
-        "HIMS",
-        "margin-strategies",
-        "Claude",
-        "practical"
+        "TSLA",
+        "Trump",
+        "politics",
+        "FSD",
+        "Medellín",
+        "cultural war",
+        "Hedonicum",
+        "family"
       ],
-      "role": "Alpha Contributor",
+      "role": "political-tech enthusiast",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "call",
-        "summary": "Tesla V2G (Vehicle-to-Grid) insight: Tesla owners as grid stabilizers creating additional value proposition beyond transportation",
+        "type": "thesis",
+        "summary": "Claude Cowork project development and AI agent implementation for productivity",
         "quality": 7
-      },
-      {
-        "type": "tool",
-        "summary": "Deep exploration of Claude Cowork for productivity, noting after-hours token availability and practical implementation",
-        "quality": 7
-      },
-      {
-        "type": "analysis",
-        "summary": "STRC covered call strategy analysis: 6.70% yield after costs, margin opportunities at 5% borrow rate with tax-efficient structure",
-        "quality": 6
       }
     ]
   },
@@ -1406,18 +1396,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 74,
+        "composite": 48,
         "pillars": {
-          "network": 75,
-          "intelligence": 85,
-          "capital": 60
+          "network": 35,
+          "intelligence": 71,
+          "capital": 42
         }
       }
     ],
     "pillars": {
-      "network": 75,
-      "intelligence": 85,
-      "capital": 60
+      "network": 35,
+      "intelligence": 71,
+      "capital": 42
     },
     "pillarComponents": {
       "network": {
@@ -1436,38 +1426,31 @@
         "specificity": 25
       }
     },
-    "composite": 74,
-    "panicScore": 25,
-    "panicFlags": [
-      "Shares geopolitical conspiracy theories",
-      "Shows anxiety about buying opportunities during dips"
-    ],
+    "composite": 48,
+    "panicScore": 28,
+    "panicFlags": [],
     "persona": {
-      "bio": "Geopolitically-aware investor with strong analytical skills. Focuses on macro trends, Trump administration impacts, and Colombian politics.",
+      "bio": "Geopolitical analyst who shares strategic insights on global power dynamics, particularly focused on US-China-Iran conflicts and their market implications. Occasional commentary on Colombian politics with investment angle.",
       "tags": [
         "geopolitics",
-        "macro",
-        "trump",
-        "colombia",
-        "conspiracy-adjacent"
+        "Iran-conflict",
+        "surveillance-state",
+        "US-foreign-policy",
+        "banking-system",
+        "nuclear-strategy"
       ],
-      "role": "Thesis Writer",
+      "role": "Geopolitical Strategist",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "thesis",
-        "summary": "Deep analysis of Marco Rubio's ideological significance and Trump's broader geopolitical strategy against globalist structures",
+        "type": "analysis",
+        "summary": "Marco Rubio speech analysis connecting civilizational strategy to Latin American implications",
         "quality": 8
       },
       {
-        "type": "analysis",
-        "summary": "Travis Kalanick's 8-year stealth robotics play through Atoms/CloudKitchens as ultimate revenge story",
-        "quality": 9
-      },
-      {
         "type": "insight",
-        "summary": "Colombian political strategy breakdown - Petro's direct income transfers creating electoral advantage",
+        "summary": "Dubai strike strategy analysis showing cost/benefit for Trump's Iran negotiations",
         "quality": 7
       }
     ]
@@ -1506,18 +1489,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 47,
+        "composite": 42,
         "pillars": {
-          "network": 55,
-          "intelligence": 60,
-          "capital": 40
+          "network": 42,
+          "intelligence": 65,
+          "capital": 68
         }
       }
     ],
     "pillars": {
-      "network": 55,
-      "intelligence": 60,
-      "capital": 40
+      "network": 42,
+      "intelligence": 65,
+      "capital": 68
     },
     "pillarComponents": {
       "network": {
@@ -1536,28 +1519,28 @@
         "specificity": 17
       }
     },
-    "composite": 47,
-    "panicScore": 85,
+    "composite": 42,
+    "panicScore": 35,
     "panicFlags": [
-      "political paranoia",
-      "conspiracy theories",
-      "electoral obsession"
+      "lo que más me preocupa es que no existió un voto-sanción",
+      "25 senadores del Pacto Histórico es un peligro"
     ],
     "persona": {
-      "bio": "Political analyst with strong right-wing views. Deeply concerned about Colombian left-wing politics and electoral outcomes.",
+      "bio": "Political analyst focused on Colombian elections, provides tactical voting advice and tracks congressional seats. Invests in airline dividends.",
       "tags": [
-        "politics",
-        "elections",
-        "colombia",
-        "conservative"
+        "Colombian-elections",
+        "political-tactics",
+        "CD-supporter",
+        "Copa-airlines",
+        "dividend-investing"
       ],
-      "role": "Panican",
+      "role": "political-strategist",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "analysis",
-        "summary": "Aviation investment thesis during crisis: Copa dividend yield at 7%, recommends buying airlines during bloodbath",
+        "type": "insight",
+        "summary": "Tactical voting advice to avoid vote manipulation - break or annul consultation ballots",
         "quality": 7
       }
     ]
@@ -1596,18 +1579,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 77,
+        "composite": 58,
         "pillars": {
-          "network": 75,
-          "intelligence": 85,
-          "capital": 70
+          "network": 55,
+          "intelligence": 75,
+          "capital": 40
         }
       }
     ],
     "pillars": {
-      "network": 75,
-      "intelligence": 85,
-      "capital": 70
+      "network": 55,
+      "intelligence": 75,
+      "capital": 40
     },
     "pillarComponents": {
       "network": {
@@ -1626,38 +1609,27 @@
         "specificity": 21
       }
     },
-    "composite": 77,
-    "panicScore": 25,
-    "panicFlags": [
-      "Concerned about BTC price drops and market volatility",
-      "Worried about scam projects and false promises"
-    ],
+    "composite": 58,
+    "panicScore": 15,
+    "panicFlags": [],
     "persona": {
-      "bio": "Tech-savvy builder experimenting with AI tools like Claude to create financial applications. Active crypto enthusiast with hardware wallet preferences.",
+      "bio": "Self-taught coder using Claude to build cashflow visualization tools. Shares quality memes, X links, and explores AI coding potential while maintaining healthy skepticism.",
       "tags": [
-        "AI-builder",
-        "crypto-security",
-        "fintech-creator",
-        "claude-enthusiast",
-        "hardware-wallets"
+        "Claude",
+        "coding",
+        "cashflow tool",
+        "memes",
+        "BTC",
+        "AI tools",
+        "X links"
       ],
-      "role": "Alpha Contributor",
+      "role": "AI builder",
       "platforms": []
     },
     "highlights": [
       {
         "type": "tool",
-        "summary": "Built multiple financial apps using Claude AI including budget planner and cash flow visualizer in days",
-        "quality": 9
-      },
-      {
-        "type": "insight",
-        "summary": "Advocates for Trezor over Coldcard for usability while acknowledging security trade-offs",
-        "quality": 7
-      },
-      {
-        "type": "analysis",
-        "summary": "Recognizes AI will replace expensive senior positions with entry-level workers guided by AI",
+        "summary": "Built cashflow-viz.vercel.app using Claude with no prior coding experience",
         "quality": 8
       }
     ]
@@ -1696,18 +1668,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 86,
+        "composite": 47,
         "pillars": {
-          "network": 80,
-          "intelligence": 90,
-          "capital": 85
+          "network": 50,
+          "intelligence": 60,
+          "capital": 30
         }
       }
     ],
     "pillars": {
-      "network": 80,
-      "intelligence": 90,
-      "capital": 85
+      "network": 50,
+      "intelligence": 60,
+      "capital": 30
     },
     "pillarComponents": {
       "network": {
@@ -1726,39 +1698,28 @@
         "specificity": 25
       }
     },
-    "composite": 86,
-    "panicScore": 15,
-    "panicFlags": [
-      "No aprenden",
-      "Q desastre"
-    ],
+    "composite": 47,
+    "panicScore": 25,
+    "panicFlags": [],
     "persona": {
-      "bio": "Strategic investor with global perspective. Expert curator of market trends, geopolitical analysis, and emerging opportunities across multiple asset classes.",
+      "bio": "Market news aggregator and political observer. Shares financial headlines, Trump/political developments, and Claude AI developments. Questions traditional media narratives.",
       "tags": [
-        "geopolitics",
-        "markets",
-        "strategy",
-        "curation",
-        "global-trends"
+        "market news",
+        "politics",
+        "Trump",
+        "Spain",
+        "X links",
+        "financial headlines",
+        "Claude"
       ],
-      "role": "Alpha Contributor",
+      "role": "news curator",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "analysis",
-        "summary": "Deep geopolitical analysis connecting Trump policies to global market impacts and regional consequences",
-        "quality": 9
-      },
-      {
-        "type": "thesis",
-        "summary": "Strategic assessment of Colombian political landscape with actionable electoral predictions",
-        "quality": 8
-      },
-      {
         "type": "link",
-        "summary": "Consistently shared high-quality market intelligence from premium sources",
-        "quality": 8
+        "summary": "Consistent quality curation of market-moving news including PLTR contracts and geopolitical developments",
+        "quality": 6
       }
     ]
   },
@@ -1899,18 +1860,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 70,
+        "composite": 40,
         "pillars": {
-          "network": 75,
-          "intelligence": 70,
-          "capital": 65
+          "network": 20,
+          "intelligence": 65,
+          "capital": 25
         }
       }
     ],
     "pillars": {
-      "network": 75,
-      "intelligence": 70,
-      "capital": 65
+      "network": 20,
+      "intelligence": 65,
+      "capital": 25
     },
     "pillarComponents": {
       "network": {
@@ -1929,39 +1890,32 @@
         "specificity": 14
       }
     },
-    "composite": 70,
-    "panicScore": 25,
+    "composite": 40,
+    "panicScore": 45,
     "panicFlags": [
-      "Frequent emotional reactions to market moves",
-      "Strong political commentary mixed with investment views"
+      "Bull trap. In my opinion",
+      "Aqui falta un zapato por caer todavia",
+      "Se los dije…."
     ],
     "persona": {
-      "bio": "Colombian-American entrepreneur with strong political opinions who brings practical business experience and contrarian views to investment discussions.",
+      "bio": "Skeptical market observer focused on AI disruption of legal/professional services. Entrepreneurial perspective from US/Africa business experience, often contrarian on timing.",
       "tags": [
+        "AI disruption",
+        "lawyers",
         "contrarian",
-        "political",
-        "entrepreneur",
-        "opinionated",
-        "practical"
+        "market timing",
+        "Africa business",
+        "Trump",
+        "entrepreneurship"
       ],
-      "role": "Alpha Contributor",
+      "role": "contrarian observer",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "thesis",
-        "summary": "AI employment impact thesis - argues market overreaction on AI job displacement, comparing to historical tech adoption cycles (computers 80s, internet 90s, e-commerce 2000s)",
-        "quality": 8
-      },
-      {
-        "type": "insight",
-        "summary": "LLM correction pricing model - suggests humans should be compensated for correcting AI outputs or get token discounts",
-        "quality": 7
-      },
-      {
         "type": "analysis",
-        "summary": "Corporate payment terms analysis - identifies how large corporations use extended payment terms to finance operations at small suppliers' expense",
-        "quality": 7
+        "summary": "AI replacing lawyers thesis with specific examples of $200 ChatGPT saving hundreds of thousands in legal fees",
+        "quality": 8
       }
     ]
   },
@@ -1999,18 +1953,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 75,
+        "composite": 67,
         "pillars": {
-          "network": 65,
-          "intelligence": 85,
-          "capital": 70
+          "network": 62,
+          "intelligence": 88,
+          "capital": 75
         }
       }
     ],
     "pillars": {
-      "network": 65,
-      "intelligence": 85,
-      "capital": 70
+      "network": 62,
+      "intelligence": 88,
+      "capital": 75
     },
     "pillarComponents": {
       "network": {
@@ -2029,38 +1983,32 @@
         "specificity": 5
       }
     },
-    "composite": 75,
-    "panicScore": 15,
-    "panicFlags": [
-      "muy fácil, sólo que gastas más plata"
-    ],
+    "composite": 67,
+    "panicScore": 8,
+    "panicFlags": [],
     "persona": {
-      "bio": "Spanish tech expert with deep AI experience. Early adopter and tool evangelist.",
+      "bio": "Technical expert who extensively uses OpenClaw and various AI models. Provides detailed technical guidance and has deep understanding of AI tools and their resource requirements.",
       "tags": [
-        "ai-tools",
-        "openclaw",
-        "kimi",
-        "technical",
-        "early-adopter"
+        "OpenClaw",
+        "AI-expert",
+        "technical-guidance",
+        "HIMS-investor",
+        "Kimi-2.5",
+        "coding"
       ],
-      "role": "Industry Expert",
+      "role": "AI-architect",
       "platforms": []
     },
     "highlights": [
       {
         "type": "tool",
-        "summary": "Deep technical analysis of AI tools like openclaw, kimi 2.5 with vectorized memory",
-        "quality": 8
-      },
-      {
-        "type": "thesis",
-        "summary": "Comprehensive AI architecture sharing and tool comparison insights",
-        "quality": 7
+        "summary": "Detailed explanation of OpenClaw setup and memory optimization techniques",
+        "quality": 9
       }
     ]
   },
   "Hector Casado": {
-    "tier": "A",
+    "tier": "B",
     "score": 66.2,
     "msgs": 46,
     "links": 13,
@@ -2092,19 +2040,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 67,
+        "tier": "B",
+        "composite": 36,
         "pillars": {
-          "network": 60,
-          "intelligence": 75,
-          "capital": 70
+          "network": 28,
+          "intelligence": 45,
+          "capital": 68
         }
       }
     ],
     "pillars": {
-      "network": 60,
-      "intelligence": 75,
-      "capital": 70
+      "network": 28,
+      "intelligence": 45,
+      "capital": 68
     },
     "pillarComponents": {
       "network": {
@@ -2123,32 +2071,27 @@
         "specificity": 19
       }
     },
-    "composite": 67,
-    "panicScore": 25,
-    "panicFlags": [
-      "Technical issues with Ledger wallet",
-      "Agent creation learning curve"
-    ],
+    "composite": 36,
+    "panicScore": 18,
+    "panicFlags": [],
     "persona": {
-      "bio": "Venezuelan crypto enthusiast and tech adopter living in Spain. Strong supporter of US intervention in Venezuela, exploring AI agents and crypto infrastructure.",
+      "bio": "Crypto-focused member from Venezuela/Spain who discusses BTC movements, hardware wallets, and AI agents. Interested in DUOL and Solana ecosystem.",
       "tags": [
-        "Venezuelan",
         "crypto",
-        "AI agents",
-        "tech early adopter"
+        "BTC",
+        "Solana",
+        "DUOL",
+        "hardware-wallets",
+        "Venezuelan",
+        "AI-agents"
       ],
-      "role": "Contributor",
+      "role": "crypto-investor",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "insight",
-        "summary": "Powerful analogy comparing Venezuelan situation to domestic violence victim, justifying US intervention based on lived experience",
-        "quality": 9
-      },
-      {
-        "type": "analysis",
-        "summary": "Technical questions about AI agent taxation, jurisdiction, and legal structures for cross-border operations",
+        "type": "link",
+        "summary": "Shared DUOL investment thesis with 600x potential from Antonio Linares",
         "quality": 7
       }
     ]
@@ -2187,18 +2130,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 84,
+        "composite": 59,
         "pillars": {
-          "network": 85,
-          "intelligence": 90,
-          "capital": 75
+          "network": 70,
+          "intelligence": 80,
+          "capital": 55
         }
       }
     ],
     "pillars": {
-      "network": 85,
-      "intelligence": 90,
-      "capital": 75
+      "network": 70,
+      "intelligence": 80,
+      "capital": 55
     },
     "pillarComponents": {
       "network": {
@@ -2217,45 +2160,33 @@
         "specificity": 16
       }
     },
-    "composite": 84,
-    "panicScore": 15,
-    "panicFlags": [
-      "political conspiracy theories",
-      "mentions Bilderberg/deep state"
-    ],
+    "composite": 59,
+    "panicScore": 5,
+    "panicFlags": [],
     "persona": {
-      "bio": "Medical doctor specializing in biohacking, longevity medicine and precision healthcare. Active in Colombian politics with libertarian views.",
+      "bio": "Medical innovation specialist focused on biohacking, longevity tech, and precision medicine. Offers molecular testing services and critiques traditional pharma approaches.",
       "tags": [
-        "doctor",
-        "biohacker",
+        "biohacking",
+        "GLP peptides",
+        "molecular testing",
         "longevity",
-        "libertarian",
-        "anti-establishment",
-        "health tech"
+        "precision medicine",
+        "Gemini AI",
+        "medical innovation"
       ],
-      "role": "Industry Expert",
+      "role": "biohacking doctor",
       "platforms": []
     },
     "highlights": [
       {
         "type": "analysis",
-        "summary": "Comprehensive analysis of Neko health technology with complementary testing recommendations including ergo-spirometry and Molecular You biomarkers",
-        "quality": 9
-      },
-      {
-        "type": "insight",
-        "summary": "Deep understanding of GLP medications progression from GLP1/2 to GLP3, offering access to cutting-edge treatments",
+        "summary": "Deep dive on GLP-1 vs GLP-3 peptides, offering molecular testing with 30% discount codes and warning about pharma limitations",
         "quality": 8
-      },
-      {
-        "type": "tool",
-        "summary": "Shares advanced health optimization tools like Shiftwave and detailed biohacking protocols",
-        "quality": 7
       }
     ]
   },
   "paul gomez": {
-    "tier": "A",
+    "tier": "B",
     "score": 61.6,
     "msgs": 17,
     "links": 4,
@@ -2287,19 +2218,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 42,
+        "tier": "B",
+        "composite": 20,
         "pillars": {
-          "network": 60,
-          "intelligence": 70,
-          "capital": 55
+          "network": 25,
+          "intelligence": 50,
+          "capital": 20
         }
       }
     ],
     "pillars": {
-      "network": 60,
-      "intelligence": 70,
-      "capital": 55
+      "network": 25,
+      "intelligence": 50,
+      "capital": 20
     },
     "pillarComponents": {
       "network": {
@@ -2318,35 +2249,31 @@
         "specificity": 25
       }
     },
-    "composite": 42,
-    "panicScore": 25,
+    "composite": 20,
+    "panicScore": 0,
     "panicFlags": [],
     "persona": {
-      "bio": "Ford engineer observing enterprise AI adoption across legal and engineering departments. Practical AI implementation perspective.",
+      "bio": "Ford employee providing corporate AI adoption insights. Shares perspective on automation and productivity from inside traditional industry.",
       "tags": [
-        "engineer",
-        "enterprise_ai",
-        "automotive",
-        "implementation_focused"
+        "Ford",
+        "AI",
+        "corporate",
+        "automation",
+        "voice-AI"
       ],
-      "role": "Industry Expert",
+      "role": "corporate-insider",
       "platforms": []
     },
     "highlights": [
       {
         "type": "insight",
-        "summary": "Enterprise AI adoption at Ford spanning engineering to legal departments",
+        "summary": "Ford pushing AI adoption across engineering to legal departments",
         "quality": 7
-      },
-      {
-        "type": "analysis",
-        "summary": "Human energy conservation vs automation efficiency philosophical perspective",
-        "quality": 6
       }
     ]
   },
   "Juan Castilla": {
-    "tier": "A",
+    "tier": "B",
     "score": 59.9,
     "msgs": 28,
     "links": 6,
@@ -2378,19 +2305,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 53,
+        "tier": "B",
+        "composite": 24,
         "pillars": {
-          "network": 60,
-          "intelligence": 75,
-          "capital": 65
+          "network": 25,
+          "intelligence": 58,
+          "capital": 22
         }
       }
     ],
     "pillars": {
-      "network": 60,
-      "intelligence": 75,
-      "capital": 65
+      "network": 25,
+      "intelligence": 58,
+      "capital": 22
     },
     "pillarComponents": {
       "network": {
@@ -2409,34 +2336,27 @@
         "specificity": 20
       }
     },
-    "composite": 53,
-    "panicScore": 30,
-    "panicFlags": [
-      "Algunos apuntan a bear market",
-      "alta probabilidad de salir herido"
-    ],
+    "composite": 24,
+    "panicScore": 28,
+    "panicFlags": [],
     "persona": {
-      "bio": "Spanish market analyst focused on geopolitics and economic trends. Provides European perspective on global events.",
+      "bio": "Spain-based member who comments on crypto bear markets, Spanish politics, and geopolitical tensions. Shares news links about AI military applications.",
       "tags": [
-        "spain",
-        "geopolitics",
-        "markets",
-        "europe",
-        "analysis"
+        "Spain",
+        "crypto-cycles",
+        "NATO",
+        "copper",
+        "transhumanism",
+        "military-AI"
       ],
-      "role": "Analyst",
+      "role": "international-observer",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "analysis",
-        "summary": "Geopolitical analysis of US-Iran conflict and market implications",
-        "quality": 7
-      },
-      {
-        "type": "insight",
-        "summary": "Natural gas price collapse analysis - under-reported positive supply shock",
-        "quality": 6
+        "type": "link",
+        "summary": "Shared Reuters article on AI military applications arrival",
+        "quality": 5
       }
     ]
   },
@@ -2474,18 +2394,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 87,
+        "composite": 58,
         "pillars": {
-          "network": 85,
-          "intelligence": 90,
-          "capital": 85
+          "network": 45,
+          "intelligence": 75,
+          "capital": 82
         }
       }
     ],
     "pillars": {
-      "network": 85,
-      "intelligence": 90,
-      "capital": 85
+      "network": 45,
+      "intelligence": 75,
+      "capital": 82
     },
     "pillarComponents": {
       "network": {
@@ -2504,39 +2424,38 @@
         "specificity": 25
       }
     },
-    "composite": 87,
-    "panicScore": 25,
-    "panicFlags": [
-      "Strategic position sizing in volatile markets",
-      "Bearish on BTC at current levels"
-    ],
+    "composite": 58,
+    "panicScore": 22,
+    "panicFlags": [],
     "persona": {
-      "bio": "Investment banker with deep tech/AI expertise and real estate ventures. Sophisticated trader mixing fundamental analysis with options strategies.",
+      "bio": "Investment banker leveraging AI for financial modeling and business transformation. Focuses on options strategies, memory stocks, and renewable energy financing while actively trading and protecting positions.",
       "tags": [
-        "tech_analyst",
-        "options_trader",
-        "real_estate",
-        "AI_expert",
-        "banking"
+        "Investment Banking",
+        "Options Strategies",
+        "MU/SNDK",
+        "HIMS",
+        "Solar Projects",
+        "Claude AI",
+        "Financial Modeling"
       ],
-      "role": "Alpha Contributor",
+      "role": "AI-Powered Investment Banker",
       "platforms": []
     },
     "highlights": [
       {
         "type": "analysis",
-        "summary": "Deep MU/memory sector analysis explaining why TurboQuant efficiency gains don't reduce memory demand but redistribute it",
-        "quality": 9
+        "summary": "Comprehensive HIMS institutional ownership analysis tracking 748 holders at 94.68% float with detailed fund movements",
+        "quality": 10
+      },
+      {
+        "type": "tool",
+        "summary": "Using Claude as 'new financial analyst' for valuation models and CRM integration via Hubspot",
+        "quality": 8
       },
       {
         "type": "thesis",
-        "summary": "Real estate migration thesis from residential to commercial/warehouses due to regulatory advantages",
-        "quality": 8
-      },
-      {
-        "type": "insight",
-        "summary": "S&P 500 perpetual futures on crypto platforms analysis - fusion of traditional and blockchain markets",
-        "quality": 8
+        "summary": "MU as 'NVDA years ago' with memory demand thesis for AI infrastructure",
+        "quality": 7
       }
     ]
   },
@@ -2574,18 +2493,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 79,
+        "composite": 43,
         "pillars": {
-          "network": 70,
-          "intelligence": 80,
-          "capital": 85
+          "network": 35,
+          "intelligence": 52,
+          "capital": 72
         }
       }
     ],
     "pillars": {
-      "network": 70,
-      "intelligence": 80,
-      "capital": 85
+      "network": 35,
+      "intelligence": 52,
+      "capital": 72
     },
     "pillarComponents": {
       "network": {
@@ -2604,39 +2523,35 @@
         "specificity": 18
       }
     },
-    "composite": 79,
-    "panicScore": 35,
+    "composite": 43,
+    "panicScore": 38,
     "panicFlags": [
-      "Market volatility concerns",
-      "Colombian political emergency decree worries",
-      "Technology disruption anxiety"
+      "Q puteria",
+      "Mmm delicado",
+      "gravísima emergencia económica"
     ],
     "persona": {
-      "bio": "Active trader and investor analyzing both US markets and Colombian politics. Engages with real estate and lending opportunities while tracking electoral developments.",
+      "bio": "Active investor who discusses real estate yields, HIMS positions, and follows market movements closely. Shows concern about Colombian political situation.",
       "tags": [
-        "trader",
-        "real estate",
-        "Colombian politics",
-        "market analyst"
+        "HIMS",
+        "real-estate",
+        "Colombian-politics",
+        "market-watcher",
+        "yield-analysis"
       ],
-      "role": "Analyst",
+      "role": "active-investor",
       "platforms": []
     },
     "highlights": [
       {
         "type": "analysis",
-        "summary": "Real estate investment analysis: 0.7% monthly cash flow plus 7% annual appreciation vs 13.8% TES rates",
-        "quality": 8
-      },
-      {
-        "type": "insight",
-        "summary": "Colombian lending opportunity structure: 1.8% monthly returns with property guarantees at 50-60% LTV",
+        "summary": "Real estate investment analysis comparing 0.7% monthly returns vs 13.8% TES yields",
         "quality": 7
       }
     ]
   },
   "Juan Pablo González S.": {
-    "tier": "A",
+    "tier": "B",
     "score": 57.9,
     "msgs": 15,
     "links": 4,
@@ -2668,19 +2583,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 46,
+        "tier": "B",
+        "composite": 30,
         "pillars": {
-          "network": 65,
-          "intelligence": 70,
-          "capital": 75
+          "network": 40,
+          "intelligence": 55,
+          "capital": 50
         }
       }
     ],
     "pillars": {
-      "network": 65,
-      "intelligence": 70,
-      "capital": 75
+      "network": 40,
+      "intelligence": 55,
+      "capital": 50
     },
     "pillarComponents": {
       "network": {
@@ -2699,36 +2614,32 @@
         "specificity": 18
       }
     },
-    "composite": 46,
+    "composite": 30,
     "panicScore": 35,
     "panicFlags": [
-      "market_asymmetry_concerns"
+      "Total asimetría entre el resultado de las compañías y el performance del mercado"
     ],
     "persona": {
-      "bio": "Investment analyst with focus on market dynamics and earnings analysis. Provides thoughtful commentary on market-fundamentals disconnects.",
+      "bio": "Market analyst focused on earnings disconnects and Solana ecosystem. Shares quality research links and tracks market sentiment closely.",
       "tags": [
-        "investment_analyst",
-        "earnings_watcher",
-        "market_observer"
+        "earnings",
+        "Solana",
+        "HIMS",
+        "market-analysis"
       ],
-      "role": "Analyst",
+      "role": "market-analyst",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "analysis",
-        "summary": "Market asymmetry observation: strong earnings vs poor market performance disconnect",
-        "quality": 8
-      },
-      {
         "type": "link",
-        "summary": "HIMS detailed investment analysis from aktienmax",
-        "quality": 7
+        "summary": "Shared detailed HIMS Q4 analysis from Aktienmax",
+        "quality": 8
       }
     ]
   },
   "Paula Jaramillo": {
-    "tier": "A",
+    "tier": "B",
     "score": 57.9,
     "msgs": 18,
     "links": 6,
@@ -2760,19 +2671,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 41,
+        "tier": "B",
+        "composite": 23,
         "pillars": {
-          "network": 65,
-          "intelligence": 60,
-          "capital": 55
+          "network": 45,
+          "intelligence": 40,
+          "capital": 30
         }
       }
     ],
     "pillars": {
-      "network": 65,
-      "intelligence": 60,
-      "capital": 55
+      "network": 45,
+      "intelligence": 40,
+      "capital": 30
     },
     "pillarComponents": {
       "network": {
@@ -2791,30 +2702,30 @@
         "specificity": 14
       }
     },
-    "composite": 41,
-    "panicScore": 25,
+    "composite": 23,
+    "panicScore": 0,
     "panicFlags": [],
     "persona": {
-      "bio": "Active political and market observer sharing relevant content. Shows family connections within the investment group.",
+      "bio": "Active in sharing links and market observations. Family member of Hernan who engages with both technical and political content.",
       "tags": [
-        "political_observer",
-        "content_curator",
-        "family_connected",
-        "market_aware"
+        "links",
+        "politics",
+        "family",
+        "market-watch"
       ],
-      "role": "Curator",
+      "role": "content-curator",
       "platforms": []
     },
     "highlights": [
       {
         "type": "link",
-        "summary": "Curated political and technology content sharing",
+        "summary": "Shares relevant AI and market development links consistently",
         "quality": 5
       }
     ]
   },
   "Diego Sanchez": {
-    "tier": "A",
+    "tier": "B",
     "score": 57.6,
     "msgs": 25,
     "links": 6,
@@ -2846,19 +2757,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 56,
+        "tier": "B",
+        "composite": 36,
         "pillars": {
-          "network": 70,
+          "network": 42,
           "intelligence": 85,
-          "capital": 65
+          "capital": 38
         }
       }
     ],
     "pillars": {
-      "network": 70,
+      "network": 42,
       "intelligence": 85,
-      "capital": 65
+      "capital": 38
     },
     "pillarComponents": {
       "network": {
@@ -2877,36 +2788,27 @@
         "specificity": 25
       }
     },
-    "composite": 56,
-    "panicScore": 25,
+    "composite": 36,
+    "panicScore": 8,
     "panicFlags": [],
     "persona": {
-      "bio": "Tech-savvy entrepreneur deeply engaged with AI tools. Expert in Claude Code and Cowork, building websites from scratch and exploring AI-driven business models.",
+      "bio": "Technical expert who codes with Claude Code and Visual Studio, shares advanced AI techniques like expert panels. Deep understanding of AI's impact on interfaces.",
       "tags": [
-        "AI_expert",
-        "developer",
-        "Claude",
-        "websites",
-        "tech_adoption"
+        "Claude-Code",
+        "Visual-Studio",
+        "AI-interfaces",
+        "expert-panels",
+        "SEO",
+        "DUOL"
       ],
-      "role": "Industry Expert",
+      "role": "technical-expert",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "tool",
-        "summary": "Expert panels technique with Claude: creates debates between 10 virtual experts for learning and decision-making",
+        "type": "technique",
+        "summary": "Expert panel technique for Claude - assembling 10 experts to debate and audit code",
         "quality": 9
-      },
-      {
-        "type": "thesis",
-        "summary": "Business discovery will shift to LLMs/agents, changing both tech and non-tech business landscapes",
-        "quality": 8
-      },
-      {
-        "type": "analysis",
-        "summary": "Built complete website from scratch using Claude Code, migrated from Squarespace",
-        "quality": 7
       }
     ]
   },
@@ -2944,18 +2846,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 61,
+        "composite": 51,
         "pillars": {
-          "network": 75,
-          "intelligence": 70,
-          "capital": 80
+          "network": 70,
+          "intelligence": 82,
+          "capital": 78
         }
       }
     ],
     "pillars": {
-      "network": 75,
-      "intelligence": 70,
-      "capital": 80
+      "network": 70,
+      "intelligence": 82,
+      "capital": 78
     },
     "pillarComponents": {
       "network": {
@@ -2974,33 +2876,27 @@
         "specificity": 0
       }
     },
-    "composite": 61,
-    "panicScore": 25,
-    "panicFlags": [
-      "vendiendo un segundo carro que casi no uso para buy the dip"
-    ],
+    "composite": 51,
+    "panicScore": 12,
+    "panicFlags": [],
     "persona": {
-      "bio": "Political and business connector with investment focus. Active in Colombian politics and crypto payments.",
+      "bio": "Connected investor who attended Circle CEO dinner and shares insights on stablecoins and agentic payments. Brother running for Senate, interested in state modernization.",
       "tags": [
-        "politics",
-        "payments",
+        "Circle",
+        "stablecoins",
+        "agentic-payments",
         "crypto",
-        "colombia",
-        "networking"
+        "Colombian-politics",
+        "venture"
       ],
-      "role": "Networker",
+      "role": "connected-investor",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "insight",
-        "summary": "Circle CEO dinner insights on agentic payments and AI-driven economy transformation",
-        "quality": 8
-      },
-      {
-        "type": "network",
-        "summary": "Political connections and strategic relationship building across sectors",
-        "quality": 7
+        "type": "intro",
+        "summary": "Attended private dinner with Circle CEO, shared insights on agentic payments future",
+        "quality": 9
       }
     ]
   },
@@ -3038,18 +2934,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 72,
+        "composite": 58,
         "pillars": {
-          "network": 70,
-          "intelligence": 80,
-          "capital": 65
+          "network": 65,
+          "intelligence": 70,
+          "capital": 50
         }
       }
     ],
     "pillars": {
-      "network": 70,
-      "intelligence": 80,
-      "capital": 65
+      "network": 65,
+      "intelligence": 70,
+      "capital": 50
     },
     "pillarComponents": {
       "network": {
@@ -3068,38 +2964,27 @@
         "specificity": 14
       }
     },
-    "composite": 72,
-    "panicScore": 25,
-    "panicFlags": [
-      "market volatility reactions",
-      "political pessimism about Colombia"
-    ],
+    "composite": 58,
+    "panicScore": 20,
+    "panicFlags": [],
     "persona": {
-      "bio": "Active financial markets participant with strong focus on AI/tech stocks and political engagement. Curates quality content and market insights.",
+      "bio": "Market observer focused on US stocks and Colombian politics. Shares YouTube content, market analysis, and bridges financial education gaps. Works to connect people with investment platforms.",
       "tags": [
-        "finance",
-        "tech investor",
-        "AI enthusiast",
-        "political observer",
-        "content curator"
+        "YouTube",
+        "market analysis",
+        "Colombian politics",
+        "Plenti",
+        "financial education",
+        "SHOP",
+        "earnings"
       ],
-      "role": "Curator",
+      "role": "financial educator",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "link",
-        "summary": "Consistently shares high-quality AI and investment content including podcasts and market analysis",
-        "quality": 8
-      },
-      {
         "type": "insight",
-        "summary": "Practical AI adoption advice: 'spend one hour a day experimenting with AI' for competitive advantage",
-        "quality": 9
-      },
-      {
-        "type": "analysis",
-        "summary": "Sharp political commentary on Colombian electoral dynamics and candidate viability assessments",
+        "summary": "Initiative to connect traditional savers with modern investment platforms, identifying the gap in basic broker funding knowledge",
         "quality": 7
       }
     ]
@@ -3138,18 +3023,18 @@
       {
         "snapshot": "s2",
         "tier": "B",
-        "composite": 38,
+        "composite": 20,
         "pillars": {
-          "network": 55,
-          "intelligence": 65,
-          "capital": 60
+          "network": 20,
+          "intelligence": 35,
+          "capital": 40
         }
       }
     ],
     "pillars": {
-      "network": 55,
-      "intelligence": 65,
-      "capital": 60
+      "network": 20,
+      "intelligence": 35,
+      "capital": 40
     },
     "pillarComponents": {
       "network": {
@@ -3168,33 +3053,30 @@
         "specificity": 25
       }
     },
-    "composite": 38,
-    "panicScore": 40,
-    "panicFlags": [
-      "Bancolombia frustration",
-      "Political worry"
-    ],
+    "composite": 20,
+    "panicScore": 10,
+    "panicFlags": [],
     "persona": {
-      "bio": "Group member with banking industry insights and political concerns. Active in group social dynamics.",
+      "bio": "Engages in group banter and shares occasional market links. Critical of traditional banking while maintaining crypto focus.",
       "tags": [
+        "crypto",
         "banking",
-        "politics",
-        "social",
-        "commentary"
+        "humor",
+        "links"
       ],
-      "role": "Contributor",
+      "role": "crypto-advocate",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "insight",
-        "summary": "Bancolombia criticism - suggests adding insider for accountability",
-        "quality": 6
+        "type": "link",
+        "summary": "Shares bitcoin and political content links",
+        "quality": 4
       }
     ]
   },
   "Felipe Medina": {
-    "tier": "A",
+    "tier": "B",
     "score": 55.8,
     "msgs": 30,
     "links": 10,
@@ -3226,19 +3108,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 70,
+        "tier": "B",
+        "composite": 34,
         "pillars": {
-          "network": 85,
-          "intelligence": 90,
-          "capital": 85
+          "network": 45,
+          "intelligence": 70,
+          "capital": 35
         }
       }
     ],
     "pillars": {
-      "network": 85,
-      "intelligence": 90,
-      "capital": 85
+      "network": 45,
+      "intelligence": 70,
+      "capital": 35
     },
     "pillarComponents": {
       "network": {
@@ -3257,32 +3139,34 @@
         "specificity": 16
       }
     },
-    "composite": 70,
-    "panicScore": 10,
+    "composite": 34,
+    "panicScore": 0,
     "panicFlags": [],
     "persona": {
-      "bio": "Tech entrepreneur in Singapore building cybersecurity solutions. Combines technical skills with practical market applications.",
+      "bio": "Singapore-based builder who created Scam Snap cybersecurity game without prior coding experience. Actively shares valuable links and connects people to opportunities.",
       "tags": [
-        "singapore",
+        "builder",
+        "Singapore",
         "cybersecurity",
-        "entrepreneurship",
-        "tech"
+        "HIMS",
+        "links",
+        "education"
       ],
-      "role": "Alpha Contributor",
+      "role": "builder-networker",
       "platforms": []
     },
     "highlights": [
       {
         "type": "tool",
-        "summary": "Built Scam Snap cybersecurity game from zero coding experience using Claude, deployed as PWA for Singapore market",
-        "quality": 10
+        "summary": "Built Scam Snap game to train people against online fraud",
+        "quality": 9
       }
     ]
   },
   "Rodrigo Londoño": {
     "tier": "A",
     "score": 55.6,
-    "msgs": 36,
+    "msgs": 61,
     "links": 5,
     "avgWords": 13.4,
     "activeDays": 17,
@@ -3313,18 +3197,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 56,
+        "composite": 41,
         "pillars": {
-          "network": 55,
-          "intelligence": 70,
-          "capital": 65
+          "network": 45,
+          "intelligence": 72,
+          "capital": 58
         }
       }
     ],
     "pillars": {
-      "network": 55,
-      "intelligence": 70,
-      "capital": 65
+      "network": 45,
+      "intelligence": 72,
+      "capital": 58
     },
     "pillarComponents": {
       "network": {
@@ -3343,43 +3227,32 @@
         "specificity": 25
       }
     },
-    "composite": 56,
-    "panicScore": 40,
-    "panicFlags": [
-      "job automation concerns",
-      "Claude behavior changes"
-    ],
+    "composite": 41,
+    "panicScore": 12,
+    "panicFlags": [],
     "persona": {
-      "bio": "Business owner implementing AI in operations while documenting the transformation. Shares practical AI implementation experience and automation insights.",
+      "bio": "Call center owner implementing AI automation and financial education. Shares practical AI implementation experiences and identified 5 positions to automate.",
       "tags": [
-        "AI_implementation",
-        "automation",
-        "business_transformation",
-        "call_center"
+        "AI-automation",
+        "call-center",
+        "financial-education",
+        "Claude",
+        "minimum-wage",
+        "substack"
       ],
-      "role": "Contributor",
+      "role": "business-automator",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "analysis",
-        "summary": "Published Substack on AI implementation in his company, sharing real transformation insights",
-        "quality": 7
-      },
-      {
         "type": "insight",
-        "summary": "Identified 5 positions to automate, already automated 2 and saved SaaS costs through internal development",
+        "summary": "Substack on AI implementation showing how to automate call center operations",
         "quality": 8
-      },
-      {
-        "type": "tool",
-        "summary": "Created financial education tool for call center employees inspired by 10AM content",
-        "quality": 6
       }
     ]
   },
   "Juancho Palacio": {
-    "tier": "A",
+    "tier": "B",
     "score": 55,
     "msgs": 13,
     "links": 9,
@@ -3411,19 +3284,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 44,
+        "tier": "B",
+        "composite": 29,
         "pillars": {
-          "network": 70,
-          "intelligence": 75,
-          "capital": 65
+          "network": 50,
+          "intelligence": 55,
+          "capital": 40
         }
       }
     ],
     "pillars": {
-      "network": 70,
-      "intelligence": 75,
-      "capital": 65
+      "network": 50,
+      "intelligence": 55,
+      "capital": 40
     },
     "pillarComponents": {
       "network": {
@@ -3442,35 +3315,31 @@
         "specificity": 25
       }
     },
-    "composite": 44,
-    "panicScore": 20,
+    "composite": 29,
+    "panicScore": 10,
     "panicFlags": [],
     "persona": {
-      "bio": "Content curator sharing high-quality Bitcoin and investment philosophy. Strong contributor of educational materials.",
+      "bio": "Shares philosophical bitcoin content and market observations. Advocates for group discussions and tracks political dynamics affecting markets.",
       "tags": [
         "bitcoin",
         "philosophy",
-        "content",
-        "curation"
+        "politics",
+        "substacks",
+        "podcasts"
       ],
-      "role": "Curator",
+      "role": "content-advocate",
       "platforms": []
     },
     "highlights": [
       {
         "type": "link",
-        "summary": "Consistent sharing of thoughtful Bitcoin philosophy content",
-        "quality": 7
-      },
-      {
-        "type": "call",
-        "summary": "Suggesting podcast/Spaces for important topics",
+        "summary": "Consistently shares quality philosophical bitcoin substacks",
         "quality": 6
       }
     ]
   },
   "Daniel Mesa": {
-    "tier": "A",
+    "tier": "B",
     "score": 55,
     "msgs": 40,
     "links": 6,
@@ -3502,19 +3371,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 68,
+        "tier": "B",
+        "composite": 34,
         "pillars": {
-          "network": 70,
-          "intelligence": 80,
-          "capital": 75
+          "network": 55,
+          "intelligence": 48,
+          "capital": 42
         }
       }
     ],
     "pillars": {
-      "network": 70,
-      "intelligence": 80,
-      "capital": 75
+      "network": 55,
+      "intelligence": 48,
+      "capital": 42
     },
     "pillarComponents": {
       "network": {
@@ -3533,43 +3402,33 @@
         "specificity": 25
       }
     },
-    "composite": 68,
+    "composite": 34,
     "panicScore": 15,
-    "panicFlags": [
-      "Lost money on perps but learning focused"
-    ],
+    "panicFlags": [],
     "persona": {
-      "bio": "AI-obsessed entrepreneur at Binance treating AI as unlimited workforce. Compares AI investment to failed startups but with better ROI potential.",
+      "bio": "Binance employee focused on AI implementation and automation. Actively building AI agents and pushing internal adoption while experimenting with Claude Max.",
       "tags": [
-        "AI automation",
         "Binance",
-        "startup mindset",
-        "workforce replacement",
-        "electric vehicles"
+        "AI-agents",
+        "Claude-Max",
+        "automation",
+        "crypto",
+        "Tesla",
+        "startup-mindset"
       ],
-      "role": "Alpha Contributor",
+      "role": "corporate-innovator",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "thesis",
-        "summary": "AI as unlimited startup workforce - better than traditional hiring with instant scaling and learning",
-        "quality": 8
-      },
-      {
         "type": "insight",
-        "summary": "Binance internal AI transformation - everyone must use AI or face job risk, company becoming AI orchestrators",
-        "quality": 8
-      },
-      {
-        "type": "analysis",
-        "summary": "EV adoption case study with concrete financial benefits: 50% insurance savings, 75% energy reduction",
+        "summary": "Binance requires employees to report weekly on AI usage and automation - showing corporate AI adoption",
         "quality": 7
       }
     ]
   },
   "Carlos Tobon": {
-    "tier": "A",
+    "tier": "B",
     "score": 54.2,
     "msgs": 32,
     "links": 14,
@@ -3601,19 +3460,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 59,
+        "tier": "B",
+        "composite": 38,
         "pillars": {
-          "network": 70,
-          "intelligence": 80,
-          "capital": 65
+          "network": 58,
+          "intelligence": 78,
+          "capital": 35
         }
       }
     ],
     "pillars": {
-      "network": 70,
-      "intelligence": 80,
-      "capital": 65
+      "network": 58,
+      "intelligence": 78,
+      "capital": 35
     },
     "pillarComponents": {
       "network": {
@@ -3632,31 +3491,26 @@
         "specificity": 23
       }
     },
-    "composite": 59,
-    "panicScore": 20,
-    "panicFlags": [
-      "Y si estamos locos con una herramienta nueva cada día"
-    ],
+    "composite": 38,
+    "panicScore": 10,
+    "panicFlags": [],
     "persona": {
-      "bio": "Strategic content curator with focus on AI applications and tools. Bridges technical and business insights.",
+      "bio": "Shares high-quality AI resources and tools, built apps with Lovable/Claude. Deep understanding of AI trends and practical applications in business.",
       "tags": [
-        "ai-strategy",
-        "content-curation",
-        "tools",
-        "education"
+        "AI-tools",
+        "app-development",
+        "Lovable",
+        "Claude",
+        "prediction-markets",
+        "second-brain"
       ],
-      "role": "Curator",
+      "role": "AI-educator",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "analysis",
-        "summary": "AI collapses the 'how,' so your real edge is choosing the right 'what' to pursue",
-        "quality": 9
-      },
-      {
-        "type": "tool",
-        "summary": "Curated high-quality AI tools and resources with strategic context",
+        "type": "link",
+        "summary": "Shared comprehensive AI/coding terminology guide and second brain setup tutorial",
         "quality": 8
       }
     ]
@@ -3695,18 +3549,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 69,
+        "composite": 47,
         "pillars": {
-          "network": 90,
-          "intelligence": 75,
-          "capital": 85
+          "network": 70,
+          "intelligence": 65,
+          "capital": 75
         }
       }
     ],
     "pillars": {
-      "network": 90,
-      "intelligence": 75,
-      "capital": 85
+      "network": 70,
+      "intelligence": 65,
+      "capital": 75
     },
     "pillarComponents": {
       "network": {
@@ -3725,30 +3579,26 @@
         "specificity": 25
       }
     },
-    "composite": 69,
-    "panicScore": 20,
+    "composite": 47,
+    "panicScore": 0,
     "panicFlags": [],
     "persona": {
-      "bio": "VC investor at Veronorte with direct exposure to Anthropic and OpenAI. High-level industry connections and insider access.",
+      "bio": "Veronorte investor with exposure to Anthropic and OpenAI through funds. Well-connected in VC circles and shares institutional perspectives.",
       "tags": [
-        "vc_investor",
-        "ai_insider",
-        "institutional",
-        "connected"
+        "VC",
+        "Anthropic",
+        "OpenAI",
+        "Veronorte",
+        "institutional"
       ],
-      "role": "Alpha Contributor",
+      "role": "institutional-investor",
       "platforms": []
     },
     "highlights": [
       {
         "type": "insight",
-        "summary": "Portfolio exposure to Anthropic through Menlo Ventures and direct OpenAI investment",
-        "quality": 9
-      },
-      {
-        "type": "analysis",
-        "summary": "Ray Dalio's parenting strategy: sending 13-year-old son to live with Chinese family",
-        "quality": 6
+        "summary": "Veronorte invested in Anthropic through Menlo Ventures",
+        "quality": 8
       }
     ]
   },
@@ -3785,21 +3635,19 @@
       },
       {
         "snapshot": "s2",
-        "score": 53.2,
         "tier": "B",
-        "composite": 15,
+        "composite": 20,
         "pillars": {
-          "network": 28,
-          "intelligence": 30,
-          "capital": 24
-        },
-        "msgs": 22
+          "network": 20,
+          "intelligence": 35,
+          "capital": 40
+        }
       }
     ],
     "pillars": {
-      "network": 28,
-      "intelligence": 30,
-      "capital": 24
+      "network": 20,
+      "intelligence": 35,
+      "capital": 40
     },
     "pillarComponents": {
       "network": {
@@ -3818,19 +3666,29 @@
         "specificity": 14
       }
     },
-    "composite": 15,
-    "panicScore": null,
+    "composite": 20,
+    "panicScore": 0,
     "panicFlags": [],
     "persona": {
-      "bio": null,
-      "platforms": [],
-      "tags": [],
-      "role": null
+      "bio": "Asks basic trading questions and shares occasional links. Limited depth in contributions.",
+      "tags": [
+        "questions",
+        "trading",
+        "HIMS"
+      ],
+      "role": "questioner",
+      "platforms": []
     },
-    "highlights": []
+    "highlights": [
+      {
+        "type": "link",
+        "summary": "Shared HIMS house content",
+        "quality": 3
+      }
+    ]
   },
   "Lucas Echavarria": {
-    "tier": "A",
+    "tier": "B",
     "score": 52.2,
     "msgs": 27,
     "links": 2,
@@ -3862,19 +3720,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 59,
+        "tier": "B",
+        "composite": 32,
         "pillars": {
-          "network": 85,
-          "intelligence": 70,
-          "capital": 75
+          "network": 60,
+          "intelligence": 55,
+          "capital": 40
         }
       }
     ],
     "pillars": {
-      "network": 85,
-      "intelligence": 70,
-      "capital": 75
+      "network": 60,
+      "intelligence": 55,
+      "capital": 40
     },
     "pillarComponents": {
       "network": {
@@ -3893,35 +3751,31 @@
         "specificity": 21
       }
     },
-    "composite": 59,
-    "panicScore": 20,
+    "composite": 32,
+    "panicScore": 0,
     "panicFlags": [],
     "persona": {
-      "bio": "Colombian investor with strong startup and negotiation experience. Active networker who connects deals and opportunities.",
+      "bio": "Active connector who facilitates podcast guests and business introductions. Shares market content and actively engages in deal-making discussions.",
       "tags": [
-        "networker",
-        "dealmaker",
-        "startup_investor",
-        "negotiator"
+        "networking",
+        "podcasts",
+        "tokenization",
+        "deals",
+        "insurance"
       ],
-      "role": "Networker",
+      "role": "deal-maker",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "insight",
-        "summary": "Real-time insurance premium adjustments for autonomous vehicles using AI (Florida example)",
-        "quality": 8
-      },
-      {
-        "type": "analysis",
-        "summary": "IPO analysis noting 30% retail allocation vs typical 5%",
+        "type": "intro",
+        "summary": "Offering to connect group with Oviedo for podcast",
         "quality": 7
       }
     ]
   },
   "Ricky Uribe": {
-    "tier": "A",
+    "tier": "B",
     "score": 51.8,
     "msgs": 23,
     "links": 4,
@@ -3953,19 +3807,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 45,
+        "tier": "B",
+        "composite": 28,
         "pillars": {
-          "network": 55,
-          "intelligence": 60,
-          "capital": 70
+          "network": 30,
+          "intelligence": 40,
+          "capital": 65
         }
       }
     ],
     "pillars": {
-      "network": 55,
-      "intelligence": 60,
-      "capital": 70
+      "network": 30,
+      "intelligence": 40,
+      "capital": 65
     },
     "pillarComponents": {
       "network": {
@@ -3984,25 +3838,25 @@
         "specificity": 11
       }
     },
-    "composite": 45,
-    "panicScore": 15,
+    "composite": 28,
+    "panicScore": 0,
     "panicFlags": [],
     "persona": {
-      "bio": "Disciplined Bitcoin DCA investor since 2021. Maintains consistent weekly purchasing strategy regardless of price movements.",
+      "bio": "DCA bitcoin investor since 2021 who shares occasional market content. Engages in group banter while maintaining consistent investment approach.",
       "tags": [
-        "bitcoin_investor",
-        "dca_strategy",
-        "disciplined",
-        "long_term"
+        "bitcoin",
+        "DCA",
+        "commercials",
+        "humor"
       ],
-      "role": "Contributor",
+      "role": "hodler",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "analysis",
-        "summary": "Consistent DCA Bitcoin strategy since 2021 through multiple market cycles",
-        "quality": 7
+        "type": "insight",
+        "summary": "Weekly BTC DCA since 2021 through multiple crashes",
+        "quality": 6
       }
     ]
   },
@@ -4040,18 +3894,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 72,
+        "composite": 43,
         "pillars": {
-          "network": 85,
+          "network": 68,
           "intelligence": 75,
-          "capital": 90
+          "capital": 45
         }
       }
     ],
     "pillars": {
-      "network": 85,
+      "network": 68,
       "intelligence": 75,
-      "capital": 90
+      "capital": 45
     },
     "pillarComponents": {
       "network": {
@@ -4070,36 +3924,31 @@
         "specificity": 0
       }
     },
-    "composite": 72,
-    "panicScore": 10,
+    "composite": 43,
+    "panicScore": 5,
     "panicFlags": [],
     "persona": {
-      "bio": "Sophisticated investor with healthcare and political interests. High-quality contributor with strategic perspective.",
+      "bio": "Thoughtful contributor who experienced NEKO health scan in London and provides strategic political analysis. Well-connected with fintech CEOs.",
       "tags": [
-        "healthcare",
-        "neko-scan",
-        "politics",
-        "strategy",
-        "quality"
+        "NEKO-health",
+        "political-analysis",
+        "fintech-connections",
+        "London",
+        "healthcare-innovation"
       ],
-      "role": "Alpha Contributor",
+      "role": "strategic-thinker",
       "platforms": []
     },
     "highlights": [
       {
         "type": "insight",
-        "summary": "NEKO scan experience analysis - future of medicine through data empowerment",
+        "summary": "NEKO scan experience analysis focusing on data-driven healthcare business model",
         "quality": 8
-      },
-      {
-        "type": "analysis",
-        "summary": "Strategic political analysis on Roy interview and campaign considerations",
-        "quality": 7
       }
     ]
   },
   "Nicolas Pelaez": {
-    "tier": "A",
+    "tier": "B",
     "score": 51.1,
     "msgs": 56,
     "links": 0,
@@ -4131,19 +3980,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 76,
+        "tier": "B",
+        "composite": 25,
         "pillars": {
-          "network": 85,
-          "intelligence": 75,
-          "capital": 70
+          "network": 38,
+          "intelligence": 42,
+          "capital": 15
         }
       }
     ],
     "pillars": {
-      "network": 85,
-      "intelligence": 75,
-      "capital": 70
+      "network": 38,
+      "intelligence": 42,
+      "capital": 15
     },
     "pillarComponents": {
       "network": {
@@ -4162,32 +4011,26 @@
         "specificity": 0
       }
     },
-    "composite": 76,
-    "panicScore": 20,
-    "panicFlags": [
-      "Shows slight concern about election outcomes but remains pragmatic"
-    ],
+    "composite": 25,
+    "panicScore": 12,
+    "panicFlags": [],
     "persona": {
-      "bio": "Strategic thinker focused on cultural battles and practical politics. Values AI automation and business efficiency while maintaining strong political engagement.",
+      "bio": "Regular commenter who engages with political content and shows interest in AI applications. Often provides encouraging reactions without deep analysis.",
       "tags": [
-        "AI advocate",
-        "political pragmatist",
-        "business strategist",
-        "cultural warrior"
+        "politics",
+        "AI-curious",
+        "architecture",
+        "legal-tech",
+        "cheerleader"
       ],
-      "role": "Alpha Contributor",
+      "role": "community-supporter",
       "platforms": []
     },
     "highlights": [
       {
         "type": "insight",
-        "summary": "Detailed AI implementation case study from architect friend using Gemini for design automation, showing practical AI adoption strategies",
-        "quality": 9
-      },
-      {
-        "type": "thesis",
-        "summary": "Cultural battle analysis emphasizing need for grassroots formation over traditional political media appearances",
-        "quality": 8
+        "summary": "Friend using AI/Gemini to automate architectural design process with 20 years of data",
+        "quality": 6
       }
     ]
   },
@@ -4225,18 +4068,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 75,
+        "composite": 45,
         "pillars": {
-          "network": 75,
-          "intelligence": 85,
-          "capital": 80
+          "network": 45,
+          "intelligence": 62,
+          "capital": 78
         }
       }
     ],
     "pillars": {
-      "network": 75,
-      "intelligence": 85,
-      "capital": 80
+      "network": 45,
+      "intelligence": 62,
+      "capital": 78
     },
     "pillarComponents": {
       "network": {
@@ -4255,38 +4098,27 @@
         "specificity": 0
       }
     },
-    "composite": 75,
-    "panicScore": 20,
-    "panicFlags": [
-      "Market manipulation concerns but confident in long-term thesis"
-    ],
+    "composite": 45,
+    "panicScore": 22,
+    "panicFlags": [],
     "persona": {
-      "bio": "Spanish-based technical builder focused on AI-powered trading tools and investment automation. Creates practical applications while questioning deeper market dynamics.",
+      "bio": "Developer who built an options scanner for leveraged ETFs and shares practical tools with the community. Posts about restaurants, AI applications, and energy solar discussions.",
       "tags": [
-        "AI tools",
-        "options trading",
-        "technical builder",
-        "market analysis",
-        "Madrid lifestyle"
+        "options-trading",
+        "ETF-scanner",
+        "Madrid-restaurants",
+        "solar-energy",
+        "AI-tools",
+        "dashboard-development"
       ],
-      "role": "Alpha Contributor",
+      "role": "technical-contributor",
       "platforms": []
     },
     "highlights": [
       {
         "type": "tool",
-        "summary": "Built automated options scanner for leveraged ETFs using AI/Black-Scholes, reducing manual analysis from hours to seconds",
+        "summary": "Built and shared open-source ETF options scanner at csp-scanner-lac.vercel.app that finds put-selling opportunities",
         "quality": 9
-      },
-      {
-        "type": "analysis",
-        "summary": "Deep analysis of AI subsidization concerns and market manipulation effects on retail investors",
-        "quality": 8
-      },
-      {
-        "type": "insight",
-        "summary": "Connects energy policy with compute thesis, questioning solar's viability given geopolitical vulnerabilities",
-        "quality": 7
       }
     ]
   },
@@ -4324,18 +4156,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 75,
+        "composite": 40,
         "pillars": {
-          "network": 80,
-          "intelligence": 85,
-          "capital": 90
+          "network": 35,
+          "intelligence": 65,
+          "capital": 70
         }
       }
     ],
     "pillars": {
-      "network": 80,
-      "intelligence": 85,
-      "capital": 90
+      "network": 35,
+      "intelligence": 65,
+      "capital": 70
     },
     "pillarComponents": {
       "network": {
@@ -4354,28 +4186,31 @@
         "specificity": 21
       }
     },
-    "composite": 75,
-    "panicScore": 40,
+    "composite": 40,
+    "panicScore": 30,
     "panicFlags": [
-      "geopolitical anxiety",
-      "war concerns"
+      "No ha dormido en días",
+      "Yo lo leo desesperado",
+      "Paniqueado"
     ],
     "persona": {
-      "bio": "Geopolitically aware investor with strong anti-war stance. Tracks AI stocks and provides humanitarian perspective on conflicts.",
+      "bio": "Active trader focused on data center plays (NBIS, IREN) and AI infrastructure. Shares geopolitical content and market analysis while showing some emotional trading behavior.",
       "tags": [
+        "NBIS",
+        "IREN",
+        "data-centers",
+        "AI-infrastructure",
         "geopolitics",
-        "AI-stocks",
-        "humanitarian",
-        "investing"
+        "trading"
       ],
-      "role": "Analyst",
+      "role": "momentum-trader",
       "platforms": []
     },
     "highlights": [
       {
         "type": "thesis",
-        "summary": "Early NBIS and IREN investor with detailed AI infrastructure tracking and Anthropic certification pursuit",
-        "quality": 9
+        "summary": "Early NBIS/IREN data center thesis before the crowd",
+        "quality": 8
       }
     ]
   },
@@ -4413,18 +4248,18 @@
       {
         "snapshot": "s2",
         "tier": "B",
-        "composite": 39,
+        "composite": 26,
         "pillars": {
-          "network": 75,
-          "intelligence": 70,
-          "capital": 65
+          "network": 55,
+          "intelligence": 45,
+          "capital": 35
         }
       }
     ],
     "pillars": {
-      "network": 75,
-      "intelligence": 70,
-      "capital": 65
+      "network": 55,
+      "intelligence": 45,
+      "capital": 35
     },
     "pillarComponents": {
       "network": {
@@ -4443,25 +4278,25 @@
         "specificity": 0
       }
     },
-    "composite": 39,
-    "panicScore": 20,
+    "composite": 26,
+    "panicScore": 0,
     "panicFlags": [],
     "persona": {
-      "bio": "Connected networker interested in collaborations and business opportunities. Seeks employment and partnership discussions.",
+      "bio": "Actively seeks collaboration opportunities and shows interest in podcast/content initiatives. Currently seeking employment.",
       "tags": [
         "networking",
-        "business",
-        "opportunities",
-        "collaboration"
+        "content",
+        "collaboration",
+        "job-seeking"
       ],
-      "role": "Networker",
+      "role": "opportunity-seeker",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "call",
-        "summary": "Multiple collaboration proposals and business meeting requests",
-        "quality": 7
+        "type": "intro",
+        "summary": "Prepared critical questions for Roy Barreras interview",
+        "quality": 6
       }
     ]
   },
@@ -4499,18 +4334,18 @@
       {
         "snapshot": "s2",
         "tier": "B",
-        "composite": 39,
+        "composite": 33,
         "pillars": {
-          "network": 40,
-          "intelligence": 50,
-          "capital": 35
+          "network": 32,
+          "intelligence": 55,
+          "capital": 48
         }
       }
     ],
     "pillars": {
-      "network": 40,
-      "intelligence": 50,
-      "capital": 35
+      "network": 32,
+      "intelligence": 55,
+      "capital": 48
     },
     "pillarComponents": {
       "network": {
@@ -4529,41 +4364,31 @@
         "specificity": 0
       }
     },
-    "composite": 39,
-    "panicScore": 75,
-    "panicFlags": [
-      "overwhelmed by AI speed",
-      "feels left behind",
-      "dependency anxiety",
-      "information overload"
-    ],
+    "composite": 33,
+    "panicScore": 20,
+    "panicFlags": [],
     "persona": {
-      "bio": "Traditional business owner struggling to adapt to AI revolution. Shows high anxiety about technological change while trying to implement Claude and AI tools.",
+      "bio": "Building fleet management app with Claude for Impleseg. Shows genuine curiosity about AI but admits feeling overwhelmed by the pace of change.",
       "tags": [
-        "traditional_business",
-        "AI_learning",
-        "anxiety",
-        "overwhelmed",
-        "fleet_management"
+        "Claude-apps",
+        "fleet-management",
+        "Impleseg",
+        "AI-learner",
+        "security-concerns"
       ],
-      "role": "Panican",
+      "role": "business-developer",
       "platforms": []
     },
     "highlights": [
       {
         "type": "tool",
-        "summary": "Built vehicle fleet management app for Impleseg using Claude despite limited technical background",
-        "quality": 6
-      },
-      {
-        "type": "insight",
-        "summary": "Identified data security as the most overlooked aspect in AI adoption rush",
+        "summary": "Built fleet vehicle maintenance app for Impleseg using Claude",
         "quality": 7
       }
     ]
   },
   "Nico Zapata (Taurus)": {
-    "tier": "A",
+    "tier": "B",
     "score": 49,
     "msgs": 11,
     "links": 1,
@@ -4595,19 +4420,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 42,
+        "tier": "B",
+        "composite": 30,
         "pillars": {
-          "network": 55,
-          "intelligence": 80,
-          "capital": 65
+          "network": 40,
+          "intelligence": 60,
+          "capital": 45
         }
       }
     ],
     "pillars": {
-      "network": 55,
-      "intelligence": 80,
-      "capital": 65
+      "network": 40,
+      "intelligence": 60,
+      "capital": 45
     },
     "pillarComponents": {
       "network": {
@@ -4626,38 +4451,31 @@
         "specificity": 25
       }
     },
-    "composite": 42,
-    "panicScore": 25,
-    "panicFlags": [
-      "Technical infrastructure concerns",
-      "Internet connectivity worries"
-    ],
+    "composite": 30,
+    "panicScore": 15,
+    "panicFlags": [],
     "persona": {
-      "bio": "Tech-savvy analyst focused on crypto infrastructure and adoption mechanics. Concerns about technical implementation details.",
+      "bio": "Infrastructure-focused investor exploring OpenClaw/AWS setups. Thinks about crypto adoption through efficiency lens rather than just narrative.",
       "tags": [
         "infrastructure",
-        "efficiency",
-        "adoption",
-        "technical"
+        "OpenClaw",
+        "AWS",
+        "crypto",
+        "efficiency"
       ],
-      "role": "Analyst",
+      "role": "infrastructure-analyst",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "analysis",
-        "summary": "Infrastructure adoption faster than narrative - efficiency beats storytelling",
-        "quality": 8
-      },
-      {
-        "type": "tool",
-        "summary": "OpenClaw technical setup discussion - AWS vs local deployment",
+        "type": "insight",
+        "summary": "Crypto adoption through infrastructure efficiency vs narrative thesis",
         "quality": 7
       }
     ]
   },
   "Romano Arango": {
-    "tier": "A",
+    "tier": "B",
     "score": 48.8,
     "msgs": 38,
     "links": 2,
@@ -4689,19 +4507,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 71,
+        "tier": "B",
+        "composite": 32,
         "pillars": {
-          "network": 75,
-          "intelligence": 80,
-          "capital": 85
+          "network": 35,
+          "intelligence": 48,
+          "capital": 55
         }
       }
     ],
     "pillars": {
-      "network": 75,
-      "intelligence": 80,
-      "capital": 85
+      "network": 35,
+      "intelligence": 48,
+      "capital": 55
     },
     "pillarComponents": {
       "network": {
@@ -4720,33 +4538,35 @@
         "specificity": 5
       }
     },
-    "composite": 71,
-    "panicScore": 25,
+    "composite": 32,
+    "panicScore": 32,
     "panicFlags": [
-      "inflation concerns",
-      "tariff impact"
+      "gas prices jumped $1 in a week",
+      "No inflation with tarrifs, bullshit",
+      "Fuel surcharges arriba 75%"
     ],
     "persona": {
-      "bio": "Coffee roaster with business operations across US/Colombia. Tracks macro trends impacting supply chains and commodity prices.",
+      "bio": "US-based coffee roaster tracking commodity prices and inflation impacts. Shares observations about supply chain costs and Starbucks Reserve experiences.",
       "tags": [
-        "coffee",
-        "commodities",
+        "coffee-roasting",
+        "commodity-prices",
         "inflation",
-        "supply-chain"
+        "supply-chain",
+        "specialty-coffee"
       ],
-      "role": "Industry Expert",
+      "role": "business-owner",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "analysis",
-        "summary": "Detailed fuel/commodity price tracking with specific data: gas $2.65→$4.25, PEAD +23%, PET +20%, freight surcharges +75%",
-        "quality": 9
+        "type": "insight",
+        "summary": "Detailed tracking of US inflation: gas from $2.65 to $4.25, PET up 20%, freight up 14%",
+        "quality": 7
       }
     ]
   },
   "Andrea Arango": {
-    "tier": "A",
+    "tier": "C",
     "score": 48.7,
     "msgs": 34,
     "links": 2,
@@ -4778,19 +4598,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 67,
+        "tier": "C",
+        "composite": 9,
         "pillars": {
-          "network": 70,
-          "intelligence": 85,
-          "capital": 80
+          "network": 15,
+          "intelligence": 20,
+          "capital": 5
         }
       }
     ],
     "pillars": {
-      "network": 70,
-      "intelligence": 85,
-      "capital": 80
+      "network": 15,
+      "intelligence": 20,
+      "capital": 5
     },
     "pillarComponents": {
       "network": {
@@ -4809,30 +4629,31 @@
         "specificity": 0
       }
     },
-    "composite": 67,
-    "panicScore": 15,
+    "composite": 9,
+    "panicScore": 10,
     "panicFlags": [],
     "persona": {
-      "bio": "Cultural observer with strong opinions on dignity and tradition. Currently in Japan, appreciates cultural values and practices.",
+      "bio": "Casual member who mostly reacts and makes personal commentary. Occasionally shares lifestyle recommendations and travel tips, with minimal investment-related contributions.",
       "tags": [
-        "culture",
         "travel",
-        "japan",
-        "tradition"
+        "lifestyle",
+        "Japan",
+        "social-commentary",
+        "Claude-AI"
       ],
-      "role": "Curator",
+      "role": "social-observer",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "insight",
-        "summary": "Cultural analysis: 'Nos está matando en occidente la falta de dignidad cultural. Ahora que estoy en Japón… eso si que les sobra'",
-        "quality": 8
+        "type": "link",
+        "summary": "Shared a Hedonicum substack link",
+        "quality": 3
       }
     ]
   },
   "Mauricio Uribe": {
-    "tier": "C",
+    "tier": "B",
     "score": 48.2,
     "msgs": 6,
     "links": 0,
@@ -4864,21 +4685,19 @@
       },
       {
         "snapshot": "s2",
-        "score": 48.2,
-        "tier": "C",
-        "composite": 6,
+        "tier": "B",
+        "composite": 23,
         "pillars": {
-          "network": 5,
-          "intelligence": 20,
-          "capital": 5
-        },
-        "msgs": 6
+          "network": 15,
+          "intelligence": 60,
+          "capital": 30
+        }
       }
     ],
     "pillars": {
-      "network": 5,
-      "intelligence": 20,
-      "capital": 5
+      "network": 15,
+      "intelligence": 60,
+      "capital": 30
     },
     "pillarComponents": {
       "network": {
@@ -4897,19 +4716,31 @@
         "specificity": 0
       }
     },
-    "composite": 6,
-    "panicScore": null,
+    "composite": 23,
+    "panicScore": 0,
     "panicFlags": [],
     "persona": {
-      "bio": null,
-      "platforms": [],
-      "tags": [],
-      "role": null
+      "bio": "Constitutional law perspective on Trump policies. Focuses on legal/regulatory impacts on markets with US political expertise.",
+      "tags": [
+        "law",
+        "constitution",
+        "Trump",
+        "SCOTUS",
+        "regulation"
+      ],
+      "role": "legal-analyst",
+      "platforms": []
     },
-    "highlights": []
+    "highlights": [
+      {
+        "type": "analysis",
+        "summary": "Trump tariff powers limited by SCOTUS constitutional rulings",
+        "quality": 7
+      }
+    ]
   },
   "Molo Villa": {
-    "tier": "C",
+    "tier": "B",
     "score": 47.6,
     "msgs": 4,
     "links": 0,
@@ -4941,21 +4772,19 @@
       },
       {
         "snapshot": "s2",
-        "score": 47.6,
-        "tier": "C",
-        "composite": 8,
+        "tier": "B",
+        "composite": 29,
         "pillars": {
-          "network": 5,
-          "intelligence": 28,
-          "capital": 5
-        },
-        "msgs": 4
+          "network": 65,
+          "intelligence": 50,
+          "capital": 35
+        }
       }
     ],
     "pillars": {
-      "network": 5,
-      "intelligence": 28,
-      "capital": 5
+      "network": 65,
+      "intelligence": 50,
+      "capital": 35
     },
     "pillarComponents": {
       "network": {
@@ -4974,19 +4803,31 @@
         "specificity": 0
       }
     },
-    "composite": 8,
-    "panicScore": null,
+    "composite": 29,
+    "panicScore": 0,
     "panicFlags": [],
     "persona": {
-      "bio": null,
-      "platforms": [],
-      "tags": [],
-      "role": null
+      "bio": "Event visionary proposing massive crypto gatherings in Medellin. Thinks big about community building and DAO structures.",
+      "tags": [
+        "events",
+        "crypto",
+        "Medellin",
+        "DAO",
+        "community"
+      ],
+      "role": "event-organizer",
+      "platforms": []
     },
-    "highlights": []
+    "highlights": [
+      {
+        "type": "insight",
+        "summary": "Proposed 10AM crypto event at Plaza Mayor like Efix fair (80k attendees)",
+        "quality": 7
+      }
+    ]
   },
   "Monica Arango": {
-    "tier": "A",
+    "tier": "B",
     "score": 46.3,
     "msgs": 54,
     "links": 1,
@@ -5018,19 +4859,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 64,
+        "tier": "B",
+        "composite": 34,
         "pillars": {
-          "network": 55,
-          "intelligence": 60,
-          "capital": 75
+          "network": 48,
+          "intelligence": 35,
+          "capital": 52
         }
       }
     ],
     "pillars": {
-      "network": 55,
-      "intelligence": 60,
-      "capital": 75
+      "network": 48,
+      "intelligence": 35,
+      "capital": 52
     },
     "pillarComponents": {
       "network": {
@@ -5049,40 +4890,32 @@
         "specificity": 0
       }
     },
-    "composite": 64,
-    "panicScore": 40,
-    "panicFlags": [
-      "Totazo = Caída fuerte",
-      "Prefiero no mirar",
-      "voy de mal e'peor"
-    ],
+    "composite": 34,
+    "panicScore": 25,
+    "panicFlags": [],
     "persona": {
-      "bio": "Colombian investor learning AI tools for business applications. Enthusiastic but sometimes overwhelmed by complexity.",
+      "bio": "Uses Claude for architectural design projects at Cali Botanical Garden. Often asks clarifying questions and celebrates others' successes.",
       "tags": [
-        "colombia",
-        "ai-learning",
+        "architecture",
+        "Claude-user",
+        "Cali",
+        "botanical-garden",
         "design",
-        "orchids",
-        "enthusiasm"
+        "questions"
       ],
-      "role": "Contributor",
+      "role": "design-practitioner",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "tool",
-        "summary": "Successfully applied Claude for orchid garden pavilion design vs ChatGPT",
-        "quality": 6
-      },
-      {
         "type": "insight",
-        "summary": "Practical AI tool comparison for real-world design applications",
-        "quality": 5
+        "summary": "Using Claude Pro for orchid pavilion conceptual design at Cali Botanical Garden",
+        "quality": 6
       }
     ]
   },
   "Antonio Linares": {
-    "tier": "A",
+    "tier": "B",
     "score": 45.8,
     "msgs": 21,
     "links": 0,
@@ -5114,19 +4947,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 50,
+        "tier": "B",
+        "composite": 39,
         "pillars": {
-          "network": 65,
-          "intelligence": 75,
-          "capital": 70
+          "network": 35,
+          "intelligence": 70,
+          "capital": 80
         }
       }
     ],
     "pillars": {
-      "network": 65,
-      "intelligence": 75,
-      "capital": 70
+      "network": 35,
+      "intelligence": 70,
+      "capital": 80
     },
     "pillarComponents": {
       "network": {
@@ -5145,38 +4978,31 @@
         "specificity": 0
       }
     },
-    "composite": 50,
-    "panicScore": 15,
-    "panicFlags": [
-      "Measured approach to volatility",
-      "Long-term perspective"
-    ],
+    "composite": 39,
+    "panicScore": 0,
+    "panicFlags": [],
     "persona": {
-      "bio": "Long-term investor with philosophical approach to markets. Values patience and learning from both wins and losses.",
+      "bio": "Patient value investor with international perspective. Emphasizes holding periods over timing and shares wisdom about multi-baggers.",
       "tags": [
+        "value-investing",
         "patience",
-        "philosophy",
-        "multibagger",
-        "networking"
+        "multi-baggers",
+        "Spain",
+        "wisdom"
       ],
-      "role": "Alpha Contributor",
+      "role": "value-investor",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "thesis",
-        "summary": "Picks need time - walk away too early and you get neither multibagger nor lesson",
-        "quality": 8
-      },
-      {
         "type": "insight",
-        "summary": "Doesn't matter when you bought, just how much and how long you held it",
-        "quality": 9
+        "summary": "'Doesn't matter when you bought, just how much and how long you held it for'",
+        "quality": 8
       }
     ]
   },
   "Maria Rios": {
-    "tier": "A",
+    "tier": "B",
     "score": 44.9,
     "msgs": 45,
     "links": 0,
@@ -5208,19 +5034,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 83,
+        "tier": "B",
+        "composite": 20,
         "pillars": {
-          "network": 85,
-          "intelligence": 90,
-          "capital": 85
+          "network": 25,
+          "intelligence": 40,
+          "capital": 15
         }
       }
     ],
     "pillars": {
-      "network": 85,
-      "intelligence": 90,
-      "capital": 85
+      "network": 25,
+      "intelligence": 40,
+      "capital": 15
     },
     "pillarComponents": {
       "network": {
@@ -5239,30 +5065,31 @@
         "specificity": 0
       }
     },
-    "composite": 83,
+    "composite": 20,
     "panicScore": 5,
     "panicFlags": [],
     "persona": {
-      "bio": "Cybersecurity professional and AI enthusiast. Heavy Claude user with practical tech applications and investment focus.",
+      "bio": "Active Claude AI enthusiast who shares tech insights and reacts positively to others' content. Works with cybersecurity awareness but rarely shares specific investment positions.",
       "tags": [
-        "AI",
-        "claude",
+        "Claude-AI",
+        "tech",
         "cybersecurity",
-        "technology"
+        "Trii",
+        "enthusiasm"
       ],
-      "role": "Alpha Contributor",
+      "role": "tech-enthusiast",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "tool",
-        "summary": "Claude Chrome extension advocacy and practical AI implementation in cybersecurity workflows",
-        "quality": 8
+        "type": "insight",
+        "summary": "Warned about cybersecurity risks with AI/APIs - 'en un minuto le roban la vida a uno'",
+        "quality": 6
       }
     ]
   },
   "Sergio Gonzalez": {
-    "tier": "A",
+    "tier": "B",
     "score": 44.7,
     "msgs": 23,
     "links": 8,
@@ -5294,19 +5121,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 42,
+        "tier": "B",
+        "composite": 31,
         "pillars": {
-          "network": 50,
-          "intelligence": 65,
-          "capital": 55
+          "network": 35,
+          "intelligence": 50,
+          "capital": 60
         }
       }
     ],
     "pillars": {
-      "network": 50,
-      "intelligence": 65,
-      "capital": 55
+      "network": 35,
+      "intelligence": 50,
+      "capital": 60
     },
     "pillarComponents": {
       "network": {
@@ -5325,37 +5152,32 @@
         "specificity": 20
       }
     },
-    "composite": 42,
-    "panicScore": 40,
-    "panicFlags": [
-      "market_timing_anxiety"
-    ],
+    "composite": 31,
+    "panicScore": 20,
+    "panicFlags": [],
     "persona": {
-      "bio": "Active trader and political observer. Focuses on market timing and technical analysis with political commentary.",
+      "bio": "Active trader who shares market analysis and follows tech disruption themes. Engages with political discussions while maintaining investment focus.",
       "tags": [
-        "trader",
-        "political_observer",
-        "market_timer",
-        "technical_analyst"
+        "trading",
+        "Tesla",
+        "FSD",
+        "HIMS",
+        "politics",
+        "tech"
       ],
-      "role": "Analyst",
+      "role": "swing-trader",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "analysis",
-        "summary": "Tesla/Rivian FSD market consolidation thesis validation",
+        "type": "thesis",
+        "summary": "Tesla/Rivian FSD licensing thesis playing out",
         "quality": 7
-      },
-      {
-        "type": "tool",
-        "summary": "iPhone app development completed using Claude Opus for better design iteration",
-        "quality": 6
       }
     ]
   },
   "Gustavo Villa": {
-    "tier": "C",
+    "tier": "B",
     "score": 44.6,
     "msgs": 4,
     "links": 0,
@@ -5387,21 +5209,19 @@
       },
       {
         "snapshot": "s2",
-        "score": 44.6,
-        "tier": "C",
-        "composite": 6,
+        "tier": "B",
+        "composite": 15,
         "pillars": {
-          "network": 15,
-          "intelligence": 9,
-          "capital": 9
-        },
-        "msgs": 11
+          "network": 25,
+          "intelligence": 30,
+          "capital": 20
+        }
       }
     ],
     "pillars": {
-      "network": 15,
-      "intelligence": 9,
-      "capital": 9
+      "network": 25,
+      "intelligence": 30,
+      "capital": 20
     },
     "pillarComponents": {
       "network": {
@@ -5420,19 +5240,29 @@
         "specificity": 0
       }
     },
-    "composite": 6,
-    "panicScore": null,
+    "composite": 15,
+    "panicScore": 0,
     "panicFlags": [],
     "persona": {
-      "bio": null,
-      "platforms": [],
-      "tags": [],
-      "role": null
+      "bio": "Advocates for maintaining guillotine culture. Makes occasional political observations but limited investment content.",
+      "tags": [
+        "guillotine",
+        "culture",
+        "politics"
+      ],
+      "role": "culture-guardian",
+      "platforms": []
     },
-    "highlights": []
+    "highlights": [
+      {
+        "type": "insight",
+        "summary": "Don't delegate the guillotine - maintain standards",
+        "quality": 4
+      }
+    ]
   },
   "Gabby Grinberg": {
-    "tier": "C",
+    "tier": "B",
     "score": 44.4,
     "msgs": 4,
     "links": 1,
@@ -5464,21 +5294,19 @@
       },
       {
         "snapshot": "s2",
-        "score": 44.4,
-        "tier": "C",
-        "composite": 6,
+        "tier": "B",
+        "composite": 28,
         "pillars": {
-          "network": 13,
-          "intelligence": 11,
-          "capital": 10
-        },
-        "msgs": 4
+          "network": 30,
+          "intelligence": 55,
+          "capital": 50
+        }
       }
     ],
     "pillars": {
-      "network": 13,
-      "intelligence": 11,
-      "capital": 10
+      "network": 30,
+      "intelligence": 55,
+      "capital": 50
     },
     "pillarComponents": {
       "network": {
@@ -5497,19 +5325,30 @@
         "specificity": 0
       }
     },
-    "composite": 6,
-    "panicScore": null,
+    "composite": 28,
+    "panicScore": 15,
     "panicFlags": [],
     "persona": {
-      "bio": null,
-      "platforms": [],
-      "tags": [],
-      "role": null
+      "bio": "Tracks OpenAI developments and pharma regulatory issues. Shares important links but with minimal commentary.",
+      "tags": [
+        "OpenAI",
+        "pharma",
+        "FDA",
+        "links"
+      ],
+      "role": "news-curator",
+      "platforms": []
     },
-    "highlights": []
+    "highlights": [
+      {
+        "type": "insight",
+        "summary": "FDA accountability for Novo warnings could trigger another dip",
+        "quality": 6
+      }
+    ]
   },
   "Ricardo Sierra": {
-    "tier": "A",
+    "tier": "B",
     "score": 43.7,
     "msgs": 22,
     "links": 6,
@@ -5541,19 +5380,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 52,
+        "tier": "B",
+        "composite": 35,
         "pillars": {
-          "network": 60,
-          "intelligence": 80,
-          "capital": 70
+          "network": 50,
+          "intelligence": 75,
+          "capital": 45
         }
       }
     ],
     "pillars": {
-      "network": 60,
-      "intelligence": 80,
-      "capital": 70
+      "network": 50,
+      "intelligence": 75,
+      "capital": 45
     },
     "pillarComponents": {
       "network": {
@@ -5572,35 +5411,32 @@
         "specificity": 0
       }
     },
-    "composite": 52,
-    "panicScore": 25,
+    "composite": 35,
+    "panicScore": 10,
     "panicFlags": [],
     "persona": {
-      "bio": "Energy sector expert with deep knowledge of solar, LNG markets and infrastructure. Provides technical insights on energy transitions.",
+      "bio": "Energy sector expert providing deep insights on solar costs, LNG markets, and infrastructure. Shares quality analysis and connects members to opportunities.",
       "tags": [
-        "energy_expert",
-        "solar_specialist",
+        "energy",
+        "solar",
+        "LNG",
         "infrastructure",
-        "technical_analyst"
+        "Colombia",
+        "analysis"
       ],
-      "role": "Industry Expert",
+      "role": "sector-expert",
       "platforms": []
     },
     "highlights": [
       {
         "type": "analysis",
-        "summary": "Colombia solar cost analysis: 50% reduction in 7 years due to equipment costs and installer experience",
+        "summary": "Colombia solar costs down 50% in 7 years with detailed breakdown",
         "quality": 9
-      },
-      {
-        "type": "insight",
-        "summary": "LNG market dynamics with Qatar exit impact and Colombia El Niño implications",
-        "quality": 8
       }
     ]
   },
   "Checho Barth": {
-    "tier": "A",
+    "tier": "B",
     "score": 43.6,
     "msgs": 25,
     "links": 1,
@@ -5632,19 +5468,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 50,
+        "tier": "B",
+        "composite": 24,
         "pillars": {
-          "network": 60,
-          "intelligence": 65,
-          "capital": 70
+          "network": 30,
+          "intelligence": 35,
+          "capital": 50
         }
       }
     ],
     "pillars": {
-      "network": 60,
-      "intelligence": 65,
-      "capital": 70
+      "network": 30,
+      "intelligence": 35,
+      "capital": 50
     },
     "pillarComponents": {
       "network": {
@@ -5663,33 +5499,26 @@
         "specificity": 0
       }
     },
-    "composite": 50,
-    "panicScore": 30,
-    "panicFlags": [
-      "Political anxiety",
-      "Empathy concerns"
-    ],
+    "composite": 24,
+    "panicScore": 0,
+    "panicFlags": [],
     "persona": {
-      "bio": "Miami-based member with strong political opinions and social commentary. Active in group dynamics and elections.",
+      "bio": "Miami-based member with German passport who votes from abroad. Engages in political discussions while maintaining international perspective.",
       "tags": [
+        "Miami",
+        "international",
         "politics",
-        "miami",
-        "social",
-        "elections"
+        "Tesla",
+        "voting"
       ],
-      "role": "Contributor",
+      "role": "expat-investor",
       "platforms": []
     },
     "highlights": [
       {
         "type": "insight",
-        "summary": "Tesla experience changes you permanently",
-        "quality": 7
-      },
-      {
-        "type": "analysis",
-        "summary": "Political election commentary and candidate analysis",
-        "quality": 6
+        "summary": "Dual citizenship perspective on Colombian politics from Miami",
+        "quality": 4
       }
     ]
   },
@@ -5727,18 +5556,18 @@
       {
         "snapshot": "s2",
         "tier": "B",
-        "composite": 37,
+        "composite": 17,
         "pillars": {
-          "network": 45,
-          "intelligence": 55,
-          "capital": 50
+          "network": 20,
+          "intelligence": 35,
+          "capital": 25
         }
       }
     ],
     "pillars": {
-      "network": 45,
-      "intelligence": 55,
-      "capital": 50
+      "network": 20,
+      "intelligence": 35,
+      "capital": 25
     },
     "pillarComponents": {
       "network": {
@@ -5757,27 +5586,25 @@
         "specificity": 0
       }
     },
-    "composite": 37,
-    "panicScore": 30,
-    "panicFlags": [
-      "political_uncertainty"
-    ],
+    "composite": 17,
+    "panicScore": 25,
+    "panicFlags": [],
     "persona": {
-      "bio": "Active community member exploring AI tools and crypto events. Shows interest in practical applications and networking opportunities.",
+      "bio": "Engages with crypto community events and political discussions. Learning Claude while maintaining skepticism about new tools.",
       "tags": [
-        "community_active",
-        "ai_curious",
-        "crypto_events",
-        "practical"
+        "crypto-events",
+        "politics",
+        "Claude",
+        "Medellin"
       ],
-      "role": "Contributor",
+      "role": "community-participant",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "intro",
-        "summary": "Promoting Binance Angels crypto networking event in Medellín",
-        "quality": 5
+        "type": "link",
+        "summary": "Shared Binance Angels Medellin networking event",
+        "quality": 4
       }
     ]
   },
@@ -5814,21 +5641,19 @@
       },
       {
         "snapshot": "s2",
-        "score": 42.8,
         "tier": "C",
-        "composite": 4,
+        "composite": 13,
         "pillars": {
-          "network": 8,
-          "intelligence": 11,
-          "capital": 5
-        },
-        "msgs": 4
+          "network": 15,
+          "intelligence": 20,
+          "capital": 25
+        }
       }
     ],
     "pillars": {
-      "network": 8,
-      "intelligence": 11,
-      "capital": 5
+      "network": 15,
+      "intelligence": 20,
+      "capital": 25
     },
     "pillarComponents": {
       "network": {
@@ -5847,19 +5672,28 @@
         "specificity": 0
       }
     },
-    "composite": 4,
-    "panicScore": null,
+    "composite": 13,
+    "panicScore": 0,
     "panicFlags": [],
     "persona": {
-      "bio": null,
-      "platforms": [],
-      "tags": [],
-      "role": null
+      "bio": "Minimal contributor who makes occasional cultural references. Limited investment or analytical content.",
+      "tags": [
+        "minimal",
+        "cultural-references"
+      ],
+      "role": "lurker",
+      "platforms": []
     },
-    "highlights": []
+    "highlights": [
+      {
+        "type": "insight",
+        "summary": "Cultural memory of Pablo references",
+        "quality": 2
+      }
+    ]
   },
   "Barry": {
-    "tier": "A",
+    "tier": "B",
     "score": 42.3,
     "msgs": 16,
     "links": 1,
@@ -5891,19 +5725,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 52,
+        "tier": "B",
+        "composite": 19,
         "pillars": {
-          "network": 70,
-          "intelligence": 80,
-          "capital": 85
+          "network": 20,
+          "intelligence": 45,
+          "capital": 25
         }
       }
     ],
     "pillars": {
-      "network": 70,
-      "intelligence": 80,
-      "capital": 85
+      "network": 20,
+      "intelligence": 45,
+      "capital": 25
     },
     "pillarComponents": {
       "network": {
@@ -5922,32 +5756,30 @@
         "specificity": 6
       }
     },
-    "composite": 52,
-    "panicScore": 25,
-    "panicFlags": [
-      "automation displacement"
-    ],
+    "composite": 19,
+    "panicScore": 20,
+    "panicFlags": [],
     "persona": {
-      "bio": "Agricultural investor with philosophical perspective on technology's societal impact. Focuses on rural economics and automation effects.",
+      "bio": "Agricultural sector perspective with insights on cattle tech and rural economics. Questions conventional wisdom but doesn't share specific positions.",
       "tags": [
         "agriculture",
-        "automation",
-        "rural-economics",
-        "philosophy"
+        "cattle",
+        "rural-tech",
+        "economics"
       ],
-      "role": "Industry Expert",
+      "role": "sector-specialist",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "analysis",
-        "summary": "Livestock monitoring tech analysis: $8/month = 35-50% of animal maintenance cost in LatAm, questions scalability vs traditional fencing",
-        "quality": 8
+        "type": "insight",
+        "summary": "Practical cattle farming economics perspective on IoT collars",
+        "quality": 6
       }
     ]
   },
   "Antonioooo": {
-    "tier": "A",
+    "tier": "B",
     "score": 41.9,
     "msgs": 41,
     "links": 0,
@@ -5979,19 +5811,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 67,
+        "tier": "B",
+        "composite": 33,
         "pillars": {
-          "network": 65,
-          "intelligence": 75,
-          "capital": 80
+          "network": 10,
+          "intelligence": 55,
+          "capital": 65
         }
       }
     ],
     "pillars": {
-      "network": 65,
-      "intelligence": 75,
-      "capital": 80
+      "network": 10,
+      "intelligence": 55,
+      "capital": 65
     },
     "pillarComponents": {
       "network": {
@@ -6010,25 +5842,27 @@
         "specificity": 0
       }
     },
-    "composite": 67,
-    "panicScore": 20,
+    "composite": 33,
+    "panicScore": 15,
     "panicFlags": [],
     "persona": {
-      "bio": "Spanish investor with practical market perspective. Focuses on Bitcoin/MSTR analysis and European market dynamics.",
+      "bio": "Spanish member who provides MSTR valuation analysis and bond math. Shows deep understanding of Saylor's strategy and contributes substantive market commentary.",
       "tags": [
-        "bitcoin",
         "MSTR",
-        "spain",
-        "valuation"
+        "bitcoin",
+        "valuation",
+        "bonds",
+        "Spain",
+        "analysis"
       ],
-      "role": "Analyst",
+      "role": "value-analyst",
       "platforms": []
     },
     "highlights": [
       {
         "type": "analysis",
-        "summary": "Deep MSTR valuation analysis: should trade 50% premium to Bitcoin holdings due to regulated market access, currently undervalued 20%",
-        "quality": 9
+        "summary": "Detailed MSTR undervaluation thesis with 50% upside based on BTC collateral and bond yields",
+        "quality": 8
       }
     ]
   },
@@ -6098,7 +5932,7 @@
         "specificity": 11
       }
     },
-    "composite": 13,
+    "composite": 10,
     "panicScore": null,
     "panicFlags": [],
     "persona": {
@@ -6143,18 +5977,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 55,
+        "composite": 46,
         "pillars": {
-          "network": 85,
-          "intelligence": 90,
-          "capital": 80
+          "network": 75,
+          "intelligence": 70,
+          "capital": 85
         }
       }
     ],
     "pillars": {
-      "network": 85,
-      "intelligence": 90,
-      "capital": 80
+      "network": 75,
+      "intelligence": 70,
+      "capital": 85
     },
     "pillarComponents": {
       "network": {
@@ -6173,40 +6007,32 @@
         "specificity": 11
       }
     },
-    "composite": 55,
-    "panicScore": 10,
+    "composite": 46,
+    "panicScore": 0,
     "panicFlags": [],
     "persona": {
-      "bio": "Fintech entrepreneur building Plenti, leading product at Finity. Strong AI/voice programming advocate and industry connector.",
+      "bio": "Plenti/Finity product leader actively raising capital. Programs with voice AI and builds fintech infrastructure while sharing deep insights.",
       "tags": [
+        "Plenti",
         "fintech",
-        "AI",
+        "fundraising",
+        "voice-coding",
         "product",
-        "entrepreneur"
+        "infrastructure"
       ],
-      "role": "Industry Expert",
+      "role": "fintech-founder",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "tool",
-        "summary": "Voice programming workflow - more natural and faster development",
-        "quality": 9
-      },
-      {
-        "type": "link",
-        "summary": "Humanoids tracking website - comprehensive robotics market view",
-        "quality": 8
-      },
-      {
         "type": "call",
-        "summary": "Seeking VC connections and warm intros for Finity growth",
-        "quality": 7
+        "summary": "Seeking warm intros to VCs for fundraising round",
+        "quality": 9
       }
     ]
   },
   "Alejandro Pérez": {
-    "tier": "A",
+    "tier": "B",
     "score": 39.5,
     "msgs": 34,
     "links": 14,
@@ -6238,19 +6064,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 56,
+        "tier": "B",
+        "composite": 34,
         "pillars": {
-          "network": 55,
-          "intelligence": 75,
-          "capital": 65
+          "network": 30,
+          "intelligence": 60,
+          "capital": 55
         }
       }
     ],
     "pillars": {
-      "network": 55,
-      "intelligence": 75,
-      "capital": 65
+      "network": 30,
+      "intelligence": 60,
+      "capital": 55
     },
     "pillarComponents": {
       "network": {
@@ -6269,37 +6095,32 @@
         "specificity": 4
       }
     },
-    "composite": 56,
-    "panicScore": 35,
-    "panicFlags": [
-      "geopolitical_concerns"
-    ],
+    "composite": 34,
+    "panicScore": 25,
+    "panicFlags": [],
     "persona": {
-      "bio": "Anesthesiologist developing medical AI applications. Strong technical background building diagnostic tools with Claude.",
+      "bio": "Medical professional building diagnostic app for cardiac surgery. Shares market links and follows hashrate/Iran connections closely.",
       "tags": [
-        "medical_professional",
-        "ai_developer",
-        "healthtech",
-        "technical"
+        "medical-tech",
+        "app-development",
+        "bitcoin",
+        "Iran",
+        "hashrate",
+        "STRC"
       ],
-      "role": "Industry Expert",
+      "role": "medtech-builder",
       "platforms": []
     },
     "highlights": [
       {
         "type": "tool",
-        "summary": "Coagulation diagnostic app for cardiac surgery using ROTEM technology",
+        "summary": "Building rotem-based coagulopathy diagnostic app for cardiac surgery",
         "quality": 8
-      },
-      {
-        "type": "insight",
-        "summary": "Iran hashrate impact on Bitcoin mining analysis",
-        "quality": 6
       }
     ]
   },
   "Luis Alberto Botero": {
-    "tier": "A",
+    "tier": "B",
     "score": 38.2,
     "msgs": 29,
     "links": 5,
@@ -6331,19 +6152,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 52,
+        "tier": "B",
+        "composite": 21,
         "pillars": {
-          "network": 60,
-          "intelligence": 65,
-          "capital": 70
+          "network": 38,
+          "intelligence": 35,
+          "capital": 25
         }
       }
     ],
     "pillars": {
-      "network": 60,
-      "intelligence": 65,
-      "capital": 70
+      "network": 38,
+      "intelligence": 35,
+      "capital": 25
     },
     "pillarComponents": {
       "network": {
@@ -6362,38 +6183,31 @@
         "specificity": 5
       }
     },
-    "composite": 52,
-    "panicScore": 35,
-    "panicFlags": [
-      "political anxiety",
-      "electoral concerns"
-    ],
+    "composite": 21,
+    "panicScore": 15,
+    "panicFlags": [],
     "persona": {
-      "bio": "Conservative investor focused on Colombian politics. Shares political analysis and warns about electoral risks from left-wing candidates.",
+      "bio": "Shares political content and memes, particularly focused on Colombian elections. Often uses emojis and brief reactions rather than analysis.",
       "tags": [
-        "conservative",
         "politics",
+        "memes",
         "elections",
-        "analysis"
+        "reactions",
+        "Instagram-links"
       ],
-      "role": "Curator",
+      "role": "political-observer",
       "platforms": []
     },
     "highlights": [
       {
         "type": "analysis",
-        "summary": "Detailed political analysis on why massive consultation voting is crucial to prevent Cepeda presidency",
-        "quality": 7
-      },
-      {
-        "type": "link",
-        "summary": "Shares real-time presidential poll and encourages participation",
-        "quality": 5
+        "summary": "Shared Camilo Guzman's strategic analysis of opposition consultation importance",
+        "quality": 6
       }
     ]
   },
   "Ricardo Espinal": {
-    "tier": "A",
+    "tier": "B",
     "score": 38.2,
     "msgs": 69,
     "links": 2,
@@ -6425,19 +6239,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 72,
+        "tier": "B",
+        "composite": 24,
         "pillars": {
-          "network": 65,
-          "intelligence": 70,
-          "capital": 80
+          "network": 22,
+          "intelligence": 31,
+          "capital": 28
         }
       }
     ],
     "pillars": {
-      "network": 65,
-      "intelligence": 70,
-      "capital": 80
+      "network": 22,
+      "intelligence": 31,
+      "capital": 28
     },
     "pillarComponents": {
       "network": {
@@ -6456,39 +6270,35 @@
         "specificity": 0
       }
     },
-    "composite": 72,
+    "composite": 24,
     "panicScore": 45,
     "panicFlags": [
-      "Geopolitical anxiety about Iran-US conflict",
-      "Energy investment concerns due to oil volatility",
-      "Electoral uncertainty"
+      "Iran esta preparado para alargar la guerra y el costo politco de eso para Trump es un desastre",
+      "Les va a costar mucho tiempo y mucho dinero derrocar al regimen irani!",
+      "la economia mundial dando tumbos"
     ],
     "persona": {
-      "bio": "Energy investor with strong geopolitical views and conservative political alignment. Focuses on solar energy projects while analyzing Middle East conflicts.",
+      "bio": "Posts mostly about geopolitics with focus on Iran, Trump, and Colombian politics. Shows reactionary tendencies and conspiracy-adjacent thinking about global power structures.",
       "tags": [
-        "energy investor",
-        "geopolitical analyst",
-        "conservative",
-        "solar energy"
+        "Iran-conflict",
+        "Trump-criticism",
+        "geopolitics",
+        "Colombian-politics",
+        "oil-prices"
       ],
-      "role": "Industry Expert",
+      "role": "political-commentator",
       "platforms": []
     },
     "highlights": [
       {
         "type": "analysis",
-        "summary": "Detailed geopolitical analysis of Iran-US conflict comparing to historical failures in Iraq/Afghanistan, warning about oil price impacts",
-        "quality": 8
-      },
-      {
-        "type": "insight",
-        "summary": "Solar energy project details: 1% monthly returns, $1M per MW investment thesis",
-        "quality": 7
+        "summary": "Solar energy investment analysis showing 1% monthly returns on $1M investment",
+        "quality": 4
       }
     ]
   },
   "Wilder Zapata": {
-    "tier": "A",
+    "tier": "B",
     "score": 36.8,
     "msgs": 13,
     "links": 3,
@@ -6520,19 +6330,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 40,
+        "tier": "B",
+        "composite": 17,
         "pillars": {
-          "network": 80,
-          "intelligence": 55,
-          "capital": 60
+          "network": 52,
+          "intelligence": 28,
+          "capital": 15
         }
       }
     ],
     "pillars": {
-      "network": 80,
-      "intelligence": 55,
-      "capital": 60
+      "network": 52,
+      "intelligence": 28,
+      "capital": 15
     },
     "pillarComponents": {
       "network": {
@@ -6551,36 +6361,30 @@
         "specificity": 5
       }
     },
-    "composite": 40,
-    "panicScore": 20,
+    "composite": 17,
+    "panicScore": 10,
     "panicFlags": [],
     "persona": {
-      "bio": "Entrepreneur-turned-politician running for Senate. Independent candidate focused on meritocracy and anti-establishment politics.",
+      "bio": "Running for Colombian Senate under CREEMOS party. Entrepreneur who emphasizes independence from political machinery and merit-based governance.",
       "tags": [
-        "politics",
+        "Senate-candidate",
+        "CREEMOS",
         "entrepreneur",
-        "senate",
-        "meritocracy",
-        "CREEMOS"
+        "Colombian-politics"
       ],
-      "role": "Networker",
+      "role": "politician-entrepreneur",
       "platforms": []
     },
     "highlights": [
       {
         "type": "call",
-        "summary": "Senate campaign announcement with clear anti-corruption, pro-business message",
-        "quality": 6
-      },
-      {
-        "type": "thesis",
-        "summary": "Defends regional leadership over traditional party politics, emphasizes economic independence",
-        "quality": 5
+        "summary": "Senate campaign message emphasizing independence from traditional political machinery",
+        "quality": 4
       }
     ]
   },
   "Jorge Campuzano": {
-    "tier": "A",
+    "tier": "B",
     "score": 34.8,
     "msgs": 21,
     "links": 2,
@@ -6612,19 +6416,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 40,
+        "tier": "B",
+        "composite": 15,
         "pillars": {
-          "network": 50,
-          "intelligence": 60,
-          "capital": 55
+          "network": 25,
+          "intelligence": 30,
+          "capital": 20
         }
       }
     ],
     "pillars": {
-      "network": 50,
-      "intelligence": 60,
-      "capital": 55
+      "network": 25,
+      "intelligence": 30,
+      "capital": 20
     },
     "pillarComponents": {
       "network": {
@@ -6643,28 +6447,25 @@
         "specificity": 5
       }
     },
-    "composite": 40,
-    "panicScore": 35,
-    "panicFlags": [
-      "Security concerns about Colombia",
-      "Political worry"
-    ],
+    "composite": 15,
+    "panicScore": 15,
+    "panicFlags": [],
     "persona": {
-      "bio": "Colombian member tracking local political developments and security issues. Casual contributor with family connections.",
+      "bio": "Active in reactions and humor. Engages with political content and group dynamics but rarely shares investment insights or positions.",
       "tags": [
-        "colombia",
+        "humor",
+        "reactions",
         "politics",
-        "security",
-        "local"
+        "social"
       ],
-      "role": "Contributor",
+      "role": "group-cheerleader",
       "platforms": []
     },
     "highlights": [
       {
         "type": "link",
-        "summary": "American Airlines bullet holes story - Colombia security awareness",
-        "quality": 6
+        "summary": "Shared American Airlines Colombia shooting incident",
+        "quality": 3
       }
     ]
   },
@@ -6702,18 +6503,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 77,
+        "composite": 65,
         "pillars": {
-          "network": 90,
-          "intelligence": 80,
-          "capital": 65
+          "network": 85,
+          "intelligence": 70,
+          "capital": 45
         }
       }
     ],
     "pillars": {
-      "network": 90,
-      "intelligence": 80,
-      "capital": 65
+      "network": 85,
+      "intelligence": 70,
+      "capital": 45
     },
     "pillarComponents": {
       "network": {
@@ -6732,43 +6533,34 @@
         "specificity": 13
       }
     },
-    "composite": 77,
-    "panicScore": 15,
-    "panicFlags": [
-      "Concerned about job security due to AI advancement in development"
-    ],
+    "composite": 65,
+    "panicScore": 5,
+    "panicFlags": [],
     "persona": {
-      "bio": "VPN company professional with deep geopolitical insights, traveling between Japan, Korea, and North America. Expert on internet censorship and crypto adoption.",
+      "bio": "VPN specialist based in Japan working for Canadian company. Unique perspective on internet freedom, AI infrastructure, and Asian tech scene. Travels between Tokyo, Seoul, Seattle.",
       "tags": [
-        "VPN-expert",
-        "geopolitics",
-        "AI-adoption",
-        "crypto-freedom",
-        "international-perspective"
+        "VPN",
+        "Japan",
+        "AI servers",
+        "internet freedom",
+        "Iran",
+        "crypto",
+        "Tokyo",
+        "tech infrastructure"
       ],
-      "role": "Industry Expert",
+      "role": "tech infrastructure expert",
       "platforms": []
     },
     "highlights": [
       {
         "type": "insight",
-        "summary": "Detailed explanation of VPN technology helping Iranian protesters bypass internet censorship using AmneziaWG",
-        "quality": 10
-      },
-      {
-        "type": "analysis",
-        "summary": "Predicts that AI agents will eliminate developers who don't adapt: 'El que no sabe, quedará eliminado'",
+        "summary": "Detailed explanation of helping Iranians bypass internet blocks using AmneziaWG configurations during protests",
         "quality": 9
-      },
-      {
-        "type": "thesis",
-        "summary": "Explores implications of Universal Basic Income in post-AI employment world while maintaining capitalism",
-        "quality": 8
       }
     ]
   },
   "Carolina Rojas Gómez": {
-    "tier": "A",
+    "tier": "B",
     "score": 24,
     "msgs": 27,
     "links": 2,
@@ -6800,19 +6592,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 60,
+        "tier": "B",
+        "composite": 39,
         "pillars": {
-          "network": 85,
-          "intelligence": 90,
-          "capital": 60
+          "network": 72,
+          "intelligence": 85,
+          "capital": 25
         }
       }
     ],
     "pillars": {
-      "network": 85,
-      "intelligence": 90,
-      "capital": 60
+      "network": 72,
+      "intelligence": 85,
+      "capital": 25
     },
     "pillarComponents": {
       "network": {
@@ -6831,39 +6623,27 @@
         "specificity": 25
       }
     },
-    "composite": 60,
-    "panicScore": 30,
-    "panicFlags": [
-      "Overwhelmed by AI pace",
-      "Political concerns about Colombian elections"
-    ],
+    "composite": 39,
+    "panicScore": 10,
+    "panicFlags": [],
     "persona": {
-      "bio": "Energy policy expert and political analyst. Runs energy think tanks, writes extensively on geopolitics and energy strategy with deep institutional knowledge.",
+      "bio": "Energy expert who founded Colombia's Regional Energy Studies Center and writes analytical substacks. Deep knowledge of oil markets, geopolitics, and Colombian energy policy.",
       "tags": [
-        "energy policy",
+        "energy-analysis",
+        "oil-markets",
+        "Colombian-politics",
+        "think-tank-founder",
         "geopolitics",
-        "think tank",
-        "political analysis",
-        "Colombian politics"
+        "substack-writer"
       ],
-      "role": "Industry Expert",
+      "role": "energy-analyst",
       "platforms": []
     },
     "highlights": [
       {
         "type": "analysis",
-        "summary": "Contradictions in Trump's cheap energy strategy vs shale economics - questioning sustainability of $50-60 oil with shale breakeven costs",
+        "summary": "Detailed analysis connecting US shale economics to reindustrialization strategy contradictions",
         "quality": 9
-      },
-      {
-        "type": "thesis",
-        "summary": "Democratic vs authoritarian advantage in long-term energy strategy implementation beyond political cycles",
-        "quality": 8
-      },
-      {
-        "type": "call",
-        "summary": "Proposes 10AM energy podcast pivot to address Colombian energy literacy gap with group expertise",
-        "quality": 7
       }
     ]
   },
@@ -6978,18 +6758,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 73,
+        "composite": 52,
         "pillars": {
           "network": 85,
-          "intelligence": 75,
-          "capital": 80
+          "intelligence": 72,
+          "capital": 65
         }
       }
     ],
     "pillars": {
       "network": 85,
-      "intelligence": 75,
-      "capital": 80
+      "intelligence": 72,
+      "capital": 65
     },
     "pillarComponents": {
       "network": {
@@ -7008,38 +6788,28 @@
         "specificity": 23
       }
     },
-    "composite": 73,
-    "panicScore": 15,
-    "panicFlags": [
-      "skeptical of fear-based selling"
-    ],
+    "composite": 52,
+    "panicScore": 10,
+    "panicFlags": [],
     "persona": {
-      "bio": "Serial entrepreneur with political connections and media experience. Runs 30x.com and provides AI training for executives. Strong network operator.",
+      "bio": "Entrepreneur running 30x.com with AI training programs. Creates concentrated investment portfolio following Hernán's recommendations and conducts political interviews.",
       "tags": [
-        "entrepreneur",
-        "media",
-        "politics",
-        "AI",
-        "networking"
+        "30x.com",
+        "AI-training",
+        "concentrated-portfolio",
+        "political-interviews",
+        "TESLA",
+        "SOLANA",
+        "PLTR"
       ],
-      "role": "Alpha Contributor",
+      "role": "entrepreneur-investor",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "thesis",
-        "summary": "Built concentrated portfolio following Hernan's recommendations: 50% Tesla, 30% Solana ETF, 20% Palantir - anti-diversification strategy",
-        "quality": 8
-      },
-      {
-        "type": "insight",
-        "summary": "AI agents pipeline for population control is ready - connecting dots on Meta's AI developments",
+        "type": "analysis",
+        "summary": "50% TSLA, 30% BSOL, 20% PLTR concentrated portfolio strategy",
         "quality": 7
-      },
-      {
-        "type": "tool",
-        "summary": "Offers AI training programs for executives and board members through 30x.com to help adoption",
-        "quality": 8
       }
     ]
   },
@@ -7228,21 +6998,19 @@
       },
       {
         "snapshot": "s2",
-        "score": 14.7,
         "tier": "C",
-        "composite": 4,
+        "composite": 7,
         "pillars": {
-          "network": 8,
-          "intelligence": 9,
-          "capital": 3
-        },
-        "msgs": 7
+          "network": 10,
+          "intelligence": 15,
+          "capital": 10
+        }
       }
     ],
     "pillars": {
-      "network": 8,
-      "intelligence": 9,
-      "capital": 3
+      "network": 10,
+      "intelligence": 15,
+      "capital": 10
     },
     "pillarComponents": {
       "network": {
@@ -7261,19 +7029,29 @@
         "specificity": 0
       }
     },
-    "composite": 4,
-    "panicScore": null,
+    "composite": 7,
+    "panicScore": 0,
     "panicFlags": [],
     "persona": {
-      "bio": null,
-      "platforms": [],
-      "tags": [],
-      "role": "Inactive"
+      "bio": "Minimal contributor who mostly shares Instagram/TikTok links and emojis. No substantial investment content.",
+      "tags": [
+        "links",
+        "social-media",
+        "minimal"
+      ],
+      "role": "link-sharer",
+      "platforms": []
     },
-    "highlights": []
+    "highlights": [
+      {
+        "type": "link",
+        "summary": "Shares social media content",
+        "quality": 1
+      }
+    ]
   },
   "Jorge Saldarriaga": {
-    "tier": "C",
+    "tier": "B",
     "score": 14.7,
     "msgs": 8,
     "links": 0,
@@ -7305,21 +7083,19 @@
       },
       {
         "snapshot": "s2",
-        "score": 14.7,
-        "tier": "C",
-        "composite": 4,
+        "tier": "B",
+        "composite": 19,
         "pillars": {
-          "network": 8,
-          "intelligence": 9,
-          "capital": 3
-        },
-        "msgs": 8
+          "network": 20,
+          "intelligence": 25,
+          "capital": 45
+        }
       }
     ],
     "pillars": {
-      "network": 8,
-      "intelligence": 9,
-      "capital": 3
+      "network": 20,
+      "intelligence": 25,
+      "capital": 45
     },
     "pillarComponents": {
       "network": {
@@ -7338,16 +7114,31 @@
         "specificity": 0
       }
     },
-    "composite": 4,
-    "panicScore": null,
-    "panicFlags": [],
+    "composite": 19,
+    "panicScore": 60,
+    "panicFlags": [
+      "Iran has just hit a missile in to my account !!!",
+      "Esta semanita 😫",
+      "esto le está saliendo como mal a trump"
+    ],
     "persona": {
-      "bio": null,
-      "platforms": [],
-      "tags": [],
-      "role": "Inactive"
+      "bio": "Reactive trader who panics on geopolitical events. Reads much but speaks little, except when losses mount.",
+      "tags": [
+        "panic",
+        "Iran",
+        "losses",
+        "reactive"
+      ],
+      "role": "panic-trader",
+      "platforms": []
     },
-    "highlights": []
+    "highlights": [
+      {
+        "type": "insight",
+        "summary": "Self-aware about reading much and speaking little",
+        "quality": 3
+      }
+    ]
   },
   "Eduardo Llopis": {
     "tier": "A",
@@ -7383,18 +7174,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 84,
+        "composite": 53,
         "pillars": {
-          "network": 78,
-          "intelligence": 90,
-          "capital": 82
+          "network": 40,
+          "intelligence": 85,
+          "capital": 70
         }
       }
     ],
     "pillars": {
-      "network": 78,
-      "intelligence": 90,
-      "capital": 82
+      "network": 40,
+      "intelligence": 85,
+      "capital": 70
     },
     "pillarComponents": {
       "network": {
@@ -7413,34 +7204,28 @@
         "specificity": 5
       }
     },
-    "composite": 84,
-    "panicScore": 15,
+    "composite": 53,
+    "panicScore": 10,
     "panicFlags": [],
     "persona": {
-      "bio": "High-quality new member. Deep substance per message despite low volume. Analytical and well-sourced contributions.",
+      "bio": "Spanish-based private debt specialist with deep understanding of European credit markets. Provides institutional-grade analysis on private capital, energy infrastructure, and European politics.",
       "tags": [
-        "analysis",
-        "deep research",
-        "new contributor"
+        "private credit",
+        "direct lending",
+        "Spain",
+        "energy",
+        "European markets",
+        "fintech",
+        "infrastructure"
       ],
-      "role": "Analyst",
+      "role": "credit specialist",
       "platforms": []
     },
     "highlights": [
       {
         "type": "analysis",
-        "summary": "Comprehensive private credit risk analysis - detailed breakdown of leverage differences vs 2008, sector concentration risks, and systemic implications",
-        "quality": 10
-      },
-      {
-        "type": "thesis",
-        "summary": "Private equity vs private debt risk hierarchy - argues PE will suffer more than debt in downturn due to subordination, explains evergreen fund trends",
+        "summary": "Comprehensive private debt market breakdown explaining sponsor vs sponsorless lending, systemic risks, and why banks can't replace private lenders",
         "quality": 9
-      },
-      {
-        "type": "insight",
-        "summary": "Bank-gestora partnership model explanation - how banks use third-party managers to deploy capital they can't underwrite themselves",
-        "quality": 8
       }
     ]
   },
@@ -7477,21 +7262,19 @@
       },
       {
         "snapshot": "s2",
-        "score": 12.7,
         "tier": "C",
-        "composite": 3,
+        "composite": 6,
         "pillars": {
-          "network": 8,
-          "intelligence": 8,
-          "capital": 3
-        },
-        "msgs": 4
+          "network": 10,
+          "intelligence": 15,
+          "capital": 5
+        }
       }
     ],
     "pillars": {
-      "network": 8,
-      "intelligence": 8,
-      "capital": 3
+      "network": 10,
+      "intelligence": 15,
+      "capital": 5
     },
     "pillarComponents": {
       "network": {
@@ -7510,19 +7293,28 @@
         "specificity": 0
       }
     },
-    "composite": 3,
-    "panicScore": null,
+    "composite": 6,
+    "panicScore": 0,
     "panicFlags": [],
     "persona": {
-      "bio": null,
-      "platforms": [],
-      "tags": [],
-      "role": "Inactive"
+      "bio": "Family member who shares family history and asks simple questions. No investment content.",
+      "tags": [
+        "family",
+        "history"
+      ],
+      "role": "family-elder",
+      "platforms": []
     },
-    "highlights": []
+    "highlights": [
+      {
+        "type": "insight",
+        "summary": "Shares family history about grandfather",
+        "quality": 2
+      }
+    ]
   },
   "Felo": {
-    "tier": "B",
+    "tier": "C",
     "score": 10.7,
     "msgs": 12,
     "links": 0,
@@ -7554,19 +7346,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "B",
-        "composite": 24,
+        "tier": "C",
+        "composite": 13,
         "pillars": {
-          "network": 40,
-          "intelligence": 45,
-          "capital": 30
+          "network": 25,
+          "intelligence": 30,
+          "capital": 10
         }
       }
     ],
     "pillars": {
-      "network": 40,
-      "intelligence": 45,
-      "capital": 30
+      "network": 25,
+      "intelligence": 30,
+      "capital": 10
     },
     "pillarComponents": {
       "network": {
@@ -7585,27 +7377,27 @@
         "specificity": 0
       }
     },
-    "composite": 24,
-    "panicScore": 75,
+    "composite": 13,
+    "panicScore": 40,
     "panicFlags": [
-      "political_anxiety",
-      "electoral_predictions"
+      "Yo veo Todas las posibilidades que gane Cepeda"
     ],
     "persona": {
-      "bio": "Politically engaged member with strong concerns about Colombian electoral dynamics. Shows anxiety about political outcomes.",
+      "bio": "Political observer focused on Colombian elections. Uses Claude for analysis but mostly discusses politics rather than investments.",
       "tags": [
-        "political_observer",
-        "anxious",
-        "market_watcher"
+        "politics",
+        "Colombia",
+        "Cepeda",
+        "Claude"
       ],
-      "role": "Panican",
+      "role": "political-commentator",
       "platforms": []
     },
     "highlights": [
       {
         "type": "analysis",
-        "summary": "Detailed political sentiment analysis of Petro supporters vs economic reality",
-        "quality": 6
+        "summary": "Political analysis of Petro government perception vs reality",
+        "quality": 5
       }
     ]
   },
@@ -7948,18 +7740,18 @@
       {
         "snapshot": "s2",
         "tier": "B",
-        "composite": 39,
+        "composite": 30,
         "pillars": {
-          "network": 70,
-          "intelligence": 85,
-          "capital": 60
+          "network": 30,
+          "intelligence": 70,
+          "capital": 40
         }
       }
     ],
     "pillars": {
-      "network": 70,
-      "intelligence": 85,
-      "capital": 60
+      "network": 30,
+      "intelligence": 70,
+      "capital": 40
     },
     "pillarComponents": {
       "network": {
@@ -7978,29 +7770,24 @@
         "specificity": 0
       }
     },
-    "composite": 39,
-    "panicScore": 15,
+    "composite": 30,
+    "panicScore": 0,
     "panicFlags": [],
     "persona": {
-      "bio": "Construction industry expert with sharp political and economic analysis. Focuses on AI applications in traditional sectors.",
+      "bio": "Asks sharp political strategy questions and connects AI to real sectors like construction. Focused on practical applications over pure tech.",
       "tags": [
+        "strategy",
         "construction",
-        "politics",
-        "AI",
-        "analysis"
+        "AI-applications",
+        "politics"
       ],
-      "role": "Industry Expert",
+      "role": "strategic-thinker",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "analysis",
-        "summary": "Political strategy insight - mobilizing non-voters vs changing ideologues",
-        "quality": 9
-      },
-      {
-        "type": "thesis",
-        "summary": "AI creates value in housing/construction - more productivity, employment, welfare",
+        "type": "insight",
+        "summary": "AI + construction/housing creates both value AND employment",
         "quality": 8
       }
     ]
@@ -8158,7 +7945,7 @@
     "highlights": []
   },
   "Amalia Uribe Gustavo Villa Gumroad": {
-    "tier": "A",
+    "tier": "B",
     "score": 0,
     "msgs": 13,
     "links": 3,
@@ -8190,19 +7977,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 46,
+        "tier": "B",
+        "composite": 28,
         "pillars": {
-          "network": 70,
-          "intelligence": 85,
-          "capital": 60
+          "network": 40,
+          "intelligence": 65,
+          "capital": 30
         }
       }
     ],
     "pillars": {
-      "network": 70,
-      "intelligence": 85,
-      "capital": 60
+      "network": 40,
+      "intelligence": 65,
+      "capital": 30
     },
     "pillarComponents": {
       "network": {
@@ -8221,30 +8008,26 @@
         "specificity": 0
       }
     },
-    "composite": 46,
-    "panicScore": 15,
+    "composite": 28,
+    "panicScore": 0,
     "panicFlags": [],
     "persona": {
-      "bio": "Entrepreneur building women's health app using AI. Strong technical execution with paying customers and product development skills.",
+      "bio": "Female health app developer focused on hormone cycles and Chinese medicine. Built paying product and shares AI development insights.",
       "tags": [
-        "female_entrepreneur",
         "healthtech",
-        "ai_builder",
-        "product_developer"
+        "women",
+        "app-development",
+        "AI-tools",
+        "hormones"
       ],
-      "role": "Alpha Contributor",
+      "role": "healthtech-founder",
       "platforms": []
     },
     "highlights": [
       {
         "type": "tool",
-        "summary": "Women's hormonal health app with natural medicine focus - already has paying users",
+        "summary": "Built healvisorycycles.com app for women's hormonal health with paying customers",
         "quality": 9
-      },
-      {
-        "type": "insight",
-        "summary": "Practical AI development workflow using Lovable for rapid prototyping and deployment",
-        "quality": 7
       }
     ]
   },
@@ -9396,7 +9179,7 @@
     "highlights": []
   },
   "Gonzalo teso": {
-    "tier": "Z",
+    "tier": "B",
     "score": 0,
     "msgs": 3,
     "links": 0,
@@ -9428,21 +9211,19 @@
       },
       {
         "snapshot": "s2",
-        "score": 0,
-        "tier": "Z",
-        "composite": 0,
+        "tier": "B",
+        "composite": 26,
         "pillars": {
-          "network": 0,
-          "intelligence": 0,
-          "capital": 0
-        },
-        "msgs": 3
+          "network": 20,
+          "intelligence": 50,
+          "capital": 55
+        }
       }
     ],
     "pillars": {
-      "network": 0,
-      "intelligence": 0,
-      "capital": 0
+      "network": 20,
+      "intelligence": 50,
+      "capital": 55
     },
     "pillarComponents": {
       "network": {
@@ -9461,16 +9242,26 @@
         "specificity": 0
       }
     },
-    "composite": 0,
+    "composite": 26,
     "panicScore": 0,
     "panicFlags": [],
     "persona": {
-      "bio": null,
-      "platforms": [],
-      "tags": [],
-      "role": "Zombie"
+      "bio": "Cynical market observer who understands Trump's market focus. Wants insider access to trade on political tweets.",
+      "tags": [
+        "Trump",
+        "market-psychology",
+        "cynical"
+      ],
+      "role": "political-trader",
+      "platforms": []
     },
-    "highlights": []
+    "highlights": [
+      {
+        "type": "insight",
+        "summary": "Trump's market concern is the only thing that stops him",
+        "quality": 6
+      }
+    ]
   },
   "Jackie Yanovich": {
     "tier": "Z",
@@ -9625,7 +9416,7 @@
     "highlights": []
   },
   "Luisk": {
-    "tier": "Z",
+    "tier": "B",
     "score": 0,
     "msgs": 5,
     "links": 0,
@@ -9657,21 +9448,19 @@
       },
       {
         "snapshot": "s2",
-        "score": 0,
-        "tier": "Z",
-        "composite": 0,
+        "tier": "B",
+        "composite": 29,
         "pillars": {
-          "network": 0,
-          "intelligence": 0,
-          "capital": 0
-        },
-        "msgs": 5
+          "network": 25,
+          "intelligence": 55,
+          "capital": 60
+        }
       }
     ],
     "pillars": {
-      "network": 0,
-      "intelligence": 0,
-      "capital": 0
+      "network": 25,
+      "intelligence": 55,
+      "capital": 60
     },
     "pillarComponents": {
       "network": {
@@ -9690,16 +9479,27 @@
         "specificity": 0
       }
     },
-    "composite": 0,
-    "panicScore": 0,
+    "composite": 29,
+    "panicScore": 20,
     "panicFlags": [],
     "persona": {
-      "bio": null,
-      "platforms": [],
-      "tags": [],
-      "role": "Zombie"
+      "bio": "Plenti power user frustrated by crypto transfer restrictions. Uses ArchiCAD since '97 and provides UX perspective on financial products.",
+      "tags": [
+        "Plenti",
+        "crypto-transfers",
+        "ArchiCAD",
+        "UX"
+      ],
+      "role": "power-user",
+      "platforms": []
     },
-    "highlights": []
+    "highlights": [
+      {
+        "type": "insight",
+        "summary": "ArchiCAD vs Revit BIM comparison from 25+ years experience",
+        "quality": 6
+      }
+    ]
   },
   "Manu Cuñada beto": {
     "tier": "Z",
@@ -10270,18 +10070,18 @@
       {
         "snapshot": "s2",
         "tier": "B",
-        "composite": 38,
+        "composite": 22,
         "pillars": {
-          "network": 60,
-          "intelligence": 70,
-          "capital": 55
+          "network": 40,
+          "intelligence": 45,
+          "capital": 25
         }
       }
     ],
     "pillars": {
-      "network": 60,
-      "intelligence": 70,
-      "capital": 55
+      "network": 40,
+      "intelligence": 45,
+      "capital": 25
     },
     "pillarComponents": {
       "network": {
@@ -10300,25 +10100,25 @@
         "specificity": 0
       }
     },
-    "composite": 38,
-    "panicScore": 10,
+    "composite": 22,
+    "panicScore": 0,
     "panicFlags": [],
     "persona": {
-      "bio": "Creative industry observer focused on AI's impact on content creation. Values unique perspective over mass production.",
+      "bio": "Supportive member who appreciates content quality and advocates for in-person meetups. Mother interested in health/wellness apps.",
       "tags": [
-        "creativity",
-        "content",
-        "AI",
-        "perspective"
+        "community",
+        "wellness",
+        "meetups",
+        "support"
       ],
-      "role": "Contributor",
+      "role": "community-builder",
       "platforms": []
     },
     "highlights": [
       {
         "type": "insight",
-        "summary": "Production will be easy, but unique perspective will be scarce in AI era",
-        "quality": 8
+        "summary": "Advocates for more 10AM lunch meetups",
+        "quality": 5
       }
     ]
   },
@@ -10703,7 +10503,7 @@
     "highlights": []
   },
   "santiago lopez": {
-    "tier": "Z",
+    "tier": "B",
     "score": 0,
     "msgs": 5,
     "links": 0,
@@ -10735,21 +10535,19 @@
       },
       {
         "snapshot": "s2",
-        "score": 0,
-        "tier": "Z",
-        "composite": 0,
+        "tier": "B",
+        "composite": 21,
         "pillars": {
-          "network": 0,
-          "intelligence": 0,
-          "capital": 0
-        },
-        "msgs": 5
+          "network": 40,
+          "intelligence": 35,
+          "capital": 30
+        }
       }
     ],
     "pillars": {
-      "network": 0,
-      "intelligence": 0,
-      "capital": 0
+      "network": 40,
+      "intelligence": 35,
+      "capital": 30
     },
     "pillarComponents": {
       "network": {
@@ -10768,16 +10566,27 @@
         "specificity": 0
       }
     },
-    "composite": 0,
+    "composite": 21,
     "panicScore": 0,
     "panicFlags": [],
     "persona": {
-      "bio": null,
-      "platforms": [],
-      "tags": [],
-      "role": "Zombie"
+      "bio": "Has connections to Trii leadership and clarifies corporate relationships. Provides insider knowledge on fintech deals.",
+      "tags": [
+        "Trii",
+        "fintech",
+        "connections",
+        "Bancolombia"
+      ],
+      "role": "fintech-insider",
+      "platforms": []
     },
-    "highlights": []
+    "highlights": [
+      {
+        "type": "insight",
+        "summary": "Clarified Trii's Bancolombia equity investment vs Accivalores partnership",
+        "quality": 5
+      }
+    ]
   },
   "Sergio Jaramillo": {
     "tier": "Z",
@@ -10952,103 +10761,61 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 52,
+        "composite": 49,
         "pillars": {
-          "network": 60,
-          "intelligence": 45,
-          "capital": 55
+          "network": 32,
+          "intelligence": 42,
+          "capital": 68
         }
       }
     ],
-    "panicScore": 75,
+    "panicScore": 71,
     "panicFlags": [
-      "Closed positions during Iran tensions",
-      "Constantly worried about Trump's market impact",
-      "Questions every volatility spike",
-      "Prefers cash in uncertain times"
+      "Hood 72! 😰 Hims 16.40!",
+      "Tesla sub 400usd!",
+      "BTC y SOL cayendo feo hoy! El lunes va haber sangre! 😰",
+      "Lo malo es que parece que se nos viene otro lunes negro pal portafolio de acciones! 😅",
+      "Hoy cascaron todas las acciones de Colombia, de cuenta de la encuesta de Invamer! Si gana Cepeda, les falta otro 60% por caer rapido! Jaja",
+      "Trump es muy erratico, o por lo menos sus mensajes dicen eso, horrible!",
+      "Ya veremos el costo de Iran en las urnas para Trump!",
+      "Yo si cerre hoy unas posiciones, no me da pena decirlo… jaja"
     ],
     "persona": {
-      "bio": "Retail trader focused on momentum plays and geopolitical events. Heavy Trump/politics commentary with emotional market reactions.",
+      "bio": "Active trader prone to emotional reactions and frequent market commentary. Focuses heavily on Trump's social media impact on markets and tends toward panic selling during volatility.",
       "tags": [
-        "retail_trader",
-        "politics",
-        "geopolitics",
-        "momentum",
-        "emotional"
+        "Day Trading",
+        "Trump Tweets",
+        "Market Panic",
+        "HIMS Options",
+        "Colombia Politics",
+        "Tesla",
+        "Iran War"
       ],
-      "role": "Panican",
+      "role": "Emotional Retail Trader",
       "platforms": []
     },
     "highlights": [
       {
         "type": "call",
-        "summary": "Consistent criticism of Trump's Iran negotiation tactics and market timing",
+        "summary": "Sold puts on HIMS strike 15, premium 1.01",
         "quality": 4
       },
       {
-        "type": "insight",
-        "summary": "Questions SpaceX IPO timing and Tesla integration mechanics",
-        "quality": 3
+        "type": "analysis",
+        "summary": "Connected Trump's erratic Iran messaging to market volatility patterns",
+        "quality": 5
       }
     ],
     "pillars": {
-      "network": 60,
-      "intelligence": 45,
-      "capital": 55
+      "network": 32,
+      "intelligence": 42,
+      "capital": 68
     },
     "pillarComponents": {},
-    "composite": 52
-  },
-  "Rodrigo londoño 12": {
-    "tier": "A",
-    "score": 0,
-    "msgs": 25,
-    "links": 0,
-    "avgWords": 0,
-    "activeDays": 0,
-    "activeWeeks": 0,
-    "lastActive": "unknown",
-    "daysInactive": 0,
-    "components": {
-      "volume": 0,
-      "consistency": 0,
-      "substance": 0,
-      "recency": 0
-    },
-    "isFounder": false,
-    "history": [
-      {
-        "snapshot": "s2",
-        "score": 0,
-        "tier": "A",
-        "composite": 0,
-        "pillars": {
-          "network": 0,
-          "intelligence": 0,
-          "capital": 0
-        },
-        "msgs": 25
-      }
-    ],
-    "panicScore": 0,
-    "panicFlags": [],
-    "persona": {
-      "bio": null,
-      "platforms": [],
-      "tags": [],
-      "role": null
-    },
-    "highlights": [],
-    "pillars": {
-      "network": 0,
-      "intelligence": 0,
-      "capital": 0
-    },
-    "pillarComponents": {},
-    "composite": 0
+    "composite": 49
   },
   "María Posada Martínez": {
-    "tier": "A",
+    "tier": "B",
     "score": 0,
     "msgs": 15,
     "links": 1,
@@ -11067,56 +10834,47 @@
     "history": [
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 47,
+        "tier": "B",
+        "composite": 34,
         "pillars": {
-          "network": 65,
-          "intelligence": 90,
-          "capital": 55
+          "network": 42,
+          "intelligence": 88,
+          "capital": 32
         }
       }
     ],
-    "panicScore": 10,
+    "panicScore": 5,
     "panicFlags": [],
     "persona": {
-      "bio": "Creative professional and architect with deep philosophical perspective on AI's impact. Articulates the human element that remains irreplaceable in creative industries.",
+      "bio": "Creative professional with deep philosophical insights on AI's impact on architecture and creativity. Writes substacks about analog experiences and human-centered design.",
       "tags": [
         "architecture",
         "creativity",
         "philosophy",
-        "AI_impact",
-        "substack"
+        "AI-impact",
+        "substack-writer",
+        "design-thinking"
       ],
-      "role": "Thesis Writer",
+      "role": "creative-philosopher",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "thesis",
-        "summary": "AI will be more transformative than Industrial Revolution, potentially shifting civilization from efficiency-focus to creativity and meaning-centered",
-        "quality": 10
-      },
-      {
-        "type": "thesis",
-        "summary": "Architecture requires human interpretation and cultural understanding that AI cannot replicate - the soul vs technical correctness",
+        "type": "analysis",
+        "summary": "Profound reflection on AI transforming from Industrial Revolution of physical to cognitive automation",
         "quality": 9
-      },
-      {
-        "type": "insight",
-        "summary": "AI reveals who adds original thinking vs. who just replicates formulas across all professions",
-        "quality": 8
       }
     ],
     "pillars": {
-      "network": 65,
-      "intelligence": 90,
-      "capital": 55
+      "network": 42,
+      "intelligence": 88,
+      "capital": 32
     },
     "pillarComponents": {},
-    "composite": 47
+    "composite": 34
   },
   "Pedro Fernandez": {
-    "tier": "A",
+    "tier": "B",
     "score": 0,
     "msgs": 4,
     "links": 1,
@@ -11135,36 +10893,45 @@
     "history": [
       {
         "snapshot": "s2",
-        "score": 0,
-        "tier": "A",
-        "composite": 0,
+        "tier": "B",
+        "composite": 21,
         "pillars": {
-          "network": 0,
-          "intelligence": 0,
-          "capital": 0
-        },
-        "msgs": 4
+          "network": 45,
+          "intelligence": 25,
+          "capital": 40
+        }
       }
     ],
     "panicScore": 0,
     "panicFlags": [],
     "persona": {
-      "bio": null,
-      "platforms": [],
-      "tags": [],
-      "role": null
+      "bio": "Restaurant owner (Terraza y Cava) who promotes his business and food/wine offerings to the group.",
+      "tags": [
+        "restaurant",
+        "wine",
+        "food",
+        "business-owner"
+      ],
+      "role": "business-promoter",
+      "platforms": []
     },
-    "highlights": [],
+    "highlights": [
+      {
+        "type": "intro",
+        "summary": "Terraza y Cava restaurant for group meetups",
+        "quality": 4
+      }
+    ],
     "pillars": {
-      "network": 0,
-      "intelligence": 0,
-      "capital": 0
+      "network": 45,
+      "intelligence": 25,
+      "capital": 40
     },
     "pillarComponents": {},
-    "composite": 0
+    "composite": 21
   },
   "Amalia Uribe": {
-    "tier": "B",
+    "tier": "Z",
     "score": 0,
     "msgs": 0,
     "links": 0,
@@ -11192,7 +10959,7 @@
         }
       }
     ],
-    "panicScore": 15,
+    "panicScore": 0,
     "panicFlags": [],
     "persona": {
       "bio": "Entrepreneur building women's health app using AI. Strong technical execution with paying customers and product development skills.",
@@ -11218,12 +10985,12 @@
       }
     ],
     "pillars": {
-      "network": 70,
-      "intelligence": 85,
-      "capital": 60
+      "network": 0,
+      "intelligence": 0,
+      "capital": 0
     },
     "pillarComponents": {},
-    "composite": 37
+    "composite": 0
   },
   "Antonio Jaller": {
     "tier": "A",
@@ -11259,18 +11026,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 77,
+        "composite": 49,
         "pillars": {
-          "network": 75,
-          "intelligence": 85,
-          "capital": 70
+          "network": 60,
+          "intelligence": 55,
+          "capital": 35
         }
       }
     ],
     "pillars": {
-      "network": 75,
-      "intelligence": 85,
-      "capital": 70
+      "network": 60,
+      "intelligence": 55,
+      "capital": 35
     },
     "pillarComponents": {
       "network": {
@@ -11289,39 +11056,29 @@
         "specificity": 11
       }
     },
-    "composite": 77,
-    "panicScore": 25,
+    "composite": 49,
+    "panicScore": 30,
     "panicFlags": [
-      "Pasamos de 10AMPRO a 10AMDROP",
-      "Muy preocupante",
-      "Es q estoy muy estresado ome"
+      "Que pereza estar paseando en Dubai",
+      "De pronto Sebastián Toro"
     ],
     "persona": {
-      "bio": "Radiologist who bridges medicine and tech innovation. Expert in AI applications for healthcare, actively using tools like Perplexity in radiology practice.",
+      "bio": "Radiologist exploring AI applications in medical imaging. Shares market links, political observations, and experiments with Perplexity for teleradiology dashboards.",
       "tags": [
-        "healthcare",
         "radiology",
-        "AI",
-        "tech-adoption",
-        "medical-innovation"
+        "medical AI",
+        "Perplexity",
+        "politics",
+        "healthcare",
+        "teleradiology"
       ],
-      "role": "Industry Expert",
+      "role": "medical AI explorer",
       "platforms": []
     },
     "highlights": [
       {
-        "type": "insight",
-        "summary": "Applied AI to create teleradiology dashboard using Perplexity computer",
-        "quality": 9
-      },
-      {
-        "type": "analysis",
-        "summary": "Analyzed Colombian political dynamics with strategic insight on Paloma-Oviedo alliance dynamics",
-        "quality": 8
-      },
-      {
         "type": "tool",
-        "summary": "Demonstrated practical use of Perplexity for daily radiology work",
+        "summary": "Building teleradiology dashboard using Perplexity computer for medical imaging workflow",
         "quality": 7
       }
     ]
