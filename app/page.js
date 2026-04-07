@@ -188,48 +188,29 @@ const Card = ({ m, rank, exp, tog }) => {
       {(m.t === "Z" || m.t === "C") && !m.savedBy && (() => {
         const TOKEN = META.token || {};
         const timerDays = TOKEN.timerDays || 10;
-        // Same deadline for everyone: 10 days from audit date (Apr 7, 2026)
         const auditDate = new Date('2026-04-07T00:00:00');
         const deadline = new Date(auditDate.getTime() + timerDays * 24 * 3600 * 1000);
         const now = new Date();
         const remaining = Math.max(0, Math.floor((deadline - now) / 1000));
-        const pct = (remaining / (timerDays * 86400)) * 100;
         const d = Math.floor(remaining / 86400);
         const h = Math.floor((remaining % 86400) / 3600);
         const mn = Math.floor((remaining % 3600) / 60);
         const urgent = d <= 3;
 
         return (
-          <div style={{ marginTop: 8, background: "#0d0d14", borderRadius: 10, border: `1px solid ${urgent ? "#ef444430" : "#f9731620"}`, overflow: "hidden" }}>
-            {/* Timer row */}
-            <div style={{ display: "flex", alignItems: "center", padding: "8px 12px", gap: 10 }}>
-              {/* Stop the timer label */}
-              <span style={{ fontSize: 11, color: "#6b7280", whiteSpace: "nowrap", flexShrink: 0 }}>Stop the timer:</span>
-              {/* Countdown digits */}
-              <div style={{ display: "flex", alignItems: "baseline", gap: 2, flexShrink: 0 }}>
-                <span style={{ fontSize: 13 }}>⏰</span>
-                <span style={{ fontSize: 22, fontWeight: 800, color: urgent ? "#ef4444" : "#f97316", fontFamily: "'JetBrains Mono',monospace", letterSpacing: "-0.02em" }}>{d}</span>
-                <span style={{ fontSize: 10, color: "#6b7280", marginRight: 2 }}>d</span>
-                <span style={{ fontSize: 18, fontWeight: 700, color: urgent ? "#ef4444" : "#f97316", fontFamily: "'JetBrains Mono',monospace" }}>{h}</span>
-                <span style={{ fontSize: 10, color: "#6b7280", marginRight: 2 }}>hrs</span>
-                <span style={{ fontSize: 18, fontWeight: 700, color: urgent ? "#ef4444" : "#f97316", fontFamily: "'JetBrains Mono',monospace" }}>{mn}</span>
-                <span style={{ fontSize: 10, color: "#6b7280" }}>min</span>
-              </div>
-              {/* Spacer */}
-              <div style={{ flex: 1 }} />
-              {/* PAY BUTTON */}
-              <div onClick={e => { e.stopPropagation(); window.open(`https://solscan.io/token/${TOKEN.mint}`, '_blank'); }} style={{ display: "flex", alignItems: "center", gap: 6, padding: "8px 16px", background: "linear-gradient(135deg, #f59e0b, #f97316)", borderRadius: 10, cursor: "pointer", boxShadow: "0 2px 12px #f59e0b50", flexShrink: 0, transition: "transform 0.1s", }} onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"} onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}>
-                <img src="/logo.jpg" alt="" style={{ width: 18, height: 18, borderRadius: 5 }} />
-                <span style={{ fontSize: 13, fontWeight: 800, color: "#0a0a0f", letterSpacing: "-0.01em" }}>Pay 10,000</span>
-              </div>
-            </div>
-            {/* Progress bar */}
-            <div style={{ width: "100%", height: 4, background: "#1a1a2e" }}>
-              <div style={{ width: `${pct}%`, height: "100%", background: urgent ? "linear-gradient(90deg, #ef4444, #f97316)" : "linear-gradient(90deg, #f97316, #f59e0b)", transition: "width 0.5s ease", boxShadow: urgent ? "0 0 8px #ef444460" : "0 0 6px #f59e0b30" }} />
-            </div>
-            {/* Burn address footer */}
-            <div style={{ padding: "3px 12px 5px", display: "flex", justifyContent: "flex-end" }}>
-              <a href={`https://solscan.io/account/${TOKEN.burnAddress}`} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} style={{ fontSize: 8, color: "#4b5563", textDecoration: "none", fontFamily: "'JetBrains Mono',monospace" }}>🔥 {TOKEN.burnAddress?.slice(0,6)}...{TOKEN.burnAddress?.slice(-4)}</a>
+          <div style={{ marginTop: 6, display: "flex", alignItems: "center", gap: 8 }}>
+            <span style={{ fontSize: 10, color: "#6b7280", whiteSpace: "nowrap", flexShrink: 0 }}>Stop the timer:</span>
+            <span style={{ fontSize: 12 }}>⏰</span>
+            <span style={{ fontSize: 20, fontWeight: 800, color: urgent ? "#ef4444" : "#f97316", fontFamily: "'JetBrains Mono',monospace" }}>{d}</span>
+            <span style={{ fontSize: 9, color: "#6b7280" }}>d</span>
+            <span style={{ fontSize: 16, fontWeight: 700, color: urgent ? "#ef4444" : "#f97316", fontFamily: "'JetBrains Mono',monospace" }}>{h}</span>
+            <span style={{ fontSize: 9, color: "#6b7280" }}>hrs</span>
+            <span style={{ fontSize: 16, fontWeight: 700, color: urgent ? "#ef4444" : "#f97316", fontFamily: "'JetBrains Mono',monospace" }}>{mn}</span>
+            <span style={{ fontSize: 9, color: "#6b7280" }}>min</span>
+            <div style={{ flex: 1 }} />
+            <div onClick={e => { e.stopPropagation(); window.open(`https://solscan.io/token/${TOKEN.mint}`, '_blank'); }} style={{ display: "flex", alignItems: "center", gap: 5, padding: "6px 14px", background: "linear-gradient(135deg, #f59e0b, #f97316)", borderRadius: 8, cursor: "pointer", boxShadow: "0 2px 10px #f59e0b40", flexShrink: 0 }} onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"} onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}>
+              <img src="/logo.jpg" alt="" style={{ width: 16, height: 16, borderRadius: 4 }} />
+              <span style={{ fontSize: 12, fontWeight: 800, color: "#0a0a0f" }}>Pay 10,000</span>
             </div>
           </div>
         );
