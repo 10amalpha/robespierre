@@ -16,6 +16,7 @@ const D = Object.entries(membersRaw).map(([name, d]) => ({
   co: d.composite || 0,
   panic: d.panicScore,
   panicFlags: d.panicFlags || [],
+  persona: d.persona || {},
 }));
 
 const META = metaRaw;
@@ -207,6 +208,32 @@ const Card = ({ m, rank, exp, tog }) => {
             <div key={a} style={{ fontSize: 10, color: "#9ca3af" }}><span style={{ color: "#6b7280" }}>{a}:</span> {b}</div>
           ))}
         </div>
+        {/* Persona */}
+        {(m.persona.bio || m.persona.role || m.persona.tags?.length > 0 || m.persona.platforms?.length > 0) && (
+          <div style={{ marginTop: 8, paddingTop: 6, borderTop: `1px solid ${tc.color}10` }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 4 }}>
+              <span style={{ fontSize: 9, color: "#6b7280", fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase" }}>Profile</span>
+              {m.persona.role && <span style={{ fontSize: 8, padding: "1px 6px", borderRadius: 99, background: "#1e1e2e", color: tc.color, fontWeight: 600, border: `1px solid ${tc.color}20` }}>{m.persona.role}</span>}
+            </div>
+            {m.persona.bio && <div style={{ fontSize: 11, color: "#b0b0c0", lineHeight: 1.5, marginBottom: 4 }}>{m.persona.bio}</div>}
+            {m.persona.platforms?.length > 0 && (
+              <div style={{ display: "flex", gap: 6, marginBottom: 4, flexWrap: "wrap" }}>
+                {m.persona.platforms.map((pl, i) => (
+                  <a key={i} href={pl.url || "#"} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} style={{ fontSize: 9, padding: "2px 8px", borderRadius: 6, background: "#0a0a0f", color: "#3b82f6", border: "1px solid #3b82f620", textDecoration: "none", fontWeight: 500 }}>
+                    {pl.type === "substack" ? "📝" : pl.type === "twitter" ? "𝕏" : pl.type === "youtube" ? "▶" : "🔗"} {pl.handle || pl.type}
+                  </a>
+                ))}
+              </div>
+            )}
+            {m.persona.tags?.length > 0 && (
+              <div style={{ display: "flex", gap: 4, flexWrap: "wrap" }}>
+                {m.persona.tags.map((tag, i) => (
+                  <span key={i} style={{ fontSize: 9, padding: "1px 7px", borderRadius: 99, background: "#1e1e2e", color: "#9ca3af", border: "1px solid #2a2a3e" }}>{tag}</span>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
         {hasHistory && (<div style={{ marginTop: 8, paddingTop: 6, borderTop: `1px solid ${tc.color}10` }}>
           <div style={{ fontSize: 9, color: "#6b7280", fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", marginBottom: 4 }}>Trajectory</div>
           <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>

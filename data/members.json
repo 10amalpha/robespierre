@@ -55,7 +55,19 @@
     },
     "composite": 53,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": "Runs investment academy. Deep on BTC/crypto fundamentals, hash rate analysis, macro policy.",
+      "platforms": [],
+      "tags": [
+        "BTC",
+        "hash rate",
+        "macro",
+        "politics",
+        "crypto fundamentals"
+      ],
+      "role": "Alpha Contributor"
+    }
   },
   "Camilo Gomez": {
     "tier": "A",
@@ -113,7 +125,24 @@
     },
     "composite": 63,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": "Substack writer. Research on astrocytomas. Intermittent but high-quality when active.",
+      "platforms": [
+        {
+          "type": "youtube",
+          "url": "",
+          "handle": "Camilo Gomez"
+        }
+      ],
+      "tags": [
+        "research",
+        "writing",
+        "health",
+        "deep analysis"
+      ],
+      "role": "Contributor"
+    }
   },
   "Fede Suarez": {
     "tier": "A",
@@ -171,7 +200,19 @@
     },
     "composite": 55,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": "Tokenization and fintech. Supports USTBL project. Deep on JPM, stablecoins, DeFi rails.",
+      "platforms": [],
+      "tags": [
+        "tokenization",
+        "stablecoins",
+        "JPM",
+        "DeFi",
+        "fintech"
+      ],
+      "role": "Alpha Contributor"
+    }
   },
   "Lucas Jaramillo": {
     "tier": "A",
@@ -229,7 +270,19 @@
     },
     "composite": 60,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": "Built custom Python tools for options trading. TSLA/BTC conviction. Self-taught coder.",
+      "platforms": [],
+      "tags": [
+        "TSLA",
+        "BTC",
+        "options",
+        "python",
+        "tools"
+      ],
+      "role": "Alpha Contributor"
+    }
   },
   "Nico Fernandez": {
     "tier": "A",
@@ -287,7 +340,24 @@
     },
     "composite": 59,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": "Substack writer on cultural/political battles. Consistent analytical presence.",
+      "platforms": [
+        {
+          "type": "substack",
+          "url": "https://open.substack.com/pub/nicolasfernandezgiraldo",
+          "handle": "nicolasfernandezgiraldo"
+        }
+      ],
+      "tags": [
+        "politics",
+        "culture",
+        "Colombia",
+        "analysis"
+      ],
+      "role": "Alpha Contributor"
+    }
   },
   "Gabriel Bedoya": {
     "tier": "A",
@@ -345,7 +415,18 @@
     },
     "composite": 41,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": "Tokenization distribution expert. Son has European manufacturing business.",
+      "platforms": [],
+      "tags": [
+        "tokenization",
+        "distribution",
+        "business",
+        "Europe"
+      ],
+      "role": "Contributor"
+    }
   },
   "Camilo Botero": {
     "tier": "A",
@@ -403,7 +484,18 @@
     },
     "composite": 42,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": "Quantum computing research. Bear case analysis. Technical deep dives.",
+      "platforms": [],
+      "tags": [
+        "quantum computing",
+        "tech",
+        "research",
+        "bear cases"
+      ],
+      "role": "Contributor"
+    }
   },
   "Hernán Jaramillo": {
     "tier": "A",
@@ -461,7 +553,32 @@
     },
     "composite": 68,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": "Founder of 10AMPRO. Macro + crypto investor. Options trader. Connects everything.",
+      "platforms": [
+        {
+          "type": "substack",
+          "url": "https://www.10am.pro",
+          "handle": "10am.pro"
+        },
+        {
+          "type": "twitter",
+          "url": "https://x.com/holdmybirra",
+          "handle": "@holdmybirra"
+        }
+      ],
+      "tags": [
+        "macro",
+        "crypto",
+        "BTC",
+        "SOL",
+        "MSTR",
+        "options",
+        "tokenization"
+      ],
+      "role": "Founder & Chief Curator"
+    }
   },
   "Dario Palacio": {
     "tier": "A",
@@ -519,7 +636,19 @@
     },
     "composite": 47,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": "Political economy analyst. Drives the Medellín energy valley thesis. Podcast coordinator.",
+      "platforms": [],
+      "tags": [
+        "politics",
+        "Colombia",
+        "energy",
+        "Medellín",
+        "podcasts"
+      ],
+      "role": "Alpha Contributor"
+    }
   },
   "Nathanel Serebrenik": {
     "tier": "A",
@@ -577,7 +706,23 @@
     },
     "composite": 55,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": "YouTube creator. High link diversity, consistent info diet contributor.",
+      "platforms": [
+        {
+          "type": "youtube",
+          "url": "",
+          "handle": "Nathanel Serebrenik"
+        }
+      ],
+      "tags": [
+        "curation",
+        "diverse sources",
+        "analysis"
+      ],
+      "role": "Contributor"
+    }
   },
   "gordo Barato": {
     "tier": "A",
@@ -635,7 +780,18 @@
     },
     "composite": 50,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": "10AMPRO content creator. Prolific link curator — highest link count in the group.",
+      "platforms": [],
+      "tags": [
+        "curation",
+        "links",
+        "broad market",
+        "content creation"
+      ],
+      "role": "Chief Curator"
+    }
   },
   "Guillermo Valencia": {
     "tier": "A",
@@ -693,7 +849,25 @@
     },
     "composite": 44,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": "Substack writer on macro, central banking, Bessent/Fed dynamics. Treasury analysis.",
+      "platforms": [
+        {
+          "type": "substack",
+          "url": "",
+          "handle": "macrowise"
+        }
+      ],
+      "tags": [
+        "macro",
+        "Fed",
+        "Treasury",
+        "central banking",
+        "globalization"
+      ],
+      "role": "Contributor"
+    }
   },
   "antonio jaller": {
     "tier": "A",
@@ -751,7 +925,13 @@
     },
     "composite": 33,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Juan Diego Pipo": {
     "tier": "A",
@@ -809,7 +989,13 @@
     },
     "composite": 38,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Daniel Bermúdez": {
     "tier": "A",
@@ -867,7 +1053,18 @@
     },
     "composite": 65,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": "Bogotá-based. Highest avg words per message — thesis-grade posts. Podcast connector.",
+      "platforms": [],
+      "tags": [
+        "theses",
+        "deep analysis",
+        "Bogotá",
+        "networking"
+      ],
+      "role": "Thesis Writer"
+    }
   },
   "Juan Esteban Sanin": {
     "tier": "A",
@@ -925,7 +1122,13 @@
     },
     "composite": 37,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Misas": {
     "tier": "A",
@@ -983,7 +1186,18 @@
     },
     "composite": 54,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": "Defense tech knowledge. Palmer Luckey/Anduril analysis. Good link curation.",
+      "platforms": [],
+      "tags": [
+        "defense tech",
+        "Anduril",
+        "Palantir",
+        "military"
+      ],
+      "role": "Contributor"
+    }
   },
   "Enrique Uribe": {
     "tier": "A",
@@ -1041,7 +1255,13 @@
     },
     "composite": 49,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Pablo Velez Mejia": {
     "tier": "A",
@@ -1099,7 +1319,23 @@
     },
     "composite": 36,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": "YouTube creator. Political commentary and analysis.",
+      "platforms": [
+        {
+          "type": "youtube",
+          "url": "",
+          "handle": "Pablo Velez Mejia"
+        }
+      ],
+      "tags": [
+        "politics",
+        "Colombia",
+        "commentary"
+      ],
+      "role": "Contributor"
+    }
   },
   "Andred Angel": {
     "tier": "A",
@@ -1157,7 +1393,13 @@
     },
     "composite": 37,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Jon Oleaga": {
     "tier": "A",
@@ -1215,7 +1457,18 @@
     },
     "composite": 29,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": "HIMS trader. Linux/tech setup knowledge. Named the bot concept \"guillotini\".",
+      "platforms": [],
+      "tags": [
+        "HIMS",
+        "trading",
+        "tech",
+        "Linux"
+      ],
+      "role": "Contributor"
+    }
   },
   "Hector Casado": {
     "tier": "A",
@@ -1273,7 +1526,13 @@
     },
     "composite": 37,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Camilo Ospina Lumm": {
     "tier": "A",
@@ -1331,7 +1590,13 @@
     },
     "composite": 34,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "paul gomez": {
     "tier": "A",
@@ -1389,7 +1654,13 @@
     },
     "composite": 44,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Juan Castilla": {
     "tier": "A",
@@ -1447,7 +1718,13 @@
     },
     "composite": 35,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Simón Restrepo": {
     "tier": "A",
@@ -1505,7 +1782,13 @@
     },
     "composite": 51,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Sebastian Piedrahita": {
     "tier": "A",
@@ -1563,7 +1846,13 @@
     },
     "composite": 33,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Juan Pablo González S.": {
     "tier": "A",
@@ -1621,7 +1910,13 @@
     },
     "composite": 38,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Paula Jaramillo": {
     "tier": "A",
@@ -1679,7 +1974,13 @@
     },
     "composite": 29,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Diego Sanchez": {
     "tier": "A",
@@ -1737,7 +2038,13 @@
     },
     "composite": 42,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Simon Jaramillo Alpha": {
     "tier": "A",
@@ -1795,7 +2102,13 @@
     },
     "composite": 24,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Valentina Ramírez": {
     "tier": "A",
@@ -1853,7 +2166,13 @@
     },
     "composite": 27,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Peter Alexander": {
     "tier": "A",
@@ -1911,7 +2230,13 @@
     },
     "composite": 48,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Felipe Medina": {
     "tier": "A",
@@ -1969,7 +2294,13 @@
     },
     "composite": 31,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Rodrigo Londoño": {
     "tier": "A",
@@ -2027,7 +2358,13 @@
     },
     "composite": 35,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Juancho Palacio": {
     "tier": "A",
@@ -2085,7 +2422,13 @@
     },
     "composite": 38,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Daniel Mesa": {
     "tier": "A",
@@ -2143,7 +2486,13 @@
     },
     "composite": 41,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Carlos Tobon": {
     "tier": "A",
@@ -2201,7 +2550,13 @@
     },
     "composite": 34,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Felipe Valencia": {
     "tier": "A",
@@ -2259,7 +2614,13 @@
     },
     "composite": 35,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Andres Palacio": {
     "tier": "A",
@@ -2317,7 +2678,13 @@
     },
     "composite": 27,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Lucas Echavarria": {
     "tier": "A",
@@ -2375,7 +2742,13 @@
     },
     "composite": 28,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Ricky Uribe": {
     "tier": "A",
@@ -2433,7 +2806,13 @@
     },
     "composite": 22,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Eulalia Sanín": {
     "tier": "A",
@@ -2491,7 +2870,13 @@
     },
     "composite": 17,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Nicolas Pelaez": {
     "tier": "A",
@@ -2549,7 +2934,13 @@
     },
     "composite": 14,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Rafael Troconis": {
     "tier": "A",
@@ -2607,7 +2998,13 @@
     },
     "composite": 21,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Luis Espinoza": {
     "tier": "A",
@@ -2665,7 +3062,13 @@
     },
     "composite": 34,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Carlos Henao": {
     "tier": "A",
@@ -2723,7 +3126,13 @@
     },
     "composite": 16,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "German Corredor": {
     "tier": "A",
@@ -2781,7 +3190,13 @@
     },
     "composite": 20,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Nico Zapata (Taurus)": {
     "tier": "A",
@@ -2839,7 +3254,13 @@
     },
     "composite": 33,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Romano Arango": {
     "tier": "A",
@@ -2897,7 +3318,13 @@
     },
     "composite": 17,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Andrea Arango": {
     "tier": "A",
@@ -2955,7 +3382,13 @@
     },
     "composite": 13,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Mauricio Uribe": {
     "tier": "A",
@@ -3013,7 +3446,13 @@
     },
     "composite": 11,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Molo Villa": {
     "tier": "A",
@@ -3071,7 +3510,13 @@
     },
     "composite": 14,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Monica Arango": {
     "tier": "A",
@@ -3129,7 +3574,13 @@
     },
     "composite": 15,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Antonio Linares": {
     "tier": "A",
@@ -3187,7 +3638,13 @@
     },
     "composite": 14,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Maria Rios": {
     "tier": "A",
@@ -3245,7 +3702,13 @@
     },
     "composite": 12,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Sergio Gonzalez": {
     "tier": "A",
@@ -3303,7 +3766,13 @@
     },
     "composite": 30,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Gustavo Villa": {
     "tier": "A",
@@ -3361,7 +3830,13 @@
     },
     "composite": 11,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Gabby Grinberg": {
     "tier": "A",
@@ -3419,7 +3894,13 @@
     },
     "composite": 11,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Ricardo Sierra": {
     "tier": "A",
@@ -3477,7 +3958,18 @@
     },
     "composite": 9,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": "CEO of CELSIA. Energy sector expert. Recently added to group.",
+      "platforms": [],
+      "tags": [
+        "energy",
+        "CELSIA",
+        "Colombia",
+        "CEO"
+      ],
+      "role": "Industry Expert"
+    }
   },
   "Checho Barth": {
     "tier": "A",
@@ -3535,7 +4027,13 @@
     },
     "composite": 12,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Maria Isabel Arango": {
     "tier": "A",
@@ -3593,7 +4091,13 @@
     },
     "composite": 12,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Ricardo Jaramillo": {
     "tier": "A",
@@ -3651,7 +4155,13 @@
     },
     "composite": 8,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Barry": {
     "tier": "A",
@@ -3709,7 +4219,13 @@
     },
     "composite": 16,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Antonioooo": {
     "tier": "A",
@@ -3767,7 +4283,13 @@
     },
     "composite": 14,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Juan Saldarriaga": {
     "tier": "A",
@@ -3825,7 +4347,13 @@
     },
     "composite": 25,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Martin Pelaez": {
     "tier": "B",
@@ -3883,7 +4411,13 @@
     },
     "composite": 24,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Alejandro Pérez": {
     "tier": "B",
@@ -3941,7 +4475,13 @@
     },
     "composite": 21,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Luis Alberto Botero": {
     "tier": "B",
@@ -3999,7 +4539,13 @@
     },
     "composite": 15,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Ricardo Espinal": {
     "tier": "B",
@@ -4057,7 +4603,13 @@
     },
     "composite": 8,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Wilder Zapata": {
     "tier": "B",
@@ -4115,7 +4667,13 @@
     },
     "composite": 19,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Jorge Campuzano": {
     "tier": "B",
@@ -4173,7 +4731,13 @@
     },
     "composite": 13,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Agustin Argentino": {
     "tier": "B",
@@ -4231,7 +4795,13 @@
     },
     "composite": 22,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Carolina Rojas Gómez": {
     "tier": "B",
@@ -4289,7 +4859,13 @@
     },
     "composite": 39,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Eduardo Sagues": {
     "tier": "B",
@@ -4347,7 +4923,13 @@
     },
     "composite": 3,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Andres Bilbao": {
     "tier": "B",
@@ -4405,7 +4987,13 @@
     },
     "composite": 32,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Rafael Troconis Llave": {
     "tier": "B",
@@ -4463,7 +5051,13 @@
     },
     "composite": 42,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Roberto Cuartas": {
     "tier": "B",
@@ -4521,7 +5115,13 @@
     },
     "composite": 15,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": null
+    }
   },
   "Mauricio Ortega": {
     "tier": "C",
@@ -4579,7 +5179,13 @@
     },
     "composite": 7,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Inactive"
+    }
   },
   "Jorge Saldarriaga": {
     "tier": "C",
@@ -4637,7 +5243,13 @@
     },
     "composite": 7,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Inactive"
+    }
   },
   "Eduardo Llopis": {
     "tier": "C",
@@ -4695,7 +5307,13 @@
     },
     "composite": 13,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Inactive"
+    }
   },
   "Mama": {
     "tier": "C",
@@ -4753,7 +5371,13 @@
     },
     "composite": 6,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Inactive"
+    }
   },
   "Felo": {
     "tier": "C",
@@ -4811,7 +5435,13 @@
     },
     "composite": 7,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Inactive"
+    }
   },
   "Squiz Medina": {
     "tier": "C",
@@ -4869,7 +5499,13 @@
     },
     "composite": 4,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Inactive"
+    }
   },
   "Juancho Tirado": {
     "tier": "C",
@@ -4927,7 +5563,13 @@
     },
     "composite": 4,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Inactive"
+    }
   },
   "Musimbi": {
     "tier": "C",
@@ -4985,7 +5627,13 @@
     },
     "composite": 16,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Inactive"
+    }
   },
   "David Muñoz": {
     "tier": "C",
@@ -5043,7 +5691,13 @@
     },
     "composite": 3,
     "panicScore": null,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Inactive"
+    }
   },
   "Alejandra Zapata Coninsa": {
     "tier": "Z",
@@ -5101,7 +5755,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Alejo Molina": {
     "tier": "Z",
@@ -5159,7 +5819,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Amalia AAA Londoño": {
     "tier": "Z",
@@ -5217,7 +5883,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Amalia Uribe Gustavo Villa Gumroad": {
     "tier": "Z",
@@ -5275,7 +5947,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Ana Arango": {
     "tier": "Z",
@@ -5333,7 +6011,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "André Joffry": {
     "tier": "Z",
@@ -5391,7 +6075,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Blanket": {
     "tier": "Z",
@@ -5449,7 +6139,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Carlos Mazo": {
     "tier": "Z",
@@ -5507,7 +6203,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "catalina botero": {
     "tier": "Z",
@@ -5565,7 +6267,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Checho Aguirre": {
     "tier": "Z",
@@ -5623,7 +6331,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Claudia restrepo Rectora": {
     "tier": "Z",
@@ -5681,7 +6395,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Damian Llave De lucas jaramillo": {
     "tier": "Z",
@@ -5739,7 +6459,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Daniel Arango": {
     "tier": "Z",
@@ -5797,7 +6523,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Daniel Martinez": {
     "tier": "Z",
@@ -5855,7 +6587,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Diego Kuri": {
     "tier": "Z",
@@ -5913,7 +6651,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Diego Mazo": {
     "tier": "Z",
@@ -5971,7 +6715,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Douglas Rueda Buche": {
     "tier": "Z",
@@ -6029,7 +6779,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Federico Molina": {
     "tier": "Z",
@@ -6087,7 +6843,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Germancito Primo Ricky Uribe": {
     "tier": "Z",
@@ -6145,7 +6907,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Gonzalo teso": {
     "tier": "Z",
@@ -6203,7 +6971,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Jackie Yanovich": {
     "tier": "Z",
@@ -6261,7 +7035,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Juliana M Novia Santi": {
     "tier": "Z",
@@ -6319,7 +7099,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Luisk": {
     "tier": "Z",
@@ -6377,7 +7163,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Manu Cuñada beto": {
     "tier": "Z",
@@ -6435,7 +7227,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Mariana Botero": {
     "tier": "Z",
@@ -6493,7 +7291,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Melissa P": {
     "tier": "Z",
@@ -6551,7 +7355,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Miguel Botero": {
     "tier": "Z",
@@ -6609,7 +7419,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Mimi": {
     "tier": "Z",
@@ -6667,7 +7483,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Pablo Arboleda": {
     "tier": "Z",
@@ -6725,7 +7547,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Pablo Botero Londoño": {
     "tier": "Z",
@@ -6783,7 +7611,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Paola Betancur Vargas": {
     "tier": "Z",
@@ -6841,7 +7675,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Paola Macia Fernandez": {
     "tier": "Z",
@@ -6899,7 +7739,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Pedro Faria": {
     "tier": "Z",
@@ -6957,7 +7803,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Ricardo Kuri": {
     "tier": "Z",
@@ -7015,7 +7867,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Rigo Uran": {
     "tier": "Z",
@@ -7073,7 +7931,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "SA Santiago Arango": {
     "tier": "Z",
@@ -7131,7 +7995,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "santiago lopez": {
     "tier": "Z",
@@ -7189,7 +8059,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Sergio Jaramillo": {
     "tier": "Z",
@@ -7247,7 +8123,13 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   },
   "Tomas Restrepo Amigo Mazo F2 Y F3": {
     "tier": "Z",
@@ -7305,6 +8187,12 @@
     },
     "composite": 0,
     "panicScore": 0,
-    "panicFlags": []
+    "panicFlags": [],
+    "persona": {
+      "bio": null,
+      "platforms": [],
+      "tags": [],
+      "role": "Zombie"
+    }
   }
 }
