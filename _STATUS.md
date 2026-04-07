@@ -7,7 +7,7 @@
 - **URL**: https://club.10am.pro
 - **Fallback**: https://robespierre.vercel.app
 - **Repo**: github.com/10amalpha/robespierre
-- **Version**: V8.2 (On-Chain Pay to Stay — WORKING end-to-end)
+- **Version**: V8.3 (On-Chain Pay to Stay — PRODUCTION READY)
 - **Last Deploy**: April 7, 2026
 - **Vercel**: `prj_h7LiqacKcqwQcae368ZXoMyQ7aeL` / `team_nPG5TrnRZyVuclmm6dZL1AcX`
 
@@ -84,17 +84,18 @@ robespierre/
 - **Anyone can pay on behalf of another member** (sponsorship)
 - Paid members show 🛡️ Saved badge with wallet + tx link
 
-### On-Chain Architecture (V8.0–8.2)
+### On-Chain Architecture (V8.0–8.3)
 - **No database needed** — the blockchain IS the database
 - **RPC**: Helius mainnet (`mainnet.helius-rpc.com`) — public RPC blocked browser requests
 - **Client-side wallet**: Direct `window.solana` detection (Phantom/Backpack), no heavy adapter libraries
 - **Transaction flow**: User clicks Pay → wallet connect → build SPL transfer + memo → `signAndSendTransaction` → confirm
 - **Memo format**: `SAVE:MemberName` — identifies which member the payment covers
-- **Verification API** (`/api/verify-saves`): Scans burn address token account, reads ALL instructions (including inner), parses memos, returns saved members. Add `?debug=1` to see raw tx data.
+- **Verification API** (`/api/verify-saves`): Dual-search — scans BOTH burn wallet address AND derived ATA for transactions. Survives ATA closures after token burns. Parses all instructions (including inner). Add `?debug=1` to see raw tx data.
 - **Merge strategy**: On-chain saves override static `members.json` data at render time via `mergedD`
-- **Caching**: API caches results for 60s to avoid RPC rate limits
+- **Caching**: API `force-dynamic` (never cached by Vercel CDN), client fetches with `cache: "no-store"`
 - **Optimistic UI**: After successful payment, local state updates immediately before API refetch
 - **Token decimals**: 9 (confirmed on-chain — standard for pump.fun tokens)
+- **Dependencies**: `@solana/web3.js`, `@solana/spl-token`, `buffer` (browser polyfill), `bs58`
 
 ### Saved Member Visibility (V8.1)
 - **Members tab**: 🛡️ Saved filter button shows only saved Z/C members
@@ -153,6 +154,7 @@ robespierre/
 | V8.0 | Apr 7 | **On-Chain Pay to Stay** — Phantom/Backpack wallet, SPL transfer, memo tagging, verification API |
 | V8.1 | Apr 7 | **Saved Visibility** — 🛡️ Saved filter, badges in zombie/remove lists, saved counter card |
 | V8.2 | Apr 7 | **Working E2E** — Helius RPC, 9 decimals, signAndSendTransaction, inner ix memo scan |
+| V8.3 | Apr 7 | **Production Ready** — dual-search (wallet+ATA), cache-busting, cross-browser consistency |
 
 ## TODO — Part 2: On-Chain ✅ COMPLETE
 - [x] **Phantom/Backpack wallet connect** on Pay button (window.solana detection)
@@ -168,8 +170,10 @@ robespierre/
 - [x] **Helius RPC**: public Solana RPC blocks browser requests
 - [x] **signAndSendTransaction**: Phantom recommended method (not signTransaction+sendRaw)
 - [x] **Debug mode**: `/api/verify-saves?debug=1` shows raw tx data
+- [x] **Dual-search**: scans both burn wallet + burn ATA (survives token burns/ATA closures)
+- [x] **Cache-busting**: `force-dynamic` API route + `cache: "no-store"` client fetch
+- [x] **Cross-browser**: consistent saves display across Firefox, Chrome, Brave
 - [ ] Real-time timer that ticks every second (currently ticks on re-render)
-- [ ] Batch verification — handle 100+ saves efficiently
 
 ## TODO — Other
 - [ ] Quarterly Opus re-run (~July 2026)
