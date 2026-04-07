@@ -1,7 +1,7 @@
 {
   "group": "10AMPRO",
   "groupDisplayName": "10AMPRO — Collective Intelligence",
-  "currentSnapshot": "s1",
+  "currentSnapshot": "s2",
   "snapshots": [
     {
       "id": "s1",
@@ -12,6 +12,17 @@
       "totalLinks": 1161,
       "totalMembers": 126,
       "processedAt": "2026-02-21"
+    },
+    {
+      "id": "s2",
+      "from": "2026-02-22",
+      "to": "2026-04-07",
+      "days": 44,
+      "totalMsgs": 8082,
+      "totalLinks": null,
+      "totalMembers": 133,
+      "processedAt": "2026-04-07",
+      "processedBy": "opus"
     }
   ],
   "pillars": {
@@ -22,11 +33,25 @@
       "color": "#3b82f6",
       "weight": 0.25,
       "description": "Connecting people — intros, deal flow, client/investor bridges, expanding the group's collective reach",
-      "signals": ["@mentions of other members", "intro language (te presento, meet X)", "deal flow sharing", "connecting dots between members"],
+      "signals": [
+        "@mentions of other members",
+        "intro language (te presento, meet X)",
+        "deal flow sharing",
+        "connecting dots between members"
+      ],
       "components": {
-        "mentions": { "max": 30, "desc": "Tagging/referencing other members" },
-        "intros": { "max": 40, "desc": "Explicit introductions and connections made" },
-        "reach": { "max": 30, "desc": "Diversity of members engaged with" }
+        "mentions": {
+          "max": 30,
+          "desc": "Tagging/referencing other members"
+        },
+        "intros": {
+          "max": 40,
+          "desc": "Explicit introductions and connections made"
+        },
+        "reach": {
+          "max": 30,
+          "desc": "Diversity of members engaged with"
+        }
       }
     },
     "intelligence": {
@@ -34,13 +59,27 @@
       "icon": "🧠",
       "emoji": "🧠",
       "color": "#8b5cf6",
-      "weight": 0.40,
+      "weight": 0.4,
       "description": "Making the group smarter — quality info diet, sharing concepts, arguing positions, cementing ideas through discussion",
-      "signals": ["quality links (not junk food)", "substantive messages (high word count)", "discussion engagement (back-and-forth)", "original analysis"],
+      "signals": [
+        "quality links (not junk food)",
+        "substantive messages (high word count)",
+        "discussion engagement (back-and-forth)",
+        "original analysis"
+      ],
       "components": {
-        "infoQuality": { "max": 35, "desc": "Quality and diversity of shared links/sources" },
-        "depth": { "max": 35, "desc": "Average message substance (words, analysis)" },
-        "discussion": { "max": 30, "desc": "Engaging in back-and-forth, building on others' ideas" }
+        "infoQuality": {
+          "max": 35,
+          "desc": "Quality and diversity of shared links/sources"
+        },
+        "depth": {
+          "max": 35,
+          "desc": "Average message substance (words, analysis)"
+        },
+        "discussion": {
+          "max": 30,
+          "desc": "Engaging in back-and-forth, building on others' ideas"
+        }
       }
     },
     "capital": {
@@ -50,25 +89,49 @@
       "color": "#10b981",
       "weight": 0.35,
       "description": "Showing your hand — sharing positions, theses, what you bought/sold and why. Radical transparency on investment decisions",
-      "signals": ["ticker mentions ($TSLA, $BTC)", "buy/sell language (compré, vendí, entré)", "thesis posts (here's why)", "price targets", "portfolio mentions"],
+      "signals": [
+        "ticker mentions ($TSLA, $BTC)",
+        "buy/sell language (compré, vendí, entré)",
+        "thesis posts (here's why)",
+        "price targets",
+        "portfolio mentions"
+      ],
       "components": {
-        "positions": { "max": 40, "desc": "Sharing what you bought/sold with tickers" },
-        "thesis": { "max": 35, "desc": "Explaining the why — investment reasoning" },
-        "transparency": { "max": 25, "desc": "Frequency and openness of sharing decisions" }
+        "positions": {
+          "max": 40,
+          "desc": "Sharing what you bought/sold with tickers"
+        },
+        "thesis": {
+          "max": 35,
+          "desc": "Explaining the why — investment reasoning"
+        },
+        "transparency": {
+          "max": 25,
+          "desc": "Frequency and openness of sharing decisions"
+        }
       }
     }
   },
   "pillarWeights": {
     "network": 0.25,
-    "intelligence": 0.40,
+    "intelligence": 0.4,
     "capital": 0.35
   },
   "engagement": {
     "description": "Base activity metrics — consistency, volume, recency. Not a pillar, but a multiplier.",
     "components": {
-      "volume": { "max": 30, "desc": "msgs/week × 5, capped" },
-      "consistency": { "max": 25, "desc": "active weeks / total weeks × 25" },
-      "recency": { "max": 25, "desc": "25 if <7d, 20 if <14d, 12 if <30d, 5 if <60d, 0 if 60d+" }
+      "volume": {
+        "max": 30,
+        "desc": "msgs/week × 5, capped"
+      },
+      "consistency": {
+        "max": 25,
+        "desc": "active weeks / total weeks × 25"
+      },
+      "recency": {
+        "max": 25,
+        "desc": "25 if <7d, 20 if <14d, 12 if <30d, 5 if <60d, 0 if 60d+"
+      }
     }
   },
   "tierThresholds": {
@@ -100,29 +163,100 @@
     }
   },
   "rules": {
-    "junkSources": ["instagram.com", "tiktok.com"],
-    "goodSources": ["x.com", "twitter.com", "youtube.com", "substack.com", "bloomberg.com", "reuters.com", "ft.com", "arxiv.org"],
+    "junkSources": [
+      "instagram.com",
+      "tiktok.com"
+    ],
+    "goodSources": [
+      "x.com",
+      "twitter.com",
+      "youtube.com",
+      "substack.com",
+      "bloomberg.com",
+      "reuters.com",
+      "ft.com",
+      "arxiv.org"
+    ],
     "zombieDays": 90,
     "guillotineRule": "Old/repetido = Guillotina (since Jan 21, 2026)"
   },
   "sourceStats": {
     "s1": [
-      { "source": "X/Twitter", "count": 754, "verdict": "Primary alpha channel" },
-      { "source": "YouTube", "count": 151, "verdict": "Deep content" },
-      { "source": "Substack", "count": 71, "verdict": "Analysis layer" },
-      { "source": "Instagram", "count": 16, "verdict": "Junk food" },
-      { "source": "TikTok", "count": 14, "verdict": "Junk food" },
-      { "source": "Bloomberg/Reuters/FT", "count": 4, "verdict": "Premium signal" }
+      {
+        "source": "X/Twitter",
+        "count": 754,
+        "verdict": "Primary alpha channel"
+      },
+      {
+        "source": "YouTube",
+        "count": 151,
+        "verdict": "Deep content"
+      },
+      {
+        "source": "Substack",
+        "count": 71,
+        "verdict": "Analysis layer"
+      },
+      {
+        "source": "Instagram",
+        "count": 16,
+        "verdict": "Junk food"
+      },
+      {
+        "source": "TikTok",
+        "count": 14,
+        "verdict": "Junk food"
+      },
+      {
+        "source": "Bloomberg/Reuters/FT",
+        "count": 4,
+        "verdict": "Premium signal"
+      }
     ]
   },
   "highlightTypes": {
-    "thesis": { "label": "Investment Thesis", "icon": "💰", "color": "#10b981", "pillar": "capital" },
-    "analysis": { "label": "Deep Analysis", "icon": "🧠", "color": "#8b5cf6", "pillar": "intelligence" },
-    "link": { "label": "Alpha Link", "icon": "🔗", "color": "#3b82f6", "pillar": "intelligence" },
-    "intro": { "label": "Network Intro", "icon": "🤝", "color": "#ec4899", "pillar": "network" },
-    "call": { "label": "Market Call", "icon": "📣", "color": "#f59e0b", "pillar": "capital" },
-    "insight": { "label": "Original Insight", "icon": "💡", "color": "#06b6d4", "pillar": "intelligence" },
-    "tool": { "label": "Tool/Resource", "icon": "🛠️", "color": "#6366f1", "pillar": "network" }
+    "thesis": {
+      "label": "Investment Thesis",
+      "icon": "💰",
+      "color": "#10b981",
+      "pillar": "capital"
+    },
+    "analysis": {
+      "label": "Deep Analysis",
+      "icon": "🧠",
+      "color": "#8b5cf6",
+      "pillar": "intelligence"
+    },
+    "link": {
+      "label": "Alpha Link",
+      "icon": "🔗",
+      "color": "#3b82f6",
+      "pillar": "intelligence"
+    },
+    "intro": {
+      "label": "Network Intro",
+      "icon": "🤝",
+      "color": "#ec4899",
+      "pillar": "network"
+    },
+    "call": {
+      "label": "Market Call",
+      "icon": "📣",
+      "color": "#f59e0b",
+      "pillar": "capital"
+    },
+    "insight": {
+      "label": "Original Insight",
+      "icon": "💡",
+      "color": "#06b6d4",
+      "pillar": "intelligence"
+    },
+    "tool": {
+      "label": "Tool/Resource",
+      "icon": "🛠️",
+      "color": "#6366f1",
+      "pillar": "network"
+    }
   },
   "groupHighlights": {
     "s1": []
