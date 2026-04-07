@@ -1,7 +1,13 @@
 "use client";
 import { useState, useMemo, useEffect, useRef, useCallback } from "react";
+import { Buffer } from "buffer";
 import membersRaw from "../data/members.json";
 import metaRaw from "../data/meta.json";
+
+// Polyfill Buffer for @solana/web3.js in browser
+if (typeof window !== "undefined" && !window.Buffer) {
+  window.Buffer = Buffer;
+}
 
 /* ── Data Transform ─────────────────────────────────────────────── */
 const D = Object.entries(membersRaw).map(([name, d]) => ({
@@ -604,8 +610,10 @@ async function connectWallet() {
 
 async function buildPayTransaction(walletPubkey, memberName, provider) {
   // Dynamically import solana web3 — only loaded when user clicks Pay
-  const { Connection, PublicKey, Transaction, TransactionInstruction } = await import("@solana/web3.js");
-  const { getAssociatedTokenAddress, createTransferInstruction, getAccount, createAssociatedTokenAccountInstruction } = await import("@solana/spl-token");
+  const solanaWeb3 = await import("@solana/web3.js");
+  const splToken = await import("@solana/spl-token");
+  const { Connection, PublicKey, Transaction, TransactionInstruction } = solanaWeb3;
+  const { getAssociatedTokenAddress, createTransferInstruction, getAccount, createAssociatedTokenAccountInstruction } = splToken;
 
   const conn = new Connection(SOL_CONFIG.rpc, "confirmed");
   const senderPk = new PublicKey(walletPubkey);
@@ -623,7 +631,7 @@ async function buildPayTransaction(walletPubkey, memberName, provider) {
       throw new Error(`Insufficient balance: ${balance.toLocaleString()} $10AMPRO (need ${SOL_CONFIG.cost.toLocaleString()})`);
     }
   } catch (e) {
-    if (e.message.includes("Insufficient")) throw e;
+    if (e.message && e.message.includes("Insufficient")) throw e;
     throw new Error("No $10AMPRO tokens found in this wallet");
   }
 
@@ -642,11 +650,12 @@ async function buildPayTransaction(walletPubkey, memberName, provider) {
   const rawAmount = BigInt(SOL_CONFIG.cost) * BigInt(Math.pow(10, SOL_CONFIG.decimals));
   tx.add(createTransferInstruction(senderATA, burnATA, senderPk, rawAmount));
 
-  // Add memo: "SAVE:MemberName"
+  // Add memo: "SAVE:MemberName" — use TextEncoder instead of Buffer (browser-safe)
+  const memoData = new TextEncoder().encode(`SAVE:${memberName}`);
   const memoIx = new TransactionInstruction({
     keys: [],
     programId: new PublicKey(SOL_CONFIG.memoProgram),
-    data: Buffer.from(`SAVE:${memberName}`),
+    data: memoData,
   });
   tx.add(memoIx);
 

@@ -7,7 +7,6 @@ const nextConfig = {
         ...config.resolve.fallback,
         crypto: false,
         stream: false,
-        buffer: false,
         http: false,
         https: false,
         zlib: false,
