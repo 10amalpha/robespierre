@@ -189,7 +189,6 @@ const Card = ({ m, rank, exp, tog }) => {
               <span style={{ fontSize: 7, color: "#10b981" }}>🛡️ saved</span>
             </div>
           )}
-          </div>
         </div>
         <div style={{ textAlign: "right", flexShrink: 0 }}>
           <div style={{ fontSize: 17, fontWeight: 700, color: tc.color, fontFamily: "'JetBrains Mono',monospace" }}>{m.co}</div>
