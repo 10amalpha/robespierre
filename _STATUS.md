@@ -7,7 +7,7 @@
 - **URL**: https://club.10am.pro
 - **Fallback**: https://robespierre.vercel.app
 - **Repo**: github.com/10amalpha/robespierre
-- **Version**: V8.1 (On-Chain Pay to Stay + Saved Visibility)
+- **Version**: V8.2 (On-Chain Pay to Stay — WORKING end-to-end)
 - **Last Deploy**: April 7, 2026
 - **Vercel**: `prj_h7LiqacKcqwQcae368ZXoMyQ7aeL` / `team_nPG5TrnRZyVuclmm6dZL1AcX`
 
@@ -80,19 +80,21 @@ robespierre/
 ### Pay to Stay
 - Cost: **10,000 $10AMPRO** tokens per member
 - Orange gradient button with 10AMPRO logo on every flagged card
-- Currently links to Solscan token page
+- **Phantom/Backpack wallet connect** → SPL transfer → on-chain confirmation
 - **Anyone can pay on behalf of another member** (sponsorship)
-- Paid members **disappear** from Remove/Zombie lists until next audit
+- Paid members show 🛡️ Saved badge with wallet + tx link
 
-### On-Chain Architecture (V8.0)
+### On-Chain Architecture (V8.0–8.2)
 - **No database needed** — the blockchain IS the database
+- **RPC**: Helius mainnet (`mainnet.helius-rpc.com`) — public RPC blocked browser requests
 - **Client-side wallet**: Direct `window.solana` detection (Phantom/Backpack), no heavy adapter libraries
-- **Transaction flow**: User clicks Pay → wallet connect → build SPL transfer + memo → sign → send → confirm
+- **Transaction flow**: User clicks Pay → wallet connect → build SPL transfer + memo → `signAndSendTransaction` → confirm
 - **Memo format**: `SAVE:MemberName` — identifies which member the payment covers
-- **Verification API** (`/api/verify-saves`): Scans burn address token account for incoming transfers, reads memos, returns list of saved members with wallet + tx signature
+- **Verification API** (`/api/verify-saves`): Scans burn address token account, reads ALL instructions (including inner), parses memos, returns saved members. Add `?debug=1` to see raw tx data.
 - **Merge strategy**: On-chain saves override static `members.json` data at render time via `mergedD`
 - **Caching**: API caches results for 60s to avoid RPC rate limits
 - **Optimistic UI**: After successful payment, local state updates immediately before API refetch
+- **Token decimals**: 9 (confirmed on-chain — standard for pump.fun tokens)
 
 ### Saved Member Visibility (V8.1)
 - **Members tab**: 🛡️ Saved filter button shows only saved Z/C members
@@ -109,7 +111,7 @@ robespierre/
   "mint": "6P5McDuhznaedKjnCvfe9iEjtCfVLyZhSqe93TZtawky",
   "burnAddress": "EGEYg4GYbfdUpEeL6RByTSTiuZYckNJ1EwUGACY6UezG",
   "costToStay": 10000,
-  "decimals": 6,
+  "decimals": 9,
   "timerDays": 10,
   "chain": "solana"
 }
@@ -150,18 +152,22 @@ robespierre/
 | V7.3 | Apr 7 | **Inline timer + header tally** — 🪓46 pending | ⏰9d 8h | 🛡️ saved |
 | V8.0 | Apr 7 | **On-Chain Pay to Stay** — Phantom/Backpack wallet, SPL transfer, memo tagging, verification API |
 | V8.1 | Apr 7 | **Saved Visibility** — 🛡️ Saved filter, badges in zombie/remove lists, saved counter card |
+| V8.2 | Apr 7 | **Working E2E** — Helius RPC, 9 decimals, signAndSendTransaction, inner ix memo scan |
 
-## TODO — Part 2: On-Chain
+## TODO — Part 2: On-Chain ✅ COMPLETE
 - [x] **Phantom/Backpack wallet connect** on Pay button (window.solana detection)
 - [x] **SPL token transfer** transaction builder (10K $10AMPRO → burn address)
-- [x] **On-chain verification** API route (`/api/verify-saves` — Solana RPC → scan burn address → match memos)
+- [x] **On-chain verification** API route (`/api/verify-saves` — Helius RPC → scan burn address → match memos)
 - [x] **Memo/reference** system to match payments to specific members (`SAVE:MemberName`)
 - [x] Auto-merge on-chain saves with static data at render time
 - [x] Saved members show 🛡️ shield + wallet address + tx link
 - [x] Pay button shows ⏳ Signing... state during transaction
 - [x] Wallet connect bar in header with address display
 - [x] Error/success banners for transaction status
-- [ ] **Token decimals verification** — confirm 6 decimals on mainnet (currently assumed)
+- [x] **Token decimals**: confirmed 9 on mainnet
+- [x] **Helius RPC**: public Solana RPC blocks browser requests
+- [x] **signAndSendTransaction**: Phantom recommended method (not signTransaction+sendRaw)
+- [x] **Debug mode**: `/api/verify-saves?debug=1` shows raw tx data
 - [ ] Real-time timer that ticks every second (currently ticks on re-render)
 - [ ] Batch verification — handle 100+ saves efficiently
 
