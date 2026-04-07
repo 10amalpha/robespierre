@@ -24,23 +24,21 @@
         "msgs": 641,
         "links": 85,
         "pillars": {
-          "network": 48,
-          "intelligence": 55,
-          "capital": 55
+          "network": 78,
+          "intelligence": 85,
+          "capital": 75
         },
-        "composite": 53
+        "composite": 80
       },
       {
         "snapshot": "s2",
-        "score": 87.9,
         "tier": "A",
         "composite": 80,
         "pillars": {
           "network": 78,
           "intelligence": 85,
           "capital": 75
-        },
-        "msgs": 1680
+        }
       }
     ],
     "pillars": {
@@ -126,23 +124,21 @@
         "msgs": 153,
         "links": 30,
         "pillars": {
-          "network": 46,
-          "intelligence": 56,
-          "capital": 83
+          "network": 60,
+          "intelligence": 95,
+          "capital": 75
         },
-        "composite": 63
+        "composite": 79
       },
       {
         "snapshot": "s2",
-        "score": 86.5,
         "tier": "A",
         "composite": 79,
         "pillars": {
           "network": 60,
           "intelligence": 95,
           "capital": 75
-        },
-        "msgs": 326
+        }
       }
     ],
     "pillars": {
@@ -236,23 +232,21 @@
         "msgs": 185,
         "links": 17,
         "pillars": {
-          "network": 45,
-          "intelligence": 44,
-          "capital": 76
+          "network": 85,
+          "intelligence": 90,
+          "capital": 80
         },
-        "composite": 55
+        "composite": 85
       },
       {
         "snapshot": "s2",
-        "score": 86.5,
         "tier": "A",
         "composite": 85,
         "pillars": {
           "network": 85,
           "intelligence": 90,
           "capital": 80
-        },
-        "msgs": 472
+        }
       }
     ],
     "pillars": {
@@ -337,23 +331,21 @@
         "msgs": 205,
         "links": 33,
         "pillars": {
-          "network": 49,
-          "intelligence": 53,
-          "capital": 75
+          "network": 85,
+          "intelligence": 75,
+          "capital": 80
         },
-        "composite": 60
+        "composite": 79
       },
       {
         "snapshot": "s2",
-        "score": 86.5,
         "tier": "A",
         "composite": 79,
         "pillars": {
           "network": 85,
           "intelligence": 75,
           "capital": 80
-        },
-        "msgs": 339
+        }
       }
     ],
     "pillars": {
@@ -442,23 +434,21 @@
         "msgs": 160,
         "links": 25,
         "pillars": {
-          "network": 49,
-          "intelligence": 48,
-          "capital": 78
+          "network": 75,
+          "intelligence": 85,
+          "capital": 70
         },
-        "composite": 59
+        "composite": 77
       },
       {
         "snapshot": "s2",
-        "score": 86.5,
         "tier": "A",
         "composite": 77,
         "pillars": {
           "network": 75,
           "intelligence": 85,
           "capital": 70
-        },
-        "msgs": 446
+        }
       }
     ],
     "pillars": {
@@ -550,23 +540,21 @@
         "msgs": 133,
         "links": 8,
         "pillars": {
-          "network": 48,
-          "intelligence": 27,
-          "capital": 53
+          "network": 85,
+          "intelligence": 70,
+          "capital": 60
         },
-        "composite": 41
+        "composite": 70
       },
       {
         "snapshot": "s2",
-        "score": 86.5,
         "tier": "A",
         "composite": 70,
         "pillars": {
           "network": 85,
           "intelligence": 70,
           "capital": 60
-        },
-        "msgs": 555
+        }
       }
     ],
     "pillars": {
@@ -652,23 +640,21 @@
         "msgs": 130,
         "links": 11,
         "pillars": {
-          "network": 48,
-          "intelligence": 28,
-          "capital": 55
+          "network": 70,
+          "intelligence": 90,
+          "capital": 85
         },
-        "composite": 42
+        "composite": 83
       },
       {
         "snapshot": "s2",
-        "score": 86.5,
         "tier": "A",
         "composite": 83,
         "pillars": {
           "network": 70,
           "intelligence": 90,
           "capital": 85
-        },
-        "msgs": 283
+        }
       }
     ],
     "pillars": {
@@ -762,20 +748,19 @@
       },
       {
         "snapshot": "s2",
-        "score": 86.5,
         "tier": "A",
-        "composite": 68,
+        "composite": 91,
         "pillars": {
-          "network": 42,
-          "intelligence": 70,
-          "capital": 85
+          "network": 95,
+          "intelligence": 92,
+          "capital": 88
         }
       }
     ],
     "pillars": {
-      "network": 42,
-      "intelligence": 70,
-      "capital": 85
+      "network": 95,
+      "intelligence": 92,
+      "capital": 88
     },
     "pillarComponents": {
       "network": {
@@ -794,11 +779,21 @@
         "specificity": 25
       }
     },
-    "composite": 68,
-    "panicScore": null,
-    "panicFlags": [],
+    "composite": 91,
+    "panicScore": 15,
+    "panicFlags": [
+      "occasional market timing concerns"
+    ],
     "persona": {
-      "bio": "Founder of 10AMPRO. Macro + crypto investor. Options trader. Connects everything.",
+      "bio": "Group's intellectual anchor and macro strategist. Deep Bitcoin/crypto thesis, sophisticated market analysis, strong network connections.",
+      "tags": [
+        "macro-strategist",
+        "bitcoin-maximalist",
+        "content-creator",
+        "podcast-host",
+        "market-analyst"
+      ],
+      "role": "Alpha Contributor",
       "platforms": [
         {
           "type": "substack",
@@ -810,19 +805,25 @@
           "url": "https://x.com/holdmybirra",
           "handle": "@holdmybirra"
         }
-      ],
-      "tags": [
-        "macro",
-        "crypto",
-        "BTC",
-        "SOL",
-        "MSTR",
-        "options",
-        "tokenization"
-      ],
-      "role": "Founder & Chief Curator"
+      ]
     },
-    "highlights": []
+    "highlights": [
+      {
+        "type": "thesis",
+        "summary": "Reserve currency thesis: 'the reserve currency is going to be equities' - profound macro insight about dollar debasement and equity store of value",
+        "quality": 9
+      },
+      {
+        "type": "analysis",
+        "summary": "MSTR analysis: 'es como el avg de todos los put/calls de BTC.. en un solo precio.. y el premium que la gente paga por esos put/calls es STRC' - brilliant options analogy",
+        "quality": 10
+      },
+      {
+        "type": "insight",
+        "summary": "Saylor's genius: 'la sincronizacion de time horizons' - understanding that Saylor arbitrages different time preferences for capital access",
+        "quality": 9
+      }
+    ]
   },
   "Dario Palacio": {
     "tier": "A",
@@ -849,23 +850,21 @@
         "msgs": 213,
         "links": 59,
         "pillars": {
-          "network": 46,
-          "intelligence": 59,
-          "capital": 33
+          "network": 85,
+          "intelligence": 90,
+          "capital": 80
         },
-        "composite": 47
+        "composite": 85
       },
       {
         "snapshot": "s2",
-        "score": 85,
         "tier": "A",
         "composite": 85,
         "pillars": {
           "network": 85,
           "intelligence": 90,
           "capital": 80
-        },
-        "msgs": 505
+        }
       }
     ],
     "pillars": {
@@ -949,23 +948,21 @@
         "msgs": 157,
         "links": 38,
         "pillars": {
-          "network": 44,
-          "intelligence": 60,
-          "capital": 56
+          "network": 70,
+          "intelligence": 90,
+          "capital": 75
         },
-        "composite": 55
+        "composite": 80
       },
       {
         "snapshot": "s2",
-        "score": 85,
         "tier": "A",
         "composite": 80,
         "pillars": {
           "network": 70,
           "intelligence": 90,
           "capital": 75
-        },
-        "msgs": 367
+        }
       }
     ],
     "pillars": {
@@ -1054,23 +1051,21 @@
         "msgs": 318,
         "links": 135,
         "pillars": {
-          "network": 42,
-          "intelligence": 67,
-          "capital": 36
+          "network": 75,
+          "intelligence": 65,
+          "capital": 70
         },
-        "composite": 50
+        "composite": 69
       },
       {
         "snapshot": "s2",
-        "score": 85,
         "tier": "A",
         "composite": 69,
         "pillars": {
           "network": 75,
           "intelligence": 65,
           "capital": 70
-        },
-        "msgs": 848
+        }
       }
     ],
     "pillars": {
@@ -1155,23 +1150,21 @@
         "msgs": 98,
         "links": 11,
         "pillars": {
-          "network": 46,
-          "intelligence": 30,
-          "capital": 59
+          "network": 85,
+          "intelligence": 95,
+          "capital": 80
         },
-        "composite": 44
+        "composite": 87
       },
       {
         "snapshot": "s2",
-        "score": 84.6,
         "tier": "A",
         "composite": 87,
         "pillars": {
           "network": 85,
           "intelligence": 95,
           "capital": 80
-        },
-        "msgs": 193
+        }
       }
     ],
     "pillars": {
@@ -1273,20 +1266,19 @@
       },
       {
         "snapshot": "s2",
-        "score": 77.1,
         "tier": "A",
-        "composite": 33,
+        "composite": 77,
         "pillars": {
-          "network": 45,
-          "intelligence": 24,
-          "capital": 36
+          "network": 75,
+          "intelligence": 85,
+          "capital": 70
         }
       }
     ],
     "pillars": {
-      "network": 45,
-      "intelligence": 24,
-      "capital": 36
+      "network": 75,
+      "intelligence": 85,
+      "capital": 70
     },
     "pillarComponents": {
       "network": {
@@ -1305,16 +1297,42 @@
         "specificity": 11
       }
     },
-    "composite": 33,
-    "panicScore": null,
-    "panicFlags": [],
+    "composite": 77,
+    "panicScore": 25,
+    "panicFlags": [
+      "Pasamos de 10AMPRO a 10AMDROP",
+      "Muy preocupante",
+      "Es q estoy muy estresado ome"
+    ],
     "persona": {
-      "bio": null,
-      "platforms": [],
-      "tags": [],
-      "role": null
+      "bio": "Radiologist who bridges medicine and tech innovation. Expert in AI applications for healthcare, actively using tools like Perplexity in radiology practice.",
+      "tags": [
+        "healthcare",
+        "radiology",
+        "AI",
+        "tech-adoption",
+        "medical-innovation"
+      ],
+      "role": "Industry Expert",
+      "platforms": []
     },
-    "highlights": []
+    "highlights": [
+      {
+        "type": "insight",
+        "summary": "Applied AI to create teleradiology dashboard using Perplexity computer",
+        "quality": 9
+      },
+      {
+        "type": "analysis",
+        "summary": "Analyzed Colombian political dynamics with strategic insight on Paloma-Oviedo alliance dynamics",
+        "quality": 8
+      },
+      {
+        "type": "tool",
+        "summary": "Demonstrated practical use of Perplexity for daily radiology work",
+        "quality": 7
+      }
+    ]
   },
   "Juan Diego Pipo": {
     "tier": "A",
@@ -1341,23 +1359,21 @@
         "msgs": 77,
         "links": 13,
         "pillars": {
-          "network": 44,
-          "intelligence": 31,
-          "capital": 42
+          "network": 70,
+          "intelligence": 75,
+          "capital": 85
         },
-        "composite": 38
+        "composite": 77
       },
       {
         "snapshot": "s2",
-        "score": 77.1,
         "tier": "A",
         "composite": 77,
         "pillars": {
           "network": 70,
           "intelligence": 75,
           "capital": 85
-        },
-        "msgs": 208
+        }
       }
     ],
     "pillars": {
@@ -1445,23 +1461,21 @@
         "msgs": 65,
         "links": 13,
         "pillars": {
-          "network": 39,
-          "intelligence": 60,
-          "capital": 90
+          "network": 75,
+          "intelligence": 85,
+          "capital": 60
         },
-        "composite": 65
+        "composite": 74
       },
       {
         "snapshot": "s2",
-        "score": 73.7,
         "tier": "A",
         "composite": 74,
         "pillars": {
           "network": 75,
           "intelligence": 85,
           "capital": 60
-        },
-        "msgs": 134
+        }
       }
     ],
     "pillars": {
@@ -1547,23 +1561,21 @@
         "msgs": 73,
         "links": 7,
         "pillars": {
-          "network": 27,
-          "intelligence": 34,
-          "capital": 47
+          "network": 60,
+          "intelligence": 75,
+          "capital": 70
         },
-        "composite": 37
+        "composite": 70
       },
       {
         "snapshot": "s2",
-        "score": 71.7,
         "tier": "A",
         "composite": 70,
         "pillars": {
           "network": 60,
           "intelligence": 75,
           "capital": 70
-        },
-        "msgs": 112
+        }
       }
     ],
     "pillars": {
@@ -1639,23 +1651,21 @@
         "msgs": 51,
         "links": 24,
         "pillars": {
-          "network": 41,
-          "intelligence": 64,
-          "capital": 53
+          "network": 75,
+          "intelligence": 85,
+          "capital": 70
         },
-        "composite": 54
+        "composite": 77
       },
       {
         "snapshot": "s2",
-        "score": 68.2,
         "tier": "A",
         "composite": 77,
         "pillars": {
           "network": 75,
           "intelligence": 85,
           "capital": 70
-        },
-        "msgs": 150
+        }
       }
     ],
     "pillars": {
@@ -1741,23 +1751,21 @@
         "msgs": 45,
         "links": 11,
         "pillars": {
-          "network": 44,
-          "intelligence": 37,
-          "capital": 67
+          "network": 80,
+          "intelligence": 90,
+          "capital": 85
         },
-        "composite": 49
+        "composite": 86
       },
       {
         "snapshot": "s2",
-        "score": 68,
         "tier": "A",
         "composite": 86,
         "pillars": {
           "network": 80,
           "intelligence": 90,
           "capital": 85
-        },
-        "msgs": 141
+        }
       }
     ],
     "pillars": {
@@ -1851,20 +1859,19 @@
       },
       {
         "snapshot": "s2",
-        "score": 67.7,
         "tier": "A",
-        "composite": 36,
+        "composite": 52,
         "pillars": {
-          "network": 46,
-          "intelligence": 19,
-          "capital": 48
+          "network": 60,
+          "intelligence": 45,
+          "capital": 55
         }
       }
     ],
     "pillars": {
-      "network": 46,
-      "intelligence": 19,
-      "capital": 48
+      "network": 60,
+      "intelligence": 45,
+      "capital": 55
     },
     "pillarComponents": {
       "network": {
@@ -1883,26 +1890,44 @@
         "specificity": 11
       }
     },
-    "composite": 36,
-    "panicScore": null,
-    "panicFlags": [],
+    "composite": 52,
+    "panicScore": 75,
+    "panicFlags": [
+      "Closed positions during Iran tensions",
+      "Constantly worried about Trump's market impact",
+      "Questions every volatility spike",
+      "Prefers cash in uncertain times"
+    ],
     "persona": {
-      "bio": "YouTube creator. Political commentary and analysis.",
+      "bio": "Retail trader focused on momentum plays and geopolitical events. Heavy Trump/politics commentary with emotional market reactions.",
+      "tags": [
+        "retail_trader",
+        "politics",
+        "geopolitics",
+        "momentum",
+        "emotional"
+      ],
+      "role": "Panican",
       "platforms": [
         {
           "type": "youtube",
           "url": "",
           "handle": "Pablo Velez Mejia"
         }
-      ],
-      "tags": [
-        "politics",
-        "Colombia",
-        "commentary"
-      ],
-      "role": "Contributor"
+      ]
     },
-    "highlights": []
+    "highlights": [
+      {
+        "type": "call",
+        "summary": "Consistent criticism of Trump's Iran negotiation tactics and market timing",
+        "quality": 4
+      },
+      {
+        "type": "insight",
+        "summary": "Questions SpaceX IPO timing and Tesla integration mechanics",
+        "quality": 3
+      }
+    ]
   },
   "Andred Angel": {
     "tier": "A",
@@ -1929,23 +1954,21 @@
         "msgs": 49,
         "links": 3,
         "pillars": {
-          "network": 36,
-          "intelligence": 27,
-          "capital": 48
+          "network": 75,
+          "intelligence": 70,
+          "capital": 65
         },
-        "composite": 37
+        "composite": 70
       },
       {
         "snapshot": "s2",
-        "score": 67.7,
         "tier": "A",
         "composite": 70,
         "pillars": {
           "network": 75,
           "intelligence": 70,
           "capital": 65
-        },
-        "msgs": 137
+        }
       }
     ],
     "pillars": {
@@ -2031,23 +2054,21 @@
         "msgs": 48,
         "links": 1,
         "pillars": {
-          "network": 31,
-          "intelligence": 22,
-          "capital": 36
+          "network": 65,
+          "intelligence": 85,
+          "capital": 70
         },
-        "composite": 29
+        "composite": 75
       },
       {
         "snapshot": "s2",
-        "score": 67.4,
         "tier": "A",
         "composite": 75,
         "pillars": {
           "network": 65,
           "intelligence": 85,
           "capital": 70
-        },
-        "msgs": 91
+        }
       }
     ],
     "pillars": {
@@ -2127,23 +2148,21 @@
         "msgs": 44,
         "links": 10,
         "pillars": {
-          "network": 36,
-          "intelligence": 33,
-          "capital": 42
+          "network": 60,
+          "intelligence": 75,
+          "capital": 70
         },
-        "composite": 37
+        "composite": 70
       },
       {
         "snapshot": "s2",
-        "score": 66.2,
         "tier": "A",
         "composite": 70,
         "pillars": {
           "network": 60,
           "intelligence": 75,
           "capital": 70
-        },
-        "msgs": 82
+        }
       }
     ],
     "pillars": {
@@ -2223,23 +2242,21 @@
         "msgs": 47,
         "links": 5,
         "pillars": {
-          "network": 30,
-          "intelligence": 26,
-          "capital": 45
+          "network": 85,
+          "intelligence": 90,
+          "capital": 75
         },
-        "composite": 34
+        "composite": 84
       },
       {
         "snapshot": "s2",
-        "score": 65.7,
         "tier": "A",
         "composite": 84,
         "pillars": {
           "network": 85,
           "intelligence": 90,
           "capital": 75
-        },
-        "msgs": 95
+        }
       }
     ],
     "pillars": {
@@ -2326,29 +2343,27 @@
         "msgs": 33,
         "links": 6,
         "pillars": {
-          "network": 22,
-          "intelligence": 42,
-          "capital": 61
+          "network": 60,
+          "intelligence": 70,
+          "capital": 55
         },
-        "composite": 44
+        "composite": 62
       },
       {
         "snapshot": "s2",
-        "score": 61.6,
         "tier": "A",
-        "composite": 44,
+        "composite": 62,
         "pillars": {
-          "network": 22,
-          "intelligence": 42,
-          "capital": 61
-        },
-        "msgs": 44
+          "network": 60,
+          "intelligence": 70,
+          "capital": 55
+        }
       }
     ],
     "pillars": {
-      "network": 22,
-      "intelligence": 42,
-      "capital": 61
+      "network": 60,
+      "intelligence": 70,
+      "capital": 55
     },
     "pillarComponents": {
       "network": {
@@ -2367,16 +2382,32 @@
         "specificity": 25
       }
     },
-    "composite": 44,
-    "panicScore": null,
+    "composite": 62,
+    "panicScore": 25,
     "panicFlags": [],
     "persona": {
-      "bio": null,
-      "platforms": [],
-      "tags": [],
-      "role": null
+      "bio": "Ford engineer observing enterprise AI adoption across legal and engineering departments. Practical AI implementation perspective.",
+      "tags": [
+        "engineer",
+        "enterprise_ai",
+        "automotive",
+        "implementation_focused"
+      ],
+      "role": "Industry Expert",
+      "platforms": []
     },
-    "highlights": []
+    "highlights": [
+      {
+        "type": "insight",
+        "summary": "Enterprise AI adoption at Ford spanning engineering to legal departments",
+        "quality": 7
+      },
+      {
+        "type": "analysis",
+        "summary": "Human energy conservation vs automation efficiency philosophical perspective",
+        "quality": 6
+      }
+    ]
   },
   "Juan Castilla": {
     "tier": "A",
@@ -2403,23 +2434,21 @@
         "msgs": 22,
         "links": 3,
         "pillars": {
-          "network": 28,
-          "intelligence": 23,
-          "capital": 53
+          "network": 60,
+          "intelligence": 75,
+          "capital": 65
         },
-        "composite": 35
+        "composite": 68
       },
       {
         "snapshot": "s2",
-        "score": 59.9,
         "tier": "A",
         "composite": 68,
         "pillars": {
           "network": 60,
           "intelligence": 75,
           "capital": 65
-        },
-        "msgs": 44
+        }
       }
     ],
     "pillars": {
@@ -2500,23 +2529,21 @@
         "msgs": 21,
         "links": 4,
         "pillars": {
-          "network": 30,
-          "intelligence": 50,
-          "capital": 66
+          "network": 85,
+          "intelligence": 90,
+          "capital": 85
         },
-        "composite": 51
+        "composite": 87
       },
       {
         "snapshot": "s2",
-        "score": 59.6,
         "tier": "A",
         "composite": 87,
         "pillars": {
           "network": 85,
           "intelligence": 90,
           "capital": 85
-        },
-        "msgs": 78
+        }
       }
     ],
     "pillars": {
@@ -2602,23 +2629,21 @@
         "msgs": 20,
         "links": 5,
         "pillars": {
-          "network": 35,
-          "intelligence": 27,
-          "capital": 38
+          "network": 70,
+          "intelligence": 80,
+          "capital": 85
         },
-        "composite": 33
+        "composite": 79
       },
       {
         "snapshot": "s2",
-        "score": 59.3,
         "tier": "A",
         "composite": 79,
         "pillars": {
           "network": 70,
           "intelligence": 80,
           "capital": 85
-        },
-        "msgs": 71
+        }
       }
     ],
     "pillars": {
@@ -2699,23 +2724,21 @@
         "msgs": 15,
         "links": 7,
         "pillars": {
-          "network": 34,
-          "intelligence": 40,
-          "capital": 39
+          "network": 65,
+          "intelligence": 70,
+          "capital": 75
         },
-        "composite": 38
+        "composite": 71
       },
       {
         "snapshot": "s2",
-        "score": 57.9,
         "tier": "A",
         "composite": 71,
         "pillars": {
           "network": 65,
           "intelligence": 70,
           "capital": 75
-        },
-        "msgs": 26
+        }
       }
     ],
     "pillars": {
@@ -2793,23 +2816,21 @@
         "msgs": 20,
         "links": 2,
         "pillars": {
-          "network": 25,
-          "intelligence": 20,
-          "capital": 41
+          "network": 65,
+          "intelligence": 60,
+          "capital": 55
         },
-        "composite": 29
+        "composite": 60
       },
       {
         "snapshot": "s2",
-        "score": 57.9,
         "tier": "A",
         "composite": 60,
         "pillars": {
           "network": 65,
           "intelligence": 60,
           "capital": 55
-        },
-        "msgs": 35
+        }
       }
     ],
     "pillars": {
@@ -2881,23 +2902,21 @@
         "msgs": 14,
         "links": 4,
         "pillars": {
-          "network": 27,
-          "intelligence": 36,
-          "capital": 59
+          "network": 70,
+          "intelligence": 85,
+          "capital": 65
         },
-        "composite": 42
+        "composite": 74
       },
       {
         "snapshot": "s2",
-        "score": 57.6,
         "tier": "A",
         "composite": 74,
         "pillars": {
           "network": 70,
           "intelligence": 85,
           "capital": 65
-        },
-        "msgs": 31
+        }
       }
     ],
     "pillars": {
@@ -2980,23 +2999,21 @@
         "msgs": 14,
         "links": 0,
         "pillars": {
-          "network": 31,
-          "intelligence": 14,
-          "capital": 30
+          "network": 75,
+          "intelligence": 70,
+          "capital": 80
         },
-        "composite": 24
+        "composite": 75
       },
       {
         "snapshot": "s2",
-        "score": 57.6,
         "tier": "A",
         "composite": 75,
         "pillars": {
           "network": 75,
           "intelligence": 70,
           "capital": 80
-        },
-        "msgs": 38
+        }
       }
     ],
     "pillars": {
@@ -3076,23 +3093,21 @@
         "msgs": 29,
         "links": 3,
         "pillars": {
-          "network": 21,
-          "intelligence": 25,
-          "capital": 34
+          "network": 70,
+          "intelligence": 80,
+          "capital": 65
         },
-        "composite": 27
+        "composite": 72
       },
       {
         "snapshot": "s2",
-        "score": 57.6,
         "tier": "A",
         "composite": 72,
         "pillars": {
           "network": 70,
           "intelligence": 80,
           "capital": 65
-        },
-        "msgs": 90
+        }
       }
     ],
     "pillars": {
@@ -3178,23 +3193,21 @@
         "msgs": 16,
         "links": 5,
         "pillars": {
-          "network": 26,
-          "intelligence": 51,
-          "capital": 61
+          "network": 55,
+          "intelligence": 65,
+          "capital": 60
         },
-        "composite": 48
+        "composite": 61
       },
       {
         "snapshot": "s2",
-        "score": 56.8,
         "tier": "A",
         "composite": 61,
         "pillars": {
           "network": 55,
           "intelligence": 65,
           "capital": 60
-        },
-        "msgs": 27
+        }
       }
     ],
     "pillars": {
@@ -3269,23 +3282,21 @@
         "msgs": 16,
         "links": 3,
         "pillars": {
-          "network": 38,
-          "intelligence": 20,
-          "capital": 38
+          "network": 85,
+          "intelligence": 90,
+          "capital": 85
         },
-        "composite": 31
+        "composite": 87
       },
       {
         "snapshot": "s2",
-        "score": 55.8,
         "tier": "A",
         "composite": 87,
         "pillars": {
           "network": 85,
           "intelligence": 90,
           "capital": 85
-        },
-        "msgs": 41
+        }
       }
     ],
     "pillars": {
@@ -3357,28 +3368,27 @@
         "msgs": 17,
         "links": 4,
         "pillars": {
-          "network": 23,
-          "intelligence": 31,
-          "capital": 49
+          "network": 55,
+          "intelligence": 70,
+          "capital": 65
         },
-        "composite": 35
+        "composite": 65
       },
       {
         "snapshot": "s2",
-        "score": 55.6,
         "tier": "A",
-        "composite": 35,
+        "composite": 65,
         "pillars": {
-          "network": 23,
-          "intelligence": 31,
-          "capital": 49
+          "network": 55,
+          "intelligence": 70,
+          "capital": 65
         }
       }
     ],
     "pillars": {
-      "network": 23,
-      "intelligence": 31,
-      "capital": 49
+      "network": 55,
+      "intelligence": 70,
+      "capital": 65
     },
     "pillarComponents": {
       "network": {
@@ -3397,16 +3407,40 @@
         "specificity": 25
       }
     },
-    "composite": 35,
-    "panicScore": null,
-    "panicFlags": [],
+    "composite": 65,
+    "panicScore": 40,
+    "panicFlags": [
+      "job automation concerns",
+      "Claude behavior changes"
+    ],
     "persona": {
-      "bio": null,
-      "platforms": [],
-      "tags": [],
-      "role": null
+      "bio": "Business owner implementing AI in operations while documenting the transformation. Shares practical AI implementation experience and automation insights.",
+      "tags": [
+        "AI_implementation",
+        "automation",
+        "business_transformation",
+        "call_center"
+      ],
+      "role": "Contributor",
+      "platforms": []
     },
-    "highlights": []
+    "highlights": [
+      {
+        "type": "analysis",
+        "summary": "Published Substack on AI implementation in his company, sharing real transformation insights",
+        "quality": 7
+      },
+      {
+        "type": "insight",
+        "summary": "Identified 5 positions to automate, already automated 2 and saved SaaS costs through internal development",
+        "quality": 8
+      },
+      {
+        "type": "tool",
+        "summary": "Created financial education tool for call center employees inspired by 10AM content",
+        "quality": 6
+      }
+    ]
   },
   "Juancho Palacio": {
     "tier": "A",
@@ -3433,23 +3467,21 @@
         "msgs": 7,
         "links": 2,
         "pillars": {
-          "network": 29,
-          "intelligence": 28,
-          "capital": 56
+          "network": 70,
+          "intelligence": 75,
+          "capital": 65
         },
-        "composite": 38
+        "composite": 70
       },
       {
         "snapshot": "s2",
-        "score": 55,
         "tier": "A",
         "composite": 70,
         "pillars": {
           "network": 70,
           "intelligence": 75,
           "capital": 65
-        },
-        "msgs": 17
+        }
       }
     ],
     "pillars": {
@@ -3526,23 +3558,21 @@
         "msgs": 20,
         "links": 6,
         "pillars": {
-          "network": 15,
-          "intelligence": 47,
-          "capital": 52
+          "network": 70,
+          "intelligence": 80,
+          "capital": 75
         },
-        "composite": 41
+        "composite": 76
       },
       {
         "snapshot": "s2",
-        "score": 55,
         "tier": "A",
         "composite": 76,
         "pillars": {
           "network": 70,
           "intelligence": 80,
           "capital": 75
-        },
-        "msgs": 44
+        }
       }
     ],
     "pillars": {
@@ -3627,23 +3657,21 @@
         "msgs": 12,
         "links": 4,
         "pillars": {
-          "network": 27,
-          "intelligence": 34,
-          "capital": 38
+          "network": 70,
+          "intelligence": 80,
+          "capital": 65
         },
-        "composite": 34
+        "composite": 72
       },
       {
         "snapshot": "s2",
-        "score": 54.2,
         "tier": "A",
         "composite": 72,
         "pillars": {
           "network": 70,
           "intelligence": 80,
           "capital": 65
-        },
-        "msgs": 36
+        }
       }
     ],
     "pillars": {
@@ -3722,28 +3750,27 @@
         "msgs": 11,
         "links": 3,
         "pillars": {
-          "network": 22,
-          "intelligence": 31,
-          "capital": 48
+          "network": 90,
+          "intelligence": 75,
+          "capital": 85
         },
-        "composite": 35
+        "composite": 82
       },
       {
         "snapshot": "s2",
-        "score": 53.9,
         "tier": "A",
-        "composite": 35,
+        "composite": 82,
         "pillars": {
-          "network": 22,
-          "intelligence": 31,
-          "capital": 48
+          "network": 90,
+          "intelligence": 75,
+          "capital": 85
         }
       }
     ],
     "pillars": {
-      "network": 22,
-      "intelligence": 31,
-      "capital": 48
+      "network": 90,
+      "intelligence": 75,
+      "capital": 85
     },
     "pillarComponents": {
       "network": {
@@ -3762,16 +3789,32 @@
         "specificity": 25
       }
     },
-    "composite": 35,
-    "panicScore": null,
+    "composite": 82,
+    "panicScore": 20,
     "panicFlags": [],
     "persona": {
-      "bio": null,
-      "platforms": [],
-      "tags": [],
-      "role": null
+      "bio": "VC investor at Veronorte with direct exposure to Anthropic and OpenAI. High-level industry connections and insider access.",
+      "tags": [
+        "vc_investor",
+        "ai_insider",
+        "institutional",
+        "connected"
+      ],
+      "role": "Alpha Contributor",
+      "platforms": []
     },
-    "highlights": []
+    "highlights": [
+      {
+        "type": "insight",
+        "summary": "Portfolio exposure to Anthropic through Menlo Ventures and direct OpenAI investment",
+        "quality": 9
+      },
+      {
+        "type": "analysis",
+        "summary": "Ray Dalio's parenting strategy: sending 13-year-old son to live with Chinese family",
+        "quality": 6
+      }
+    ]
   },
   "Andres Palacio": {
     "tier": "B",
@@ -3875,23 +3918,21 @@
         "msgs": 12,
         "links": 2,
         "pillars": {
-          "network": 17,
-          "intelligence": 24,
-          "capital": 39
+          "network": 85,
+          "intelligence": 70,
+          "capital": 75
         },
-        "composite": 28
+        "composite": 76
       },
       {
         "snapshot": "s2",
-        "score": 52.2,
         "tier": "A",
         "composite": 76,
         "pillars": {
           "network": 85,
           "intelligence": 70,
           "capital": 75
-        },
-        "msgs": 29
+        }
       }
     ],
     "pillars": {
@@ -3968,23 +4009,21 @@
         "msgs": 27,
         "links": 4,
         "pillars": {
-          "network": 26,
-          "intelligence": 20,
-          "capital": 20
+          "network": 55,
+          "intelligence": 60,
+          "capital": 70
         },
-        "composite": 22
+        "composite": 62
       },
       {
         "snapshot": "s2",
-        "score": 51.8,
         "tier": "A",
         "composite": 62,
         "pillars": {
           "network": 55,
           "intelligence": 60,
           "capital": 70
-        },
-        "msgs": 36
+        }
       }
     ],
     "pillars": {
@@ -4056,23 +4095,21 @@
         "msgs": 23,
         "links": 0,
         "pillars": {
-          "network": 30,
-          "intelligence": 8,
-          "capital": 18
+          "network": 85,
+          "intelligence": 75,
+          "capital": 90
         },
-        "composite": 17
+        "composite": 83
       },
       {
         "snapshot": "s2",
-        "score": 51.6,
         "tier": "A",
         "composite": 83,
         "pillars": {
           "network": 85,
           "intelligence": 75,
           "capital": 90
-        },
-        "msgs": 53
+        }
       }
     ],
     "pillars": {
@@ -4150,23 +4187,21 @@
         "msgs": 36,
         "links": 0,
         "pillars": {
-          "network": 36,
-          "intelligence": 5,
-          "capital": 9
+          "network": 85,
+          "intelligence": 75,
+          "capital": 70
         },
-        "composite": 14
+        "composite": 76
       },
       {
         "snapshot": "s2",
-        "score": 51.1,
         "tier": "A",
         "composite": 76,
         "pillars": {
           "network": 85,
           "intelligence": 75,
           "capital": 70
-        },
-        "msgs": 84
+        }
       }
     ],
     "pillars": {
@@ -4245,23 +4280,21 @@
         "msgs": 11,
         "links": 0,
         "pillars": {
-          "network": 15,
-          "intelligence": 34,
-          "capital": 10
+          "network": 75,
+          "intelligence": 85,
+          "capital": 80
         },
-        "composite": 21
+        "composite": 81
       },
       {
         "snapshot": "s2",
-        "score": 51,
         "tier": "A",
         "composite": 81,
         "pillars": {
           "network": 75,
           "intelligence": 85,
           "capital": 80
-        },
-        "msgs": 42
+        }
       }
     ],
     "pillars": {
@@ -4346,23 +4379,21 @@
         "msgs": 5,
         "links": 3,
         "pillars": {
-          "network": 23,
-          "intelligence": 40,
-          "capital": 36
+          "network": 80,
+          "intelligence": 85,
+          "capital": 90
         },
-        "composite": 34
+        "composite": 86
       },
       {
         "snapshot": "s2",
-        "score": 50.8,
         "tier": "A",
         "composite": 86,
         "pillars": {
           "network": 80,
           "intelligence": 85,
           "capital": 90
-        },
-        "msgs": 41
+        }
       }
     ],
     "pillars": {
@@ -4437,23 +4468,21 @@
         "msgs": 3,
         "links": 0,
         "pillars": {
-          "network": 17,
-          "intelligence": 17,
-          "capital": 15
+          "network": 75,
+          "intelligence": 70,
+          "capital": 65
         },
-        "composite": 16
+        "composite": 70
       },
       {
         "snapshot": "s2",
-        "score": 50.2,
         "tier": "A",
         "composite": 70,
         "pillars": {
           "network": 75,
           "intelligence": 70,
           "capital": 65
-        },
-        "msgs": 8
+        }
       }
     ],
     "pillars": {
@@ -4525,23 +4554,21 @@
         "msgs": 7,
         "links": 0,
         "pillars": {
-          "network": 29,
-          "intelligence": 11,
-          "capital": 25
+          "network": 45,
+          "intelligence": 60,
+          "capital": 40
         },
-        "composite": 20
+        "composite": 49
       },
       {
         "snapshot": "s2",
-        "score": 49.8,
         "tier": "A",
         "composite": 49,
         "pillars": {
           "network": 45,
           "intelligence": 60,
           "capital": 40
-        },
-        "msgs": 46
+        }
       }
     ],
     "pillars": {
@@ -4624,23 +4651,21 @@
         "msgs": 4,
         "links": 1,
         "pillars": {
-          "network": 14,
-          "intelligence": 39,
-          "capital": 39
+          "network": 55,
+          "intelligence": 80,
+          "capital": 65
         },
-        "composite": 33
+        "composite": 69
       },
       {
         "snapshot": "s2",
-        "score": 49,
         "tier": "A",
         "composite": 69,
         "pillars": {
           "network": 55,
           "intelligence": 80,
           "capital": 65
-        },
-        "msgs": 11
+        }
       }
     ],
     "pillars": {
@@ -4720,23 +4745,21 @@
         "msgs": 21,
         "links": 3,
         "pillars": {
-          "network": 32,
-          "intelligence": 15,
-          "capital": 9
+          "network": 75,
+          "intelligence": 80,
+          "capital": 85
         },
-        "composite": 17
+        "composite": 81
       },
       {
         "snapshot": "s2",
-        "score": 48.8,
         "tier": "A",
         "composite": 81,
         "pillars": {
           "network": 75,
           "intelligence": 80,
           "capital": 85
-        },
-        "msgs": 52
+        }
       }
     ],
     "pillars": {
@@ -4811,23 +4834,21 @@
         "msgs": 12,
         "links": 0,
         "pillars": {
-          "network": 21,
-          "intelligence": 10,
-          "capital": 12
+          "network": 70,
+          "intelligence": 85,
+          "capital": 80
         },
-        "composite": 13
+        "composite": 80
       },
       {
         "snapshot": "s2",
-        "score": 48.7,
         "tier": "A",
         "composite": 80,
         "pillars": {
           "network": 70,
           "intelligence": 85,
           "capital": 80
-        },
-        "msgs": 40
+        }
       }
     ],
     "pillars": {
@@ -5053,23 +5074,21 @@
         "msgs": 12,
         "links": 0,
         "pillars": {
-          "network": 29,
-          "intelligence": 7,
-          "capital": 15
+          "network": 55,
+          "intelligence": 60,
+          "capital": 75
         },
-        "composite": 15
+        "composite": 64
       },
       {
         "snapshot": "s2",
-        "score": 46.3,
         "tier": "A",
         "composite": 64,
         "pillars": {
           "network": 55,
           "intelligence": 60,
           "capital": 75
-        },
-        "msgs": 60
+        }
       }
     ],
     "pillars": {
@@ -5151,23 +5170,21 @@
         "msgs": 10,
         "links": 0,
         "pillars": {
-          "network": 31,
-          "intelligence": 7,
-          "capital": 9
+          "network": 65,
+          "intelligence": 75,
+          "capital": 70
         },
-        "composite": 14
+        "composite": 71
       },
       {
         "snapshot": "s2",
-        "score": 45.8,
         "tier": "A",
         "composite": 71,
         "pillars": {
           "network": 65,
           "intelligence": 75,
           "capital": 70
-        },
-        "msgs": 26
+        }
       }
     ],
     "pillars": {
@@ -5247,23 +5264,21 @@
         "msgs": 15,
         "links": 0,
         "pillars": {
-          "network": 28,
-          "intelligence": 6,
-          "capital": 8
+          "network": 85,
+          "intelligence": 90,
+          "capital": 85
         },
-        "composite": 12
+        "composite": 87
       },
       {
         "snapshot": "s2",
-        "score": 44.9,
         "tier": "A",
         "composite": 87,
         "pillars": {
           "network": 85,
           "intelligence": 90,
           "capital": 85
-        },
-        "msgs": 52
+        }
       }
     ],
     "pillars": {
@@ -5335,23 +5350,21 @@
         "msgs": 3,
         "links": 2,
         "pillars": {
-          "network": 12,
-          "intelligence": 41,
-          "capital": 29
+          "network": 50,
+          "intelligence": 65,
+          "capital": 55
         },
-        "composite": 30
+        "composite": 58
       },
       {
         "snapshot": "s2",
-        "score": 44.7,
         "tier": "A",
         "composite": 58,
         "pillars": {
           "network": 50,
           "intelligence": 65,
           "capital": 55
-        },
-        "msgs": 23
+        }
       }
     ],
     "pillars": {
@@ -5584,23 +5597,21 @@
         "msgs": 1,
         "links": 0,
         "pillars": {
-          "network": 8,
-          "intelligence": 12,
-          "capital": 5
+          "network": 60,
+          "intelligence": 80,
+          "capital": 70
         },
-        "composite": 9
+        "composite": 72
       },
       {
         "snapshot": "s2",
-        "score": 43.7,
         "tier": "A",
         "composite": 72,
         "pillars": {
           "network": 60,
           "intelligence": 80,
           "capital": 70
-        },
-        "msgs": 22
+        }
       }
     ],
     "pillars": {
@@ -5677,23 +5688,21 @@
         "msgs": 16,
         "links": 0,
         "pillars": {
-          "network": 29,
-          "intelligence": 5,
-          "capital": 8
+          "network": 60,
+          "intelligence": 65,
+          "capital": 70
         },
-        "composite": 12
+        "composite": 66
       },
       {
         "snapshot": "s2",
-        "score": 43.6,
         "tier": "A",
         "composite": 66,
         "pillars": {
           "network": 60,
           "intelligence": 65,
           "capital": 70
-        },
-        "msgs": 39
+        }
       }
     ],
     "pillars": {
@@ -5773,23 +5782,21 @@
         "msgs": 14,
         "links": 0,
         "pillars": {
-          "network": 27,
-          "intelligence": 5,
-          "capital": 8
+          "network": 45,
+          "intelligence": 55,
+          "capital": 50
         },
-        "composite": 12
+        "composite": 51
       },
       {
         "snapshot": "s2",
-        "score": 43.4,
         "tier": "A",
         "composite": 51,
         "pillars": {
           "network": 45,
           "intelligence": 55,
           "capital": 50
-        },
-        "msgs": 33
+        }
       }
     ],
     "pillars": {
@@ -5940,23 +5947,21 @@
         "msgs": 7,
         "links": 1,
         "pillars": {
-          "network": 24,
-          "intelligence": 14,
-          "capital": 13
+          "network": 70,
+          "intelligence": 80,
+          "capital": 85
         },
-        "composite": 16
+        "composite": 79
       },
       {
         "snapshot": "s2",
-        "score": 42.3,
         "tier": "A",
         "composite": 79,
         "pillars": {
           "network": 70,
           "intelligence": 80,
           "capital": 85
-        },
-        "msgs": 18
+        }
       }
     ],
     "pillars": {
@@ -6030,23 +6035,21 @@
         "msgs": 15,
         "links": 0,
         "pillars": {
-          "network": 27,
-          "intelligence": 8,
-          "capital": 12
+          "network": 65,
+          "intelligence": 75,
+          "capital": 80
         },
-        "composite": 14
+        "composite": 74
       },
       {
         "snapshot": "s2",
-        "score": 41.9,
         "tier": "A",
         "composite": 74,
         "pillars": {
           "network": 65,
           "intelligence": 75,
           "capital": 80
-        },
-        "msgs": 52
+        }
       }
     ],
     "pillars": {
@@ -6195,23 +6198,21 @@
         "msgs": 4,
         "links": 2,
         "pillars": {
-          "network": 11,
-          "intelligence": 38,
-          "capital": 16
+          "network": 85,
+          "intelligence": 90,
+          "capital": 80
         },
-        "composite": 24
+        "composite": 85
       },
       {
         "snapshot": "s2",
-        "score": 39.8,
         "tier": "A",
         "composite": 85,
         "pillars": {
           "network": 85,
           "intelligence": 90,
           "capital": 80
-        },
-        "msgs": 16
+        }
       }
     ],
     "pillars": {
@@ -6293,23 +6294,21 @@
         "msgs": 6,
         "links": 3,
         "pillars": {
-          "network": 20,
-          "intelligence": 35,
-          "capital": 6
+          "network": 55,
+          "intelligence": 75,
+          "capital": 65
         },
-        "composite": 21
+        "composite": 67
       },
       {
         "snapshot": "s2",
-        "score": 39.5,
         "tier": "A",
         "composite": 67,
         "pillars": {
           "network": 55,
           "intelligence": 75,
           "capital": 65
-        },
-        "msgs": 33
+        }
       }
     ],
     "pillars": {
@@ -6388,23 +6387,21 @@
         "msgs": 4,
         "links": 1,
         "pillars": {
-          "network": 16,
-          "intelligence": 19,
-          "capital": 10
+          "network": 60,
+          "intelligence": 65,
+          "capital": 70
         },
-        "composite": 15
+        "composite": 66
       },
       {
         "snapshot": "s2",
-        "score": 38.2,
         "tier": "A",
         "composite": 66,
         "pillars": {
           "network": 60,
           "intelligence": 65,
           "capital": 70
-        },
-        "msgs": 31
+        }
       }
     ],
     "pillars": {
@@ -6484,23 +6481,21 @@
         "msgs": 6,
         "links": 0,
         "pillars": {
-          "network": 15,
-          "intelligence": 5,
-          "capital": 5
+          "network": 65,
+          "intelligence": 70,
+          "capital": 80
         },
-        "composite": 8
+        "composite": 72
       },
       {
         "snapshot": "s2",
-        "score": 38.2,
         "tier": "A",
         "composite": 72,
         "pillars": {
           "network": 65,
           "intelligence": 70,
           "capital": 80
-        },
-        "msgs": 71
+        }
       }
     ],
     "pillars": {
@@ -6581,23 +6576,21 @@
         "msgs": 3,
         "links": 2,
         "pillars": {
-          "network": 17,
-          "intelligence": 32,
-          "capital": 6
+          "network": 80,
+          "intelligence": 55,
+          "capital": 60
         },
-        "composite": 19
+        "composite": 63
       },
       {
         "snapshot": "s2",
-        "score": 36.8,
         "tier": "A",
         "composite": 63,
         "pillars": {
           "network": 80,
           "intelligence": 55,
           "capital": 60
-        },
-        "msgs": 15
+        }
       }
     ],
     "pillars": {
@@ -6675,23 +6668,21 @@
         "msgs": 8,
         "links": 1,
         "pillars": {
-          "network": 18,
-          "intelligence": 13,
-          "capital": 10
+          "network": 50,
+          "intelligence": 60,
+          "capital": 55
         },
-        "composite": 13
+        "composite": 56
       },
       {
         "snapshot": "s2",
-        "score": 34.8,
         "tier": "A",
         "composite": 56,
         "pillars": {
           "network": 50,
           "intelligence": 60,
           "capital": 55
-        },
-        "msgs": 28
+        }
       }
     ],
     "pillars": {
@@ -6766,23 +6757,21 @@
         "msgs": 14,
         "links": 2,
         "pillars": {
-          "network": 22,
-          "intelligence": 19,
-          "capital": 26
+          "network": 90,
+          "intelligence": 80,
+          "capital": 65
         },
-        "composite": 22
+        "composite": 77
       },
       {
         "snapshot": "s2",
-        "score": 24.3,
         "tier": "A",
         "composite": 77,
         "pillars": {
           "network": 90,
           "intelligence": 80,
           "capital": 65
-        },
-        "msgs": 144
+        }
       }
     ],
     "pillars": {
@@ -6867,23 +6856,21 @@
         "msgs": 4,
         "links": 1,
         "pillars": {
-          "network": 11,
-          "intelligence": 52,
-          "capital": 43
+          "network": 85,
+          "intelligence": 90,
+          "capital": 60
         },
-        "composite": 39
+        "composite": 78
       },
       {
         "snapshot": "s2",
-        "score": 24,
         "tier": "A",
         "composite": 78,
         "pillars": {
           "network": 85,
           "intelligence": 90,
           "capital": 60
-        },
-        "msgs": 31
+        }
       }
     ],
     "pillars": {
@@ -7046,23 +7033,21 @@
         "msgs": 3,
         "links": 1,
         "pillars": {
-          "network": 6,
-          "intelligence": 44,
-          "capital": 36
+          "network": 85,
+          "intelligence": 75,
+          "capital": 80
         },
-        "composite": 32
+        "composite": 79
       },
       {
         "snapshot": "s2",
-        "score": 22.3,
         "tier": "A",
         "composite": 79,
         "pillars": {
           "network": 85,
           "intelligence": 75,
           "capital": 80
-        },
-        "msgs": 45
+        }
       }
     ],
     "pillars": {
@@ -7453,23 +7438,21 @@
         "msgs": 7,
         "links": 1,
         "pillars": {
-          "network": 12,
-          "intelligence": 16,
-          "capital": 9
+          "network": 85,
+          "intelligence": 90,
+          "capital": 80
         },
-        "composite": 13
+        "composite": 85
       },
       {
         "snapshot": "s2",
-        "score": 13.3,
         "tier": "A",
         "composite": 85,
         "pillars": {
           "network": 85,
           "intelligence": 90,
           "capital": 80
-        },
-        "msgs": 60
+        }
       }
     ],
     "pillars": {
@@ -7629,23 +7612,21 @@
         "msgs": 3,
         "links": 0,
         "pillars": {
-          "network": 15,
-          "intelligence": 5,
-          "capital": 3
+          "network": 40,
+          "intelligence": 45,
+          "capital": 30
         },
-        "composite": 7
+        "composite": 39
       },
       {
         "snapshot": "s2",
-        "score": 10.7,
         "tier": "B",
         "composite": 39,
         "pillars": {
           "network": 40,
           "intelligence": 45,
           "capital": 30
-        },
-        "msgs": 15
+        }
       }
     ],
     "pillars": {
@@ -8024,23 +8005,21 @@
         "msgs": 0,
         "links": 0,
         "pillars": {
-          "network": 0,
-          "intelligence": 0,
-          "capital": 0
+          "network": 70,
+          "intelligence": 85,
+          "capital": 60
         },
-        "composite": 0
+        "composite": 73
       },
       {
         "snapshot": "s2",
-        "score": 73,
         "tier": "A",
         "composite": 73,
         "pillars": {
           "network": 70,
           "intelligence": 85,
           "capital": 60
-        },
-        "msgs": 4
+        }
       }
     ],
     "pillars": {
@@ -8269,23 +8248,21 @@
         "msgs": 0,
         "links": 0,
         "pillars": {
-          "network": 0,
-          "intelligence": 0,
-          "capital": 0
+          "network": 70,
+          "intelligence": 85,
+          "capital": 60
         },
-        "composite": 0
+        "composite": 73
       },
       {
         "snapshot": "s2",
-        "score": 73,
         "tier": "A",
         "composite": 73,
         "pillars": {
           "network": 70,
           "intelligence": 85,
           "capital": 60
-        },
-        "msgs": 12
+        }
       }
     ],
     "pillars": {
@@ -10350,23 +10327,21 @@
         "msgs": 0,
         "links": 0,
         "pillars": {
-          "network": 0,
-          "intelligence": 0,
-          "capital": 0
+          "network": 60,
+          "intelligence": 70,
+          "capital": 55
         },
-        "composite": 0
+        "composite": 62
       },
       {
         "snapshot": "s2",
-        "score": 62,
         "tier": "A",
         "composite": 62,
         "pillars": {
           "network": 60,
           "intelligence": 70,
           "capital": 55
-        },
-        "msgs": 11
+        }
       }
     ],
     "pillars": {
@@ -11042,15 +11017,13 @@
     "history": [
       {
         "snapshot": "s2",
-        "score": 91,
         "tier": "A",
         "composite": 91,
         "pillars": {
           "network": 95,
           "intelligence": 92,
           "capital": 88
-        },
-        "msgs": 2117
+        }
       }
     ],
     "panicScore": 15,
@@ -11114,15 +11087,13 @@
     "history": [
       {
         "snapshot": "s2",
-        "score": 77,
         "tier": "A",
         "composite": 77,
         "pillars": {
           "network": 75,
           "intelligence": 85,
           "capital": 70
-        },
-        "msgs": 108
+        }
       }
     ],
     "panicScore": 25,
@@ -11188,15 +11159,13 @@
     "history": [
       {
         "snapshot": "s2",
-        "score": 52,
         "tier": "A",
         "composite": 52,
         "pillars": {
           "network": 60,
           "intelligence": 45,
           "capital": 55
-        },
-        "msgs": 149
+        }
       }
     ],
     "panicScore": 75,
@@ -11306,33 +11275,47 @@
     "history": [
       {
         "snapshot": "s2",
-        "score": 0,
         "tier": "A",
-        "composite": 0,
+        "composite": 82,
         "pillars": {
-          "network": 0,
-          "intelligence": 0,
-          "capital": 0
-        },
-        "msgs": 14
+          "network": 90,
+          "intelligence": 75,
+          "capital": 85
+        }
       }
     ],
-    "panicScore": 0,
+    "panicScore": 20,
     "panicFlags": [],
     "persona": {
-      "bio": null,
+      "bio": "VC investor at Veronorte with direct exposure to Anthropic and OpenAI. High-level industry connections and insider access.",
       "platforms": [],
-      "tags": [],
-      "role": null
+      "tags": [
+        "vc_investor",
+        "ai_insider",
+        "institutional",
+        "connected"
+      ],
+      "role": "Alpha Contributor"
     },
-    "highlights": [],
+    "highlights": [
+      {
+        "type": "insight",
+        "summary": "Portfolio exposure to Anthropic through Menlo Ventures and direct OpenAI investment",
+        "quality": 9
+      },
+      {
+        "type": "analysis",
+        "summary": "Ray Dalio's parenting strategy: sending 13-year-old son to live with Chinese family",
+        "quality": 6
+      }
+    ],
     "pillars": {
-      "network": 0,
-      "intelligence": 0,
-      "capital": 0
+      "network": 90,
+      "intelligence": 75,
+      "capital": 85
     },
     "pillarComponents": {},
-    "composite": 0
+    "composite": 82
   },
   "María Posada Martínez": {
     "tier": "A",
@@ -11354,15 +11337,13 @@
     "history": [
       {
         "snapshot": "s2",
-        "score": 72,
         "tier": "A",
         "composite": 72,
         "pillars": {
           "network": 65,
           "intelligence": 90,
           "capital": 55
-        },
-        "msgs": 15
+        }
       }
     ],
     "panicScore": 10,
@@ -11451,5 +11432,67 @@
     },
     "pillarComponents": {},
     "composite": 0
+  },
+  "Amalia Uribe": {
+    "tier": "A",
+    "score": 0,
+    "msgs": 0,
+    "links": 0,
+    "avgWords": 0,
+    "activeDays": 0,
+    "activeWeeks": 0,
+    "lastActive": "2026-04-07",
+    "daysInactive": 0,
+    "components": {
+      "volume": 0,
+      "consistency": 0,
+      "substance": 0,
+      "recency": 0
+    },
+    "isFounder": false,
+    "history": [
+      {
+        "snapshot": "s2",
+        "tier": "A",
+        "composite": 73,
+        "pillars": {
+          "network": 70,
+          "intelligence": 85,
+          "capital": 60
+        }
+      }
+    ],
+    "panicScore": 15,
+    "panicFlags": [],
+    "persona": {
+      "bio": "Entrepreneur building women's health app using AI. Strong technical execution with paying customers and product development skills.",
+      "tags": [
+        "female_entrepreneur",
+        "healthtech",
+        "ai_builder",
+        "product_developer"
+      ],
+      "role": "Alpha Contributor",
+      "platforms": []
+    },
+    "highlights": [
+      {
+        "type": "tool",
+        "summary": "Women's hormonal health app with natural medicine focus - already has paying users",
+        "quality": 9
+      },
+      {
+        "type": "insight",
+        "summary": "Practical AI development workflow using Lovable for rapid prototyping and deployment",
+        "quality": 7
+      }
+    ],
+    "pillars": {
+      "network": 70,
+      "intelligence": 85,
+      "capital": 60
+    },
+    "pillarComponents": {},
+    "composite": 73
   }
 }
