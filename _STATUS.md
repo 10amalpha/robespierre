@@ -1,151 +1,211 @@
 # Robespierre — 10AMPRO Collective Intelligence Dashboard
 
 ## Quick Context
-WhatsApp group engagement analytics for 10AMPRO community. Measures collective intelligence health, identifies dead weight, enforces information diet quality. Named after the group's own enforcement culture ("guillotina").
+WhatsApp group engagement analytics for 10AMPRO community. Measures collective intelligence across three pillars: Network Sharing, Collective Intelligence, and Open Source Capital. Identifies dead weight, panicans, and enforces information diet quality. Named after the group's own enforcement culture ("guillotina").
 
 ## Live
 - **URL**: https://robespierre.vercel.app
 - **Repo**: github.com/10amalpha/robespierre
 - **Vercel Project**: `prj_h7LiqacKcqwQcae368ZXoMyQ7aeL`
 - **Team**: `team_nPG5TrnRZyVuclmm6dZL1AcX`
-- **Current Version**: V5 (Metrics Ledger Architecture)
+- **Current Version**: V5.7
 - **Last Deploy**: April 7, 2026
 
-## Architecture (V5 — Metrics Ledger)
+## Architecture (V5 — Metrics Ledger + Three Pillars)
 
 ### Design Principle
-Process the ore, keep only the gold. Raw WhatsApp exports are parsed for metrics then discarded. The repo stores only the graded output — scores, tiers, activity metrics, and trajectory history. No chat content, no messages, no timestamps of individual posts.
+Process the ore, keep only the gold. Raw WhatsApp exports are parsed for metrics then discarded. The repo stores only the graded output — pillar scores, personas, highlights, panic flags, and trajectory history.
 
 ### File Structure
 ```
 robespierre/
   data/
-    members.json      ← metrics ledger (126 members, ~62KB)
-    meta.json         ← snapshots registry, scoring rules, source stats
+    members.json      ← metrics ledger (126 members, per-member pillars + personas + highlights)
+    meta.json         ← snapshots, pillar definitions, scoring rules, highlight types, source stats
   app/
-    page.js           ← UI component (imports from data/, never hardcodes data)
+    page.js           ← UI (imports from data/, 5 tabs, ~1100 lines)
     layout.js         ← root layout (fonts, meta tags)
   _STATUS.md          ← this file
   package.json        ← Next.js 14, React 18
   next.config.js      ← minimal config
 ```
 
-### Data Layer (`data/`)
-- **`members.json`** — The ledger. Keyed by member name. Each entry:
-  - Current metrics: tier, score, msgs, links, avgWords, activeDays, activeWeeks, lastActive, daysInactive
-  - Score components: volume (0-30), consistency (0-25), substance (0-20), recency (0-25)
-  - `isFounder` flag (Hernán Jaramillo)
-  - `history[]` array — one entry per snapshot with score + tier. Enables trajectory tracking across audits.
-- **`meta.json`** — Group config:
-  - `snapshots[]` — registry of all audit periods (id, date range, days, totals)
-  - `currentSnapshot` — which snapshot the UI renders
-  - `scoring` — model documentation (weights, caps, descriptions)
-  - `tierThresholds` — A=40+, B=15-39, C=1-14, Z=0
-  - `rules` — junk sources, good sources, zombie threshold
-  - `sourceStats` — per-snapshot link source breakdown
+### Three Pillars Scoring Model
+Every member is scored 0-100 on three dimensions:
 
-### UI Layer (`app/page.js`)
-- Imports both JSON files at build time
-- Transforms ledger format into flat array for rendering
-- All metrics computed dynamically from data (KPIs, gauges, flywheel, leaderboard)
-- 4 tabs: Intelligence, Insights, Robespierre, Members
-- When `history[]` has 2+ entries: shows delta arrows (▲▼) on member cards and trajectory chips
-- When `snapshots` has 2+ entries: shows version badge in header
-- No database needed — static JSON at build time = instant load, zero cost
+| Pillar | Weight | What It Measures |
+|--------|--------|-----------------|
+| 🔗 Network Sharing | 25% | Connecting people — intros, deal flow, bridging opportunities, expanding group reach |
+| 🧠 Collective Intelligence | 40% | Making the group smarter — info diet quality, analysis depth, discussion engagement |
+| 💰 Open Source Capital | 35% | Showing your hand — positions, theses, "I bought X because Y", radical transparency |
+
+**Composite** = weighted blend of all three pillars.
+
+**Scoring philosophy**: Rate-based, not volume-based. Quality per unit of activity, not raw counts. Someone with 10 thesis-grade posts scores higher than someone with 100 one-liners.
+
+### Additional Scoring
+- **Panic Score** (0-100): Detects "panicans" — members who flood fear without thesis. Thresholds: 40=flagged, 60=warning, 80=guillotine.
+- **Engagement metrics**: Volume, Consistency, Recency (legacy scoring, kept for context)
+- **Tier thresholds**: A=40+, B=15-39, C=1-14, Z=0 (never posted)
+
+### Per-Member Data Model
+```json
+{
+  "tier": "A",
+  "score": 87.9,
+  "composite": 68,
+  "pillars": { "network": 42, "intelligence": 70, "capital": 85 },
+  "pillarComponents": { "network": {...}, "intelligence": {...}, "capital": {...} },
+  "msgs": 1476, "links": 510, "avgWords": 18.8,
+  "activeDays": 40, "activeWeeks": 8,
+  "lastActive": "2026-02-21", "daysInactive": 0,
+  "components": { "volume": 30, "consistency": 11.5, "substance": 20, "recency": 25 },
+  "panicScore": null,
+  "panicFlags": [],
+  "persona": {
+    "bio": "Founder of 10AMPRO...",
+    "platforms": [{ "type": "substack", "url": "https://www.10am.pro", "handle": "10am.pro" }],
+    "tags": ["macro", "crypto", "BTC"],
+    "role": "Founder & Chief Curator"
+  },
+  "highlights": [
+    { "type": "thesis", "pillar": "capital", "summary": "...", "date": "...", "quality": 9 }
+  ],
+  "history": [
+    { "snapshot": "s1", "score": 87.9, "tier": "A", "composite": 68, "pillars": {...} }
+  ]
+}
+```
 
 ### Update Workflow
 ```
-1. Upload new WhatsApp chat export to Claude
-2. Claude parses → computes metrics for new period only
-3. Merge into data/members.json:
-   - Update cumulative totals (msgs, links, activeDays, etc.)
-   - Recalculate scores and tiers
-   - Append new entry to each member's history[]
-   - Add any new members, flag removed ones
-4. Add new snapshot entry to data/meta.json
-5. git push → Vercel auto-deploys (page.js untouched)
+1. Upload WhatsApp chat export
+2. Extract messages per member
+3. Send to Opus API in batches (~7 calls):
+   - Grade 3 pillars (0-100 each) with component scores
+   - Detect panic behavior with evidence flags
+   - Generate persona (bio, tags, role) from message content
+   - Extract top highlights (best thesis, analysis, links, intros)
+4. Store results in data/members.json
+5. Update snapshot in data/meta.json + groupHighlights
+6. git push → Vercel auto-deploys
 ```
 
-### Why No Database
-Robespierre updates ~4x/year (quarterly audits). The data is 62KB of JSON. Adding Supabase/Postgres would mean connection strings, API layers, auth, and a monthly bill — all to serve data that changes once a quarter. JSON-in-git gives: version control for free (every snapshot = a git commit), zero infrastructure, zero cost, fastest possible load time. Database makes sense only if/when: (a) the Robespierre bot writes data in real-time, (b) multiple users trigger updates via UI, or (c) multi-group instances exist.
+### Opus AI Pipeline (Ready to Run)
+- **API Key**: Stored in project memory (Claude API)
+- **Model**: Claude Opus 4 for nuanced judgment
+- **Estimated cost per full run**: ~$3-4 USD (87 non-zombie members, ~7 batch calls)
+- **What Opus does**: Reads actual message content in Spanish/English and grades with real understanding — not proxy math
+- **Current state**: Framework built, awaiting new chat export to trigger first Opus run
+- **Note**: s1 currently has proxy-math pillar scores. First Opus run should re-grade s1 + grade s2 for clean comparisons.
 
-## Current Snapshot: s1
+### Why No Database
+Updates ~4x/year. 62KB of JSON. Zero infrastructure, zero cost, instant load. Database only needed when Robespierre bot writes data in real-time.
+
+## Current Snapshot: s1 (Proxy Math — Pending Opus Re-grade)
 - **Range**: Nov 16, 2025 → Feb 21, 2026 (96 days)
-- **Source**: WhatsApp chat export + member list screenshots
-- **Status**: Baseline. Awaiting s2 export for first trajectory comparison.
+- **Source**: WhatsApp chat export (9,358 lines) + member list screenshots
+- **Pillar scores**: Currently derived from proxy formulas (rate-based). Will be replaced by Opus analysis.
 
 ### Numbers
-| Metric | Value | Target |
-|--------|-------|--------|
-| Total members | 126 | — |
-| Tier A (Active) | 66 | — |
-| Tier B (Watch) | 12 | — |
-| Tier C (Remove) | 9 | — |
-| Tier Z (Zombie) | 39 | 0 |
-| Founder msg share | 29% | <15% |
-| Founder link share | 52% | <20% |
-| Knowledge distribution | 63% | >85% |
-| Signal-to-noise | 86% | >80% ✓ |
-| Network density | 32% | >50% |
-| Decentralization | 71% | >85% |
-| Bus factor | 1 | 5+ |
-| Dead weight to cut | 53 | 0 |
+| Metric | Value | Target | Status |
+|--------|-------|--------|--------|
+| Total members | 126 | — | — |
+| Tier A (Active) | 66 | — | — |
+| Tier B (Watch) | 12 | — | — |
+| Tier C (Remove) | 9 | — | — |
+| Tier Z (Zombie) | 39 | 0 | ✗ |
+| 🔗 Network avg | ~44 | >50 | ✗ |
+| 🧠 Intelligence avg | ~42 | >50 | ✗ |
+| 💰 Capital avg | ~40 | >50 | ✗ |
+| Founder msg share | 29% | <15% | ✗ |
+| Founder link share | 52% | <20% | ✗ |
+| Bus factor | 1 | 5+ | ✗ |
+| Dead weight to cut | 53 | 0 | ✗ |
 
-## 4 Tabs
-1. **🧠 Intelligence** — System health gauges (Knowledge Distribution, S/N, Network Density, Decentralization), 6 KPI cards, Learning Flywheel (4 progress bars with targets), Top 10 Knowledge Nodes leaderboard (clickable → Members)
-2. **💡 Insights** — Founder Dependency deep dive (4 metric cards + analysis text with clickable member names), 6 insight cards (Top 5 Concentration, Lurker Ratio, Signal Quality, Knowledge Input Diversity, Consistency, Bus Factor), 5 Actionable Plays
-3. **⚔️ Robespierre** — La Guillotina header, Execution stats (4 cards), Crimes Against CI (3 offense types), Future Guillotine Offenses, Group Information Diet (source bars from meta.json), Zombie list, Tier C Deserters, Death Row (dormant B), Redemption Path
-4. **👥 Members** — Tier summary cards, search/filter/sort, expandable member cards with score breakdown (volume/consistency/substance/recency bars), trajectory chips when history > 1 snapshot
+## 5 Tabs
 
-## Scoring Model
-Engagement Score (0-100):
-- **Volume** (0-30): msgs/week × 5, capped at 30
-- **Consistency** (0-25): (active weeks / total weeks) × 25
-- **Substance** (0-20): (avg words/10) × 10 + (links × 2), capped at 20
-- **Recency** (0-25): 25 if <7d, 20 if <14d, 12 if <30d, 5 if <60d, 0 if 60d+
-- **Tier thresholds**: A = 40+, B = 15-39, C = 1-14, Z = 0 (never posted)
+### 🧠 Intelligence
+- **Three Pillars of 10AMPRO**: Group averages per pillar with weights and progress bars
+- **Top 5 per pillar**: Separate leaderboards for Network, Intelligence, Capital
+- **🌐 Network Node Map**: Force-directed canvas graph. Nodes = members (sized by composite, colored by tier). Edges = activity overlap. Hover for pillar tooltip, click to navigate. Founder gets 👑.
+- **💎 Best Of**: Top contributions across all members (pending Opus). 7 highlight types: thesis, analysis, alpha link, network intro, market call, insight, tool.
+- **System Health Gauges**: Knowledge Distribution, Signal-to-Noise, Network Density, Decentralization
+- **KPI Grid**: Active Brains, Knowledge Inputs, Velocity, Depth, 7d Pulse, Dead Weight
+
+### 💡 Insights
+- **Pillar Diagnosis**: Per-pillar analysis with strong/weak member counts and actionable insight
+- **Founder Dependency**: 4 metric cards (msg share, link share, counts) with targets
+- **Insight cards**: Lurker Ratio, Bus Factor
+- **Pillar-Based Actions**: 5 actionable plays (Network Challenge, Weekly Curator, Friday Position Thread, Cut dead weight, Quarterly Audit)
+
+### 📈 Progress
+- **Single snapshot view**: Baseline metrics with targets and ✓/✗, tier distribution bar chart, "What s2 Will Reveal" roadmap
+- **Multi-snapshot view** (when s2+ exists): Pillar progress deltas (▲▼), Tier movements + promotions, Biggest Climbers (top 10), Biggest Drops (top 10)
+
+### ⚔️ Robespierre
+- **La Guillotina header**: Pillar-based execution logic
+- **Execution stats**: 4 cards (Zombies, Tier C, Dormant B, Total Cut)
+- **Crimes Against CI**: 3 offense types with counts
+- **🚨 Panicans**: Fear merchant detection. Behavior cards (fear without thesis, red candle reactive, FUD spreader, no follow-up). Flagged members list with panic scores + Capital cross-reference + Opus evidence. Pending analysis state until Opus runs.
+- **Source Quality**: Information diet bars (X/Twitter, YouTube, Substack, IG, TikTok, Bloomberg)
+- **Zombies, Deserters, Death Row**: Lists with activity stats
+- **Redemption Path**: Pillar-based (prove value in at least ONE pillar)
+
+### 👥 Members
+- **Tier summary cards** (A/B/C/Z counts)
+- **Search + filter + sort**: Sort by Composite, 🔗 Network, 🧠 Intelligence, 💰 Capital, Messages, Links, Inactive
+- **Member cards** (collapsed): Name, tier badge, panic badge (if 40+), pillar scores (🔗🧠💰), days ago, composite score
+- **Member cards** (expanded): Radar triangle chart, pillar bars, panic bar + evidence, engagement metrics (volume/consistency/recency), stats row, persona (bio, platforms, tags, role), highlights (top 3), trajectory chips
+
+## Personas
+17 members pre-seeded with bio, platforms, tags, role from chat context. 109 pending Opus auto-generation. Known platforms: Hernán (10am.pro Substack, @holdmybirra Twitter), Nico Fernandez (Substack), Guillermo Valencia (macrowise Substack), Pablo Velez Mejia (YouTube).
 
 ## Signal Quality Rules
 - **Good sources** (+1): X/Twitter, YouTube, Substack, Bloomberg, Reuters, FT, arxiv
 - **Junk food** (-2): Instagram, TikTok
 - **gordo Barato exempt** from junk food penalty (10AMPRO content creator)
 - **Stale content** (-1): community flags "viejo/old/repetido"
-- **Self-aware reshare** (-0.5): "perdón si es repetido"
 - Group rule since Jan 21, 2026: "Old/repetido = Guillotina"
 
-## Source Quality (s1)
-| Source | Links | Verdict |
-|--------|-------|---------|
-| X/Twitter | 754 | Primary alpha ✓ |
-| YouTube | 151 | Deep content ✓ |
-| Substack | 71 | Analysis ✓ |
-| Instagram | 16 | Junk food ✗ |
-| TikTok | 14 | Junk food ✗ (86% gordo Barato — exempt) |
-| Bloomberg/Reuters/FT | 4 | Premium ✓ (need more) |
-
-## Known Limitations
-- **Emoji reactions not captured**: WhatsApp exports exclude tap-reactions
-- **Zero-post members from screenshots only**: Cross-referenced chat export (87 posted) with member list (126 total)
-- **No reply-thread analysis**: Export format doesn't capture who replied to whom
-- **Duplicate URL detection not yet built**: Can't detect same link shared twice
+## Highlight Types
+| Type | Icon | Pillar | Description |
+|------|------|--------|-------------|
+| thesis | 💰 | Capital | Investment thesis with specific position and reasoning |
+| analysis | 🧠 | Intelligence | Deep analytical post on a topic |
+| link | 🔗 | Intelligence | High-value external source shared |
+| intro | 🤝 | Network | Introduction or connection made between members |
+| call | 📣 | Capital | Specific market call with conviction |
+| insight | 💡 | Intelligence | Original observation or framework |
+| tool | 🛠️ | Network | Tool, resource, or utility shared with the group |
 
 ## Version History
 | Version | Date | Changes |
 |---------|------|---------|
 | V1-V3 | Feb 21, 2026 | Initial builds — monolithic JSX with hardcoded data |
-| V4 | Feb 21, 2026 | Production release — 4 tabs, scoring model, full UI |
-| V5 | Apr 7, 2026 | Metrics ledger architecture — data/UI separation, history tracking, snapshot system |
+| V4 | Feb 21, 2026 | Production release — 4 tabs, single engagement score, full UI |
+| V5.0 | Apr 7, 2026 | Metrics ledger architecture — data/UI separation, snapshot system |
+| V5.1 | Apr 7, 2026 | Three-pillar scoring system (Network, Intelligence, Capital) |
+| V5.2 | Apr 7, 2026 | Rate-based pillar scoring — quality over volume |
+| V5.3 | Apr 7, 2026 | Panicans detection framework — fear merchants section |
+| V5.4 | Apr 7, 2026 | Network Node Map — force-directed graph on Intelligence tab |
+| V5.5 | Apr 7, 2026 | Member Personas — identity layer + profile UI |
+| V5.6 | Apr 7, 2026 | Progress tab — differential tracking across snapshots |
+| V5.7 | Apr 7, 2026 | Best Of highlights — per-member + group-level top contributions |
 
 ## TODO / Next Steps
-- [ ] Ingest s2 WhatsApp export (new conversations pending upload)
-- [ ] Apply tweaks to scoring/UI (tweaks pending from user)
-- [ ] Add signal freshness scoring (detect "viejo/old/repetido" community flags)
+- [ ] **NEXT**: Run Opus pipeline on chat export (re-grade s1 + process s2)
+- [ ] Process new WhatsApp export (awaiting upload)
+- [ ] Opus: real pillar scores replacing proxy math
+- [ ] Opus: panican detection with evidence
+- [ ] Opus: auto-generate 109 pending personas
+- [ ] Opus: extract highlights for Best Of feed
+- [ ] Opus: @mention graph for real Node Map edges
 - [ ] Implement IG/TikTok penalty in scoring model
-- [ ] Cross-tab: clicking zombie names in Robespierre → Members tab
-- [ ] Add "executed date" tracking once members are actually removed
+- [ ] Add "executed date" tracking once members are removed
 - [ ] Build Robespierre bot (Mac Mini + KIMI — mentioned in chat Feb 9)
-- [ ] Consider database layer when bot goes live (not before)
 
 ## Related
-- Claude Project: `10ampro_robespierre_v4.jsx` + `_chat.txt` (WhatsApp export, 9358 lines)
+- Claude Project: `10ampro_robespierre_v4.jsx` + `_chat.txt` (9,358 lines)
+- Claude API key: stored in project memory
 - Goldfishmemory: `10AMPRO_WhatsApp_CI_Status.docx` in Google Drive (needs updating)
