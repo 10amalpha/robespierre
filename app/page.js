@@ -85,7 +85,7 @@ const G = ({ v, mx = 1, lb, sub, c, sz = 76 }) => {
 };
 
 const KPI = ({ icon, title, value, sub, color, alert }) => (
-  <div style={{ background: "#111118", borderRadius: 10, padding: "11px 13px", border: `1px solid ${alert ? color + "40" : "#1e1e2e"}`, flex: "1 1 140px", minWidth: 140 }}>
+  <div style={{ background: "#111118", borderRadius: 10, padding: "11px 13px", border: `1px solid ${alert ? color + "40" : "#1e1e2e"}`, flex: "1 1 100px", minWidth: 100 }}>
     <div style={{ display: "flex", alignItems: "center", gap: 5, marginBottom: 5 }}><span style={{ fontSize: 12 }}>{icon}</span><span style={{ fontSize: 9, color: "#6b7280", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase" }}>{title}</span></div>
     <div style={{ fontSize: 21, fontWeight: 700, color, fontFamily: "'JetBrains Mono',monospace" }}>{value}</div>
     <div style={{ fontSize: 10, color: "#6b7280", marginTop: 2, lineHeight: 1.4 }}>{sub}</div>
@@ -164,12 +164,12 @@ const Card = ({ m, rank, exp, tog }) => {
             {m.panic !== null && m.panic >= 40 && <span style={{ fontSize: 9, padding: "2px 7px", borderRadius: 99, fontWeight: 600, background: m.panic >= 80 ? "#450a0a" : "#422006", color: m.panic >= 80 ? "#ef4444" : "#f97316", border: `1px solid ${m.panic >= 80 ? "#ef444430" : "#f9731630"}` }}>🚨 {m.panic}</span>}
             {delta !== null && <span style={{ fontSize: 9, fontWeight: 700, color: delta > 0 ? "#10b981" : delta < 0 ? "#ef4444" : "#6b7280", fontFamily: "'JetBrains Mono',monospace" }}>{delta > 0 ? "▲" : delta < 0 ? "▼" : "="}{Math.abs(delta).toFixed(0)}</span>}
           </div>
-          <div style={{ display: "flex", gap: 8, marginTop: 4 }}>
-            <span style={{ fontSize: 9, color: PCOL.network, fontWeight: 600, fontFamily: "'JetBrains Mono',monospace" }}>🔗{m.p.network}</span>
-            <span style={{ fontSize: 9, color: PCOL.intelligence, fontWeight: 600, fontFamily: "'JetBrains Mono',monospace" }}>🧠{m.p.intelligence}</span>
-            <span style={{ fontSize: 9, color: PCOL.capital, fontWeight: 600, fontFamily: "'JetBrains Mono',monospace" }}>💰{m.p.capital}</span>
-            <span style={{ fontSize: 9, color: "#6b7280" }}>·</span>
-            <span style={{ fontSize: 9, color: m.di > 30 ? "#ef4444" : m.di > 14 ? "#f59e0b" : "#6b7280" }}>{m.di === 0 ? "today" : `${m.di}d ago`}</span>
+          <div style={{ display: "flex", gap: 6, marginTop: 4, flexWrap: "wrap" }}>
+            <span style={{ fontSize: 8, color: PCOL.network, fontWeight: 600, fontFamily: "'JetBrains Mono',monospace" }}>🔗{m.p.network}</span>
+            <span style={{ fontSize: 8, color: PCOL.intelligence, fontWeight: 600, fontFamily: "'JetBrains Mono',monospace" }}>🧠{m.p.intelligence}</span>
+            <span style={{ fontSize: 8, color: PCOL.capital, fontWeight: 600, fontFamily: "'JetBrains Mono',monospace" }}>💰{m.p.capital}</span>
+            <span style={{ fontSize: 8, color: "#6b7280" }}>·</span>
+            <span style={{ fontSize: 8, color: m.di > 30 ? "#ef4444" : m.di > 14 ? "#f59e0b" : "#6b7280" }}>{m.di === 0 ? "today" : `${m.di}d ago`}</span>
           </div>
         </div>
         <div style={{ textAlign: "right", flexShrink: 0 }}>
@@ -178,9 +178,9 @@ const Card = ({ m, rank, exp, tog }) => {
         </div>
       </div>
       {exp && (<div style={{ marginTop: 11, paddingTop: 9, borderTop: `1px solid ${tc.color}20` }}>
-        <div style={{ display: "flex", gap: 12, alignItems: "flex-start", flexWrap: "wrap" }}>
-          <Radar net={m.p.network} int={m.p.intelligence} cap={m.p.capital} size={100} />
-          <div style={{ flex: 1, minWidth: 150 }}>
+        <div style={{ display: "flex", gap: 12, alignItems: "flex-start", flexWrap: "wrap", justifyContent: "center" }}>
+          <Radar net={m.p.network} int={m.p.intelligence} cap={m.p.capital} size={90} />
+          <div style={{ flex: 1, minWidth: 0, width: "100%" }}>
             <PillarBar label="Network" icon="🔗" value={m.p.network} color={PCOL.network} />
             <PillarBar label="Intelligence" icon="🧠" value={m.p.intelligence} color={PCOL.intelligence} />
             <PillarBar label="Capital" icon="💰" value={m.p.capital} color={PCOL.capital} />
@@ -203,7 +203,7 @@ const Card = ({ m, rank, exp, tog }) => {
             </div>
           </div>
         </div>
-        <div style={{ display: "flex", gap: 13, marginTop: 7, flexWrap: "wrap" }}>
+        <div style={{ display: "flex", gap: 8, marginTop: 7, flexWrap: "wrap", flexWrap: "wrap" }}>
           {[["Msgs", m.m], ["Links", m.l], ["Avg words", m.w], ["Active days", `${m.ad}/${SNAP.days}`], ["Last", m.la]].map(([a, b]) => (
             <div key={a} style={{ fontSize: 10, color: "#9ca3af" }}><span style={{ color: "#6b7280" }}>{a}:</span> {b}</div>
           ))}
@@ -489,8 +489,8 @@ const NodeMap = ({ data, goM }) => {
       <div style={{ position: "relative", borderRadius: 8, overflow: "hidden", background: "#0a0a0f", border: "1px solid #1e1e2e" }}>
         <canvas
           ref={canvasRef}
-          width={720}
-          height={500}
+          width={600}
+          height={400}
           style={{ width: "100%", height: "auto", display: "block" }}
           onMouseMove={handleMouse}
           onMouseLeave={() => { if (typeof window !== "undefined") window.__robHover = null; setHovered(null); }}
@@ -554,29 +554,29 @@ export default function App() {
   const topInt = [...active].sort((a, b) => b.p.intelligence - a.p.intelligence).slice(0, 5);
   const topCap = [...active].sort((a, b) => b.p.capital - a.p.capital).slice(0, 5);
 
-  return (<div style={{ minHeight: "100vh", background: "#0a0a0f", color: "#e5e7eb", fontFamily: "'Inter',-apple-system,sans-serif" }}>
+  return (<div style={{ minHeight: "100vh", background: "#0a0a0f", color: "#e5e7eb", fontFamily: "'Inter',-apple-system,sans-serif", overflowX: "hidden" }}>
 
     {/* Header */}
-    <div style={{ padding: "22px 20px 12px" }}>
-      <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-        <span style={{ fontSize: 19, fontWeight: 700, letterSpacing: "-0.02em" }}>10AMPRO</span>
-        <span style={{ fontSize: 10, padding: "3px 10px", borderRadius: 99, background: "linear-gradient(135deg,#052e16,#1e1e2e)", color: "#10b981", fontWeight: 600, border: "1px solid #10b98130" }}>Collective Intelligence</span>
-        {META.snapshots.length > 1 && <span style={{ fontSize: 9, padding: "2px 7px", borderRadius: 99, background: "#1e1e2e", color: "#8b5cf6", fontWeight: 600, border: "1px solid #8b5cf630" }}>v{META.snapshots.length}</span>}
+    <div style={{ padding: "18px 14px 10px" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
+        <span style={{ fontSize: 18, fontWeight: 700, letterSpacing: "-0.02em" }}>10AMPRO</span>
+        <span style={{ fontSize: 9, padding: "3px 8px", borderRadius: 99, background: "linear-gradient(135deg,#052e16,#1e1e2e)", color: "#10b981", fontWeight: 600, border: "1px solid #10b98130" }}>Collective Intelligence</span>
+        {META.snapshots.length > 1 && <span style={{ fontSize: 8, padding: "2px 6px", borderRadius: 99, background: "#1e1e2e", color: "#8b5cf6", fontWeight: 600, border: "1px solid #8b5cf630" }}>v{META.snapshots.length}</span>}
       </div>
-      <div style={{ fontSize: 11, color: "#6b7280", marginTop: 3 }}>
-        {META.snapshots[0].from.slice(5).replace("-", "/")} → {SNAP.to.slice(5).replace("-", "/")} · {k.nn} members · {k.tot.toLocaleString()} msgs · {META.snapshots.length} snapshots
+      <div style={{ fontSize: 10, color: "#6b7280", marginTop: 3 }}>
+        {META.snapshots[0].from.slice(5).replace("-", "/")} → {SNAP.to.slice(5).replace("-", "/")} · {k.nn} members · {k.tot.toLocaleString()} msgs
       </div>
     </div>
 
-    {/* Tabs */}
-    <div style={{ display: "flex", borderBottom: "1px solid #1e1e2e", padding: "0 20px", gap: 2, overflowX: "auto" }}>
-      {[["intel", "🧠 Intelligence"], ["insights", "💡 Insights"], ["progress", "📈 Progress"], ["robes", "⚔️ Robespierre"], ["members", "👥 Members"]].map(([key, lb]) => (
-        <button key={key} onClick={() => { setSec(key); if (key !== "members") { setSearch(""); setFilter("all"); } }} style={{ padding: "8px 14px", fontSize: 11, fontWeight: 600, cursor: "pointer", background: "transparent", border: "none", color: sec === key ? "#e5e7eb" : "#6b7280", borderBottom: sec === key ? "2px solid #10b981" : "2px solid transparent", whiteSpace: "nowrap" }}>{lb}</button>
+    {/* Tabs — horizontally scrollable on mobile */}
+    <div style={{ display: "flex", borderBottom: "1px solid #1e1e2e", padding: "0 14px", gap: 0, overflowX: "auto", WebkitOverflowScrolling: "touch", msOverflowStyle: "none", scrollbarWidth: "none" }}>
+      {[["intel", "🧠 Intel"], ["insights", "💡 Insights"], ["progress", "📈 Progress"], ["robes", "⚔️ Robes"], ["members", "👥 Members"]].map(([key, lb]) => (
+        <button key={key} onClick={() => { setSec(key); if (key !== "members") { setSearch(""); setFilter("all"); } }} style={{ padding: "8px 12px", fontSize: 11, fontWeight: 600, cursor: "pointer", background: "transparent", border: "none", color: sec === key ? "#e5e7eb" : "#6b7280", borderBottom: sec === key ? "2px solid #10b981" : "2px solid transparent", whiteSpace: "nowrap", flexShrink: 0 }}>{lb}</button>
       ))}
     </div>
 
     {/* ── TAB: Intelligence ──────────────────────────────────────── */}
-    {sec === "intel" && (<div style={{ padding: "14px 20px 80px" }}>
+    {sec === "intel" && (<div style={{ padding: "12px 14px 80px" }}>
 
       {/* Three Pillars Overview */}
       <div style={{ background: "#111118", borderRadius: 12, padding: "16px 14px", border: "1px solid #1e1e2e", marginBottom: 12 }}>
@@ -587,7 +587,7 @@ export default function App() {
             { key: "intelligence", icon: "🧠", label: "Collective Intelligence", desc: "Making us smarter", avg: k.avgInt, c: PCOL.intelligence, w: PW.intelligence },
             { key: "capital", icon: "💰", label: "Open Source Capital", desc: "Showing your hand", avg: k.avgCap, c: PCOL.capital, w: PW.capital },
           ].map(p => (
-            <div key={p.key} style={{ flex: "1 1 140px", minWidth: 140, background: "#0a0a0f", borderRadius: 10, padding: "14px 12px", border: `1px solid ${p.c}20` }}>
+            <div key={p.key} style={{ flex: "1 1 100px", minWidth: 100, background: "#0a0a0f", borderRadius: 10, padding: "14px 12px", border: `1px solid ${p.c}20` }}>
               <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 8 }}>
                 <span style={{ fontSize: 16 }}>{p.icon}</span>
                 <div>
@@ -619,7 +619,7 @@ export default function App() {
           { label: "Top Intelligence", icon: "🧠", data: topInt, key: "intelligence", c: PCOL.intelligence },
           { label: "Top Capital", icon: "💰", data: topCap, key: "capital", c: PCOL.capital },
         ].map(col => (
-          <div key={col.key} style={{ flex: "1 1 180px", minWidth: 180, background: "#111118", borderRadius: 10, padding: "12px", border: `1px solid ${col.c}20` }}>
+          <div key={col.key} style={{ flex: "1 1 100%", minWidth: 140, background: "#111118", borderRadius: 10, padding: "12px", border: `1px solid ${col.c}20` }}>
             <div style={{ fontSize: 10, color: col.c, fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", marginBottom: 8 }}>{col.icon} {col.label}</div>
             {col.data.map((m, i) => (
               <div key={m.n} onClick={() => goM(m.n)} style={{ display: "flex", alignItems: "center", gap: 6, padding: "4px 0", cursor: "pointer", borderBottom: i < 4 ? "1px solid #1a1a2e" : "none" }}>
@@ -709,7 +709,7 @@ export default function App() {
     </div>)}
 
     {/* ── TAB: Insights ──────────────────────────────────────────── */}
-    {sec === "insights" && (<div style={{ padding: "14px 20px 80px" }}>
+    {sec === "insights" && (<div style={{ padding: "12px 14px 80px" }}>
 
       {/* Pillar Health Insights */}
       <div style={{ background: "#111118", borderRadius: 12, padding: "14px 12px", border: "1px solid #1e1e2e", marginBottom: 14 }}>
@@ -821,13 +821,13 @@ export default function App() {
         return <span style={{ fontSize: 11, fontWeight: 700, color: c, fontFamily: "'JetBrains Mono',monospace" }}>{r > 0 ? "▲" : r < 0 ? "▼" : "="}{Math.abs(r)}{suffix}</span>;
       };
 
-      return (<div style={{ padding: "14px 20px 80px" }}>
+      return (<div style={{ padding: "12px 14px 80px" }}>
         {/* Header */}
         <div style={{ background: "#111118", borderRadius: 12, padding: "16px 14px", border: "1px solid #1e1e2e", marginBottom: 12 }}>
           <div style={{ fontSize: 10, color: "#6b7280", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 8 }}>📈 Snapshot Timeline</div>
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
             {snaps.map((s, i) => (
-              <div key={s.id} style={{ flex: "1 1 120px", minWidth: 120, padding: "10px 12px", borderRadius: 8, background: s.id === current.id ? "#052e16" : "#0a0a0f", border: `1px solid ${s.id === current.id ? "#10b98130" : "#1e1e2e"}` }}>
+              <div key={s.id} style={{ flex: "1 1 120px", minWidth: 100, padding: "10px 12px", borderRadius: 8, background: s.id === current.id ? "#052e16" : "#0a0a0f", border: `1px solid ${s.id === current.id ? "#10b98130" : "#1e1e2e"}` }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 4, marginBottom: 4 }}>
                   <span style={{ fontSize: 13, fontWeight: 700, color: s.id === current.id ? "#10b981" : "#6b7280", fontFamily: "'JetBrains Mono',monospace" }}>{s.id}</span>
                   {s.id === current.id && <span style={{ fontSize: 8, padding: "1px 5px", borderRadius: 99, background: "#10b98120", color: "#10b981", fontWeight: 600 }}>CURRENT</span>}
@@ -837,7 +837,7 @@ export default function App() {
               </div>
             ))}
             {snaps.length === 1 && (
-              <div style={{ flex: "1 1 120px", minWidth: 120, padding: "10px 12px", borderRadius: 8, background: "#0a0a0f", border: "1px dashed #1e1e2e" }}>
+              <div style={{ flex: "1 1 120px", minWidth: 100, padding: "10px 12px", borderRadius: 8, background: "#0a0a0f", border: "1px dashed #1e1e2e" }}>
                 <div style={{ fontSize: 13, fontWeight: 700, color: "#374151", fontFamily: "'JetBrains Mono',monospace" }}>s2</div>
                 <div style={{ fontSize: 10, color: "#374151" }}>Next audit</div>
                 <div style={{ fontSize: 10, color: "#374151", marginTop: 2 }}>Upload new chat export to generate</div>
@@ -986,7 +986,7 @@ export default function App() {
     })())}
 
     {/* ── TAB: Robespierre ───────────────────────────────────────── */}
-    {sec === "robes" && (<div style={{ padding: "14px 20px 80px" }}>
+    {sec === "robes" && (<div style={{ padding: "12px 14px 80px" }}>
       <div style={{ background: "linear-gradient(135deg,#1a0a0a,#2e1065)", borderRadius: 12, padding: "20px 16px", border: "1px solid #6b21a830", marginBottom: 14 }}>
         <div style={{ fontSize: 18, fontWeight: 700, color: "#dc2626", marginBottom: 6 }}>⚔️ La Guillotina</div>
         <div style={{ fontSize: 12, color: "#e5a0a0", lineHeight: 1.6 }}>Zero across all 3 pillars = instant execution. Strong on 1 but zero on 2 = watch list with specific challenge.</div>
@@ -1027,7 +1027,7 @@ export default function App() {
                 { lb: "FUD spreader", icon: "🔥", desc: "Emotional contagion that triggers others" },
                 { lb: "No follow-up", icon: "🫥", desc: "Panics, disappears, never admits they were wrong" },
               ].map((s, i) => (
-                <div key={i} style={{ flex: "1 1 120px", minWidth: 120, padding: "8px 10px", background: "#1a0a00", borderRadius: 8, border: "1px solid #f9731615" }}>
+                <div key={i} style={{ flex: "1 1 120px", minWidth: 100, padding: "8px 10px", background: "#1a0a00", borderRadius: 8, border: "1px solid #f9731615" }}>
                   <div style={{ fontSize: 14, marginBottom: 2 }}>{s.icon}</div>
                   <div style={{ fontSize: 10, fontWeight: 600, color: "#f97316" }}>{s.lb}</div>
                   <div style={{ fontSize: 9, color: "#9ca3af", marginTop: 2, lineHeight: 1.4 }}>{s.desc}</div>
@@ -1082,10 +1082,10 @@ export default function App() {
         <div style={{ fontSize: 10, color: "#10b981", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>📡 Group Information Diet</div>
         {SRC.map((s, i) => { const mx = Math.max(...SRC.map(x => x.count)); const c = srcColors[s.source] || "#6b7280"; return (
           <div key={i} style={{ display: "flex", alignItems: "center", gap: 10, padding: "6px 0", borderBottom: i < SRC.length - 1 ? "1px solid #1a1a2e" : "none" }}>
-            <div style={{ width: 120, fontSize: 11, fontWeight: 500, color: "#e5e7eb" }}>{s.source}</div>
+            <div style={{ width: 90, fontSize: 10, fontWeight: 500, color: "#e5e7eb" }}>{s.source}</div>
             <div style={{ flex: 1, height: 6, background: "#1a1a2e", borderRadius: 3, overflow: "hidden" }}><div style={{ width: `${(s.count / mx) * 100}%`, height: "100%", background: c, borderRadius: 3 }} /></div>
             <div style={{ width: 40, fontSize: 12, fontWeight: 700, color: c, fontFamily: "'JetBrains Mono',monospace", textAlign: "right" }}>{s.count}</div>
-            <div style={{ width: 130, fontSize: 9, color: c }}>{s.verdict} {srcVerdicts[s.verdict] || ""}</div>
+            <div style={{ fontSize: 8, minWidth: 60, maxWidth: 100, color: c }}>{s.verdict} {srcVerdicts[s.verdict] || ""}</div>
           </div>); })}
       </div>}
       <div style={{ background: "#111118", borderRadius: 12, padding: "16px 14px", border: "1px solid #6b21a825", marginBottom: 14 }}>
@@ -1112,15 +1112,15 @@ export default function App() {
 
     {/* ── TAB: Members ───────────────────────────────────────────── */}
     {sec === "members" && (<>
-      <div style={{ padding: "12px 20px 0", display: "flex", gap: 8, flexWrap: "wrap" }}>
+      <div style={{ padding: "12px 14px 0", display: "flex", gap: 8, flexWrap: "wrap" }}>
         {[["Active", k.tA, "#10b981", "#052e16"], ["Watch", k.tB, "#f59e0b", "#422006"], ["Remove", k.tC, "#ef4444", "#450a0a"], ["Zombie", k.tZ, "#6b21a8", "#2e1065"]].map(([lb, ct, c, bg]) => (
-          <div key={lb} style={{ flex: 1, minWidth: 85, padding: "9px 12px", borderRadius: 8, background: bg, border: `1px solid ${c}25` }}>
+          <div key={lb} style={{ flex: 1, minWidth: 70, padding: "9px 12px", borderRadius: 8, background: bg, border: `1px solid ${c}25` }}>
             <div style={{ fontSize: 20, fontWeight: 700, color: c, fontFamily: "'JetBrains Mono',monospace" }}>{ct}</div>
             <div style={{ fontSize: 10, color: c, opacity: 0.7, fontWeight: 500 }}>{lb}</div>
           </div>
         ))}
       </div>
-      <div style={{ padding: "10px 20px", display: "flex", flexDirection: "column", gap: 8 }}>
+      <div style={{ padding: "10px 14px", display: "flex", flexDirection: "column", gap: 8 }}>
         <input type="text" placeholder="Search members..." value={search} onChange={e => setSearch(e.target.value)} style={{ width: "100%", padding: "9px 12px", borderRadius: 8, background: "#111118", border: "1px solid #1e1e2e", color: "#e5e7eb", fontSize: 12, outline: "none", boxSizing: "border-box" }} />
         <div style={{ display: "flex", gap: 5, flexWrap: "wrap" }}>
           {[["all", "All"], ["A", "⚡ Active"], ["B", "👁 Watch"], ["C", "🪓 Remove"], ["Z", "🧟 Zombie"]].map(([key, lb]) => (
@@ -1138,7 +1138,7 @@ export default function App() {
           </select>
         </div>
       </div>
-      <div style={{ padding: "0 20px 80px" }}>
+      <div style={{ padding: "0 14px 80px" }}>
         <div style={{ fontSize: 10, color: "#6b7280", marginBottom: 6, fontWeight: 500 }}>{filt.length} member{filt.length !== 1 ? "s" : ""}</div>
         {filt.map((m, i) => (<Card key={m.n} m={m} rank={i + 1} exp={exp === m.n} tog={() => setExp(exp === m.n ? null : m.n)} />))}
       </div>
