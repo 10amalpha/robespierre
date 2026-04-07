@@ -50,7 +50,7 @@ function kpis(d) {
   const t5m = t5.reduce((a, x) => a + x.m, 0);
   const lurk = d.filter(x => x.m < 3).length;
   const avgW = d.reduce((a, x) => a + x.aw, 0) / nn;
-  const days = SNAP.days;
+  const days = META.snapshots.reduce((a, s) => a + s.days, 0);
   // Pillar averages (non-zombie only)
   const active = d.filter(x => x.t !== "Z");
   const an = active.length || 1;
@@ -564,7 +564,7 @@ export default function App() {
         {META.snapshots.length > 1 && <span style={{ fontSize: 9, padding: "2px 7px", borderRadius: 99, background: "#1e1e2e", color: "#8b5cf6", fontWeight: 600, border: "1px solid #8b5cf630" }}>v{META.snapshots.length}</span>}
       </div>
       <div style={{ fontSize: 11, color: "#6b7280", marginTop: 3 }}>
-        {SNAP.from.slice(5).replace("-", "/")} → {SNAP.to.slice(5).replace("-", "/")} · {k.nn} members · {k.tot.toLocaleString()} msgs · {SNAP.days}d
+        {META.snapshots[0].from.slice(5).replace("-", "/")} → {SNAP.to.slice(5).replace("-", "/")} · {k.nn} members · {k.tot.toLocaleString()} msgs · {META.snapshots.length} snapshots
       </div>
     </div>
 
