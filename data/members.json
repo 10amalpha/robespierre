@@ -53,7 +53,9 @@
         "specificity": 13
       }
     },
-    "composite": 53
+    "composite": 53,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Camilo Gomez": {
     "tier": "A",
@@ -109,7 +111,9 @@
         "specificity": 25
       }
     },
-    "composite": 63
+    "composite": 63,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Fede Suarez": {
     "tier": "A",
@@ -165,7 +169,9 @@
         "specificity": 23
       }
     },
-    "composite": 55
+    "composite": 55,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Lucas Jaramillo": {
     "tier": "A",
@@ -221,7 +227,9 @@
         "specificity": 22
       }
     },
-    "composite": 60
+    "composite": 60,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Nico Fernandez": {
     "tier": "A",
@@ -277,7 +285,9 @@
         "specificity": 25
       }
     },
-    "composite": 59
+    "composite": 59,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Gabriel Bedoya": {
     "tier": "A",
@@ -333,7 +343,9 @@
         "specificity": 12
       }
     },
-    "composite": 41
+    "composite": 41,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Camilo Botero": {
     "tier": "A",
@@ -389,7 +401,9 @@
         "specificity": 13
       }
     },
-    "composite": 42
+    "composite": 42,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Hernán Jaramillo": {
     "tier": "A",
@@ -445,7 +459,9 @@
         "specificity": 25
       }
     },
-    "composite": 68
+    "composite": 68,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Dario Palacio": {
     "tier": "A",
@@ -501,7 +517,9 @@
         "specificity": 13
       }
     },
-    "composite": 47
+    "composite": 47,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Nathanel Serebrenik": {
     "tier": "A",
@@ -557,7 +575,9 @@
         "specificity": 19
       }
     },
-    "composite": 55
+    "composite": 55,
+    "panicScore": null,
+    "panicFlags": []
   },
   "gordo Barato": {
     "tier": "A",
@@ -613,7 +633,9 @@
         "specificity": 14
       }
     },
-    "composite": 50
+    "composite": 50,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Guillermo Valencia": {
     "tier": "A",
@@ -669,7 +691,9 @@
         "specificity": 18
       }
     },
-    "composite": 44
+    "composite": 44,
+    "panicScore": null,
+    "panicFlags": []
   },
   "antonio jaller": {
     "tier": "A",
@@ -725,7 +749,9 @@
         "specificity": 11
       }
     },
-    "composite": 33
+    "composite": 33,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Juan Diego Pipo": {
     "tier": "A",
@@ -781,7 +807,9 @@
         "specificity": 15
       }
     },
-    "composite": 38
+    "composite": 38,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Daniel Bermúdez": {
     "tier": "A",
@@ -837,7 +865,9 @@
         "specificity": 25
       }
     },
-    "composite": 65
+    "composite": 65,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Juan Esteban Sanin": {
     "tier": "A",
@@ -893,7 +923,9 @@
         "specificity": 17
       }
     },
-    "composite": 37
+    "composite": 37,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Misas": {
     "tier": "A",
@@ -949,7 +981,9 @@
         "specificity": 21
       }
     },
-    "composite": 54
+    "composite": 54,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Enrique Uribe": {
     "tier": "A",
@@ -1005,7 +1039,9 @@
         "specificity": 25
       }
     },
-    "composite": 49
+    "composite": 49,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Pablo Velez Mejia": {
     "tier": "A",
@@ -1061,7 +1097,9 @@
         "specificity": 11
       }
     },
-    "composite": 36
+    "composite": 36,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Andred Angel": {
     "tier": "A",
@@ -1117,7 +1155,9 @@
         "specificity": 14
       }
     },
-    "composite": 37
+    "composite": 37,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Jon Oleaga": {
     "tier": "A",
@@ -1173,7 +1213,9 @@
         "specificity": 5
       }
     },
-    "composite": 29
+    "composite": 29,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Hector Casado": {
     "tier": "A",
@@ -1229,7 +1271,9 @@
         "specificity": 19
       }
     },
-    "composite": 37
+    "composite": 37,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Camilo Ospina Lumm": {
     "tier": "A",
@@ -1285,7 +1329,9 @@
         "specificity": 16
       }
     },
-    "composite": 34
+    "composite": 34,
+    "panicScore": null,
+    "panicFlags": []
   },
   "paul gomez": {
     "tier": "A",
@@ -1341,7 +1387,9 @@
         "specificity": 25
       }
     },
-    "composite": 44
+    "composite": 44,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Juan Castilla": {
     "tier": "A",
@@ -1397,7 +1445,9 @@
         "specificity": 20
       }
     },
-    "composite": 35
+    "composite": 35,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Simón Restrepo": {
     "tier": "A",
@@ -1453,7 +1503,9 @@
         "specificity": 25
       }
     },
-    "composite": 51
+    "composite": 51,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Sebastian Piedrahita": {
     "tier": "A",
@@ -1509,7 +1561,9 @@
         "specificity": 18
       }
     },
-    "composite": 33
+    "composite": 33,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Juan Pablo González S.": {
     "tier": "A",
@@ -1565,7 +1619,9 @@
         "specificity": 18
       }
     },
-    "composite": 38
+    "composite": 38,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Paula Jaramillo": {
     "tier": "A",
@@ -1621,7 +1677,9 @@
         "specificity": 14
       }
     },
-    "composite": 29
+    "composite": 29,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Diego Sanchez": {
     "tier": "A",
@@ -1677,7 +1735,9 @@
         "specificity": 25
       }
     },
-    "composite": 42
+    "composite": 42,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Simon Jaramillo Alpha": {
     "tier": "A",
@@ -1733,7 +1793,9 @@
         "specificity": 0
       }
     },
-    "composite": 24
+    "composite": 24,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Valentina Ramírez": {
     "tier": "A",
@@ -1789,7 +1851,9 @@
         "specificity": 14
       }
     },
-    "composite": 27
+    "composite": 27,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Peter Alexander": {
     "tier": "A",
@@ -1845,7 +1909,9 @@
         "specificity": 25
       }
     },
-    "composite": 48
+    "composite": 48,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Felipe Medina": {
     "tier": "A",
@@ -1901,7 +1967,9 @@
         "specificity": 16
       }
     },
-    "composite": 31
+    "composite": 31,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Rodrigo Londoño": {
     "tier": "A",
@@ -1957,7 +2025,9 @@
         "specificity": 25
       }
     },
-    "composite": 35
+    "composite": 35,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Juancho Palacio": {
     "tier": "A",
@@ -2013,7 +2083,9 @@
         "specificity": 25
       }
     },
-    "composite": 38
+    "composite": 38,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Daniel Mesa": {
     "tier": "A",
@@ -2069,7 +2141,9 @@
         "specificity": 25
       }
     },
-    "composite": 41
+    "composite": 41,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Carlos Tobon": {
     "tier": "A",
@@ -2125,7 +2199,9 @@
         "specificity": 23
       }
     },
-    "composite": 34
+    "composite": 34,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Felipe Valencia": {
     "tier": "A",
@@ -2181,7 +2257,9 @@
         "specificity": 25
       }
     },
-    "composite": 35
+    "composite": 35,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Andres Palacio": {
     "tier": "A",
@@ -2237,7 +2315,9 @@
         "specificity": 14
       }
     },
-    "composite": 27
+    "composite": 27,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Lucas Echavarria": {
     "tier": "A",
@@ -2293,7 +2373,9 @@
         "specificity": 21
       }
     },
-    "composite": 28
+    "composite": 28,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Ricky Uribe": {
     "tier": "A",
@@ -2349,7 +2431,9 @@
         "specificity": 11
       }
     },
-    "composite": 22
+    "composite": 22,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Eulalia Sanín": {
     "tier": "A",
@@ -2405,7 +2489,9 @@
         "specificity": 0
       }
     },
-    "composite": 17
+    "composite": 17,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Nicolas Pelaez": {
     "tier": "A",
@@ -2461,7 +2547,9 @@
         "specificity": 0
       }
     },
-    "composite": 14
+    "composite": 14,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Rafael Troconis": {
     "tier": "A",
@@ -2517,7 +2605,9 @@
         "specificity": 0
       }
     },
-    "composite": 21
+    "composite": 21,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Luis Espinoza": {
     "tier": "A",
@@ -2573,7 +2663,9 @@
         "specificity": 21
       }
     },
-    "composite": 34
+    "composite": 34,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Carlos Henao": {
     "tier": "A",
@@ -2629,7 +2721,9 @@
         "specificity": 0
       }
     },
-    "composite": 16
+    "composite": 16,
+    "panicScore": null,
+    "panicFlags": []
   },
   "German Corredor": {
     "tier": "A",
@@ -2685,7 +2779,9 @@
         "specificity": 0
       }
     },
-    "composite": 20
+    "composite": 20,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Nico Zapata (Taurus)": {
     "tier": "A",
@@ -2741,7 +2837,9 @@
         "specificity": 25
       }
     },
-    "composite": 33
+    "composite": 33,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Romano Arango": {
     "tier": "A",
@@ -2797,7 +2895,9 @@
         "specificity": 5
       }
     },
-    "composite": 17
+    "composite": 17,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Andrea Arango": {
     "tier": "A",
@@ -2853,7 +2953,9 @@
         "specificity": 0
       }
     },
-    "composite": 13
+    "composite": 13,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Mauricio Uribe": {
     "tier": "A",
@@ -2909,7 +3011,9 @@
         "specificity": 0
       }
     },
-    "composite": 11
+    "composite": 11,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Molo Villa": {
     "tier": "A",
@@ -2965,7 +3069,9 @@
         "specificity": 0
       }
     },
-    "composite": 14
+    "composite": 14,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Monica Arango": {
     "tier": "A",
@@ -3021,7 +3127,9 @@
         "specificity": 0
       }
     },
-    "composite": 15
+    "composite": 15,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Antonio Linares": {
     "tier": "A",
@@ -3077,7 +3185,9 @@
         "specificity": 0
       }
     },
-    "composite": 14
+    "composite": 14,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Maria Rios": {
     "tier": "A",
@@ -3133,7 +3243,9 @@
         "specificity": 0
       }
     },
-    "composite": 12
+    "composite": 12,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Sergio Gonzalez": {
     "tier": "A",
@@ -3189,7 +3301,9 @@
         "specificity": 20
       }
     },
-    "composite": 30
+    "composite": 30,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Gustavo Villa": {
     "tier": "A",
@@ -3245,7 +3359,9 @@
         "specificity": 0
       }
     },
-    "composite": 11
+    "composite": 11,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Gabby Grinberg": {
     "tier": "A",
@@ -3301,7 +3417,9 @@
         "specificity": 0
       }
     },
-    "composite": 11
+    "composite": 11,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Ricardo Sierra": {
     "tier": "A",
@@ -3357,7 +3475,9 @@
         "specificity": 0
       }
     },
-    "composite": 9
+    "composite": 9,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Checho Barth": {
     "tier": "A",
@@ -3413,7 +3533,9 @@
         "specificity": 0
       }
     },
-    "composite": 12
+    "composite": 12,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Maria Isabel Arango": {
     "tier": "A",
@@ -3469,7 +3591,9 @@
         "specificity": 0
       }
     },
-    "composite": 12
+    "composite": 12,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Ricardo Jaramillo": {
     "tier": "A",
@@ -3525,7 +3649,9 @@
         "specificity": 0
       }
     },
-    "composite": 8
+    "composite": 8,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Barry": {
     "tier": "A",
@@ -3581,7 +3707,9 @@
         "specificity": 6
       }
     },
-    "composite": 16
+    "composite": 16,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Antonioooo": {
     "tier": "A",
@@ -3637,7 +3765,9 @@
         "specificity": 0
       }
     },
-    "composite": 14
+    "composite": 14,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Juan Saldarriaga": {
     "tier": "A",
@@ -3693,7 +3823,9 @@
         "specificity": 11
       }
     },
-    "composite": 25
+    "composite": 25,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Martin Pelaez": {
     "tier": "B",
@@ -3749,7 +3881,9 @@
         "specificity": 11
       }
     },
-    "composite": 24
+    "composite": 24,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Alejandro Pérez": {
     "tier": "B",
@@ -3805,7 +3939,9 @@
         "specificity": 4
       }
     },
-    "composite": 21
+    "composite": 21,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Luis Alberto Botero": {
     "tier": "B",
@@ -3861,7 +3997,9 @@
         "specificity": 5
       }
     },
-    "composite": 15
+    "composite": 15,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Ricardo Espinal": {
     "tier": "B",
@@ -3917,7 +4055,9 @@
         "specificity": 0
       }
     },
-    "composite": 8
+    "composite": 8,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Wilder Zapata": {
     "tier": "B",
@@ -3973,7 +4113,9 @@
         "specificity": 5
       }
     },
-    "composite": 19
+    "composite": 19,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Jorge Campuzano": {
     "tier": "B",
@@ -4029,7 +4171,9 @@
         "specificity": 5
       }
     },
-    "composite": 13
+    "composite": 13,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Agustin Argentino": {
     "tier": "B",
@@ -4085,7 +4229,9 @@
         "specificity": 13
       }
     },
-    "composite": 22
+    "composite": 22,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Carolina Rojas Gómez": {
     "tier": "B",
@@ -4141,7 +4287,9 @@
         "specificity": 25
       }
     },
-    "composite": 39
+    "composite": 39,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Eduardo Sagues": {
     "tier": "B",
@@ -4197,7 +4345,9 @@
         "specificity": 0
       }
     },
-    "composite": 3
+    "composite": 3,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Andres Bilbao": {
     "tier": "B",
@@ -4253,7 +4403,9 @@
         "specificity": 23
       }
     },
-    "composite": 32
+    "composite": 32,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Rafael Troconis Llave": {
     "tier": "B",
@@ -4309,7 +4461,9 @@
         "specificity": 25
       }
     },
-    "composite": 42
+    "composite": 42,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Roberto Cuartas": {
     "tier": "B",
@@ -4365,7 +4519,9 @@
         "specificity": 0
       }
     },
-    "composite": 15
+    "composite": 15,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Mauricio Ortega": {
     "tier": "C",
@@ -4421,7 +4577,9 @@
         "specificity": 0
       }
     },
-    "composite": 7
+    "composite": 7,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Jorge Saldarriaga": {
     "tier": "C",
@@ -4477,7 +4635,9 @@
         "specificity": 0
       }
     },
-    "composite": 7
+    "composite": 7,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Eduardo Llopis": {
     "tier": "C",
@@ -4533,7 +4693,9 @@
         "specificity": 5
       }
     },
-    "composite": 13
+    "composite": 13,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Mama": {
     "tier": "C",
@@ -4589,7 +4751,9 @@
         "specificity": 0
       }
     },
-    "composite": 6
+    "composite": 6,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Felo": {
     "tier": "C",
@@ -4645,7 +4809,9 @@
         "specificity": 0
       }
     },
-    "composite": 7
+    "composite": 7,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Squiz Medina": {
     "tier": "C",
@@ -4701,7 +4867,9 @@
         "specificity": 0
       }
     },
-    "composite": 4
+    "composite": 4,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Juancho Tirado": {
     "tier": "C",
@@ -4757,7 +4925,9 @@
         "specificity": 0
       }
     },
-    "composite": 4
+    "composite": 4,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Musimbi": {
     "tier": "C",
@@ -4813,7 +4983,9 @@
         "specificity": 1
       }
     },
-    "composite": 16
+    "composite": 16,
+    "panicScore": null,
+    "panicFlags": []
   },
   "David Muñoz": {
     "tier": "C",
@@ -4869,7 +5041,9 @@
         "specificity": 0
       }
     },
-    "composite": 3
+    "composite": 3,
+    "panicScore": null,
+    "panicFlags": []
   },
   "Alejandra Zapata Coninsa": {
     "tier": "Z",
@@ -4925,7 +5099,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Alejo Molina": {
     "tier": "Z",
@@ -4981,7 +5157,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Amalia AAA Londoño": {
     "tier": "Z",
@@ -5037,7 +5215,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Amalia Uribe Gustavo Villa Gumroad": {
     "tier": "Z",
@@ -5093,7 +5273,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Ana Arango": {
     "tier": "Z",
@@ -5149,7 +5331,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "André Joffry": {
     "tier": "Z",
@@ -5205,7 +5389,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Blanket": {
     "tier": "Z",
@@ -5261,7 +5447,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Carlos Mazo": {
     "tier": "Z",
@@ -5317,7 +5505,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "catalina botero": {
     "tier": "Z",
@@ -5373,7 +5563,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Checho Aguirre": {
     "tier": "Z",
@@ -5429,7 +5621,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Claudia restrepo Rectora": {
     "tier": "Z",
@@ -5485,7 +5679,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Damian Llave De lucas jaramillo": {
     "tier": "Z",
@@ -5541,7 +5737,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Daniel Arango": {
     "tier": "Z",
@@ -5597,7 +5795,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Daniel Martinez": {
     "tier": "Z",
@@ -5653,7 +5853,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Diego Kuri": {
     "tier": "Z",
@@ -5709,7 +5911,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Diego Mazo": {
     "tier": "Z",
@@ -5765,7 +5969,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Douglas Rueda Buche": {
     "tier": "Z",
@@ -5821,7 +6027,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Federico Molina": {
     "tier": "Z",
@@ -5877,7 +6085,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Germancito Primo Ricky Uribe": {
     "tier": "Z",
@@ -5933,7 +6143,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Gonzalo teso": {
     "tier": "Z",
@@ -5989,7 +6201,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Jackie Yanovich": {
     "tier": "Z",
@@ -6045,7 +6259,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Juliana M Novia Santi": {
     "tier": "Z",
@@ -6101,7 +6317,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Luisk": {
     "tier": "Z",
@@ -6157,7 +6375,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Manu Cuñada beto": {
     "tier": "Z",
@@ -6213,7 +6433,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Mariana Botero": {
     "tier": "Z",
@@ -6269,7 +6491,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Melissa P": {
     "tier": "Z",
@@ -6325,7 +6549,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Miguel Botero": {
     "tier": "Z",
@@ -6381,7 +6607,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Mimi": {
     "tier": "Z",
@@ -6437,7 +6665,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Pablo Arboleda": {
     "tier": "Z",
@@ -6493,7 +6723,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Pablo Botero Londoño": {
     "tier": "Z",
@@ -6549,7 +6781,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Paola Betancur Vargas": {
     "tier": "Z",
@@ -6605,7 +6839,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Paola Macia Fernandez": {
     "tier": "Z",
@@ -6661,7 +6897,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Pedro Faria": {
     "tier": "Z",
@@ -6717,7 +6955,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Ricardo Kuri": {
     "tier": "Z",
@@ -6773,7 +7013,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Rigo Uran": {
     "tier": "Z",
@@ -6829,7 +7071,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "SA Santiago Arango": {
     "tier": "Z",
@@ -6885,7 +7129,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "santiago lopez": {
     "tier": "Z",
@@ -6941,7 +7187,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Sergio Jaramillo": {
     "tier": "Z",
@@ -6997,7 +7245,9 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   },
   "Tomas Restrepo Amigo Mazo F2 Y F3": {
     "tier": "Z",
@@ -7053,6 +7303,8 @@
         "specificity": 0
       }
     },
-    "composite": 0
+    "composite": 0,
+    "panicScore": 0,
+    "panicFlags": []
   }
 }

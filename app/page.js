@@ -14,6 +14,8 @@ const D = Object.entries(membersRaw).map(([name, d]) => ({
   p: d.pillars || { network: 0, intelligence: 0, capital: 0 },
   pc: d.pillarComponents || {},
   co: d.composite || 0,
+  panic: d.panicScore,
+  panicFlags: d.panicFlags || [],
 }));
 
 const META = metaRaw;
@@ -158,6 +160,7 @@ const Card = ({ m, rank, exp, tog }) => {
           <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
             <span style={{ fontWeight: 600, color: "#e5e7eb", fontSize: 13 }}>{m.n}{m.u ? " 👑" : ""}</span>
             <span style={{ fontSize: 9, padding: "2px 7px", borderRadius: 99, fontWeight: 600, background: tc.bg, color: tc.color, border: `1px solid ${tc.color}30` }}>{tc.icon} {tc.label}</span>
+            {m.panic !== null && m.panic >= 40 && <span style={{ fontSize: 9, padding: "2px 7px", borderRadius: 99, fontWeight: 600, background: m.panic >= 80 ? "#450a0a" : "#422006", color: m.panic >= 80 ? "#ef4444" : "#f97316", border: `1px solid ${m.panic >= 80 ? "#ef444430" : "#f9731630"}` }}>🚨 {m.panic}</span>}
             {delta !== null && <span style={{ fontSize: 9, fontWeight: 700, color: delta > 0 ? "#10b981" : delta < 0 ? "#ef4444" : "#6b7280", fontFamily: "'JetBrains Mono',monospace" }}>{delta > 0 ? "▲" : delta < 0 ? "▼" : "="}{Math.abs(delta).toFixed(0)}</span>}
           </div>
           <div style={{ display: "flex", gap: 8, marginTop: 4 }}>
@@ -180,6 +183,16 @@ const Card = ({ m, rank, exp, tog }) => {
             <PillarBar label="Network" icon="🔗" value={m.p.network} color={PCOL.network} />
             <PillarBar label="Intelligence" icon="🧠" value={m.p.intelligence} color={PCOL.intelligence} />
             <PillarBar label="Capital" icon="💰" value={m.p.capital} color={PCOL.capital} />
+            {m.panic !== null && m.panic > 0 && (
+              <div style={{ marginTop: 4, padding: "4px 8px", background: m.panic >= 60 ? "#450a0a" : "#1e1e2e", borderRadius: 6, border: `1px solid ${m.panic >= 60 ? "#ef444420" : "#f9731615"}` }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                  <span style={{ fontSize: 10 }}>🚨</span>
+                  <span style={{ fontSize: 10, color: m.panic >= 60 ? "#ef4444" : "#f97316", fontWeight: 600 }}>Panic: {m.panic}/100</span>
+                  <div style={{ flex: 1, height: 3, background: "#1a1a2e", borderRadius: 2 }}><div style={{ width: `${m.panic}%`, height: "100%", background: m.panic >= 80 ? "#ef4444" : m.panic >= 60 ? "#f97316" : "#f59e0b", borderRadius: 2 }} /></div>
+                </div>
+                {m.panicFlags.length > 0 && <div style={{ fontSize: 9, color: "#9ca3af", marginTop: 3, lineHeight: 1.4 }}>{m.panicFlags[0]}</div>}
+              </div>
+            )}
             <div style={{ borderTop: "1px solid #1e1e2e", marginTop: 6, paddingTop: 6 }}>
               <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                 <Mn lb="VOLUME" v={m.vs} mx={30} c="#6b7280" />
@@ -426,6 +439,75 @@ export default function App() {
           </div>
         ))}
       </div>
+
+      {/* Panicans */}
+      {(() => {
+        const panicans = D.filter(x => x.panic !== null && x.panic !== 0 && x.panic >= 40).sort((a, b) => b.panic - a.panic);
+        const pending = D.filter(x => x.panic === null && x.t !== "Z").length;
+        return (
+          <div style={{ background: "#111118", borderRadius: 12, padding: "16px 14px", border: "1px solid #f9731625", marginBottom: 14 }}>
+            <div style={{ fontSize: 10, color: "#f97316", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 6 }}>🚨 The Panicans — Fear Merchants</div>
+            <div style={{ fontSize: 11, color: "#9ca3af", lineHeight: 1.6, marginBottom: 10 }}>
+              Members who flood the chat with fear instead of thesis. No conviction, no positions — just reactive noise that erodes collective confidence. The anti-thesis of Open Source Capital.
+            </div>
+            <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 10 }}>
+              {[
+                { lb: "Fear without thesis", icon: "😱", desc: "Posts panic but never shares what they hold" },
+                { lb: "Red candle reactive", icon: "📉", desc: "Only shows up when price drops" },
+                { lb: "FUD spreader", icon: "🔥", desc: "Emotional contagion that triggers others" },
+                { lb: "No follow-up", icon: "🫥", desc: "Panics, disappears, never admits they were wrong" },
+              ].map((s, i) => (
+                <div key={i} style={{ flex: "1 1 120px", minWidth: 120, padding: "8px 10px", background: "#1a0a00", borderRadius: 8, border: "1px solid #f9731615" }}>
+                  <div style={{ fontSize: 14, marginBottom: 2 }}>{s.icon}</div>
+                  <div style={{ fontSize: 10, fontWeight: 600, color: "#f97316" }}>{s.lb}</div>
+                  <div style={{ fontSize: 9, color: "#9ca3af", marginTop: 2, lineHeight: 1.4 }}>{s.desc}</div>
+                </div>
+              ))}
+            </div>
+            {panicans.length > 0 ? (
+              <div>
+                <div style={{ fontSize: 9, color: "#6b7280", marginBottom: 6 }}>Flagged by Opus analysis — panic score 40+</div>
+                {panicans.map(m => (
+                  <div key={m.n} onClick={() => goM(m.n)} style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 6px", borderBottom: "1px solid #1e1e2e", cursor: "pointer", borderRadius: 6 }} onMouseEnter={e => e.currentTarget.style.background = "#1a1a2e"} onMouseLeave={e => e.currentTarget.style.background = "transparent"}>
+                    <div style={{ width: 36, height: 36, borderRadius: "50%", background: m.panic >= 80 ? "#7f1d1d" : m.panic >= 60 ? "#78350f" : "#422006", border: `2px solid ${m.panic >= 80 ? "#ef4444" : m.panic >= 60 ? "#f97316" : "#f59e0b"}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 700, color: m.panic >= 80 ? "#ef4444" : m.panic >= 60 ? "#f97316" : "#f59e0b", fontFamily: "'JetBrains Mono',monospace" }}>{m.panic}</div>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ fontSize: 12, fontWeight: 600, color: "#e5e7eb" }}>{m.n}</div>
+                      <div style={{ fontSize: 10, color: "#9ca3af" }}>{m.m} msgs · 💰 Capital: {m.p.capital}</div>
+                    </div>
+                    <div style={{ fontSize: 9, padding: "3px 8px", borderRadius: 6, background: m.panic >= 80 ? "#450a0a" : m.panic >= 60 ? "#422006" : "#1e1e2e", color: m.panic >= 80 ? "#ef4444" : m.panic >= 60 ? "#f97316" : "#f59e0b", fontWeight: 600 }}>
+                      {m.panic >= 80 ? "🚨 GUILLOTINE" : m.panic >= 60 ? "⚠️ WARNING" : "👁 FLAGGED"}
+                    </div>
+                  </div>
+                ))}
+                {panicans.filter(m => m.panicFlags.length > 0).length > 0 && (
+                  <div style={{ marginTop: 8, padding: "8px 10px", background: "#0a0a0f", borderRadius: 8, border: "1px solid #1e1e2e" }}>
+                    <div style={{ fontSize: 9, color: "#6b7280", fontWeight: 600, textTransform: "uppercase", marginBottom: 4 }}>Evidence from Opus</div>
+                    {panicans.filter(m => m.panicFlags.length > 0).slice(0, 3).map(m => (
+                      <div key={m.n} style={{ marginBottom: 6 }}>
+                        <div style={{ fontSize: 10, fontWeight: 600, color: "#f97316" }}>{m.n}:</div>
+                        {m.panicFlags.slice(0, 2).map((f, i) => (
+                          <div key={i} style={{ fontSize: 10, color: "#9ca3af", marginLeft: 8, lineHeight: 1.4 }}>• {f}</div>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : pending > 0 ? (
+              <div style={{ padding: "12px", background: "#0a0a0f", borderRadius: 8, border: "1px dashed #f9731630", textAlign: "center" }}>
+                <div style={{ fontSize: 12, color: "#f97316", fontWeight: 600, marginBottom: 4 }}>🔍 Pending Opus Analysis</div>
+                <div style={{ fontSize: 11, color: "#9ca3af" }}>{pending} members awaiting AI analysis to detect panic behavior patterns.</div>
+                <div style={{ fontSize: 10, color: "#6b7280", marginTop: 4 }}>Once processed, flagged panicans will appear here with evidence.</div>
+              </div>
+            ) : (
+              <div style={{ padding: "10px", background: "#052e16", borderRadius: 8, border: "1px solid #10b98120", textAlign: "center" }}>
+                <div style={{ fontSize: 11, color: "#10b981" }}>✓ No panicans detected — the group maintains conviction.</div>
+              </div>
+            )}
+          </div>
+        );
+      })()}
+
       {SRC.length > 0 && <div style={{ background: "#111118", borderRadius: 12, padding: "16px 14px", border: "1px solid #1e1e2e", marginBottom: 14 }}>
         <div style={{ fontSize: 10, color: "#10b981", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>📡 Group Information Diet</div>
         {SRC.map((s, i) => { const mx = Math.max(...SRC.map(x => x.count)); const c = srcColors[s.source] || "#6b7280"; return (

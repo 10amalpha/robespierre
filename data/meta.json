@@ -77,6 +77,28 @@
     "C": 1,
     "Z": 0
   },
+  "panicans": {
+    "label": "Panicans",
+    "icon": "🚨",
+    "color": "#f97316",
+    "description": "Members who flood the chat with fear, panic, and reactive noise. They have no thesis, no conviction, and amplify volatility instead of signal. The anti-thesis of Open Source Capital.",
+    "signals": [
+      "Fear language without thesis (nos vamos a la mierda, esto se cae, RIP)",
+      "Reactive to red candles — only posts when price drops",
+      "Zero conviction — never shares what they actually hold",
+      "Question-bombing without research (qué está pasando?? por qué cayó??)",
+      "Emotional contagion — spreads FUD that triggers others to panic",
+      "No follow-up — panics, disappears, never acknowledges when wrong"
+    ],
+    "scoring": {
+      "panicScore": "0-100 assigned by Opus analysis. Higher = more panican behavior.",
+      "thresholds": {
+        "flagged": 40,
+        "warning": 60,
+        "guillotine": 80
+      }
+    }
+  },
   "rules": {
     "junkSources": ["instagram.com", "tiktok.com"],
     "goodSources": ["x.com", "twitter.com", "youtube.com", "substack.com", "bloomberg.com", "reuters.com", "ft.com", "arxiv.org"],
