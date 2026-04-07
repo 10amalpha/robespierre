@@ -114,5 +114,17 @@
       { "source": "TikTok", "count": 14, "verdict": "Junk food" },
       { "source": "Bloomberg/Reuters/FT", "count": 4, "verdict": "Premium signal" }
     ]
+  },
+  "highlightTypes": {
+    "thesis": { "label": "Investment Thesis", "icon": "💰", "color": "#10b981", "pillar": "capital" },
+    "analysis": { "label": "Deep Analysis", "icon": "🧠", "color": "#8b5cf6", "pillar": "intelligence" },
+    "link": { "label": "Alpha Link", "icon": "🔗", "color": "#3b82f6", "pillar": "intelligence" },
+    "intro": { "label": "Network Intro", "icon": "🤝", "color": "#ec4899", "pillar": "network" },
+    "call": { "label": "Market Call", "icon": "📣", "color": "#f59e0b", "pillar": "capital" },
+    "insight": { "label": "Original Insight", "icon": "💡", "color": "#06b6d4", "pillar": "intelligence" },
+    "tool": { "label": "Tool/Resource", "icon": "🛠️", "color": "#6366f1", "pillar": "network" }
+  },
+  "groupHighlights": {
+    "s1": []
   }
 }

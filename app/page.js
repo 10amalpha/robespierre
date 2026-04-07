@@ -234,6 +234,29 @@ const Card = ({ m, rank, exp, tog }) => {
             )}
           </div>
         )}
+        {/* Highlights */}
+        {m.highlights?.length > 0 && (
+          <div style={{ marginTop: 8, paddingTop: 6, borderTop: `1px solid ${tc.color}10` }}>
+            <div style={{ fontSize: 9, color: "#06b6d4", fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", marginBottom: 4 }}>💎 Best Contributions</div>
+            {m.highlights.slice(0, 3).map((h, i) => {
+              const HT = META.highlightTypes || {};
+              const ht = HT[h.type] || { icon: "💡", color: "#6b7280", label: h.type };
+              return (
+                <div key={i} style={{ display: "flex", gap: 8, padding: "4px 0", borderBottom: i < Math.min(m.highlights.length, 3) - 1 ? "1px solid #1a1a2e" : "none" }}>
+                  <span style={{ fontSize: 12, flexShrink: 0 }}>{ht.icon}</span>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 4, flexWrap: "wrap" }}>
+                      <span style={{ fontSize: 8, padding: "1px 5px", borderRadius: 99, background: ht.color + "15", color: ht.color, fontWeight: 600 }}>{ht.label}</span>
+                      {h.quality && <span style={{ fontSize: 8, color: "#f59e0b", fontFamily: "'JetBrains Mono',monospace" }}>★{h.quality}</span>}
+                      {h.date && <span style={{ fontSize: 8, color: "#6b7280" }}>{h.date}</span>}
+                    </div>
+                    <div style={{ fontSize: 10, color: "#9ca3af", lineHeight: 1.4, marginTop: 1 }}>{h.summary}</div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
         {hasHistory && (<div style={{ marginTop: 8, paddingTop: 6, borderTop: `1px solid ${tc.color}10` }}>
           <div style={{ fontSize: 9, color: "#6b7280", fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", marginBottom: 4 }}>Trajectory</div>
           <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
@@ -611,6 +634,57 @@ export default function App() {
 
       {/* Network Node Map */}
       <NodeMap data={D} goM={goM} />
+
+      {/* 💎 Best Of — Group Highlights */}
+      {(() => {
+        const HT = META.highlightTypes || {};
+        const groupHL = (META.groupHighlights && META.groupHighlights[META.currentSnapshot]) || [];
+        // Also collect top individual highlights
+        const allHL = D.flatMap(m => (m.highlights || []).map(h => ({ ...h, member: m.n }))).sort((a, b) => (b.quality || 0) - (a.quality || 0));
+        const combined = groupHL.length > 0 ? groupHL : allHL.slice(0, 12);
+        const pending = combined.length === 0;
+        return (
+          <div style={{ background: "#111118", borderRadius: 12, padding: "16px 14px", border: "1px solid #06b6d425", marginBottom: 12 }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
+              <div style={{ fontSize: 10, color: "#06b6d4", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase" }}>💎 Best Of — Top Contributions</div>
+              {!pending && <div style={{ fontSize: 9, color: "#6b7280" }}>{combined.length} highlights</div>}
+            </div>
+            {pending ? (
+              <div style={{ padding: "14px", background: "#0a0a0f", borderRadius: 8, border: "1px dashed #06b6d420", textAlign: "center" }}>
+                <div style={{ fontSize: 13, color: "#06b6d4", fontWeight: 600, marginBottom: 4 }}>🔍 Pending Opus Analysis</div>
+                <div style={{ fontSize: 11, color: "#9ca3af", lineHeight: 1.5 }}>
+                  Once processed, the group&apos;s greatest hits will appear here — best theses, sharpest analysis, most valuable links, key intros. Each tagged by pillar and scored by quality.
+                </div>
+                <div style={{ display: "flex", gap: 6, justifyContent: "center", marginTop: 10, flexWrap: "wrap" }}>
+                  {Object.entries(HT).map(([key, ht]) => (
+                    <span key={key} style={{ fontSize: 9, padding: "2px 8px", borderRadius: 99, background: "#1e1e2e", color: ht.color, border: `1px solid ${ht.color}20` }}>{ht.icon} {ht.label}</span>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <div>
+                {combined.map((h, i) => {
+                  const ht = HT[h.type] || { icon: "💡", color: "#6b7280", label: h.type };
+                  return (
+                    <div key={i} onClick={() => h.member && goM(h.member)} style={{ display: "flex", gap: 10, padding: "9px 4px", borderBottom: i < combined.length - 1 ? "1px solid #1a1a2e" : "none", cursor: h.member ? "pointer" : "default", borderRadius: 6 }} onMouseEnter={e => { if (h.member) e.currentTarget.style.background = "#1a1a2e"; }} onMouseLeave={e => e.currentTarget.style.background = "transparent"}>
+                      <div style={{ width: 28, height: 28, borderRadius: 8, background: ht.color + "15", border: `1px solid ${ht.color}25`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, flexShrink: 0 }}>{ht.icon}</div>
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
+                          {h.member && <span style={{ fontSize: 11, fontWeight: 600, color: "#e5e7eb" }}>{h.member}</span>}
+                          <span style={{ fontSize: 8, padding: "1px 6px", borderRadius: 99, background: ht.color + "15", color: ht.color, fontWeight: 600 }}>{ht.label}</span>
+                          {h.quality && <span style={{ fontSize: 9, color: "#f59e0b", fontFamily: "'JetBrains Mono',monospace" }}>★{h.quality}/10</span>}
+                        </div>
+                        <div style={{ fontSize: 11, color: "#b0b0c0", lineHeight: 1.5, marginTop: 2 }}>{h.summary}</div>
+                        {h.date && <div style={{ fontSize: 9, color: "#6b7280", marginTop: 2 }}>{h.date}</div>}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        );
+      })()}
 
       {/* System Health Gauges */}
       <div style={{ background: "#111118", borderRadius: 12, padding: "14px 10px", border: "1px solid #1e1e2e", marginBottom: 12 }}>
