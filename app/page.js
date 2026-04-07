@@ -548,8 +548,9 @@ export default function App() {
   }, [filter, search, sort]);
   const goM = (name) => { setSec("members"); setFilter("all"); setSearch(name); setExp(name); };
 
-  // Top per pillar (non-founder, non-zombie)
-  const active = D.filter(x => !x.u && x.t !== "Z");
+  // Top per pillar (INCLUDING founder, non-zombie)
+  const active = D.filter(x => x.t !== "Z");
+  const topComposite = [...active].sort((a, b) => b.co - a.co).slice(0, 10);
   const topNet = [...active].sort((a, b) => b.p.network - a.p.network).slice(0, 10);
   const topInt = [...active].sort((a, b) => b.p.intelligence - a.p.intelligence).slice(0, 10);
   const topCap = [...active].sort((a, b) => b.p.capital - a.p.capital).slice(0, 10);

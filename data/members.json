@@ -33,18 +33,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 80,
+        "composite": 92,
         "pillars": {
-          "network": 78,
-          "intelligence": 85,
-          "capital": 75
+          "network": 88,
+          "intelligence": 95,
+          "capital": 90
         }
       }
     ],
     "pillars": {
-      "network": 78,
-      "intelligence": 85,
-      "capital": 75
+      "network": 88,
+      "intelligence": 95,
+      "capital": 90
     },
     "pillarComponents": {
       "network": {
@@ -63,23 +63,36 @@
         "specificity": 13
       }
     },
-    "composite": 80,
+    "composite": 92,
     "panicScore": 25,
     "panicFlags": [
       "HIMS stress reactions",
       "occasional emotional trading sentiment"
     ],
     "persona": {
-      "bio": "Prolific content creator and investment analyst. Strong AI/productivity focus, active substack writer with good fundamental analysis skills.",
+      "bio": "PhD Economics. BTC fundamentalist. Runs Arias Financial Academy (3K+ subs). Homeland wealth management. Shares real positions, legal/AI analysis. Podcast regular.",
       "tags": [
-        "content-creator",
-        "AI-focused",
-        "substack-writer",
-        "productivity-optimizer",
-        "consultant"
+        "BTC",
+        "macro",
+        "economics",
+        "legal",
+        "AI",
+        "positions",
+        "academy"
       ],
-      "role": "Thesis Writer",
-      "platforms": []
+      "role": "Alpha Contributor",
+      "platforms": [
+        {
+          "type": "substack",
+          "url": "https://andresfelipearias.substack.com",
+          "handle": "Arias Financial Academy"
+        },
+        {
+          "type": "twitter",
+          "url": "https://x.com/AndresFelArias",
+          "handle": "@AndresFelArias"
+        }
+      ]
     },
     "highlights": [
       {
@@ -133,18 +146,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 79,
+        "composite": 76,
         "pillars": {
-          "network": 60,
-          "intelligence": 95,
-          "capital": 75
+          "network": 62,
+          "intelligence": 88,
+          "capital": 72
         }
       }
     ],
     "pillars": {
-      "network": 60,
-      "intelligence": 95,
-      "capital": 75
+      "network": 62,
+      "intelligence": 88,
+      "capital": 72
     },
     "pillarComponents": {
       "network": {
@@ -163,22 +176,21 @@
         "specificity": 25
       }
     },
-    "composite": 79,
+    "composite": 76,
     "panicScore": 15,
     "panicFlags": [],
     "persona": {
-      "bio": "Deep Bitcoin maximalist and AI researcher. Builds sophisticated trading tools and writes technical analysis on crypto and AI developments.",
+      "bio": "Substack writer. Deep research (astrocytomas, market analysis). Intermittent but high quality when active. Analytical depth.",
       "tags": [
-        "bitcoin-maximalist",
-        "AI-researcher",
-        "technical-analysis",
-        "crypto",
-        "developer"
+        "research",
+        "writing",
+        "health",
+        "deep analysis"
       ],
-      "role": "Alpha Contributor",
+      "role": "Analyst",
       "platforms": [
         {
-          "type": "youtube",
+          "type": "substack",
           "url": "",
           "handle": "Camilo Gomez"
         }
@@ -244,15 +256,15 @@
         "composite": 85,
         "pillars": {
           "network": 85,
-          "intelligence": 90,
-          "capital": 80
+          "intelligence": 88,
+          "capital": 82
         }
       }
     ],
     "pillars": {
       "network": 85,
-      "intelligence": 90,
-      "capital": 80
+      "intelligence": 88,
+      "capital": 82
     },
     "pillarComponents": {
       "network": {
@@ -277,13 +289,14 @@
       "Shows deep skepticism of real estate tokenization as 'fiasco'"
     ],
     "persona": {
-      "bio": "Sophisticated investment strategist with deep macro insights and contrarian views. Former IR experience gives unique perspective on Latin American markets.",
+      "bio": "Tokenization and fintech expert. London-based. Supports USTBL project. Deep on JPM/stablecoins/DeFi rails. Bridges tradfi and web3.",
       "tags": [
-        "macro-analyst",
-        "contrarian",
-        "latam-expert",
-        "oil-strategist",
-        "bitcoin-advocate"
+        "tokenization",
+        "stablecoins",
+        "JPM",
+        "DeFi",
+        "fintech",
+        "London"
       ],
       "role": "Alpha Contributor",
       "platforms": []
@@ -340,18 +353,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 79,
+        "composite": 81,
         "pillars": {
-          "network": 85,
-          "intelligence": 75,
-          "capital": 80
+          "network": 80,
+          "intelligence": 78,
+          "capital": 85
         }
       }
     ],
     "pillars": {
-      "network": 85,
-      "intelligence": 75,
-      "capital": 80
+      "network": 80,
+      "intelligence": 78,
+      "capital": 85
     },
     "pillarComponents": {
       "network": {
@@ -370,7 +383,7 @@
         "specificity": 22
       }
     },
-    "composite": 79,
+    "composite": 81,
     "panicScore": 40,
     "panicFlags": [
       "El mundo esta demasiado nervioso. El SELL button ha estado ahi varias veces",
@@ -379,14 +392,14 @@
       "Vieron la noticia de hims ? 😩"
     ],
     "persona": {
-      "bio": "Colombian entrepreneur with tech/AI background, strong Trump supporter, married with family concerns about education costs. Actively building businesses while managing investment portfolio.",
+      "bio": "Self-taught coder. Built Python options trading tools. TSLA/BTC high conviction. \"A footballer programming in Python.\" Action-oriented.",
       "tags": [
-        "entrepreneur",
-        "AI enthusiast",
-        "family man",
-        "HIMS bull",
-        "Trump supporter",
-        "tech builder"
+        "TSLA",
+        "BTC",
+        "options",
+        "python",
+        "tools",
+        "trading"
       ],
       "role": "Alpha Contributor",
       "platforms": []
@@ -443,18 +456,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 77,
+        "composite": 82,
         "pillars": {
-          "network": 75,
-          "intelligence": 85,
-          "capital": 70
+          "network": 78,
+          "intelligence": 90,
+          "capital": 75
         }
       }
     ],
     "pillars": {
-      "network": 75,
-      "intelligence": 85,
-      "capital": 70
+      "network": 78,
+      "intelligence": 90,
+      "capital": 75
     },
     "pillarComponents": {
       "network": {
@@ -473,26 +486,27 @@
         "specificity": 25
       }
     },
-    "composite": 77,
+    "composite": 82,
     "panicScore": 25,
     "panicFlags": [
       "Defensive about traditional investment banking",
       "Shows political bias affecting investment judgment"
     ],
     "persona": {
-      "bio": "Ideological investor and content creator mixing financial insights with strong political commentary. Substack writer with clear libertarian lean.",
+      "bio": "Satirical political analyst. Substack writer. MSTR debt analysis. Connects political events to market implications. Insightful and original voice.",
       "tags": [
-        "content-creator",
-        "bitcoin-maximalist",
-        "political-commentator",
-        "anti-ESG",
-        "substack-writer"
+        "politics",
+        "satire",
+        "MSTR",
+        "Colombia",
+        "culture",
+        "analysis"
       ],
-      "role": "Thesis Writer",
+      "role": "Analyst",
       "platforms": [
         {
           "type": "substack",
-          "url": "https://open.substack.com/pub/nicolasfernandezgiraldo",
+          "url": "https://nicolasfernandezgiraldo.substack.com",
           "handle": "nicolasfernandezgiraldo"
         }
       ]
@@ -549,18 +563,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 70,
+        "composite": 74,
         "pillars": {
-          "network": 85,
-          "intelligence": 70,
-          "capital": 60
+          "network": 82,
+          "intelligence": 78,
+          "capital": 65
         }
       }
     ],
     "pillars": {
-      "network": 85,
-      "intelligence": 70,
-      "capital": 60
+      "network": 82,
+      "intelligence": 78,
+      "capital": 65
     },
     "pillarComponents": {
       "network": {
@@ -579,23 +593,29 @@
         "specificity": 12
       }
     },
-    "composite": 70,
+    "composite": 74,
     "panicScore": 25,
     "panicFlags": [
       "Self-deprecating about knowledge gaps",
       "Admits understanding only 10% of discussions"
     ],
     "persona": {
-      "bio": "Content creator and investment commentator who runs Futopix newsletter. Humble learner despite strong network connections.",
+      "bio": "Tokenization distribution expert. Lived in Brazil 5 years. CASIO strategy analogy. Son has European manufacturing. FUTOPIX Substack.",
       "tags": [
-        "content-creator",
-        "substack",
-        "networking",
-        "entrepreneurship",
-        "humble"
+        "tokenization",
+        "distribution",
+        "Brazil",
+        "business",
+        "startups"
       ],
-      "role": "Networker",
-      "platforms": []
+      "role": "Alpha Contributor",
+      "platforms": [
+        {
+          "type": "substack",
+          "url": "",
+          "handle": "FUTOPIX"
+        }
+      ]
     },
     "highlights": [
       {
@@ -649,18 +669,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 83,
+        "composite": 86,
         "pillars": {
-          "network": 70,
-          "intelligence": 90,
-          "capital": 85
+          "network": 72,
+          "intelligence": 93,
+          "capital": 88
         }
       }
     ],
     "pillars": {
-      "network": 70,
-      "intelligence": 90,
-      "capital": 85
+      "network": 72,
+      "intelligence": 93,
+      "capital": 88
     },
     "pillarComponents": {
       "network": {
@@ -679,22 +699,23 @@
         "specificity": 13
       }
     },
-    "composite": 83,
+    "composite": 86,
     "panicScore": 15,
     "panicFlags": [
       "Occasional FOMO on missing positions",
       "Slight anxiety about premium pricing"
     ],
     "persona": {
-      "bio": "Sophisticated investor with strong analytical framework. Expert in valuation, market dynamics, and tech IPOs. Active trader with disciplined approach.",
+      "bio": "Deep technical researcher. Quantum computing bear case. Iran geopolitics. Shares specific portfolio positions. One of the most substantive writers.",
       "tags": [
-        "valuation",
-        "ipos",
-        "tech",
-        "trading",
-        "analysis"
+        "quantum computing",
+        "geopolitics",
+        "Iran",
+        "portfolio",
+        "research",
+        "tech"
       ],
-      "role": "Alpha Contributor",
+      "role": "Thesis Writer",
       "platforms": []
     },
     "highlights": [
@@ -749,18 +770,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 91,
+        "composite": 95,
         "pillars": {
-          "network": 95,
-          "intelligence": 92,
-          "capital": 88
+          "network": 98,
+          "intelligence": 95,
+          "capital": 92
         }
       }
     ],
     "pillars": {
-      "network": 95,
-      "intelligence": 92,
-      "capital": 88
+      "network": 98,
+      "intelligence": 95,
+      "capital": 92
     },
     "pillarComponents": {
       "network": {
@@ -779,21 +800,24 @@
         "specificity": 25
       }
     },
-    "composite": 91,
+    "composite": 95,
     "panicScore": 15,
     "panicFlags": [
       "occasional market timing concerns"
     ],
     "persona": {
-      "bio": "Group's intellectual anchor and macro strategist. Deep Bitcoin/crypto thesis, sophisticated market analysis, strong network connections.",
+      "bio": "Founder of 10AMPRO. Podcast host. Macro + crypto strategist. BTC since 2013. Raised $101M for startups. The engine that connects everything.",
       "tags": [
-        "macro-strategist",
-        "bitcoin-maximalist",
-        "content-creator",
-        "podcast-host",
-        "market-analyst"
+        "macro",
+        "BTC",
+        "SOL",
+        "MSTR",
+        "options",
+        "tokenization",
+        "AI",
+        "founder"
       ],
-      "role": "Alpha Contributor",
+      "role": "Founder",
       "platforms": [
         {
           "type": "substack",
@@ -859,18 +883,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 85,
+        "composite": 87,
         "pillars": {
-          "network": 85,
-          "intelligence": 90,
-          "capital": 80
+          "network": 92,
+          "intelligence": 92,
+          "capital": 78
         }
       }
     ],
     "pillars": {
-      "network": 85,
-      "intelligence": 90,
-      "capital": 80
+      "network": 92,
+      "intelligence": 92,
+      "capital": 78
     },
     "pillarComponents": {
       "network": {
@@ -889,21 +913,29 @@
         "specificity": 13
       }
     },
-    "composite": 85,
+    "composite": 87,
     "panicScore": 15,
     "panicFlags": [
       "Shows frustration with Colombian bureaucracy"
     ],
     "persona": {
-      "bio": "Strategic thinker and content creator who produces high-quality market summaries and identifies emerging tech trends, particularly in AI and Claude.",
+      "bio": "Political economy analyst. Podcast co-host. Writes weekly chat summaries that synthesize the group intelligence. Medellín energy valley thesis. Podcast coordinator.",
       "tags": [
-        "ai_expert",
-        "strategic_analyst",
-        "content_creator",
-        "claude_evangelist"
+        "politics",
+        "Colombia",
+        "energy",
+        "Medellín",
+        "podcasts",
+        "summaries"
       ],
-      "role": "Thesis Writer",
-      "platforms": []
+      "role": "Alpha Contributor",
+      "platforms": [
+        {
+          "type": "substack",
+          "url": "https://dariopalacioisaza.substack.com",
+          "handle": "Dario Palacio"
+        }
+      ]
     },
     "highlights": [
       {
@@ -957,18 +989,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 80,
+        "composite": 77,
         "pillars": {
-          "network": 70,
-          "intelligence": 90,
-          "capital": 75
+          "network": 75,
+          "intelligence": 85,
+          "capital": 70
         }
       }
     ],
     "pillars": {
-      "network": 70,
-      "intelligence": 90,
-      "capital": 75
+      "network": 75,
+      "intelligence": 85,
+      "capital": 70
     },
     "pillarComponents": {
       "network": {
@@ -987,19 +1019,19 @@
         "specificity": 19
       }
     },
-    "composite": 80,
+    "composite": 77,
     "panicScore": 15,
     "panicFlags": [],
     "persona": {
-      "bio": "Geopolitical analyst and energy expert with deep Middle East knowledge. Provides high-quality research links and strategic analysis on oil markets and regional conflicts.",
+      "bio": "YouTube creator. Political analysis + labor economics (robot vs. security guard math). Consistent link curation. Practical investment thinking.",
       "tags": [
-        "geopolitics expert",
-        "energy analyst",
-        "Middle East specialist",
-        "research curator",
-        "strategic thinker"
+        "politics",
+        "labor",
+        "robotics",
+        "YouTube",
+        "curation"
       ],
-      "role": "Thesis Writer",
+      "role": "Contributor",
       "platforms": [
         {
           "type": "youtube",
@@ -1060,18 +1092,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 69,
+        "composite": 77,
         "pillars": {
-          "network": 75,
-          "intelligence": 65,
-          "capital": 70
+          "network": 85,
+          "intelligence": 82,
+          "capital": 65
         }
       }
     ],
     "pillars": {
-      "network": 75,
-      "intelligence": 65,
-      "capital": 70
+      "network": 85,
+      "intelligence": 82,
+      "capital": 65
     },
     "pillarComponents": {
       "network": {
@@ -1090,22 +1122,29 @@
         "specificity": 14
       }
     },
-    "composite": 69,
+    "composite": 77,
     "panicScore": 25,
     "panicFlags": [
       "Shares emotional content (crying videos)",
       "Makes impulsive travel decisions based on market moves"
     ],
     "persona": {
-      "bio": "Colombian investor with strong networking skills who shares market insights through social media links and maintains group morale with humor.",
+      "bio": "#1 link curator in the group (646 msgs). 10AMPRO content creator. Podcast regular. The group's information nervous system.",
       "tags": [
-        "social_media_curator",
-        "crypto_enthusiast",
-        "travel_lover",
-        "humor"
+        "curation",
+        "links",
+        "content creation",
+        "politics",
+        "broad market"
       ],
       "role": "Curator",
-      "platforms": []
+      "platforms": [
+        {
+          "type": "twitter",
+          "url": "https://x.com/Gordoneaprod",
+          "handle": "@Gordoneaprod"
+        }
+      ]
     },
     "highlights": [
       {
@@ -1159,18 +1198,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 87,
+        "composite": 91,
         "pillars": {
-          "network": 85,
-          "intelligence": 95,
-          "capital": 80
+          "network": 82,
+          "intelligence": 98,
+          "capital": 88
         }
       }
     ],
     "pillars": {
-      "network": 85,
-      "intelligence": 95,
-      "capital": 80
+      "network": 82,
+      "intelligence": 98,
+      "capital": 88
     },
     "pillarComponents": {
       "network": {
@@ -1189,29 +1228,27 @@
         "specificity": 18
       }
     },
-    "composite": 87,
+    "composite": 91,
     "panicScore": 15,
     "panicFlags": [
       "None - demonstrates strong conviction"
     ],
     "persona": {
-      "bio": "Macro strategist and geopolitical analyst who writes deep research on paradigm shifts, AI, and global power dynamics. Creates sophisticated frameworks connecting technology, economics, and geopolitics.",
+      "bio": "Macro/central banking analyst. Macrowise Substack. Oil-to-30 thesis. Fed/Treasury dynamics. Geopolitical depth on Iran/Middle East. Podcast regular.",
       "tags": [
         "macro",
+        "Fed",
+        "Treasury",
+        "oil",
         "geopolitics",
-        "AI",
-        "paradigm-shifts",
-        "research",
-        "Iran",
-        "China",
-        "TSLA"
+        "central banking"
       ],
-      "role": "Thesis Writer",
+      "role": "Alpha Contributor",
       "platforms": [
         {
           "type": "substack",
           "url": "",
-          "handle": "macrowise"
+          "handle": "Macrowise Newsletter"
         }
       ]
     },
@@ -1469,18 +1506,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 63,
+        "composite": 47,
         "pillars": {
-          "network": 60,
-          "intelligence": 75,
-          "capital": 70
+          "network": 55,
+          "intelligence": 60,
+          "capital": 40
         }
       }
     ],
     "pillars": {
-      "network": 60,
-      "intelligence": 75,
-      "capital": 70
+      "network": 55,
+      "intelligence": 60,
+      "capital": 40
     },
     "pillarComponents": {
       "network": {
@@ -1499,7 +1536,7 @@
         "specificity": 17
       }
     },
-    "composite": 63,
+    "composite": 47,
     "panicScore": 85,
     "panicFlags": [
       "political paranoia",
@@ -1759,18 +1796,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 46,
+        "composite": 41,
         "pillars": {
-          "network": 60,
-          "intelligence": 45,
-          "capital": 55
+          "network": 55,
+          "intelligence": 42,
+          "capital": 45
         }
       }
     ],
     "pillars": {
-      "network": 60,
-      "intelligence": 45,
-      "capital": 55
+      "network": 55,
+      "intelligence": 42,
+      "capital": 45
     },
     "pillarComponents": {
       "network": {
@@ -1789,8 +1826,8 @@
         "specificity": 11
       }
     },
-    "composite": 46,
-    "panicScore": 75,
+    "composite": 41,
+    "panicScore": 78,
     "panicFlags": [
       "Closed positions during Iran tensions",
       "Constantly worried about Trump's market impact",
@@ -4429,7 +4466,7 @@
     ]
   },
   "German Corredor": {
-    "tier": "A",
+    "tier": "B",
     "score": 49.8,
     "msgs": 42,
     "links": 1,
@@ -4461,19 +4498,19 @@
       },
       {
         "snapshot": "s2",
-        "tier": "A",
-        "composite": 45,
+        "tier": "B",
+        "composite": 39,
         "pillars": {
-          "network": 45,
-          "intelligence": 60,
-          "capital": 40
+          "network": 40,
+          "intelligence": 50,
+          "capital": 35
         }
       }
     ],
     "pillars": {
-      "network": 45,
-      "intelligence": 60,
-      "capital": 40
+      "network": 40,
+      "intelligence": 50,
+      "capital": 35
     },
     "pillarComponents": {
       "network": {
@@ -4492,7 +4529,7 @@
         "specificity": 0
       }
     },
-    "composite": 45,
+    "composite": 39,
     "panicScore": 75,
     "panicFlags": [
       "overwhelmed by AI speed",
@@ -7346,18 +7383,18 @@
       {
         "snapshot": "s2",
         "tier": "A",
-        "composite": 85,
+        "composite": 84,
         "pillars": {
-          "network": 85,
+          "network": 78,
           "intelligence": 90,
-          "capital": 80
+          "capital": 82
         }
       }
     ],
     "pillars": {
-      "network": 85,
+      "network": 78,
       "intelligence": 90,
-      "capital": 80
+      "capital": 82
     },
     "pillarComponents": {
       "network": {
@@ -7376,19 +7413,17 @@
         "specificity": 5
       }
     },
-    "composite": 85,
+    "composite": 84,
     "panicScore": 15,
     "panicFlags": [],
     "persona": {
-      "bio": "European finance professional specializing in private credit and alternative investments with deep technical expertise and institutional market access.",
+      "bio": "High-quality new member. Deep substance per message despite low volume. Analytical and well-sourced contributions.",
       "tags": [
-        "technical",
-        "institutional",
-        "credit",
-        "european",
-        "analytical"
+        "analysis",
+        "deep research",
+        "new contributor"
       ],
-      "role": "Industry Expert",
+      "role": "Analyst",
       "platforms": []
     },
     "highlights": [
