@@ -291,6 +291,98 @@
     }
   },
   "groupHighlights": {
-    "s1": []
+    "s1": [],
+    "s2": [
+      {
+        "type": "tool",
+        "summary": "Built homeland.net.co platform using Claude that replaces UBS/JPM/Goldman analyst teams - monetizing financial analysis",
+        "quality": 10,
+        "member": "Andres Felipe Arias"
+      },
+      {
+        "type": "insight",
+        "summary": "'Con Claude ya no necesito equipo' - fired all analysts after building AI platform that does their work better/faster",
+        "quality": 10,
+        "member": "Andres Felipe Arias"
+      },
+      {
+        "type": "thesis",
+        "summary": "Si yo fuera un agente portfolio - comprehensive analysis of how AI agents will reshape the economy and what assets they'd choose",
+        "quality": 10,
+        "member": "Hernán Jaramillo"
+      },
+      {
+        "type": "analysis",
+        "summary": "Connected Iran targeting, oil flows, China chokepoints to Treasury bills and BRICS destruction thesis",
+        "quality": 10,
+        "member": "Hernán Jaramillo"
+      },
+      {
+        "type": "link",
+        "summary": "Shared over 200 high-quality sources, tools, and analysis threads connecting macro to specific positions",
+        "quality": 10,
+        "member": "Hernán Jaramillo"
+      },
+      {
+        "type": "thesis",
+        "summary": "Published book 'Epistemic Wealth' arguing true wealth in AI era is learning capacity, not assets",
+        "quality": 10,
+        "member": "Guillermo Valencia"
+      },
+      {
+        "type": "analysis",
+        "summary": "Comprehensive HIMS institutional ownership analysis tracking 748 holders at 94.68% float with detailed fund movements",
+        "quality": 10,
+        "member": "Simón Restrepo"
+      },
+      {
+        "type": "thesis",
+        "summary": "HIMS vs Big Pharma analysis showing network effects and FCF/share fundamentals vs regulatory attacks",
+        "quality": 9,
+        "member": "Andres Felipe Arias"
+      },
+      {
+        "type": "analysis",
+        "summary": "Detailed MSTR debt/Bitcoin thesis with specific entry points and Sharpe ratio adjustments for liquidity",
+        "quality": 9,
+        "member": "Andres Felipe Arias"
+      },
+      {
+        "type": "tool",
+        "summary": "Built and deployed MacroPulse market monitoring system",
+        "quality": 9,
+        "member": "Camilo Gomez"
+      },
+      {
+        "type": "analysis",
+        "summary": "Detailed breakdown of Anthropic's leaked code implications for agent orchestration acceleration",
+        "quality": 9,
+        "member": "Camilo Gomez"
+      },
+      {
+        "type": "link",
+        "summary": "Connected Latin American fintechs with LSEG growth opportunities - generated real business discussions",
+        "quality": 9,
+        "member": "Fede Suarez"
+      },
+      {
+        "type": "analysis",
+        "summary": "Detailed explanation of MSTR valuation using BTC Yield concept, showing how shares/BTC ratio creates value beyond NAV",
+        "quality": 9,
+        "member": "Nico Fernandez"
+      },
+      {
+        "type": "insight",
+        "summary": "LLMs are becoming the OS layer while tools like Claude Code and Perplexity Computer are just use cases - the real disruption will come in Layer 2 applications",
+        "quality": 9,
+        "member": "Gabriel Bedoya"
+      },
+      {
+        "type": "tool",
+        "summary": "Built hedonicum.pro - AI-powered wine/restaurant recommendation engine using personal taste data",
+        "quality": 9,
+        "member": "Hernán Jaramillo"
+      }
+    ]
   }
 }
