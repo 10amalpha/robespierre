@@ -701,7 +701,7 @@ export default function App() {
 
   // Fetch on-chain saves on mount
   useEffect(() => {
-    fetch("/api/verify-saves")
+    fetch("/api/verify-saves", { cache: "no-store" })
       .then(r => r.json())
       .then(data => {
         if (data.saves) {

@@ -1,5 +1,9 @@
 import { Connection, PublicKey } from "@solana/web3.js";
 
+// Force dynamic — never cache this route
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 const RPC = "https://mainnet.helius-rpc.com/?api-key=d4d1c413-f308-4627-acf4-be837d854089";
 const BURN = "EGEYg4GYbfdUpEeL6RByTSTiuZYckNJ1EwUGACY6UezG";
 const MINT = "6P5McDuhznaedKjnCvfe9iEjtCfVLyZhSqe93TZtawky";
