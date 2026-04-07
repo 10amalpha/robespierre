@@ -184,62 +184,52 @@ const Card = ({ m, rank, exp, tog }) => {
         )}
       </div>
 
-      {/* ⏰ COUNTDOWN BAR — Z and C tier only */}
-      {(m.t === "Z" || m.t === "C") && (() => {
+      {/* ⏰ COUNTDOWN — Z and C tier only, hidden if saved */}
+      {(m.t === "Z" || m.t === "C") && !m.savedBy && (() => {
         const TOKEN = META.token || {};
-        const saved = m.savedBy || null;
         const timerDays = TOKEN.timerDays || 10;
-        const totalSec = timerDays * 24 * 3600;
-        // Simulate countdown: use member's daysInactive to vary the timer per member
-        const elapsed = Math.min(totalSec - 1, (m.di || 0) * 8640); // rough variation
-        const remaining = saved ? totalSec : Math.max(0, totalSec - elapsed);
-        const pct = (remaining / totalSec) * 100;
+        // Same deadline for everyone: 10 days from audit date (Apr 7, 2026)
+        const auditDate = new Date('2026-04-07T00:00:00');
+        const deadline = new Date(auditDate.getTime() + timerDays * 24 * 3600 * 1000);
+        const now = new Date();
+        const remaining = Math.max(0, Math.floor((deadline - now) / 1000));
+        const pct = (remaining / (timerDays * 86400)) * 100;
         const d = Math.floor(remaining / 86400);
         const h = Math.floor((remaining % 86400) / 3600);
         const mn = Math.floor((remaining % 3600) / 60);
-
-        if (saved) return (
-          <div style={{ marginTop: 8, padding: "8px 12px", background: "linear-gradient(90deg, #052e16, #0a0a0f)", borderRadius: 8, border: "1px solid #10b98130", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-              <span style={{ fontSize: 16 }}>🛡️</span>
-              <div>
-                <div style={{ fontSize: 11, fontWeight: 600, color: "#10b981" }}>Saved from removal</div>
-                <a href={`https://solscan.io/account/${saved}`} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} style={{ fontSize: 9, color: "#3b82f6", textDecoration: "none", fontFamily: "'JetBrains Mono',monospace" }}>by {saved.slice(0,4)}...{saved.slice(-4)} ↗</a>
-              </div>
-            </div>
-            <div style={{ width: 100, height: 4, background: "#1a1a2e", borderRadius: 2 }}>
-              <div style={{ width: "100%", height: "100%", background: "#10b981", borderRadius: 2 }} />
-            </div>
-          </div>
-        );
+        const urgent = d <= 3;
 
         return (
-          <div style={{ marginTop: 8 }}>
-            {/* Countdown display */}
-            <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
-              <span style={{ fontSize: 14 }}>⏰</span>
-              <div style={{ display: "flex", gap: 4, alignItems: "baseline" }}>
-                <span style={{ fontSize: 18, fontWeight: 700, color: d <= 3 ? "#ef4444" : "#f97316", fontFamily: "'JetBrains Mono',monospace" }}>{d}</span>
-                <span style={{ fontSize: 9, color: "#6b7280" }}>d</span>
-                <span style={{ fontSize: 14, fontWeight: 700, color: d <= 3 ? "#ef4444" : "#f97316", fontFamily: "'JetBrains Mono',monospace" }}>{h}</span>
-                <span style={{ fontSize: 9, color: "#6b7280" }}>hrs</span>
-                <span style={{ fontSize: 14, fontWeight: 700, color: d <= 3 ? "#ef4444" : "#f97316", fontFamily: "'JetBrains Mono',monospace" }}>{mn}</span>
-                <span style={{ fontSize: 9, color: "#6b7280" }}>min</span>
+          <div style={{ marginTop: 8, background: "#0d0d14", borderRadius: 10, border: `1px solid ${urgent ? "#ef444430" : "#f9731620"}`, overflow: "hidden" }}>
+            {/* Timer row */}
+            <div style={{ display: "flex", alignItems: "center", padding: "8px 12px", gap: 10 }}>
+              {/* Stop the timer label */}
+              <span style={{ fontSize: 11, color: "#6b7280", whiteSpace: "nowrap", flexShrink: 0 }}>Stop the timer:</span>
+              {/* Countdown digits */}
+              <div style={{ display: "flex", alignItems: "baseline", gap: 2, flexShrink: 0 }}>
+                <span style={{ fontSize: 13 }}>⏰</span>
+                <span style={{ fontSize: 22, fontWeight: 800, color: urgent ? "#ef4444" : "#f97316", fontFamily: "'JetBrains Mono',monospace", letterSpacing: "-0.02em" }}>{d}</span>
+                <span style={{ fontSize: 10, color: "#6b7280", marginRight: 2 }}>d</span>
+                <span style={{ fontSize: 18, fontWeight: 700, color: urgent ? "#ef4444" : "#f97316", fontFamily: "'JetBrains Mono',monospace" }}>{h}</span>
+                <span style={{ fontSize: 10, color: "#6b7280", marginRight: 2 }}>hrs</span>
+                <span style={{ fontSize: 18, fontWeight: 700, color: urgent ? "#ef4444" : "#f97316", fontFamily: "'JetBrains Mono',monospace" }}>{mn}</span>
+                <span style={{ fontSize: 10, color: "#6b7280" }}>min</span>
               </div>
+              {/* Spacer */}
               <div style={{ flex: 1 }} />
               {/* PAY BUTTON */}
-              <div onClick={e => { e.stopPropagation(); window.open(`https://solscan.io/token/${TOKEN.mint}`, '_blank'); }} style={{ display: "flex", alignItems: "center", gap: 5, padding: "6px 14px", background: "linear-gradient(135deg, #f59e0b, #f97316)", borderRadius: 8, cursor: "pointer", border: "none", boxShadow: "0 2px 8px #f59e0b40" }}>
-                <img src="/logo.jpg" alt="" style={{ width: 16, height: 16, borderRadius: 4 }} />
-                <span style={{ fontSize: 11, fontWeight: 700, color: "#0a0a0f" }}>Pay 10,000</span>
+              <div onClick={e => { e.stopPropagation(); window.open(`https://solscan.io/token/${TOKEN.mint}`, '_blank'); }} style={{ display: "flex", alignItems: "center", gap: 6, padding: "8px 16px", background: "linear-gradient(135deg, #f59e0b, #f97316)", borderRadius: 10, cursor: "pointer", boxShadow: "0 2px 12px #f59e0b50", flexShrink: 0, transition: "transform 0.1s", }} onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"} onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}>
+                <img src="/logo.jpg" alt="" style={{ width: 18, height: 18, borderRadius: 5 }} />
+                <span style={{ fontSize: 13, fontWeight: 800, color: "#0a0a0f", letterSpacing: "-0.01em" }}>Pay 10,000</span>
               </div>
             </div>
             {/* Progress bar */}
-            <div style={{ width: "100%", height: 6, background: "#1a1a2e", borderRadius: 3, overflow: "hidden" }}>
-              <div style={{ width: `${pct}%`, height: "100%", background: d <= 3 ? "linear-gradient(90deg, #ef4444, #f97316)" : "linear-gradient(90deg, #f97316, #f59e0b)", borderRadius: 3, transition: "width 0.5s ease", boxShadow: d <= 3 ? "0 0 8px #ef444460" : "0 0 6px #f59e0b40" }} />
+            <div style={{ width: "100%", height: 4, background: "#1a1a2e" }}>
+              <div style={{ width: `${pct}%`, height: "100%", background: urgent ? "linear-gradient(90deg, #ef4444, #f97316)" : "linear-gradient(90deg, #f97316, #f59e0b)", transition: "width 0.5s ease", boxShadow: urgent ? "0 0 8px #ef444460" : "0 0 6px #f59e0b30" }} />
             </div>
-            <div style={{ display: "flex", justifyContent: "space-between", marginTop: 3 }}>
-              <span style={{ fontSize: 8, color: "#6b7280" }}>removal in {d}d {h}h</span>
-              <span style={{ fontSize: 8, color: "#6b7280", fontFamily: "'JetBrains Mono',monospace" }}>🔥 {TOKEN.burnAddress?.slice(0,6)}...{TOKEN.burnAddress?.slice(-4)}</span>
+            {/* Burn address footer */}
+            <div style={{ padding: "3px 12px 5px", display: "flex", justifyContent: "flex-end" }}>
+              <a href={`https://solscan.io/account/${TOKEN.burnAddress}`} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} style={{ fontSize: 8, color: "#4b5563", textDecoration: "none", fontFamily: "'JetBrains Mono',monospace" }}>🔥 {TOKEN.burnAddress?.slice(0,6)}...{TOKEN.burnAddress?.slice(-4)}</a>
             </div>
           </div>
         );
@@ -334,71 +324,6 @@ const Card = ({ m, rank, exp, tog }) => {
             ))}
           </div>
         </div>)}
-        {/* ⏰ Guillotine Timer — Z and C tier only */}
-        {(m.t === "Z" || m.t === "C") && (() => {
-          const TOKEN = META.token || {};
-          const saved = m.savedBy || null; // wallet address that paid
-          const savedUntil = m.savedUntil || null; // ISO date
-          const now = new Date();
-          const deadline = savedUntil ? new Date(savedUntil) : new Date(now.getTime() + (TOKEN.timerDays || 10) * 24 * 60 * 60 * 1000);
-          const daysLeft = Math.max(0, Math.ceil((deadline - now) / (1000 * 60 * 60 * 24)));
-          const pct = savedUntil ? Math.min(100, (daysLeft / (TOKEN.timerDays || 10)) * 100) : 0;
-          const isExpired = daysLeft === 0 && !saved;
-          const solscanUrl = saved ? `https://solscan.io/account/${saved}` : null;
-
-          return (
-            <div style={{ marginTop: 8, paddingTop: 8, borderTop: "1px solid #ef444420" }}>
-              <div style={{ background: "linear-gradient(135deg,#1a0505,#0a0a0f)", borderRadius: 8, padding: "10px 12px", border: "1px solid #ef444425" }}>
-                {/* Timer Header */}
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
-                    <span style={{ fontSize: 12 }}>⏰</span>
-                    <span style={{ fontSize: 9, color: "#ef4444", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" }}>Guillotine Timer</span>
-                  </div>
-                  {saved ? (
-                    <span style={{ fontSize: 8, padding: "2px 6px", borderRadius: 99, background: "#052e16", color: "#10b981", fontWeight: 600, border: "1px solid #10b98130" }}>🛡️ SAVED</span>
-                  ) : (
-                    <span style={{ fontSize: 8, padding: "2px 6px", borderRadius: 99, background: "#450a0a", color: "#ef4444", fontWeight: 600, border: "1px solid #ef444430" }}>{daysLeft}d left</span>
-                  )}
-                </div>
-
-                {/* Timer Bar */}
-                <div style={{ width: "100%", height: 6, background: "#1a1a2e", borderRadius: 3, overflow: "hidden", marginBottom: 6 }}>
-                  <div style={{ width: saved ? `${pct}%` : "100%", height: "100%", background: saved ? "#10b981" : `linear-gradient(90deg, #ef4444, #f97316 ${100-((daysLeft/(TOKEN.timerDays||10))*100)}%, #1a1a2e)`, borderRadius: 3, transition: "width 1s ease",
-                    animation: !saved ? "pulse 2s ease-in-out infinite" : "none" }} />
-                </div>
-
-                {saved ? (
-                  /* Saved state — show who saved them */
-                  <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-                    <span style={{ fontSize: 10, color: "#10b981" }}>🛡️ Protected until {deadline.toLocaleDateString()}</span>
-                    <a href={solscanUrl} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} style={{ fontSize: 8, color: "#3b82f6", textDecoration: "none", padding: "1px 6px", background: "#0a0a1f", borderRadius: 4, border: "1px solid #3b82f620", fontFamily: "'JetBrains Mono',monospace" }}>
-                      {saved.slice(0,4)}...{saved.slice(-4)} ↗
-                    </a>
-                  </div>
-                ) : (
-                  /* Unsaved — show pay to stay */
-                  <div>
-                    <div style={{ fontSize: 10, color: "#9ca3af", lineHeight: 1.5, marginBottom: 6 }}>
-                      Contribute to earn your seat — or pay <span style={{ color: "#f59e0b", fontWeight: 700 }}>{(TOKEN.costToStay || 10000).toLocaleString()} $10AMPRO</span> to reset the timer. Someone else can pay on your behalf.
-                    </div>
-                    <div style={{ display: "flex", gap: 6, alignItems: "center", flexWrap: "wrap" }}>
-                      <a href={`https://solscan.io/token/${TOKEN.mint}`} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} style={{ fontSize: 9, padding: "4px 10px", borderRadius: 6, background: "#1e1e2e", color: "#f59e0b", border: "1px solid #f59e0b30", textDecoration: "none", fontWeight: 600, display: "flex", alignItems: "center", gap: 4 }}>
-                        🪙 $10AMPRO Token
-                      </a>
-                      <a href={`https://solscan.io/account/${TOKEN.burnAddress}`} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} style={{ fontSize: 9, padding: "4px 10px", borderRadius: 6, background: "#450a0a", color: "#ef4444", border: "1px solid #ef444430", textDecoration: "none", fontWeight: 600, display: "flex", alignItems: "center", gap: 4 }}>
-                        🔥 Burn Address
-                      </a>
-                    </div>
-                    <div style={{ fontSize: 8, color: "#4b5563", marginTop: 4, fontFamily: "'JetBrains Mono',monospace", wordBreak: "break-all" }}>
-                      Send to: {TOKEN.burnAddress}
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          );
-        })()}
       </div>)}
     </div>
   );
@@ -667,7 +592,7 @@ export default function App() {
   const k = useMemo(() => kpis(D), []);
   const filt = useMemo(() => {
     let r = [...D];
-    if (filter !== "all") r = r.filter(x => x.t === filter);
+    if (filter !== "all") r = r.filter(x => x.t === filter && !x.savedBy);
     if (search) r = r.filter(x => x.n.toLowerCase().includes(search.toLowerCase()));
     if (sort === "composite") r.sort((a, b) => b.co - a.co);
     else if (sort === "network") r.sort((a, b) => b.p.network - a.p.network);
