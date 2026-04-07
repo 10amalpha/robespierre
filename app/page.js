@@ -558,20 +558,27 @@ export default function App() {
   return (<div style={{ minHeight: "100vh", background: "#0a0a0f", color: "#e5e7eb", fontFamily: "'Inter',-apple-system,sans-serif", overflowX: "hidden" }}>
 
     {/* Header */}
-    <div style={{ padding: "18px 14px 10px" }}>
-      <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
-        <span style={{ fontSize: 18, fontWeight: 700, letterSpacing: "-0.02em" }}>10AMPRO</span>
-        <span style={{ fontSize: 9, padding: "3px 8px", borderRadius: 99, background: "linear-gradient(135deg,#052e16,#1e1e2e)", color: "#10b981", fontWeight: 600, border: "1px solid #10b98130" }}>Collective Intelligence</span>
-        {META.snapshots.length > 1 && <span style={{ fontSize: 8, padding: "2px 6px", borderRadius: 99, background: "#1e1e2e", color: "#8b5cf6", fontWeight: 600, border: "1px solid #8b5cf630" }}>v{META.snapshots.length}</span>}
+    <div style={{ padding: "16px 14px 10px" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+        <img src="/logo.jpg" alt="10AMPRO" style={{ width: 32, height: 32, borderRadius: 8 }} />
+        <div>
+          <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
+            <span style={{ fontSize: 17, fontWeight: 700, letterSpacing: "-0.02em" }}>10AM</span>
+            <span style={{ fontSize: 17, fontWeight: 700, letterSpacing: "-0.02em", color: "#10b981" }}>CLUB</span>
+          </div>
+          <div style={{ fontSize: 9, color: "#6b7280", marginTop: 1 }}>
+            💰 Open Source Capital · 🧠 Collective Intelligence · 🔗 Network Sharing
+          </div>
+        </div>
       </div>
-      <div style={{ fontSize: 10, color: "#6b7280", marginTop: 3 }}>
-        {META.snapshots[0].from.slice(5).replace("-", "/")} → {SNAP.to.slice(5).replace("-", "/")} · {k.nn} members · {k.tot.toLocaleString()} msgs
+      <div style={{ fontSize: 10, color: "#4b5563", marginTop: 6, paddingLeft: 40 }}>
+        {META.snapshots[0].from.slice(5).replace("-", "/")} → {SNAP.to.slice(5).replace("-", "/")} · {k.nn} members · {k.tot.toLocaleString()} msgs · Powered by Cerebro
       </div>
     </div>
 
-    {/* Tabs — horizontally scrollable on mobile */}
+    {/* Tabs */}
     <div style={{ display: "flex", borderBottom: "1px solid #1e1e2e", padding: "0 14px", gap: 0, overflowX: "auto", WebkitOverflowScrolling: "touch", msOverflowStyle: "none", scrollbarWidth: "none" }}>
-      {[["intel", "🧠 Intel"], ["insights", "💡 Insights"], ["progress", "📈 Progress"], ["robes", "⚔️ Robes"], ["members", "👥 Members"]].map(([key, lb]) => (
+      {[["intel", "🧠 Intel"], ["insights", "💡 Insights"], ["progress", "📈 Progress"], ["robes", "⚔️ Standards"], ["members", "👥 Members"]].map(([key, lb]) => (
         <button key={key} onClick={() => { setSec(key); if (key !== "members") { setSearch(""); setFilter("all"); } }} style={{ padding: "8px 12px", fontSize: 11, fontWeight: 600, cursor: "pointer", background: "transparent", border: "none", color: sec === key ? "#e5e7eb" : "#6b7280", borderBottom: sec === key ? "2px solid #10b981" : "2px solid transparent", whiteSpace: "nowrap", flexShrink: 0 }}>{lb}</button>
       ))}
     </div>
@@ -581,7 +588,7 @@ export default function App() {
 
       {/* Three Pillars Overview */}
       <div style={{ background: "#111118", borderRadius: 12, padding: "16px 14px", border: "1px solid #1e1e2e", marginBottom: 12 }}>
-        <div style={{ fontSize: 10, color: "#6b7280", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 12 }}>⚡ Three Pillars of 10AMPRO</div>
+        <div style={{ fontSize: 10, color: "#6b7280", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 12 }}>⚡ The Three Pillars — Your Membership Score</div>
         <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
           {[
             { key: "network", icon: "🔗", label: "Network Sharing", desc: "Connecting people", avg: k.avgNet, c: PCOL.network, w: PW.network },
@@ -988,9 +995,12 @@ export default function App() {
 
     {/* ── TAB: Robespierre ───────────────────────────────────────── */}
     {sec === "robes" && (<div style={{ padding: "12px 14px 80px" }}>
-      <div style={{ background: "linear-gradient(135deg,#1a0a0a,#2e1065)", borderRadius: 12, padding: "20px 16px", border: "1px solid #6b21a830", marginBottom: 14 }}>
-        <div style={{ fontSize: 18, fontWeight: 700, color: "#dc2626", marginBottom: 6 }}>⚔️ La Guillotina</div>
-        <div style={{ fontSize: 12, color: "#e5a0a0", lineHeight: 1.6 }}>Zero across all 3 pillars = instant execution. Strong on 1 but zero on 2 = watch list with specific challenge.</div>
+      <div style={{ background: "linear-gradient(135deg,#0a0a1a,#1a0a2e)", borderRadius: 12, padding: "20px 16px", border: "1px solid #8b5cf620", marginBottom: 14 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
+          <img src="/logo.jpg" alt="" style={{ width: 24, height: 24, borderRadius: 6 }} />
+          <div style={{ fontSize: 18, fontWeight: 700, color: "#e5e7eb" }}>Club Standards</div>
+        </div>
+        <div style={{ fontSize: 12, color: "#9ca3af", lineHeight: 1.6 }}>Three pillars define membership: <span style={{ color: PCOL.network }}>🔗 Network</span>, <span style={{ color: PCOL.intelligence }}>🧠 Intelligence</span>, <span style={{ color: PCOL.capital }}>💰 Capital</span>. Score zero across all three and you&apos;re out. The club demands contribution — not consumption.</div>
       </div>
       <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 14 }}>
         {[["Zombies", k.tZ, "#ef4444", "#450a0a", "Never typed once"], ["Tier C", k.tC, "#f97316", "#450a0a", "Posted then vanished"], ["Dormant B", D.filter(x => x.t === "B" && x.di > 60).length, "#f59e0b", "#422006", "60+ days silent"], ["Total Cut", k.dw, "#dc2626", "#1a0a2e", `${(k.dw / k.nn * 100).toFixed(0)}% of group`]].map(([lb, ct, c, bg, sub]) => (
@@ -1002,8 +1012,8 @@ export default function App() {
         ))}
       </div>
       <div style={{ background: "#111118", borderRadius: 12, padding: "16px 14px", border: "1px solid #1e1e2e", marginBottom: 14 }}>
-        <div style={{ fontSize: 10, color: "#dc2626", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>📜 Crimes Against Collective Intelligence</div>
-        {[{ crime: "Zero on All Pillars", icon: "🧟", desc: "No networking, no intelligence, no capital sharing. Pure parasite.", count: k.tZ }, { crime: "Abandonment", icon: "💀", desc: "Posted a few times then went silent 65+ days.", count: k.tC }, { crime: "Dormancy", icon: "😴", desc: "Had activity but 60+ days inactive now.", count: D.filter(x => x.t === "B" && x.di > 60).length }].map((c, i) => (
+        <div style={{ fontSize: 10, color: "#dc2626", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>📜 Membership Violations</div>
+        {[{ crime: "Zero Contribution", icon: "🧟", desc: `Joined but never posted a single message. ${SNAP.days}+ days of silence. Pure consumer.`, count: k.tZ }, { crime: "Abandoned", icon: "💀", desc: "Posted a few times then vanished. Showed up, saw the alpha, left without contributing.", count: k.tC }, { crime: "Gone Dark", icon: "😴", desc: "Had activity but 60+ days inactive. One check-in away from removal.", count: D.filter(x => x.t === "B" && x.di > 60).length }].map((c, i) => (
           <div key={i} style={{ display: "flex", gap: 12, padding: "10px 0", borderBottom: i < 2 ? "1px solid #1e1e2e" : "none", alignItems: "flex-start" }}>
             <span style={{ fontSize: 24, flexShrink: 0 }}>{c.icon}</span>
             <div style={{ flex: 1 }}><div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}><span style={{ fontSize: 13, fontWeight: 600, color: "#e5e7eb" }}>{c.crime}</span><span style={{ fontSize: 16, fontWeight: 700, color: "#ef4444", fontFamily: "'JetBrains Mono',monospace" }}>{c.count}</span></div><div style={{ fontSize: 11, color: "#9ca3af", marginTop: 2, lineHeight: 1.5 }}>{c.desc}</div></div>
@@ -1027,7 +1037,7 @@ export default function App() {
             {/* Severity Legend */}
             <div style={{ display: "flex", gap: 8, marginBottom: 12, flexWrap: "wrap" }}>
               {[
-                { lb: "GUILLOTINE", range: "70+", c: "#ef4444", bg: "#450a0a", desc: "Chronic fear merchant. Erodes group conviction." },
+                { lb: "REMOVAL", range: "70+", c: "#ef4444", bg: "#450a0a", desc: "Chronic fear merchant. Erodes group conviction." },
                 { lb: "WARNING", range: "50-69", c: "#f97316", bg: "#422006", desc: "Notable panic. Needs to show conviction or go." },
                 { lb: "WATCH", range: "30-49", c: "#f59e0b", bg: "#1e1e2e", desc: "Some reactive behavior. Monitor next audit." },
               ].map(s => (
@@ -1040,7 +1050,7 @@ export default function App() {
 
             {/* Panican Cards */}
             {panicans.map((m, idx) => {
-              const severity = m.panic >= 70 ? { label: "GUILLOTINE", c: "#ef4444", bg: "#450a0a", icon: "🚨" } :
+              const severity = m.panic >= 70 ? { label: "REMOVAL", c: "#ef4444", bg: "#450a0a", icon: "🚨" } :
                                m.panic >= 50 ? { label: "WARNING", c: "#f97316", bg: "#422006", icon: "⚠️" } :
                                                { label: "WATCH", c: "#f59e0b", bg: "#1e1e2e", icon: "👁" };
               return (
@@ -1087,7 +1097,7 @@ export default function App() {
                   <div style={{ marginTop: 8, padding: "6px 8px", background: severity.c + "10", borderRadius: 6, border: `1px solid ${severity.c}15` }}>
                     <div style={{ fontSize: 10, color: severity.c, fontWeight: 600 }}>
                       {m.panic >= 70 ? "💀 Verdict: Actively damages group conviction. Posts fear, closes positions publicly, triggers others to panic. Zero thesis behind the emotion." :
-                       m.panic >= 50 ? "⚠️ Verdict: Pattern of reactive behavior. Surfaces mostly when markets drop. Needs to demonstrate conviction with actual positions or risk guillotine." :
+                       m.panic >= 50 ? "⚠️ Verdict: Pattern of reactive behavior. Surfaces mostly when markets drop. Needs to demonstrate conviction with actual positions or risk removal." :
                        "👁 Verdict: Some reactive tendencies detected. Not chronic but worth monitoring. Next audit will determine trajectory."}
                     </div>
                   </div>
@@ -1125,7 +1135,7 @@ export default function App() {
         {D.filter(x => x.t === "C").sort((a, b) => b.di - a.di).map(m => (<div key={m.n} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "6px 0", borderBottom: "1px solid #1a1a2e" }}><span style={{ fontSize: 12, color: "#e5e7eb" }}>{m.n}</span><div style={{ display: "flex", gap: 12, fontSize: 10, color: "#9ca3af" }}><span>{m.m} msgs</span><span style={{ color: "#ef4444" }}>{m.di}d silent</span></div></div>))}
       </div>
       <div style={{ background: "#052e16", borderRadius: 12, padding: "16px 14px", border: "1px solid #10b98130" }}>
-        <div style={{ fontSize: 10, color: "#10b981", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>🔄 Path to Redemption</div>
+        <div style={{ fontSize: 10, color: "#10b981", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>🔄 Path to Re-Entry</div>
         <div style={{ fontSize: 11, color: "#a0d4b8", lineHeight: 1.6, marginBottom: 8 }}>Pick your pillar. Prove your value in at least ONE:</div>
         {["🔗 Introduce 2 valuable contacts to the group", "🧠 Share 3 quality links/week for a month + engage in discussions", "💰 Post 4 investment theses with specific tickers and reasoning", "Accept that a second execution is permanent"].map((r, i) => (
           <div key={i} style={{ display: "flex", gap: 8, marginBottom: 6, alignItems: "flex-start" }}>
