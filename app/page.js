@@ -609,68 +609,81 @@ async function connectWallet() {
 }
 
 async function buildPayTransaction(walletPubkey, memberName, provider) {
-  // Dynamically import solana web3 — only loaded when user clicks Pay
-  const solanaWeb3 = await import("@solana/web3.js");
-  const splToken = await import("@solana/spl-token");
-  const { Connection, PublicKey, Transaction, TransactionInstruction } = solanaWeb3;
-  const { getAssociatedTokenAddress, createTransferInstruction, getAccount, createAssociatedTokenAccountInstruction } = splToken;
-
-  const conn = new Connection(SOL_CONFIG.rpc, "confirmed");
-  const senderPk = new PublicKey(walletPubkey);
-  const mintPk = new PublicKey(SOL_CONFIG.mint);
-  const burnPk = new PublicKey(SOL_CONFIG.burn);
-
-  // Get sender's associated token account
-  const senderATA = await getAssociatedTokenAddress(mintPk, senderPk);
-
-  // Check sender has enough tokens
   try {
-    const acct = await getAccount(conn, senderATA);
-    const balance = Number(acct.amount) / Math.pow(10, SOL_CONFIG.decimals);
-    if (balance < SOL_CONFIG.cost) {
-      throw new Error(`Insufficient balance: ${balance.toLocaleString()} $10AMPRO (need ${SOL_CONFIG.cost.toLocaleString()})`);
+    const solanaWeb3 = await import("@solana/web3.js");
+    const splToken = await import("@solana/spl-token");
+    const { Connection, PublicKey, Transaction, TransactionInstruction } = solanaWeb3;
+    const { getAssociatedTokenAddressSync, createTransferInstruction, createAssociatedTokenAccountInstruction } = splToken;
+
+    const conn = new Connection(SOL_CONFIG.rpc, "confirmed");
+    const senderPk = new PublicKey(walletPubkey);
+    const mintPk = new PublicKey(SOL_CONFIG.mint);
+    const burnPk = new PublicKey(SOL_CONFIG.burn);
+
+    // Derive ATAs synchronously (no RPC call)
+    const senderATA = getAssociatedTokenAddressSync(mintPk, senderPk);
+    const burnATA = getAssociatedTokenAddressSync(mintPk, burnPk);
+
+    // Check sender has enough tokens using getParsedAccountInfo
+    const senderAcctInfo = await conn.getParsedAccountInfo(senderATA);
+    if (!senderAcctInfo.value) {
+      throw new Error("No $10AMPRO tokens found in this wallet");
     }
+    const parsedData = senderAcctInfo.value.data;
+    if (parsedData && parsedData.parsed) {
+      const balance = Number(parsedData.parsed.info?.tokenAmount?.uiAmount || 0);
+      if (balance < SOL_CONFIG.cost) {
+        throw new Error("Insufficient balance: " + balance.toLocaleString() + " $10AMPRO (need " + SOL_CONFIG.cost.toLocaleString() + ")");
+      }
+    }
+
+    // Build instructions array
+    const instructions = [];
+
+    // Check if burn ATA exists, create if not
+    const burnAcctInfo = await conn.getAccountInfo(burnATA);
+    if (!burnAcctInfo) {
+      instructions.push(
+        createAssociatedTokenAccountInstruction(senderPk, burnATA, burnPk, mintPk)
+      );
+    }
+
+    // SPL transfer
+    const rawAmount = BigInt(SOL_CONFIG.cost) * BigInt(Math.pow(10, SOL_CONFIG.decimals));
+    instructions.push(
+      createTransferInstruction(senderATA, burnATA, senderPk, rawAmount)
+    );
+
+    // Memo: "SAVE:MemberName"
+    const memoData = new TextEncoder().encode("SAVE:" + memberName);
+    instructions.push(
+      new TransactionInstruction({
+        keys: [],
+        programId: new PublicKey(SOL_CONFIG.memoProgram),
+        data: memoData,
+      })
+    );
+
+    // Build transaction with blockhash
+    const { blockhash, lastValidBlockHeight } = await conn.getLatestBlockhash("confirmed");
+    const transaction = new Transaction({
+      recentBlockhash: blockhash,
+      lastValidBlockHeight: lastValidBlockHeight,
+      feePayer: senderPk,
+    });
+    transaction.add(...instructions);
+
+    // Phantom recommended: signAndSendTransaction
+    const { signature } = await provider.signAndSendTransaction(transaction);
+
+    // Wait for confirmation
+    await conn.confirmTransaction({ signature, blockhash, lastValidBlockHeight }, "confirmed");
+
+    return signature;
   } catch (e) {
-    if (e.message && e.message.includes("Insufficient")) throw e;
-    throw new Error("No $10AMPRO tokens found in this wallet");
+    if (e && e.message) throw e;
+    throw new Error("Transaction failed — check your wallet and try again");
   }
-
-  // Get or create burn address ATA
-  const burnATA = await getAssociatedTokenAddress(mintPk, burnPk);
-  const tx = new Transaction();
-
-  // Check if burn ATA exists, create if not
-  try {
-    await getAccount(conn, burnATA);
-  } catch {
-    tx.add(createAssociatedTokenAccountInstruction(senderPk, burnATA, burnPk, mintPk));
-  }
-
-  // SPL transfer: cost * 10^decimals
-  const rawAmount = BigInt(SOL_CONFIG.cost) * BigInt(Math.pow(10, SOL_CONFIG.decimals));
-  tx.add(createTransferInstruction(senderATA, burnATA, senderPk, rawAmount));
-
-  // Add memo: "SAVE:MemberName" — use TextEncoder instead of Buffer (browser-safe)
-  const memoData = new TextEncoder().encode(`SAVE:${memberName}`);
-  const memoIx = new TransactionInstruction({
-    keys: [],
-    programId: new PublicKey(SOL_CONFIG.memoProgram),
-    data: memoData,
-  });
-  tx.add(memoIx);
-
-  // Set recent blockhash and fee payer
-  const { blockhash, lastValidBlockHeight } = await conn.getLatestBlockhash();
-  tx.recentBlockhash = blockhash;
-  tx.lastValidBlockHeight = lastValidBlockHeight;
-  tx.feePayer = senderPk;
-
-  // Sign and send via wallet
-  const signed = await provider.signTransaction(tx);
-  const sig = await conn.sendRawTransaction(signed.serialize());
-  await conn.confirmTransaction({ signature: sig, blockhash, lastValidBlockHeight }, "confirmed");
-
-  return sig;
 }
 
 /* ── Main App ───────────────────────────────────────────────────── */
