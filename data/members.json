@@ -4041,11 +4041,11 @@
   "Rafael Troconis": {
     "tier": "A",
     "score": 51,
-    "msgs": 42,
-    "links": 3,
+    "msgs": 45,
+    "links": 4,
     "avgWords": 33.5,
-    "activeDays": 15,
-    "activeWeeks": 7,
+    "activeDays": 16,
+    "activeWeeks": 8,
     "lastActive": "2026-03-27",
     "daysInactive": 11,
     "components": {
@@ -4077,6 +4077,30 @@
           "network": 45,
           "intelligence": 62,
           "capital": 78
+        }
+      },
+      {
+        "snapshot": "s1",
+        "score": 22.3,
+        "tier": "B",
+        "msgs": 3,
+        "links": 1,
+        "pillars": {
+          "network": 6,
+          "intelligence": 60,
+          "capital": 46
+        },
+        "composite": 42
+      },
+      {
+        "snapshot": "s2",
+        "score": 22.3,
+        "tier": "B",
+        "composite": 22,
+        "pillars": {
+          "network": 6,
+          "intelligence": 60,
+          "capital": 46
         }
       }
     ],
@@ -6816,82 +6840,6 @@
         "quality": 7
       }
     ]
-  },
-  "Rafael Troconis Llave": {
-    "tier": "B",
-    "score": 22.3,
-    "msgs": 3,
-    "links": 1,
-    "avgWords": 98.7,
-    "activeDays": 1,
-    "activeWeeks": 1,
-    "lastActive": "2025-12-05",
-    "daysInactive": 77,
-    "components": {
-      "volume": 0.9,
-      "consistency": 1.4,
-      "substance": 20,
-      "recency": 0
-    },
-    "isFounder": false,
-    "history": [
-      {
-        "snapshot": "s1",
-        "score": 22.3,
-        "tier": "B",
-        "msgs": 3,
-        "links": 1,
-        "pillars": {
-          "network": 6,
-          "intelligence": 60,
-          "capital": 46
-        },
-        "composite": 42
-      },
-      {
-        "snapshot": "s2",
-        "score": 22.3,
-        "tier": "B",
-        "composite": 22,
-        "pillars": {
-          "network": 6,
-          "intelligence": 60,
-          "capital": 46
-        }
-      }
-    ],
-    "pillars": {
-      "network": 6,
-      "intelligence": 60,
-      "capital": 46
-    },
-    "pillarComponents": {
-      "network": {
-        "breadth": 0,
-        "consistency": 3,
-        "activation": 3
-      },
-      "intelligence": {
-        "infoQuality": 8,
-        "depthRatio": 35,
-        "sourceDiv": 17
-      },
-      "capital": {
-        "thesisDensity": 16,
-        "conviction": 5,
-        "specificity": 25
-      }
-    },
-    "composite": 22,
-    "panicScore": null,
-    "panicFlags": [],
-    "persona": {
-      "bio": null,
-      "platforms": [],
-      "tags": [],
-      "role": null
-    },
-    "highlights": []
   },
   "Roberto Cuartas": {
     "tier": "C",
