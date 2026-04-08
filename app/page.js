@@ -833,7 +833,7 @@ export default function App() {
                   <span style={{ fontSize: 22, fontWeight: 800, color: "#f97316", fontFamily: "'JetBrains Mono',monospace" }}>{mm}</span>
                   <span style={{ fontSize: 13, color: "#6b7280", fontWeight: 600 }}>m</span>
                 </div>
-                <div style={{ fontSize: 11, color: "#f97316", fontWeight: 700, marginTop: 2 }}>⏰ until cut</div>
+                <div style={{ fontSize: 11, color: "#f97316", fontWeight: 700, marginTop: 2 }}>⏰ beheading countdown</div>
               </div>
             </div>
           );
