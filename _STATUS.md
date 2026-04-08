@@ -7,22 +7,22 @@
 - **URL**: https://club.10am.pro
 - **Fallback**: https://robespierre.vercel.app
 - **Repo**: github.com/10amalpha/robespierre
-- **Version**: V8.3 (On-Chain Pay to Stay — PRODUCTION READY)
-- **Last Deploy**: April 7, 2026
+- **Version**: V8.4 (On-Chain Pay to Stay — PRODUCTION, font bump, Buy button, data merge)
+- **Last Deploy**: April 8, 2026
 - **Vercel**: `prj_h7LiqacKcqwQcae368ZXoMyQ7aeL` / `team_nPG5TrnRZyVuclmm6dZL1AcX`
 
 ## Architecture
 ```
 robespierre/
   data/
-    members.json    ← 129 members, Opus-graded + savedBy/savedUntil fields
-    meta.json       ← snapshots, pillars, sources, highlights, token config (w/ decimals)
+    members.json    ← 128 members, Opus-graded + savedBy/savedUntil fields
+    meta.json       ← snapshots, pillars, sources, highlights, token config (decimals: 9)
   app/
     page.js         ← 5-tab UI, wallet connect, on-chain pay, guillotine timers
     layout.js       ← viewport, PWA, favicon, manifest
     api/
       verify-saves/
-        route.js    ← Solana RPC verification — scans burn address for SPL transfers + memos
+        route.js    ← Solana RPC verification — dual-search burn wallet + ATA, memo parsing
   public/
     logo.jpg, icons, manifest.json
 ```
@@ -34,7 +34,11 @@ robespierre/
 | **Days** | 96 | 44 |
 | **Messages** | 1,989 | 8,082 |
 | **Links** | 452 | 1,828 |
-| **Members** | 129 (87 Opus-graded, 34 zombies) |
+| **Members** | 128 (87 Opus-graded, 34 zombies) |
+
+### Data Merges
+- Pablo Velez Mejia / PVM Pablo → merged (V6.3)
+- Rafael Troconis Llave → Rafael Troconis (V8.4, combined 45 msgs, 4 links)
 
 ## Opus AI Pipeline (Cerebro)
 - **Model**: Claude Opus 4 — full messages, not sampled
@@ -63,7 +67,7 @@ robespierre/
 | 9 | Fede Suarez | 65 | 75 | 68 | 55 | International Bridge Builder |
 | 10 | Agustin Argentino | 65 | 85 | 70 | 45 | tech infrastructure expert |
 
-## ⏰ Guillotine Timer + Pay to Stay (V7.0-7.3)
+## ⏰ Guillotine Timer + Pay to Stay
 
 ### How It Works
 - **46 members** on the chopping block (34 Zombies + 12 Remove)
@@ -72,9 +76,11 @@ robespierre/
 - Click member name → expands to show WHY Cerebro flagged them
 
 ### Header Tally (always visible)
-- **🪓 46** pending to be axed (big red number)
-- **🛡️ X** saved (green, appears when someone pays)
-- **⏰ 9d 8h 35m** until cut (orange countdown)
+- **🪓 N** pending to be axed (big red number, updates as saves come in)
+- **🛡️ N** saved (green, appears when someone pays)
+- **⏰ Xd Xh Xm** beheading countdown (orange)
+- **Buy $10AMPRO** button → Jupiter exchange link
+- **Connect Wallet** button → Phantom/Backpack
 - Visible on ALL tabs — constant pressure
 
 ### Pay to Stay
@@ -84,9 +90,9 @@ robespierre/
 - **Anyone can pay on behalf of another member** (sponsorship)
 - Paid members show 🛡️ Saved badge with wallet + tx link
 
-### On-Chain Architecture (V8.0–8.3)
+### On-Chain Architecture (V8.0–8.4)
 - **No database needed** — the blockchain IS the database
-- **RPC**: Helius mainnet (`mainnet.helius-rpc.com`) — public RPC blocked browser requests
+- **RPC**: Helius mainnet (`mainnet.helius-rpc.com`) with API key
 - **Client-side wallet**: Direct `window.solana` detection (Phantom/Backpack), no heavy adapter libraries
 - **Transaction flow**: User clicks Pay → wallet connect → build SPL transfer + memo → `signAndSendTransaction` → confirm
 - **Memo format**: `SAVE:MemberName` — identifies which member the payment covers
@@ -95,7 +101,8 @@ robespierre/
 - **Caching**: API `force-dynamic` (never cached by Vercel CDN), client fetches with `cache: "no-store"`
 - **Optimistic UI**: After successful payment, local state updates immediately before API refetch
 - **Token decimals**: 9 (confirmed on-chain — standard for pump.fun tokens)
-- **Dependencies**: `@solana/web3.js`, `@solana/spl-token`, `buffer` (browser polyfill), `bs58`
+- **Buffer polyfill**: `window.Buffer = Buffer` for `@solana/web3.js` browser compatibility
+- **Dependencies**: `@solana/web3.js`, `@solana/spl-token`, `buffer`, `bs58`
 
 ### Saved Member Visibility (V8.1)
 - **Members tab**: 🛡️ Saved filter button shows only saved Z/C members
@@ -155,25 +162,26 @@ robespierre/
 | V8.1 | Apr 7 | **Saved Visibility** — 🛡️ Saved filter, badges in zombie/remove lists, saved counter card |
 | V8.2 | Apr 7 | **Working E2E** — Helius RPC, 9 decimals, signAndSendTransaction, inner ix memo scan |
 | V8.3 | Apr 7 | **Production Ready** — dual-search (wallet+ATA), cache-busting, cross-browser consistency |
+| V8.4 | Apr 8 | **Polish** — font sizes +2px (mercados sizing), Buy $10AMPRO button, "beheading countdown" copy, Rafael Troconis merge (128 members) |
 
 ## TODO — Part 2: On-Chain ✅ COMPLETE
-- [x] **Phantom/Backpack wallet connect** on Pay button (window.solana detection)
-- [x] **SPL token transfer** transaction builder (10K $10AMPRO → burn address)
-- [x] **On-chain verification** API route (`/api/verify-saves` — Helius RPC → scan burn address → match memos)
-- [x] **Memo/reference** system to match payments to specific members (`SAVE:MemberName`)
-- [x] Auto-merge on-chain saves with static data at render time
-- [x] Saved members show 🛡️ shield + wallet address + tx link
-- [x] Pay button shows ⏳ Signing... state during transaction
-- [x] Wallet connect bar in header with address display
-- [x] Error/success banners for transaction status
-- [x] **Token decimals**: confirmed 9 on mainnet
-- [x] **Helius RPC**: public Solana RPC blocks browser requests
-- [x] **signAndSendTransaction**: Phantom recommended method (not signTransaction+sendRaw)
-- [x] **Debug mode**: `/api/verify-saves?debug=1` shows raw tx data
-- [x] **Dual-search**: scans both burn wallet + burn ATA (survives token burns/ATA closures)
-- [x] **Cache-busting**: `force-dynamic` API route + `cache: "no-store"` client fetch
-- [x] **Cross-browser**: consistent saves display across Firefox, Chrome, Brave
-- [ ] Real-time timer that ticks every second (currently ticks on re-render)
+- [x] Phantom/Backpack wallet connect
+- [x] SPL token transfer (10K $10AMPRO → burn address)
+- [x] On-chain verification API (`/api/verify-saves`)
+- [x] Memo system (`SAVE:MemberName`)
+- [x] Auto-merge on-chain saves with static data
+- [x] 🛡️ Saved badges, filter, counter
+- [x] Signing state + error/success banners
+- [x] Token decimals: 9
+- [x] Helius RPC (public RPC blocked)
+- [x] signAndSendTransaction (Phantom recommended)
+- [x] Debug mode (`?debug=1`)
+- [x] Dual-search (wallet + ATA, survives burns)
+- [x] Cache-busting (force-dynamic + no-store)
+- [x] Cross-browser consistency
+- [x] Buy $10AMPRO → Jupiter link
+- [x] Font sizes bumped to mercados standard
+- [ ] Real-time timer ticking every second
 
 ## TODO — Other
 - [ ] Quarterly Opus re-run (~July 2026)
