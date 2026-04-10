@@ -163,17 +163,18 @@ const Card = ({ m, rank, exp, tog, onPay, payingFor }) => {
   const prev = hasHistory ? m.history[m.history.length - 2] : null;
   const delta = prev && prev.composite != null ? m.co - prev.composite : null;
   return (
-    <div onClick={tog} style={{ background: exp ? tc.bgL : "#111118", border: `1px solid ${exp ? tc.color + "40" : "#1e1e2e"}`, borderRadius: 10, padding: "10px 13px", cursor: "pointer", transition: "all 0.2s", marginBottom: 5 }}>
-      <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+    <div onClick={tog} style={{ background: exp ? tc.bgL : "#111118", border: `1px solid ${exp ? tc.color + "40" : "#1e1e2e"}`, borderRadius: 10, padding: "10px 12px", cursor: "pointer", transition: "all 0.2s", marginBottom: 5 }}>
+      {/* Row 1: Rank + Name + Badges + Score (non-Z/C) */}
+      <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
         <div style={{ width: 28, height: 28, borderRadius: "50%", background: tc.bg, border: `2px solid ${tc.color}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 700, color: tc.color, fontFamily: "'JetBrains Mono',monospace", flexShrink: 0 }}>{rank}</div>
         <div style={{ flex: 1, minWidth: 0 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 5, flexWrap: "wrap" }}>
             <span style={{ fontWeight: 600, color: "#e5e7eb", fontSize: 15 }}>{m.n}{m.u ? " 👑" : ""}</span>
-            <span style={{ fontSize: 11, padding: "2px 7px", borderRadius: 99, fontWeight: 600, background: tc.bg, color: tc.color, border: `1px solid ${tc.color}30` }}>{tc.icon} {tc.label}</span>
-            {m.panic !== null && m.panic >= 40 && <span style={{ fontSize: 11, padding: "2px 7px", borderRadius: 99, fontWeight: 600, background: m.panic >= 80 ? "#450a0a" : "#422006", color: m.panic >= 80 ? "#ef4444" : "#f97316", border: `1px solid ${m.panic >= 80 ? "#ef444430" : "#f9731630"}` }}>🚨 {m.panic}</span>}
+            <span style={{ fontSize: 10, padding: "2px 6px", borderRadius: 99, fontWeight: 600, background: tc.bg, color: tc.color, border: `1px solid ${tc.color}30` }}>{tc.icon} {tc.label}</span>
+            {m.panic !== null && m.panic >= 40 && <span style={{ fontSize: 10, padding: "2px 6px", borderRadius: 99, fontWeight: 600, background: m.panic >= 80 ? "#450a0a" : "#422006", color: m.panic >= 80 ? "#ef4444" : "#f97316", border: `1px solid ${m.panic >= 80 ? "#ef444430" : "#f9731630"}` }}>🚨 {m.panic}</span>}
             {delta !== null && <span style={{ fontSize: 11, fontWeight: 700, color: delta > 0 ? "#10b981" : delta < 0 ? "#ef4444" : "#6b7280", fontFamily: "'JetBrains Mono',monospace" }}>{delta > 0 ? "▲" : delta < 0 ? "▼" : "="}{Math.abs(delta).toFixed(0)}</span>}
           </div>
-          <div style={{ display: "flex", gap: 6, marginTop: 4, flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: 5, marginTop: 3, alignItems: "center", flexWrap: "wrap" }}>
             <span style={{ fontSize: 10, color: PCOL.network, fontWeight: 600, fontFamily: "'JetBrains Mono',monospace" }}>🔗{m.p.network}</span>
             <span style={{ fontSize: 10, color: PCOL.intelligence, fontWeight: 600, fontFamily: "'JetBrains Mono',monospace" }}>🧠{m.p.intelligence}</span>
             <span style={{ fontSize: 10, color: PCOL.capital, fontWeight: 600, fontFamily: "'JetBrains Mono',monospace" }}>💰{m.p.capital}</span>
@@ -181,58 +182,62 @@ const Card = ({ m, rank, exp, tog, onPay, payingFor }) => {
             <span style={{ fontSize: 10, color: m.di > 30 ? "#ef4444" : m.di > 14 ? "#f59e0b" : "#6b7280" }}>{m.di === 0 ? "today" : `${m.di}d ago`}</span>
           </div>
         </div>
-        {/* Right side: Score OR Timer+Button (all in one row) */}
-        {(m.t === "Z" || m.t === "C") && !m.savedBy ? (() => {
-          const TOKEN = META.token || {};
-          const timerDays = TOKEN.timerDays || 10;
-          const auditDate = new Date('2026-04-07T00:00:00');
-          const deadline = new Date(auditDate.getTime() + timerDays * 24 * 3600 * 1000);
-          const now = new Date();
-          const remaining = Math.max(0, Math.floor((deadline - now) / 1000));
-          const d = Math.floor(remaining / 86400);
-          const h = Math.floor((remaining % 86400) / 3600);
-          const mn = Math.floor((remaining % 3600) / 60);
-          const urgent = d <= 3;
-          const c = urgent ? "#ef4444" : "#f97316";
-          return (
-            <div style={{ display: "flex", alignItems: "center", gap: 6, flexShrink: 0 }}>
-              <span style={{ fontSize: 12, color: "#6b7280", whiteSpace: "nowrap" }}>Stop the timer:</span>
-              <span style={{ fontSize: 16 }}>⏰</span>
-              <span style={{ fontSize: 22, fontWeight: 800, color: c, fontFamily: "'JetBrains Mono',monospace" }}>{d}</span>
-              <span style={{ fontSize: 12, color: "#6b7280" }}>d</span>
-              <span style={{ fontSize: 18, fontWeight: 700, color: c, fontFamily: "'JetBrains Mono',monospace" }}>{h}</span>
-              <span style={{ fontSize: 12, color: "#6b7280" }}>hrs</span>
-              <span style={{ fontSize: 18, fontWeight: 700, color: c, fontFamily: "'JetBrains Mono',monospace" }}>{mn}</span>
-              <span style={{ fontSize: 12, color: "#6b7280" }}>min</span>
-              <div onClick={e => { e.stopPropagation(); if (onPay) onPay(m.n); }} style={{ display: "flex", alignItems: "center", gap: 6, padding: "8px 18px", background: payingFor === m.n ? "linear-gradient(135deg, #6b7280, #4b5563)" : "linear-gradient(135deg, #f59e0b, #f97316)", borderRadius: 10, cursor: payingFor === m.n ? "wait" : "pointer", boxShadow: "0 2px 12px #f59e0b50", marginLeft: 4, opacity: payingFor && payingFor !== m.n ? 0.4 : 1 }}>
-                {payingFor === m.n ? (
-                  <span style={{ fontSize: 14, fontWeight: 800, color: "#0a0a0f" }}>⏳ Signing...</span>
-                ) : (<>
-                  <img src="/logo.jpg" alt="" style={{ width: 18, height: 18, borderRadius: 5 }} />
-                  <span style={{ fontSize: 16, fontWeight: 800, color: "#0a0a0f" }}>Pay 10,000</span>
-                </>)}
-              </div>
-            </div>
-          );
-        })() : (m.t === "Z" || m.t === "C") && m.savedBy ? (
-          /* Saved on-chain — show green shield */
-          <div style={{ display: "flex", alignItems: "center", gap: 6, flexShrink: 0 }}>
-            <div style={{ padding: "6px 14px", background: "#052e16", borderRadius: 10, border: "1px solid #10b98140", display: "flex", alignItems: "center", gap: 6 }}>
-              <span style={{ fontSize: 16 }}>🛡️</span>
-              <div>
-                <div style={{ fontSize: 13, fontWeight: 700, color: "#10b981" }}>Saved</div>
-                <div style={{ fontSize: 10, color: "#6b728080", fontFamily: "'JetBrains Mono',monospace" }}>{m.savedBy.slice(0, 4)}...{m.savedBy.slice(-4)}</div>
-              </div>
-            </div>
-            {m.txSig && <a href={`https://solscan.io/tx/${m.txSig}`} target="_blank" rel="noopener" onClick={e => e.stopPropagation()} style={{ fontSize: 10, color: "#6b7280", textDecoration: "underline" }}>tx</a>}
-          </div>
-        ) : !(m.t === "Z" || m.t === "C") ? (
+        {/* Score — only for non-Z/C members */}
+        {!(m.t === "Z" || m.t === "C") && (
           <div style={{ textAlign: "right", flexShrink: 0 }}>
             <div style={{ fontSize: 19, fontWeight: 700, color: tc.color, fontFamily: "'JetBrains Mono',monospace" }}>{m.co}</div>
             <div style={{ width: 52 }}><Br v={m.co} c={tc.color} /></div>
           </div>
-        ) : null}
+        )}
+        {/* Saved badge — inline for saved Z/C */}
+        {(m.t === "Z" || m.t === "C") && m.savedBy && (
+          <div style={{ display: "flex", alignItems: "center", gap: 4, flexShrink: 0 }}>
+            <div style={{ padding: "4px 10px", background: "#052e16", borderRadius: 8, border: "1px solid #10b98140", display: "flex", alignItems: "center", gap: 4 }}>
+              <span style={{ fontSize: 14 }}>🛡️</span>
+              <div>
+                <div style={{ fontSize: 12, fontWeight: 700, color: "#10b981" }}>Saved</div>
+                <div style={{ fontSize: 9, color: "#6b728080", fontFamily: "'JetBrains Mono',monospace" }}>{m.savedBy.slice(0, 4)}...{m.savedBy.slice(-4)}</div>
+              </div>
+            </div>
+            {m.txSig && <a href={`https://solscan.io/tx/${m.txSig}`} target="_blank" rel="noopener" onClick={e => e.stopPropagation()} style={{ fontSize: 9, color: "#6b7280", textDecoration: "underline" }}>tx</a>}
+          </div>
+        )}
       </div>
+      {/* Row 2: Timer + Pay button — ONLY for unsaved Z/C, on its own line */}
+      {(m.t === "Z" || m.t === "C") && !m.savedBy && (() => {
+        const TOKEN = META.token || {};
+        const timerDays = TOKEN.timerDays || 10;
+        const auditDate = new Date('2026-04-07T00:00:00');
+        const deadline = new Date(auditDate.getTime() + timerDays * 24 * 3600 * 1000);
+        const now = new Date();
+        const remaining = Math.max(0, Math.floor((deadline - now) / 1000));
+        const d = Math.floor(remaining / 86400);
+        const h = Math.floor((remaining % 86400) / 3600);
+        const mn = Math.floor((remaining % 3600) / 60);
+        const urgent = d <= 3;
+        const c = urgent ? "#ef4444" : "#f97316";
+        return (
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: 8, paddingTop: 8, borderTop: "1px solid #1e1e2e", gap: 8, flexWrap: "wrap" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+              <span style={{ fontSize: 14 }}>⏰</span>
+              <span style={{ fontSize: 20, fontWeight: 800, color: c, fontFamily: "'JetBrains Mono',monospace" }}>{d}</span>
+              <span style={{ fontSize: 11, color: "#6b7280" }}>d</span>
+              <span style={{ fontSize: 16, fontWeight: 700, color: c, fontFamily: "'JetBrains Mono',monospace" }}>{h}</span>
+              <span style={{ fontSize: 11, color: "#6b7280" }}>h</span>
+              <span style={{ fontSize: 16, fontWeight: 700, color: c, fontFamily: "'JetBrains Mono',monospace" }}>{mn}</span>
+              <span style={{ fontSize: 11, color: "#6b7280" }}>m</span>
+            </div>
+            <div onClick={e => { e.stopPropagation(); if (onPay) onPay(m.n); }} style={{ display: "flex", alignItems: "center", gap: 5, padding: "7px 14px", background: payingFor === m.n ? "linear-gradient(135deg, #6b7280, #4b5563)" : "linear-gradient(135deg, #f59e0b, #f97316)", borderRadius: 8, cursor: payingFor === m.n ? "wait" : "pointer", boxShadow: "0 2px 12px #f59e0b50", opacity: payingFor && payingFor !== m.n ? 0.4 : 1 }}>
+              {payingFor === m.n ? (
+                <span style={{ fontSize: 13, fontWeight: 800, color: "#0a0a0f" }}>⏳ Signing...</span>
+              ) : (<>
+                <img src="/logo.jpg" alt="" style={{ width: 16, height: 16, borderRadius: 4 }} />
+                <span style={{ fontSize: 13, fontWeight: 800, color: "#0a0a0f" }}>Pay 10,000</span>
+              </>)}
+            </div>
+          </div>
+        );
+      })()}
       {exp && (<div style={{ marginTop: 11, paddingTop: 9, borderTop: `1px solid ${tc.color}20` }}>
         <div style={{ display: "flex", gap: 12, alignItems: "flex-start", flexWrap: "wrap", justifyContent: "center" }}>
           <Radar net={m.p.network} int={m.p.intelligence} cap={m.p.capital} size={90} />
