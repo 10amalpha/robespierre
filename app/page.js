@@ -786,18 +786,21 @@ export default function App() {
 
     {/* Header */}
     <div style={{ padding: "16px 14px 10px" }}>
-      <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-        <img src="/logo.jpg" alt="10AMPRO" style={{ width: 32, height: 32, borderRadius: 8 }} />
-        <div style={{ flex: 1 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
-            <span style={{ fontSize: 19, fontWeight: 700, letterSpacing: "-0.02em" }}>10AM</span>
-            <span style={{ fontSize: 19, fontWeight: 700, letterSpacing: "-0.02em", color: "#10b981" }}>CLUB</span>
+      {/* Top row: Logo + Title */}
+      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
+        <img src="/logo.jpg" alt="10AMPRO" style={{ width: 36, height: 36, borderRadius: 8 }} />
+        <div>
+          <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+            <span style={{ fontSize: 22, fontWeight: 700, letterSpacing: "-0.02em" }}>10AM</span>
+            <span style={{ fontSize: 22, fontWeight: 700, letterSpacing: "-0.02em", color: "#10b981" }}>CLUB</span>
           </div>
-          <div style={{ fontSize: 11, color: "#6b7280", marginTop: 1 }}>
-            💰 Open Source Capital · 🧠 Collective Intelligence · 🔗 Network Sharing
+          <div style={{ fontSize: 10, color: "#6b7280", marginTop: 1 }}>
+            💰 Capital · 🧠 Intelligence · 🔗 Network
           </div>
         </div>
-        {/* Guillotine Tally — BIG and prominent */}
+      </div>
+      {/* Tally row: axed | saved | countdown — full width, centered */}
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 12, padding: "10px 0", background: "#0d0d14", borderRadius: 10, border: "1px solid #1e1e2e" }}>
         {(() => {
           const axed = mergedD.filter(x => (x.t === "Z" || x.t === "C") && !x.savedBy).length;
           const saved = mergedD.filter(x => (x.t === "Z" || x.t === "C") && x.savedBy).length;
@@ -810,53 +813,46 @@ export default function App() {
           const dd = Math.floor(remaining / 86400);
           const hh = Math.floor((remaining % 86400) / 3600);
           const mm = Math.floor((remaining % 3600) / 60);
-          return (
-            <div style={{ display: "flex", alignItems: "center", gap: 14, flexShrink: 0 }}>
-              <div style={{ textAlign: "center" }}>
-                <div style={{ fontSize: 32, fontWeight: 900, color: "#ef4444", fontFamily: "'JetBrains Mono',monospace", lineHeight: 1 }}>{axed}</div>
-                <div style={{ fontSize: 11, color: "#ef4444", fontWeight: 700, marginTop: 2 }}>🪓 pending to be axed</div>
-              </div>
-              {saved > 0 && <>
-                <div style={{ height: 36, width: 1, background: "#2a2a3e" }} />
-                <div style={{ textAlign: "center" }}>
-                  <div style={{ fontSize: 32, fontWeight: 900, color: "#10b981", fontFamily: "'JetBrains Mono',monospace", lineHeight: 1 }}>{saved}</div>
-                  <div style={{ fontSize: 11, color: "#10b981", fontWeight: 700, marginTop: 2 }}>🛡️ saved</div>
-                </div>
-              </>}
-              <div style={{ height: 36, width: 1, background: "#2a2a3e" }} />
-              <div style={{ textAlign: "center" }}>
-                <div style={{ display: "flex", alignItems: "baseline", gap: 2, justifyContent: "center" }}>
-                  <span style={{ fontSize: 28, fontWeight: 900, color: "#f97316", fontFamily: "'JetBrains Mono',monospace" }}>{dd}</span>
-                  <span style={{ fontSize: 13, color: "#6b7280", fontWeight: 600 }}>d</span>
-                  <span style={{ fontSize: 22, fontWeight: 800, color: "#f97316", fontFamily: "'JetBrains Mono',monospace" }}>{hh}</span>
-                  <span style={{ fontSize: 13, color: "#6b7280", fontWeight: 600 }}>h</span>
-                  <span style={{ fontSize: 22, fontWeight: 800, color: "#f97316", fontFamily: "'JetBrains Mono',monospace" }}>{mm}</span>
-                  <span style={{ fontSize: 13, color: "#6b7280", fontWeight: 600 }}>m</span>
-                </div>
-                <div style={{ fontSize: 11, color: "#f97316", fontWeight: 700, marginTop: 2 }}>⏰ beheading countdown</div>
-              </div>
+          return (<>
+            <div style={{ textAlign: "center", flex: 1 }}>
+              <div style={{ fontSize: 28, fontWeight: 900, color: "#ef4444", fontFamily: "'JetBrains Mono',monospace", lineHeight: 1 }}>{axed}</div>
+              <div style={{ fontSize: 10, color: "#ef4444", fontWeight: 700, marginTop: 2 }}>🪓 to be axed</div>
             </div>
-          );
+            {saved > 0 && <>
+              <div style={{ height: 32, width: 1, background: "#2a2a3e" }} />
+              <div style={{ textAlign: "center", flex: 1 }}>
+                <div style={{ fontSize: 28, fontWeight: 900, color: "#10b981", fontFamily: "'JetBrains Mono',monospace", lineHeight: 1 }}>{saved}</div>
+                <div style={{ fontSize: 10, color: "#10b981", fontWeight: 700, marginTop: 2 }}>🛡️ saved</div>
+              </div>
+            </>}
+            <div style={{ height: 32, width: 1, background: "#2a2a3e" }} />
+            <div style={{ textAlign: "center", flex: 1 }}>
+              <div style={{ display: "flex", alignItems: "baseline", gap: 2, justifyContent: "center" }}>
+                <span style={{ fontSize: 24, fontWeight: 900, color: "#f97316", fontFamily: "'JetBrains Mono',monospace" }}>{dd}</span>
+                <span style={{ fontSize: 11, color: "#6b7280", fontWeight: 600 }}>d</span>
+                <span style={{ fontSize: 20, fontWeight: 800, color: "#f97316", fontFamily: "'JetBrains Mono',monospace" }}>{hh}</span>
+                <span style={{ fontSize: 11, color: "#6b7280", fontWeight: 600 }}>h</span>
+                <span style={{ fontSize: 20, fontWeight: 800, color: "#f97316", fontFamily: "'JetBrains Mono',monospace" }}>{mm}</span>
+                <span style={{ fontSize: 11, color: "#6b7280", fontWeight: 600 }}>m</span>
+              </div>
+              <div style={{ fontSize: 10, color: "#f97316", fontWeight: 700, marginTop: 2 }}>⏰ beheading</div>
+            </div>
+          </>);
         })()}
       </div>
-      <div style={{ fontSize: 12, color: "#4b5563", marginTop: 6, paddingLeft: 40 }}>
-        {META.snapshots[0].from.slice(5).replace("-", "/")} → {SNAP.to.slice(5).replace("-", "/")} · {k.nn} members · {k.tot.toLocaleString()} msgs · Powered by Cerebro
+      <div style={{ fontSize: 11, color: "#4b5563", marginTop: 6, textAlign: "center" }}>
+        {META.snapshots[0].from.slice(5).replace("-", "/")} → {SNAP.to.slice(5).replace("-", "/")} · {k.nn} members · {k.tot.toLocaleString()} msgs · Cerebro
       </div>
-      {/* Wallet Connect Bar */}
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: 8, padding: "6px 8px", background: "#111118", borderRadius: 8, border: "1px solid #1e1e2e" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-          <span style={{ fontSize: 12, color: "#6b7280" }}>💳 Solana</span>
-          {wallet && <span style={{ fontSize: 11, color: "#10b981", fontFamily: "'JetBrains Mono',monospace" }}>{wallet.publicKey.slice(0, 4)}...{wallet.publicKey.slice(-4)}</span>}
-        </div>
-        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          <a href="https://jup.ag/tokens/6P5McDuhznaedKjnCvfe9iEjtCfVLyZhSqe93TZtawky" target="_blank" rel="noopener" style={{ padding: "4px 12px", fontSize: 12, fontWeight: 700, background: "linear-gradient(135deg, #f59e0b, #f97316)", color: "#0a0a0f", border: "none", borderRadius: 6, cursor: "pointer", textDecoration: "none", display: "flex", alignItems: "center", gap: 4 }}>
-            <img src="/logo.jpg" alt="" style={{ width: 14, height: 14, borderRadius: 4 }} />
-            Buy $10AMPRO
-          </a>
-          <button onClick={handleConnect} style={{ padding: "4px 12px", fontSize: 12, fontWeight: 700, background: wallet ? "#1e1e2e" : "linear-gradient(135deg, #ab9ff2, #7c3aed)", color: wallet ? "#9ca3af" : "#fff", border: "none", borderRadius: 6, cursor: "pointer" }}>
-            {wallet ? "Disconnect" : "Connect Wallet"}
-          </button>
-        </div>
+      {/* Wallet + Buy Bar */}
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, marginTop: 8 }}>
+        <a href="https://jup.ag/tokens/6P5McDuhznaedKjnCvfe9iEjtCfVLyZhSqe93TZtawky" target="_blank" rel="noopener" style={{ padding: "6px 14px", fontSize: 12, fontWeight: 700, background: "linear-gradient(135deg, #f59e0b, #f97316)", color: "#0a0a0f", border: "none", borderRadius: 8, cursor: "pointer", textDecoration: "none", display: "flex", alignItems: "center", gap: 4 }}>
+          <img src="/logo.jpg" alt="" style={{ width: 16, height: 16, borderRadius: 4 }} />
+          Buy $10AMPRO
+        </a>
+        <button onClick={handleConnect} style={{ padding: "6px 14px", fontSize: 12, fontWeight: 700, background: wallet ? "#1e1e2e" : "linear-gradient(135deg, #ab9ff2, #7c3aed)", color: wallet ? "#9ca3af" : "#fff", border: "none", borderRadius: 8, cursor: "pointer" }}>
+          {wallet ? "Disconnect" : "Connect Wallet"}
+        </button>
+        {wallet && <span style={{ fontSize: 10, color: "#10b981", fontFamily: "'JetBrains Mono',monospace" }}>💳 {wallet.publicKey.slice(0, 4)}...{wallet.publicKey.slice(-4)}</span>}
       </div>
       {/* Pay status messages */}
       {payError && (
