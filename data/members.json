@@ -2257,9 +2257,8 @@
     "panicScore": 0,
     "panicFlags": [],
     "persona": {
-      "bio": "Ford employee providing corporate AI adoption insights. Shares perspective on automation and productivity from inside traditional industry.",
+      "bio": "Corporate professional providing AI adoption insights. Shares perspective on automation and productivity from inside traditional industry.",
       "tags": [
-        "Ford",
         "AI",
         "corporate",
         "automation",
@@ -2271,7 +2270,7 @@
     "highlights": [
       {
         "type": "insight",
-        "summary": "Ford pushing AI adoption across engineering to legal departments",
+        "summary": "Large corporation pushing AI adoption across engineering to legal departments",
         "quality": 7
       }
     ]
