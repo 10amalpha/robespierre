@@ -7896,93 +7896,6 @@
     },
     "highlights": []
   },
-  "Amalia Uribe Gustavo Villa Gumroad": {
-    "tier": "B",
-    "score": 0,
-    "msgs": 13,
-    "links": 3,
-    "avgWords": 28.8,
-    "activeDays": 5,
-    "activeWeeks": 5,
-    "lastActive": "2026-03-22",
-    "daysInactive": 16,
-    "components": {
-      "volume": 0,
-      "consistency": 0,
-      "substance": 0,
-      "recency": 0
-    },
-    "isFounder": false,
-    "history": [
-      {
-        "snapshot": "s1",
-        "score": 0,
-        "tier": "Z",
-        "msgs": 0,
-        "links": 0,
-        "pillars": {
-          "network": 70,
-          "intelligence": 85,
-          "capital": 60
-        },
-        "composite": 73
-      },
-      {
-        "snapshot": "s2",
-        "tier": "B",
-        "composite": 28,
-        "pillars": {
-          "network": 40,
-          "intelligence": 65,
-          "capital": 30
-        }
-      }
-    ],
-    "pillars": {
-      "network": 40,
-      "intelligence": 65,
-      "capital": 30
-    },
-    "pillarComponents": {
-      "network": {
-        "breadth": 0,
-        "consistency": 0,
-        "activation": 0
-      },
-      "intelligence": {
-        "infoQuality": 0,
-        "depthRatio": 0,
-        "sourceDiv": 0
-      },
-      "capital": {
-        "thesisDensity": 0,
-        "conviction": 0,
-        "specificity": 0
-      }
-    },
-    "composite": 28,
-    "panicScore": 0,
-    "panicFlags": [],
-    "persona": {
-      "bio": "Female health app developer focused on hormone cycles and Chinese medicine. Built paying product and shares AI development insights.",
-      "tags": [
-        "healthtech",
-        "women",
-        "app-development",
-        "AI-tools",
-        "hormones"
-      ],
-      "role": "healthtech-founder",
-      "platforms": []
-    },
-    "highlights": [
-      {
-        "type": "tool",
-        "summary": "Built healvisorycycles.com app for women's hormonal health with paying customers",
-        "quality": 9
-      }
-    ]
-  },
   "Ana Arango": {
     "tier": "Z",
     "score": 0,
@@ -10809,15 +10722,15 @@
     "composite": 21
   },
   "Amalia Uribe": {
-    "tier": "Z",
+    "tier": "B",
     "score": 0,
-    "msgs": 0,
-    "links": 0,
-    "avgWords": 0,
-    "activeDays": 0,
-    "activeWeeks": 0,
-    "lastActive": "2026-04-07",
-    "daysInactive": 0,
+    "msgs": 13,
+    "links": 3,
+    "avgWords": 28.8,
+    "activeDays": 5,
+    "activeWeeks": 5,
+    "lastActive": "2026-03-22",
+    "daysInactive": 16,
     "components": {
       "volume": 0,
       "consistency": 0,
@@ -10835,40 +10748,75 @@
           "intelligence": 85,
           "capital": 60
         }
+      },
+      {
+        "snapshot": "s1",
+        "score": 0,
+        "tier": "Z",
+        "msgs": 0,
+        "links": 0,
+        "pillars": {
+          "network": 70,
+          "intelligence": 85,
+          "capital": 60
+        },
+        "composite": 73
+      },
+      {
+        "snapshot": "s2",
+        "tier": "B",
+        "composite": 28,
+        "pillars": {
+          "network": 40,
+          "intelligence": 65,
+          "capital": 30
+        }
       }
     ],
     "panicScore": 0,
     "panicFlags": [],
     "persona": {
-      "bio": "Entrepreneur building women's health app using AI. Strong technical execution with paying customers and product development skills.",
+      "bio": "Female health app developer focused on hormone cycles and Chinese medicine. Built paying product and shares AI development insights.",
       "tags": [
-        "female_entrepreneur",
         "healthtech",
-        "ai_builder",
-        "product_developer"
+        "women",
+        "app-development",
+        "AI-tools",
+        "hormones"
       ],
-      "role": "Alpha Contributor",
+      "role": "healthtech-founder",
       "platforms": []
     },
     "highlights": [
       {
         "type": "tool",
-        "summary": "Women's hormonal health app with natural medicine focus - already has paying users",
+        "summary": "Built healvisorycycles.com app for women's hormonal health with paying customers",
         "quality": 9
-      },
-      {
-        "type": "insight",
-        "summary": "Practical AI development workflow using Lovable for rapid prototyping and deployment",
-        "quality": 7
       }
     ],
     "pillars": {
-      "network": 0,
-      "intelligence": 0,
-      "capital": 0
+      "network": 40,
+      "intelligence": 65,
+      "capital": 30
     },
-    "pillarComponents": {},
-    "composite": 0
+    "pillarComponents": {
+      "network": {
+        "breadth": 0,
+        "consistency": 0,
+        "activation": 0
+      },
+      "intelligence": {
+        "infoQuality": 0,
+        "depthRatio": 0,
+        "sourceDiv": 0
+      },
+      "capital": {
+        "thesisDensity": 0,
+        "conviction": 0,
+        "specificity": 0
+      }
+    },
+    "composite": 28
   },
   "Antonio Jaller": {
     "tier": "A",
