@@ -7,7 +7,7 @@
 - **URL**: https://club.10am.pro
 - **Fallback**: https://robespierre.vercel.app
 - **Repo**: github.com/10amalpha/robespierre
-- **Version**: V8.5 (Mobile-responsive, data cleanup, privacy scrub)
+- **Version**: V8.4 (On-Chain Pay to Stay — PRODUCTION, font bump, Buy button, data merge)
 - **Last Deploy**: April 8, 2026
 - **Vercel**: `prj_h7LiqacKcqwQcae368ZXoMyQ7aeL` / `team_nPG5TrnRZyVuclmm6dZL1AcX`
 
@@ -15,7 +15,7 @@
 ```
 robespierre/
   data/
-    members.json    ← 127 members, Opus-graded + savedBy/savedUntil fields
+    members.json    ← 128 members, Opus-graded + savedBy/savedUntil fields
     meta.json       ← snapshots, pillars, sources, highlights, token config (decimals: 9)
   app/
     page.js         ← 5-tab UI, wallet connect, on-chain pay, guillotine timers
@@ -34,15 +34,11 @@ robespierre/
 | **Days** | 96 | 44 |
 | **Messages** | 1,989 | 8,082 |
 | **Links** | 452 | 1,828 |
-| **Members** | 127 (87 Opus-graded, 34 zombies) |
+| **Members** | 128 (87 Opus-graded, 34 zombies) |
 
 ### Data Merges
 - Pablo Velez Mejia / PVM Pablo → merged (V6.3)
 - Rafael Troconis Llave → Rafael Troconis (V8.4, combined 45 msgs, 4 links)
-- Amalia Uribe Gustavo Villa Gumroad → Amalia Uribe (V8.5, combined 13 msgs, 3 links)
-
-### Privacy Scrubs
-- Paul Gomez: all Ford references removed (V8.5) — bio, tags, highlights scrubbed to protect employment
 
 ## Opus AI Pipeline (Cerebro)
 - **Model**: Claude Opus 4 — full messages, not sampled
@@ -167,7 +163,6 @@ robespierre/
 | V8.2 | Apr 7 | **Working E2E** — Helius RPC, 9 decimals, signAndSendTransaction, inner ix memo scan |
 | V8.3 | Apr 7 | **Production Ready** — dual-search (wallet+ATA), cache-busting, cross-browser consistency |
 | V8.4 | Apr 8 | **Polish** — font sizes +2px (mercados sizing), Buy $10AMPRO button, "beheading countdown" copy, Rafael Troconis merge (128 members) |
-| V8.5 | Apr 8 | **Mobile-responsive** — stacked header, card timer on own row, Amalia Uribe merge, Paul Gomez Ford scrub (127 members) |
 
 ## TODO — Part 2: On-Chain ✅ COMPLETE
 - [x] Phantom/Backpack wallet connect
