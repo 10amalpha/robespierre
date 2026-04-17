@@ -392,7 +392,6 @@
     "costToStay": 10000,
     "timerDays": 10,
     "chain": "solana",
-    "decimals": 9,
-    "reEntryCost": 100000
+    "decimals": 9
   }
 }
