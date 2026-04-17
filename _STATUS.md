@@ -7,15 +7,15 @@
 - **URL**: https://club.10am.pro
 - **Fallback**: https://robespierre.vercel.app
 - **Repo**: github.com/10amalpha/robespierre
-- **Version**: V8.4 (On-Chain Pay to Stay — PRODUCTION, font bump, Buy button, data merge)
-- **Last Deploy**: April 8, 2026
+- **Version**: V8.6 (Guillotine executed, 100K cost, mobile-responsive, data cleanup)
+- **Last Deploy**: April 17, 2026
 - **Vercel**: `prj_h7LiqacKcqwQcae368ZXoMyQ7aeL` / `team_nPG5TrnRZyVuclmm6dZL1AcX`
 
 ## Architecture
 ```
 robespierre/
   data/
-    members.json    ← 128 members, Opus-graded + savedBy/savedUntil fields
+    members.json    ← 127 members (113 active in WhatsApp), Opus-graded + savedBy/savedUntil fields
     meta.json       ← snapshots, pillars, sources, highlights, token config (decimals: 9)
   app/
     page.js         ← 5-tab UI, wallet connect, on-chain pay, guillotine timers
@@ -34,11 +34,26 @@ robespierre/
 | **Days** | 96 | 44 |
 | **Messages** | 1,989 | 8,082 |
 | **Links** | 452 | 1,828 |
-| **Members** | 128 (87 Opus-graded, 34 zombies) |
+| **Members** | 127 in data (113 active in WhatsApp — 14 cut on Apr 17) |
 
 ### Data Merges
 - Pablo Velez Mejia / PVM Pablo → merged (V6.3)
 - Rafael Troconis Llave → Rafael Troconis (V8.4, combined 45 msgs, 4 links)
+- Amalia Uribe Gustavo Villa Gumroad → Amalia Uribe (V8.5, combined 13 msgs, 3 links)
+
+### Privacy Scrubs
+- Paul Gomez: all Ford references removed (V8.5) — bio, tags, highlights scrubbed to protect employment
+
+### 🪓 Guillotine Execution — April 17, 2026
+- **31 saved on-chain** (paid 10,000 $10AMPRO each via Phantom wallet)
+- **14 unsaved removed from WhatsApp** (not from data — kept for historical record):
+  Daniel Martinez, Diego Mazo, Douglas Rueda Buche, Germancito Primo Ricky Uribe,
+  Juan Saldarriaga, Manu Cuñada beto, Mariana Botero, Mimi, Musimbi,
+  Pablo Botero Londoño, Paola Macia Fernandez, Roberto Cuartas,
+  Tomas Restrepo Amigo Mazo F2 Y F3, catalina botero
+- **Cost increased**: 10,000 → **100,000 $10AMPRO** to stay going forward
+- These 14 will not appear in the next chat export / Opus audit
+- Re-entry requires 100,000 $10AMPRO payment
 
 ## Opus AI Pipeline (Cerebro)
 - **Model**: Claude Opus 4 — full messages, not sampled
@@ -118,7 +133,7 @@ robespierre/
   "name": "10AMPRO",
   "mint": "6P5McDuhznaedKjnCvfe9iEjtCfVLyZhSqe93TZtawky",
   "burnAddress": "EGEYg4GYbfdUpEeL6RByTSTiuZYckNJ1EwUGACY6UezG",
-  "costToStay": 10000,
+  "costToStay": 100000,
   "decimals": 9,
   "timerDays": 10,
   "chain": "solana"
@@ -162,11 +177,13 @@ robespierre/
 | V8.1 | Apr 7 | **Saved Visibility** — 🛡️ Saved filter, badges in zombie/remove lists, saved counter card |
 | V8.2 | Apr 7 | **Working E2E** — Helius RPC, 9 decimals, signAndSendTransaction, inner ix memo scan |
 | V8.3 | Apr 7 | **Production Ready** — dual-search (wallet+ATA), cache-busting, cross-browser consistency |
-| V8.4 | Apr 8 | **Polish** — font sizes +2px (mercados sizing), Buy $10AMPRO button, "beheading countdown" copy, Rafael Troconis merge (128 members) |
+| V8.4 | Apr 8 | **Polish** — font sizes +2px (mercados sizing), Buy $10AMPRO button, "beheading countdown" copy, Rafael Troconis merge |
+| V8.5 | Apr 8 | **Mobile-responsive** — stacked header, card timer on own row, Amalia Uribe merge, Paul Gomez Ford scrub |
+| V8.6 | Apr 17 | **🪓 Guillotine executed** — 14 unsaved cut from WhatsApp, 31 saved on-chain, cost bumped 10K → 100K |
 
 ## TODO — Part 2: On-Chain ✅ COMPLETE
 - [x] Phantom/Backpack wallet connect
-- [x] SPL token transfer (10K $10AMPRO → burn address)
+- [x] SPL token transfer → burn address
 - [x] On-chain verification API (`/api/verify-saves`)
 - [x] Memo system (`SAVE:MemberName`)
 - [x] Auto-merge on-chain saves with static data
@@ -178,6 +195,12 @@ robespierre/
 - [x] Debug mode (`?debug=1`)
 - [x] Dual-search (wallet + ATA, survives burns)
 - [x] Cache-busting (force-dynamic + no-store)
+- [x] Cross-browser consistency
+- [x] Buy $10AMPRO → Jupiter link
+- [x] Font sizes bumped to mercados standard
+- [x] Mobile-responsive header + cards
+- [x] **Guillotine executed**: 31 saved, 14 cut, cost → 100,000
+- [ ] Remove 14 cut members from data on next Opus audit
 - [x] Cross-browser consistency
 - [x] Buy $10AMPRO → Jupiter link
 - [x] Font sizes bumped to mercados standard
