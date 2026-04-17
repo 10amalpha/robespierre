@@ -232,7 +232,7 @@ const Card = ({ m, rank, exp, tog, onPay, payingFor }) => {
                 <span style={{ fontSize: 13, fontWeight: 800, color: "#0a0a0f" }}>⏳ Signing...</span>
               ) : (<>
                 <img src="/logo.jpg" alt="" style={{ width: 16, height: 16, borderRadius: 4 }} />
-                <span style={{ fontSize: 13, fontWeight: 800, color: "#0a0a0f" }}>Pay 10,000</span>
+                <span style={{ fontSize: 13, fontWeight: 800, color: "#0a0a0f" }}>Pay {SOL_CONFIG.cost.toLocaleString()}</span>
               </>)}
             </div>
           </div>
@@ -591,7 +591,7 @@ const TOKEN = META.token || {};
 const SOL_CONFIG = {
   mint: TOKEN.mint || "6P5McDuhznaedKjnCvfe9iEjtCfVLyZhSqe93TZtawky",
   burn: TOKEN.burnAddress || "EGEYg4GYbfdUpEeL6RByTSTiuZYckNJ1EwUGACY6UezG",
-  cost: TOKEN.costToStay || 10000,
+  cost: TOKEN.costToStay || 100000,
   decimals: TOKEN.decimals || 9,
   timerDays: TOKEN.timerDays || 10,
   rpc: "https://mainnet.helius-rpc.com/?api-key=d4d1c413-f308-4627-acf4-be837d854089",
