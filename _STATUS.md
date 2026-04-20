@@ -4,10 +4,10 @@
 > The three pillars to belong. Powered by Cerebro.
 
 ## Live
-- **URL**: https://club.10am.pro
-- **Fallback**: https://robespierre.vercel.app
+- **URL**: https://club.10am.pro  🔒 **PASSWORD PROTECTED** (passfort middleware)
+- **Fallback**: https://robespierre.vercel.app  🔒 protected
 - **Repo**: github.com/10amalpha/robespierre
-- **Version**: V8.6 (Guillotine executed, 100K cost, mobile-responsive, data cleanup)
+- **Version**: V8.7 (password gate added Apr 20, 2026 — password shared privately via WhatsApp)
 - **Last Deploy**: April 17, 2026
 - **Vercel**: `prj_h7LiqacKcqwQcae368ZXoMyQ7aeL` / `team_nPG5TrnRZyVuclmm6dZL1AcX`
 
